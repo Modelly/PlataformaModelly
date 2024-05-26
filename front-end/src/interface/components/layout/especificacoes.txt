@@ -1,0 +1,1 @@
+Nessa pasta vai todos os componentes de layout, como headers, footers, sidebars

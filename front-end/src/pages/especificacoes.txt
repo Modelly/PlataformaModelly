@@ -1,0 +1,5 @@
+Esta pasta é onde vamos criar os arquivos de cada página, no qual vão receber os compontes que fazem parte daquela página em específico
+
+home -> Composto por vários componentes etc (header, banner, lojas ... footer)
+Cadastro -> Compostos por vários outros componentes etc (formulario, botões...)
+....
