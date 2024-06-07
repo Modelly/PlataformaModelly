@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './components/layout/Navbar/Navbar';
-import Footer from './components/layout/Footer/Footer';
+import Produto from '../interface/pages/Produto/Produto';
 import Home from '../interface/pages/Home/Home';
 import Login from '../interface/pages/Login/Login';
 import FeiraVirtual from '../interface/pages/FeiraVirtual/FeiraVirtual';
@@ -15,6 +14,7 @@ const AppRoutes = () => {
             <div className='container'>
                 <Routes>
                     <Route path="/" element={<Home />} />
+                    <Route path="/produto" element={<Produto />} />
                     <Route path="/personalizado" element={<Personalizado/>} />
                     <Route path="/feira-virtual" element={<FeiraVirtual/>} />
                     <Route path="/login" element={<Login/>} />

@@ -15,6 +15,7 @@ import dinheiro from '../../../../assets/images/imgs-home/Banknotes.png';
 import perfil from '../../../../assets/images/imgs-home/Artist.png';
 import devolucao from '../../../../assets/images/imgs-home/devolucao.png';
 import categoria from '../../../../assets/images/imgs-home/Categorize.png';
+import { Link } from 'react-router-dom';
 import './Home.css';
 
 const categories = [
@@ -50,13 +51,15 @@ const HomeLayout = () => {
                 <div className='products-container'>
                     {products.map((product, index) => (
                         <div key={index} className='product-card'>
-                            <img src={product.img} alt={product.name} className='product-image' />
-                            <p className='product-name'>{product.name}</p>
-                            <p className='product-description'>{product.description}</p>
-                            <div className='product-footer'>
-                                <p className='product-price'>{product.price}</p>
-                                <button className='view-more-button'>Ver mais</button>
-                            </div>
+                            <Link to="/produto">
+                                <img src={product.img} alt={product.name} className='product-image' />
+                                <p className='product-name'>{product.name}</p>
+                                <p className='product-description'>{product.description}</p>
+                                <div className='product-footer'>
+                                    <p className='product-price'>{product.price}</p>
+                                    <button className='view-more-button'>Ver mais</button>
+                                </div>
+                            </Link>
                         </div>
                     ))}
                 </div>
