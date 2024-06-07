@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Platypi:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -44,11 +46,11 @@ table {
 }
 
 :root {
-    --cor-primaria: #D11F52;
-    --cor-secundaria: #FEEC9D;
-    --cor-terciaria: #26C7C4;
-    --cor-background: #F7F7F7;
-    --cor-fonte-principal: #2A2A2A;
+    --cor-primaria: #9B59B6;
+    --cor-secundaria: #D11F52;
+    --cor-terciaria: #F68E07;
+    --cor-background: #FFFBF3;
+    --cor-fonte-principal: #361A5C;
     --poppins-font: "Poppins", sans-serif;
-    /* fonts: Montserrat - Borgat Trial */
+    --montserrat-font: "Montserrat", sans-serif; 
 }

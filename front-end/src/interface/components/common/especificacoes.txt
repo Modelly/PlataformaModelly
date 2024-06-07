@@ -1,2 +1,0 @@
-Nessa pasta vai todos os componentes reutilizáveis 
-como header, botões, cards, inputs etc. 

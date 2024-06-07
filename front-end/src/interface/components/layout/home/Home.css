@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Platypi:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+:root {
+    --cor-primaria: #9B59B6;
+    --cor-secundaria: #361A5C;
+    --cor-terciaria: #F68E07;
+    --cor-quartiaria: #D11F52;
+    --cor-background: #FCF8F0;
+    --cor-preta-stroke: #0a0808;
+    --cor-fonte-principal: #361A5C;
+    --cor-fonte-branco: #fff;
+    --poppins-font: "Poppins", sans-serif;
+    --montserrat-font: "Montserrat", sans-serif; 
+    --bogart-medium: "Bogart Bold", sans-serif;
+}
+
+@font-face {
+    font-family: 'Bogart Bold';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Bogart Bold'), 
+         url('../fonts/Bogart-Bold-trial.ttf') format('truetype');
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    background-color: var(--cor-background);
+}
+
+.home-bannerImage-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px; 
+}
+
+.banner-image {
+    width: 100%;
+    max-width: 1550px; 
+    height: auto;
+}
+
+.categories-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3.7rem; 
+    margin-bottom: 40px; 
+}
+
+.category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.category-image {
+    width: auto;
+    height: 100px; 
+    margin-bottom: 10px;
+}
+
+.category-item p {
+    font-family: var(--poppins-font);
+    font-size: 1.2rem;
+    color: var(--cor-fonte-principal);
+    margin-bottom: 20px;
+}
+
+.recommendations-container {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    margin-bottom: 80px; 
+}
+
+.recommendations-heading {
+    font-family: var(--bogart-medium);
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--cor-fonte-principal);
+    margin-bottom: 65px;
+}
+
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3.5rem; 
+}
+
+.product-card {
+    position: relative;
+    border: 2px solid var(--cor-preta-stroke);
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px; 
+    background-color: #f3caff;
+    text-align: center;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 350px;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product-name {
+    font-family: var(--poppins-font);
+    font-size: 1.2rem;
+    color: var(--cor-fonte-principal);
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.product-description {
+    font-family: var(--poppins-font);
+    font-size: 1rem;
+    color: var(--cor-fonte-principal);
+    margin-bottom: 10px;
+}
+
+.product-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: auto;
+}
+
+.product-price {
+    font-family: var(--poppins-font);
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--cor-fonte-principal);
+    align-self: flex-start;
+}
+
+.view-more-button {
+    padding: 5px 10px;
+    font-family: var(--poppins-font);
+    font-size: 0.9rem;
+    color: var(--cor-fonte-branco);
+    background-color: var(--cor-quartiaria);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: flex-end;
+    border: 1px solid #0a0808;
+}
+
+.view-more-button:hover {
+    background-color: var(--cor-primaria);
+}
+
+.view-more-home{
+        background-color: var(--cor-terciaria);
+        border: 2px solid black;
+        border-right-width: 2px;
+        border-bottom-width: 5px;
+        padding: 10px 40px;
+        border-radius: 10px;
+        cursor: pointer;
+        font-family: var(--montserrat-font);
+        font-weight: bold;
+        text-transform: uppercase;
+        color: white;
+        transition: background-color 0.3s, color 0.3s;
+        display: block;
+        margin: auto;
+        text-align: center;
+}
+
+.view-more-home:hover{
+    background-color: rgb(239, 155, 52);
+}
+
+.promo-section {
+    position: relative;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    width: 92%;
+    height: 340px;
+    padding: 50px;
+    margin-top: 100px;
+    
+    text-align: left;
+    
+    border-radius: 15px;
+    background-color: #B075ED;
+}
+
+.promo-image {
+    position: absolute;
+    right: 80px;
+    bottom: 0;
+    width: auto;
+    height: 450px;
+    margin-left: 40px;
+    border-radius: 15px;
+}
+
+.promo-text {
+    max-width: 600px;
+    padding: 20px;
+    left: 10px; 
+}
+
+.promo-heading {
+    font-family: var(--bogart-medium);
+    font-size: 2.3rem;
+    color: var(--cor-fonte-branco);
+    margin-bottom: 15px;
+}
+
+.promo-paragraph {
+    font-family: var(--poppins-font);
+    font-size: 1rem;
+    color: var(--cor-fonte-branco);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.promo-link {
+    font-family: var(--poppins-font);
+    font-size: 1rem;
+    color: var(--cor-fonte-branco);
+    text-decoration: underline;
+}
+
+.help-section {
+    background-color: #E6E6FA; 
+    padding: 40px;
+    width: 92%;
+    text-align: center;
+    border-radius: 15px;
+    margin-top: 100px;
+}
+
+.help-heading {
+    font-family: var(--bogart-medium);
+    font-size: 2.5rem;
+    color: var(--cor-fonte-principal);
+    margin-bottom: 40px;
+}
+
+.service-container {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0 80px;
+}
+
+.service-item {
+    display: flex;
+    gap: 25px;
+    text-align: left;
+    margin: 10px;
+}
+
+.service-item div {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    margin-top: 12px;
+}
+
+.service-icon {
+    width: 120px; 
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.service-title {
+    font-family: var(--montserrat-font);
+    font-weight: bold;
+    font-size: 1.7rem;
+    color: var(--cor-fonte-principal);
+    margin-bottom: 5px;
+}
+
+.service-text {
+    font-family: var(--montserrat-font);
+    font-weight: normal;
+    font-size: 1.3rem;
+    color: #333; 
+}

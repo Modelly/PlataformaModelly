@@ -1,1 +1,0 @@
-// vai ser o arquivo onde vai armazenar as rotas de cada página do site

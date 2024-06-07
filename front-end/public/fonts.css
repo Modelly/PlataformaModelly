@@ -1,0 +1,144 @@
+/* fonts.css */
+@font-face {
+    font-family: 'Bogart Black Italic';
+    font-style: italic;
+    font-weight: 900;
+    src: local('Bogart Black Italic'), 
+         url('../public/fonts/Bogart-Black-Italic-trial.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Bogart Black';
+    font-style: normal;
+    font-weight: 900;
+    src: local('Bogart Black'), 
+         url('../public/fonts/Bogart-Black-trial.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Bogart Bold Italic';
+    font-style: italic;
+    font-weight: 700;
+    src: local('Bogart Bold Italic'), 
+         url('../public/fonts/Bogart-Bold-Italic-trial.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Bogart Bold';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Bogart Bold'), 
+         url('../public/fonts/Bogart-Bold-trial.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Bogart Extrabold Italic';
+    font-style: italic;
+    font-weight: 600;
+    src: local('Bogart Extrabold Italic'), 
+         url('../public/fonts/Bogart-Extrabold-Italic-trial.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Bogart Extrabold';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Bogart Extrabold'), 
+         url('../public/fonts/Bogart-Extrabold-trial.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Bogart Extralight Italic';
+    font-style: italic;
+    font-weight: 300;
+    src: local('Bogart Extralight Italic'), 
+         url('../public/fonts/Bogart-Extralight-Italic-trial.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Bogart Extralight';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Bogart Extralight'), 
+         url('../public/fonts/Bogart-Extralight-trial.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Bogart Italic';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Bogart Italic'), 
+         url('../public/fonts/Bogart-Italic-trial.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Bogart Light Italic';
+    font-style: italic;
+    font-weight: 200;
+    src: local('Bogart Light Italic'), 
+         url('../public/fonts/Bogart-Light-Italic-trial.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Bogart Light';
+    font-style: normal;
+    font-weight: 200;
+    src: local('Bogart Light'), 
+         url('../public/fonts/Bogart-Light-trial.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Bogart Medium Italic';
+    font-style: italic;
+    font-weight: 500;
+    src: local('Bogart Medium Italic'), 
+         url('../public/fonts/Bogart-Medium-Italic-trial.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Bogart Medium';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Bogart Medium'), 
+         url('../public/fonts/Bogart-Medium-trial.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Bogart Regular';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Bogart Regular'), 
+         url('../public/fonts/Bogart-Regular-trial.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Bogart Semibold Italic';
+    font-style: italic;
+    font-weight: 600;
+    src: local('Bogart Semibold Italic'), 
+         url('../public/fonts/Bogart-Semibold-Italic-trial.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Bogart Semibold';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Bogart Semibold'), 
+         url('../public/fonts/Bogart-Semibold-trial.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Bogart Thin Italic';
+    font-style: italic;
+    font-weight: 100;
+    src: local('Bogart Thin Italic'), 
+         url('../public/fonts/Bogart-Thin-Italic-trial.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Bogart Thin';
+    font-style: normal;
+    font-weight: 100;
+    src: local('Bogart Thin'), 
+         url('../public/fonts/Bogart-Thin-trial.ttf') format('truetype');
+}
