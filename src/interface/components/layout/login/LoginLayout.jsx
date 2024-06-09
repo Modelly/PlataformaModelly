@@ -1,4 +1,3 @@
-import React from 'react';
 import { useState } from 'react';
 import * as Components from './Components';
 import styled from 'styled-components';

@@ -1,4 +1,3 @@
-import React from 'react';
 import bannerImage from '../../../../assets/images/imgs-home/banner-image.png';
 import decoracaoImg from '../../../../assets/images/imgs-home/decoracao.png';
 import acessoriosImg from '../../../../assets/images/imgs-home/acessorios.png';

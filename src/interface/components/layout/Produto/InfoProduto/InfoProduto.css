@@ -1,0 +1,197 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.subText {
+    color: #545454;
+}
+
+/* elemento pai do componente */
+.ProdutoContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+}
+
+#caminhoProduto {
+    margin-left: 260px;
+}
+
+/*Estilizando as imagens do produto*/
+.imagens-produto {
+    display: flex;
+    flex-direction: row;
+    width: 45%;
+}
+
+.img-ltrl {
+    position: relative;
+    width: 70px;
+    height: 68px;
+    background-color: #F0C9FF;
+    border-radius: 4.5px;
+    margin: 30px 50px;
+}
+
+#img-principal {
+    position: relative;
+    width: 700px;
+    height: auto;
+    object-fit: cover;
+}
+
+/*Estilizando as informações do conteúdo*/
+#Container-Infos {
+    width: 30%;
+}
+
+#Content-InfosProduto {
+    position: relative;
+}
+
+#preco {
+    color: green;
+    font-size: 38px;
+    margin: 10px 0px;
+}
+
+.InfosProduto {
+    margin-bottom: 40px;
+}
+
+/*Estilizando os botões*/
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    font-weight: 600;
+
+    width: 285.5px;
+    height: 47.5px;
+    border-radius: 15px;
+}
+
+#btn_roxo {
+    background-color: #361A5C;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+#btn_rosa {
+    background-color: #F0C9FF;
+    color: #361A5C;
+}
+
+#CarrinhoIcone {
+    position: relative;
+    width: 34px;
+    height: 35px;
+    margin: 0px 15px;
+}
+
+/*Estilizando a parte de pagamentos*/
+#ContentPagamento {
+    position: relative;
+    width: 285.5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#ContentPagamento img {
+    position: relative;
+    width: 28px;
+    height: 72px;
+}
+
+#ContentPagamento #pix {
+    height: 23px;
+}
+
+#Box-InfosPagamento {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+#textoEsquerda, #textoDireita {
+    width: auto;
+    font-size: 14px;
+}
+
+#textoEsquerda {
+    border-right: 1px solid black;
+    padding-right: 5%;
+}
+
+#textoDireita {
+    border-left: 1px solid black;
+    padding-left: 5%;
+}
+
+/*Estilizando box da loja*/
+#Container-PefilLoja {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+    font-size: 14px;
+    color: #D11F52;
+
+    width: 332.5px;
+    height: 270px;
+    padding: 20px;
+    margin-top: 30px;
+    
+    border-radius: 9px;
+    border: 2px solid #D11F52;
+    box-shadow: 5px 5px 0px #d11f51ce;;
+  }
+  
+
+#Container-PefilLoja > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#Container-PefilLoja > div button {
+    padding: 10px;
+    background-color: #D11F52;
+    color: #fff;
+    border-radius: 7px;
+}
+
+#Container-PefilLoja > div #Foto-perfil {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #545454;
+    margin-right: 20px;
+}
+
+#Container-PefilLoja .textRosa {
+    color: #D11F52;
+    margin-bottom: 5px;
+}
+
+#btn-ContatarVendedor {
+    border: 2px solid #D11F52;
+    border-radius: 9px;
+}
+
+

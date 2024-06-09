@@ -1,4 +1,3 @@
-import React from 'react';
 import './Navbar.css';
 import logo from '../../../../assets/images/imgs-nav/modelly-logo.png';
 import lupa from '../../../../assets/images/imgs-nav/lupa-icon.png';

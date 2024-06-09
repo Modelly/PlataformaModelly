@@ -1,4 +1,3 @@
-import React from 'react';
 import footerBg from '../../../../assets/images/imgs-footer/footer-bg.png';
 import visaIcon from '../../../../assets/images/imgs-footer/Visa.png';
 import mastercardIcon from '../../../../assets/images/imgs-footer/MasterCard.png';

@@ -1,6 +1,4 @@
 // Personalizado.jsx
-import React from 'react';
-
 const Personalizado = () => {
   return (
     <div>
