@@ -45,9 +45,9 @@ function Produto() {
       <div>
         <Descricao />
         
-        <div id="dir">
+        <div id="Container-ProdutosSimilares">
           <h3>Produto similar da loja</h3>
-          <div id="o-p">
+          <div>
             {
               dbProducts.map((produto, index) => (
                 <a key={index} className="price-product" style={{ backgroundImage: `url(${produto.img_bg})` }}>

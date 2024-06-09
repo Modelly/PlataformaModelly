@@ -17,19 +17,21 @@ main > div {
   flex-direction: row;
   justify-content: center;
   gap: 5%;
+
+  margin-top: 50px;
 }
 
-#dir {
+#Container-ProdutosSimilares {
   width: 30%;
 }
 
-#dir h3 {
+#Container-ProdutosSimilares h3 {
   text-align: center;
   font-size: 23px;
   color: #361A5C;
 }
 
-#o-p {
+#Container-ProdutosSimilares > div{
   position: relative;
 
   display: flex;
