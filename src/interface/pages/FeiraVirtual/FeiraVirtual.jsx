@@ -1,7 +1,13 @@
+import FeiraLayout from "../../components/layout/FeiraVirtual/FeiraLayout";
+import Navbar from "../../components/layout/Navbar/Navbar"
+import Footer from "../../components/layout/Footer/Footer"
+
 const FeiraVirtual = () => {
   return (
     <div>
-      <h1>Feira Virtual</h1>
+      <Navbar />
+      <FeiraLayout />
+      <Footer />
     </div>
   );
 };

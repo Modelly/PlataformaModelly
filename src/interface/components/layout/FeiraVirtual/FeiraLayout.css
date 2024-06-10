@@ -1,0 +1,83 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#TitleRosa {
+    margin-bottom: 20px;
+    font-size: 60px;
+    color: #D11F52;
+}
+
+#TitleRoxo {
+    margin-bottom: 20px;
+    font-size: 60px;
+    color: #361A5C;
+}
+
+.NormalText {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.sectionFeira {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 2%;
+    
+    width: 100%;
+    height: 55vh;
+    margin: 120px 0 200px 0;
+}
+
+/* Bem Vindo à Feira Virtual */
+#Conteiner-BemVindoFeira > div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 38%;
+    height: 100%;
+}
+
+#btn-box {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#btn-box button {
+    font-size: 18px;
+    font-weight: 800;
+    
+    padding: 10px 20px;
+    border-radius: 5px;
+
+    color: white;
+    background-color: #FCD400;
+}
+
+#Conteiner-BemVindoFeira > article {
+    width: 50%;
+}
+
+#VideoFeira {
+    width: 100%;
+    height: 100%;
+
+    box-shadow: 0 0 20px #3c1266b7;
+
+    border-radius: 10px;
+    background-color: #B075ED;
+}
+
+/* Como funciona à Feira Virtual */
+#container-ComoFunciona  {
+
+}
+
+#container-ComoFunciona img {
+    height: 500px;
+    object-fit: cover;
+}
