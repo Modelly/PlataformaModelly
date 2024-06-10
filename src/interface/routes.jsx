@@ -7,6 +7,7 @@ import Personalizado from '../interface/pages/Personalizado/Personalizado';
 import Sobre from './pages/Sobre/Sobre';
 import Cadastro from './pages/Cadastro/Cadastro';
 import Carrinho from './pages/Carrinho/Carrinho';
+import CadastroProduto from './pages/Cad_Produto/Cad_Product';
 
 const AppRoutes = () => {
     return (
@@ -21,6 +22,7 @@ const AppRoutes = () => {
                     <Route path="/sobre" element={<Sobre/>} />
                     <Route path="/cadastro" element={<Cadastro/>}/>
                     <Route path="/carrinho" element={<Carrinho/>}/>
+                    <Route path="/Cadastro_Produto" element={<CadastroProduto/>}/>
                 </Routes>         
             </div>
         </Router>

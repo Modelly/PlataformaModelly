@@ -1,0 +1,245 @@
+/* Cadastro_Produto.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Poppins:wght@100..900&display=swap');
+
+:root {
+    --cor-primaria: #9B59B6;
+    --cor-secundaria: #361A5C;
+    --cor-background: #FBFAFA;
+    --cor-fonte-principal: #361A5C;
+    --cor-fonte-branco: #fff;
+    --poppins-font: 'Poppins', sans-serif;
+    --montserrat-font: 'Montserrat', sans-serif;
+}
+
+body {
+    font-family: var(--poppins-font);
+    background-color: var(--cor-background);
+    margin: 0;
+    padding: 0;
+    color: var(--cor-secundaria);
+}
+
+.cadastro-produto-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: var(--cor-background);
+    background-size: cover;
+    background-position: center;
+    gap: 80px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.produto-imagem img {
+    width: 300px;
+    height: auto;
+}
+
+.produto-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.form-section {
+    background-color: var(--cor-fonte-branco);
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.fotos-produto {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.fotos-upload {
+    display: flex;
+    flex-direction: row;
+    gap: 2.8rem !important;
+    margin-left: 13px;
+}
+
+.fotos-upload input[type="file"] {
+    display: none;
+}
+.fotos-upload img {
+    width: 100px;
+    height: auto;
+}
+
+.fotos-upload label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.campo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.campo-form label {
+    font-weight: bold;
+    color: var(--cor-secundaria);
+}
+
+.campo-form input[type="text"],
+.campo-form textarea {
+    width: 90%;
+    padding: 10px;
+    border: 1.9px solid var(--cor-secundaria);
+    border-radius: 5px;
+    color: var(--cor-secundaria);
+    font-size: 16px;
+    margin-top: 8px; 
+}
+
+.campo-descricao-produto textarea{
+    width: 90%;
+    height: 100px;
+    padding: 10px;
+    border: 1.9px solid var(--cor-secundaria);
+    border-radius: 5px;
+    color: var(--cor-secundaria);
+    font-size: 16px;
+    margin-top: 8px; 
+}
+
+.campo-form select {
+    width: 23%;
+    padding: 10px;
+    border: 1.9px solid var(--cor-secundaria);
+    border-radius: 5px;
+    color: var(--cor-secundaria);
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+.campo-form input[type="number"] {
+    width: 30%;
+    padding: 10px;
+    border: 1.9px solid var(--cor-secundaria);
+    border-radius: 5px;
+    color: var(--cor-secundaria);
+    font-size: 16px;
+    margin-top: 8px;
+}
+.campo-preco input[type="text"] {
+    width: 30%;
+    padding: 10px;
+    border: 1.9px solid var(--cor-secundaria);
+    border-radius: 5px;
+    color: var(--cor-secundaria);
+    font-size: 16px;
+    margin-top: 8px;
+  }
+  
+  .campo-estoque input[type="number"] {
+    width: 30%;
+    padding: 10px;
+    border: 1.9px solid var(--cor-secundaria);
+    border-radius: 5px;
+    color: var(--cor-secundaria);
+    font-size: 16px;
+    margin-top: 8px;
+  }
+
+  .campo-envio .campo-peso input[type="text"] {
+    width: 23%;
+    padding: 10px;
+    border: 1.9px solid var(--cor-secundaria);
+    border-radius: 5px;
+    color: var(--cor-secundaria);
+    font-size: 15px;
+    margin-top: -2px;
+  }
+
+  .campo-envio {
+    background-color: var(--cor-fonte-branco); 
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+  }
+
+  .campo-envio .tamanho-pacote input[type="text"] {
+    width: 23%;
+    padding: 12px;
+    border: 1.9px solid var(--cor-secundaria);
+    border-radius: 5px;
+    color: var(--cor-secundaria);
+    font-size: 15px;
+    margin-top: 2px;
+  }
+  
+.envio-fields label,
+.sob-encomenda label {
+    font-size: 18px;
+}
+
+.envio-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.envio-fields .campo-form {
+    flex: 1;
+}
+
+.tamanho-pacote {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.sob-encomenda {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.sob-encomenda p {
+    font-weight: normal !important;
+}
+
+.sob-encomenda div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.campo-form input[type="radio"] {
+    margin-right: 5px;
+}
+
+.produto-form button {
+    align-self: center;
+    background-color: var(--cor-primaria);
+    color: var(--cor-fonte-branco);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 77%;
+}
+
+.produto-form button:hover {
+    background-color: var(--cor-secundaria);
+}
