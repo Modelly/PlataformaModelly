@@ -1,0 +1,59 @@
+#ProdutoCarrinho {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(122, 122, 122, 0.363);
+}
+
+/* ESTRILIZAÇÃO DA Infos DO PRODUTO (NOME, Infos, BTN DE AÇÃO */
+#InfosProdutoCarrinho {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+#InfosProdutoCarrinho h2 {
+    color: #361A5C;
+    margin-bottom: 5px;
+}
+
+#InfosProdutoCarrinho p {
+    color: rgba(88, 88, 88, 0.747);
+    margin-bottom: 20px;
+}
+
+#InfosProdutoCarrinho > div {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+
+#InfosProdutoCarrinho button {
+    color: #361A5C;
+    font-size: 16px;
+
+    background: none;
+}
+
+/*Estilização do botão de quantidade*/
+#QuantidadeProdutoCarrinho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 30%;
+}
+
+#QuantidadeProdutoCarrinho > div {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    
+    width: 50%;
+    border-radius: 10px;
+    background-color: white;
+}

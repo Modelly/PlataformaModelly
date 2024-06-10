@@ -1,10 +1,12 @@
+import './InfoProduto.css'
+
+import { Link } from 'react-router-dom';
+
 import imagemPrincipal from '../../../../../assets/images/imgs-produto/imagem-principal.png';
 import shoppingCart from '../../../../../assets/images/imgs-produto/Shopping-Cart.png';
 import mC from '../../../../../assets/images/imgs-produto/m-c.png';
 import barcode from '../../../../../assets/images/imgs-produto/Barcode.png';
 import pix from '../../../../../assets/images/imgs-produto/pix.png';
-
-import './InfoProduto.css'
 
 function InfoProduto() {
     return(
@@ -50,9 +52,9 @@ function InfoProduto() {
 
 
                         <a href="#" className="btn" id="btn_roxo">Comprar agora</a>
-                        <a href="#" className="btn" id="btn_rosa">
+                        <Link to="/carrinho" className="btn" id="btn_rosa">
                             <img id="CarrinhoIcone" src={shoppingCart} alt="Shopping Cart" />Adicionar ao carrinho
-                        </a>
+                        </Link>
                         
                         <div id="ContentPagamento">
                             <h4>Meios de pagamento:</h4>

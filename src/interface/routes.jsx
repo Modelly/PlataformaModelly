@@ -6,6 +6,7 @@ import FeiraVirtual from '../interface/pages/FeiraVirtual/FeiraVirtual';
 import Personalizado from '../interface/pages/Personalizado/Personalizado';
 import Sobre from './pages/Sobre/Sobre';
 import Cadastro from './pages/Cadastro/Cadastro';
+import Carrinho from './pages/Carrinho/Carrinho';
 
 const AppRoutes = () => {
     return (
@@ -19,6 +20,7 @@ const AppRoutes = () => {
                     <Route path="/login" element={<Login/>} />
                     <Route path="/sobre" element={<Sobre/>} />
                     <Route path="/cadastro" element={<Cadastro/>}/>
+                    <Route path="/carrinho" element={<Carrinho/>}/>
                 </Routes>         
             </div>
         </Router>

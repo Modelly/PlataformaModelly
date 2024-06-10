@@ -19,7 +19,9 @@ const Navbar = () => {
                     <img src={lupa} alt="Lupa de pesquisa" className="lupa-icon" />
                 </div>
                 <div className='icons'>
-                    <img src={cartIcon} alt="Carrinho" className="icon" />
+                    <Link to="/carrinho">
+                        <img src={cartIcon} alt="Carrinho" className="icon" />
+                    </Link>
                     <img src={heartIcon} alt="Favoritos" className="icon" />
                     <Link to="/login" className='login-link'>
                         <img src={userIcon} alt="Ícone de usuário" className="user-icon" />
