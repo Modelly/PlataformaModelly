@@ -48,6 +48,9 @@
 }
 
 #btn-box button {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
     font-size: 18px;
     font-weight: 800;
     

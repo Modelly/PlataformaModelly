@@ -1,5 +1,7 @@
 import './FeiraLayout.css'
 import conjuntoImage from "../../../../assets/images/imgs-feira/artes-conjunto.png"
+import iconeFeira from "../../../../assets/images/imgs-feira/feiraIcone.png"
+import iconeTicket from "../../../../assets/images/imgs-feira/Ticket.png"
 
 function FeiraLayout() {
     return(
@@ -9,8 +11,14 @@ function FeiraLayout() {
                     <h1 id="TitleRosa" >Bem-vindo(a) à<br />nossa Feira Virtual</h1>
                     <p className='NormalText'>Explore uma experiência única de compras online, onde você pode encontrar uma ampla variedade de obras de arte originais e exclusivas.</p>
                     <div id="btn-box">
-                        <button>Inscrição Expositor(a)</button>
-                        <button>Convite Consumidor(a)</button>
+                        <button>
+                            <img src={iconeFeira} alt="Icone feira" />
+                            Inscrição Expositor(a)
+                        </button>
+                        <button>
+                            <img src={iconeTicket} alt="icone ticket" />
+                            Convite Consumidor(a)
+                        </button>
                     </div>
                 </div>
                 <article>
