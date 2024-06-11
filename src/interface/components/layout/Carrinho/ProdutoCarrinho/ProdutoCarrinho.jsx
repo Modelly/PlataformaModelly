@@ -22,7 +22,7 @@ function ProdutoCarrinho(props) {
                 </div>
                 <span>100 disponiveis</span>
             </div>
-            <div>
+            <div id="BoxPreco">
                 <span>{props.PrecoProduto}</span>
                 <button>Comprar</button>
             </div>

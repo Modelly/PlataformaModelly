@@ -26,10 +26,47 @@
 }
 
 #BoxInfoCarrinho {
+    display: flex;
+    flex-direction: column;
+    
     width: 30%;
-    height: 300px;
+    height: 270px;
     padding: 20px;
 
     border-radius: 10px;
     background-color: #EFC7FF;
+}
+
+#BoxInfoCarrinho button {
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #FCD400;
+}
+
+.Box-InfoResumoCompra {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5px;
+
+}
+
+.Box-InfoResumoCompra span {
+    margin-bottom: 10px;
+    color: #A972BF;
+}
+
+#BoxInforPrecoTotal {
+    margin: 20px 0 10px;
+}
+
+#Testrosa {
+    color: #D11F52;
+}
+
+#boldText {
+    color: black;
+    font-weight: 900;
 }

@@ -39,6 +39,20 @@ function CarrinhoLayout() {
             </div>
             <aside id='BoxInfoCarrinho'>
                 <h1 className="TitleCarrinho">Resumo da compra</h1>
+                <div className='Box-InfoResumoCompra'>
+                    <span>Produtos(2)</span>
+                    <span>R$ 158,90</span>
+                </div>
+                <div className='Box-InfoResumoCompra'>
+                    <span>Frete</span>
+                    <span>Grátis</span>
+                </div>
+                <div className='Box-InfoResumoCompra' id="BoxInforPrecoTotal">
+                    <span id='Testrosa'>Total</span>
+                    <span id='boldText'>R$ 158,90</span>
+                </div>
+                <button>Continuar compra</button>
+
             </aside>
         </div>
     )
