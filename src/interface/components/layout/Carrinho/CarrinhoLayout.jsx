@@ -35,7 +35,6 @@ function CarrinhoLayout() {
                         />
                     ))
                 }
-                
             </div>
             <aside id='BoxInfoCarrinho'>
                 <h1 className="TitleCarrinho">Resumo da compra</h1>
