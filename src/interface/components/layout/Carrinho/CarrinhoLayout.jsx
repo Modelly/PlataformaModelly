@@ -35,6 +35,10 @@ function CarrinhoLayout() {
                         />
                     ))
                 }
+                <div id="BoxProgresso">
+                    <progress value="70" max="100"></progress>
+                    Frete Grátis!
+                </div>
             </div>
             <aside id='BoxInfoCarrinho'>
                 <h1 className="TitleCarrinho">Resumo da compra</h1>
@@ -51,7 +55,6 @@ function CarrinhoLayout() {
                     <span id='boldText'>R$ 158,90</span>
                 </div>
                 <button>Continuar compra</button>
-
             </aside>
         </div>
     )

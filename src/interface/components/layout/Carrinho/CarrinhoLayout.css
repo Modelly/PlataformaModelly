@@ -4,25 +4,65 @@
     gap: 4%;
     
     width: 100%;
-    height: 50vh;
+    height: auto;
     padding: 30px;
+    margin-bottom: 100px;
 }
 
 .TitleCarrinho {
     color: #361A5C;
 
-    width: 100%;
-    padding: 10px 0 20px 0;
+    width: 96%;
+    padding: 20px 0 10px;
+    margin: 0 20px;
+    margin-bottom: 10px;
+ 
     border-bottom: 1px solid rgba(122, 122, 122, 0.363);
 }
 
 #BoxCarrinho {
     width: 65%;
-    height: 405px;
-    padding: 20px;
+    height: auto;
+    padding: 0px;
 
     border-radius: 20px;
     background-color: #EFC7FF;
+}
+
+#BoxProgresso {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    width: 100%;
+    padding: 20px;
+
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    font-weight: 600;
+    color: white;
+
+    background-color: #B075ED;
+}
+
+#BoxProgresso progress {
+    width: 100%;
+}
+
+#BoxProgresso progress::-webkit-progress-bar {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #f3f3f3;
+}
+
+#BoxProgresso progress::-webkit-progress-value {
+    background-color: #4caf50;
+    border-bottom-left-radius: 10px;
+}
+
+#BoxProgresso progress::-moz-progress-bar {
+    background-color: #4caf50;
 }
 
 #BoxInfoCarrinho {
@@ -31,7 +71,6 @@
     
     width: 30%;
     height: 270px;
-    padding: 20px;
 
     border-radius: 10px;
     background-color: #EFC7FF;
@@ -40,6 +79,7 @@
 #BoxInfoCarrinho button {
     border-radius: 15px;
     padding: 10px 20px;
+    margin: 0 20px;
     font-size: 16px;
     color: white;
     background-color: #FCD400;
@@ -50,6 +90,7 @@
     flex-direction: row;
     justify-content: space-between;
     margin-top: 5px;
+    margin: 0 20px;
 
 }
 
@@ -59,7 +100,7 @@
 }
 
 #BoxInforPrecoTotal {
-    margin: 20px 0 10px;
+    margin: 20px 20px 10px 20px;
 }
 
 #Testrosa {
