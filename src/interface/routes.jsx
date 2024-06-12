@@ -8,6 +8,9 @@ import Sobre from './pages/Sobre/Sobre';
 import Cadastro from './pages/Cadastro/Cadastro';
 import Carrinho from './pages/Carrinho/Carrinho';
 import CadastroProduto from './pages/Cad_Produto/Cad_Product';
+import Vendedor from './pages/Vendedor/Vendedor.jsx';
+import Popup from './components/layout/Seja_Vendedor/VendedorLayout.jsx';
+import Cadastro_VendedorLayout from './components/layout/Cadastro_Vendedor/Cadastro_VendedorLayout.jsx';
 
 const AppRoutes = () => {
     return (
@@ -15,14 +18,17 @@ const AppRoutes = () => {
             <div className='container'>
                 <Routes>
                     <Route path="/" element={<Home />} />
+                    <Route path="/seja-vendedor" element={<Vendedor/>}/>
                     <Route path="/produto" element={<Produto />} />
                     <Route path="/personalizado" element={<Personalizado/>} />
                     <Route path="/feira-virtual" element={<FeiraVirtual/>} />
                     <Route path="/login" element={<Login/>} />
                     <Route path="/sobre" element={<Sobre/>} />
-                    <Route path="/cadastro" element={<Cadastro/>}/>
-                    <Route path="/carrinho" element={<Carrinho/>}/>
-                    <Route path="/Cadastro_Produto" element={<CadastroProduto/>}/>
+                    <Route path="/cadastro" element={<Cadastro/>} />
+                    <Route path="/carrinho" element={<Carrinho/>} />
+                    <Route path="/Cadastro_Produto" element={<CadastroProduto/>} />
+                    <Route path="/" element={<Popup/>} />
+                    <Route path="/cadastrar-vendedor" element={<Cadastro_VendedorLayout/>} />
                 </Routes>         
             </div>
         </Router>
