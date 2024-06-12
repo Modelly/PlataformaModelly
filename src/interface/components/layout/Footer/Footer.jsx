@@ -19,7 +19,7 @@ const Footer = () => {
     return (
         <footer className="footer" style={{ backgroundImage: `url(${footerBg})` }}>
             <div className="footer-content">
-                <div className="footer-column">
+                <div className="footer-column customer-service">
                     <img src={logo} alt="Logo" className="footer-logo" />
                     <h4>ATENDIMENTO AO CLIENTE</h4>
                     <ul>
@@ -29,7 +29,7 @@ const Footer = () => {
                         <li><a href="#">Preferências e Cookies</a></li>
                     </ul>
                 </div>
-                <div className="footer-column">
+                <div className="footer-column about">
                     <h4>SOBRE A MODELLY</h4>
                     <ul>
                         <li><a href="#">Sobre Nós</a></li>
@@ -38,25 +38,25 @@ const Footer = () => {
                         <li><a href="#">Parcerias</a></li>
                     </ul>
                 </div>
-                <div className="footer-column">
+                <div className="footer-column payment-methods">
                     <h4>MÉTODOS DE PAGAMENTO</h4>
                     <div className="payment-icons">
                         <img src={visaIcon} alt="Visa" />
                         <img src={mastercardIcon} alt="Mastercard" />
                         <img src={amexIcon} alt="American Express" />
                         <img src={dinersIcon} alt="Discover" />
-                        <img src={barcodeIcon} alt="Barcode" />
-                        <img src={pixIcon} alt="Pix" />
+                        <img className='img-barcode' src={barcodeIcon} alt="Barcode" />
+                        <img className="pix-pix" src={pixIcon} alt="Pix" />
                     </div>
                 </div>
-                <div className="footer-column">
+                <div className="footer-column follow-us">
                     <h4>SIGA-NOS</h4>
                     <div className="social-icons">
-                        <a href="https://www.instagram.com"><img src={instagramIcon} alt="Instagram" /></a>
-                        <a href="https://www.tiktok.com"><img src={tiktokIcon} alt="TikTok" /></a>
-                        <a href="https://www.linkedin.com"><img src={linkedinIcon} alt="LinkedIn" /></a>
-                        <a href="https://www.github.com"><img src={githubIcon} alt="GitHub" /></a>
-                        <a href="https://www.linktree.com"><img src={linktreeIcon} alt="Linktree" /></a>
+                        <a href="https://www.instagram.com"><img src={instagramIcon} alt="Instagram" /><span>Instagram</span></a>
+                        <a href="https://www.tiktok.com"><img src={tiktokIcon} alt="TikTok" /><span>TikTok</span></a>
+                        <a href="https://www.linkedin.com"><img src={linkedinIcon} alt="LinkedIn" /><span>LinkedIn</span></a>
+                        <a href="https://www.github.com"><img src={githubIcon} alt="GitHub" /><span>GitHub</span></a>
+                        <a href="https://www.linktree.com"><img src={linktreeIcon} alt="Linktree" /><span>Linktree</span></a>
                     </div>
                 </div>
             </div>
