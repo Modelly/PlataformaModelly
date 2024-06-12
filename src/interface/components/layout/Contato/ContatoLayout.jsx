@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Contato.css';
 
-const ContactForm = () => {
+const Contato = () => {
   const [filePreview, setFilePreview] = useState(null);
 
   const handleFileChange = (event) => {
@@ -81,4 +81,4 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm;
+export default Contato;
