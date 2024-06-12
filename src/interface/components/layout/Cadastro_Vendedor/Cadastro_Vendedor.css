@@ -14,37 +14,33 @@
     --bogart-medium: "Bogart Bold", sans-serif;
 }
 
-@font-face {
-    font-family: 'Bogart Bold';
-    font-style: normal;
-    font-weight: 500;
-    src: local('Bogart Bold'), 
-         url('../fonts/Bogart-Bold-trial.ttf') format('truetype');
-}
-
 .form-container {
     font-family: var(--poppins-font);
     background-color: var(--cor-background);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    font-family: var(--poppins-font);
 }
 
 .steps {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+    font-family: var(--poppins-font);
 }
 
 .step {
     padding: 10px;
     border-bottom: 3px solid var(--cor-primaria);
     cursor: pointer;
+    font-family: var(--poppins-font);
 }
 
 .step.active {
     font-weight: bold;
     color: var(--cor-primaria);
+    font-family: var(--poppins-font);
 }
 
 .step-content {
@@ -52,10 +48,11 @@
     border: 1px solid var(--cor-primaria);
     border-radius: 10px;
     background-color: #fff;
+    font-family: var(--poppins-font);
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 25px !important;
 }
 
 .form-group label {
@@ -70,6 +67,7 @@
     padding: 10px;
     border: 1px solid var(--cor-primaria);
     border-radius: 5px;
+    font-family: var(--poppins-font);
 }
 
 .form-group input[type="checkbox"] {
@@ -86,6 +84,7 @@
     padding: 10px;
     border: 1px solid var(--cor-primaria);
     border-radius: 5px;
+    font-family: var(--poppins-font);
 }
 
 .verification-group {
