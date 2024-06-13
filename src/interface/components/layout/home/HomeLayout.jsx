@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import bannerImage from '../../../../assets/images/imgs-home/banner-image.png';
 import decoracaoImg from '../../../../assets/images/imgs-home/decoracao.png';
 import acessoriosImg from '../../../../assets/images/imgs-home/acessorios.png';
@@ -17,21 +18,23 @@ import categoria from '../../../../assets/images/imgs-home/Categorize.png';
 import { Link } from 'react-router-dom';
 import styleHome from './HomeLayout.module.css';
 
-const categories = [
-    { name: 'Decoração', img: decoracaoImg },
-    { name: 'Acessórios', img: acessoriosImg },
-    { name: 'Velas', img: velasImg },
-    { name: 'Moda', img: modaImg },
-    { name: 'Pets', img: petsImg },
-    { name: 'Infantil', img: infantilImg },
-    { name: 'Sociais', img: sociaisImg },
-    { name: 'Casa', img: casaImg },
-    { name: 'Personalizado', img: personalizadoImg },
-];
-
-const products = Array(8).fill({ name: 'Nome do produto', description: 'Descrição do produto', price: 'R$00,00', img: productImg });
-
 const HomeLayout = () => {
+    const { t } = useTranslation();
+
+    const categories = [
+        { name: t('categories.decoracao'), img: decoracaoImg },
+        { name: t('categories.acessorios'), img: acessoriosImg },
+        { name: t('categories.velas'), img: velasImg },
+        { name: t('categories.moda'), img: modaImg },
+        { name: t('categories.pets'), img: petsImg },
+        { name: t('categories.infantil'), img: infantilImg },
+        { name: t('categories.sociais'), img: sociaisImg },
+        { name: t('categories.casa'), img: casaImg },
+        { name: t('categories.personalizado'), img: personalizadoImg },
+    ];
+
+    const products = Array(8).fill({ name: t('product.name'), description: t('product.description'), price: t('product.price'), img: productImg });
+
     return (
         <div className={styleHome.home_container}>
             <div className={styleHome.home_bannerImage_container}>
@@ -46,7 +49,7 @@ const HomeLayout = () => {
                 ))}
             </div>
             <div className={styleHome.recommendations_container}>
-                <h2 className={styleHome.recommendations_heading}>Recomendações Diárias</h2>
+                <h2 className={styleHome.recommendations_heading}>{t('recommendations')}</h2>
                 <div className={styleHome.products_container}>
                     {products.map((product, index) => (
                         <div key={index} className={styleHome.product_card}>
@@ -56,55 +59,52 @@ const HomeLayout = () => {
                                 <p className={styleHome.product_description}>{product.description}</p>
                                 <div className={styleHome.product_footer}>
                                     <p className={styleHome.product_price}>{product.price}</p>
-                                    <button className={styleHome.view_more_button}>Ver mais</button>
+                                    <button className={styleHome.view_more_button}>{t('buttons.view_more')}</button>
                                 </div>
                             </Link>
                         </div>
                     ))}
                 </div>
             </div>
-            <button className={styleHome.view_more_home}>Ver mais</button>
+            <button className={styleHome.view_more_home}>{t('buttons.view_more')}</button>
             <div className={styleHome.promo_section}>
                 <div className={styleHome.promo_text}>
-                    <h3 className={styleHome.promo_heading}>Se é especial,<br/> você encontra aqui.</h3>
-                    <p className={styleHome.promo_paragraph}>
-                        Somos uma plataforma que valoriza e enaltece o trabalho <br/> dos artistas brasileiros,
-                        conectando-os com um público<br/> amplo e apreciador da arte feita à mão.
-                    </p>
-                    <a href="/sobre" className={styleHome.promo_link}>Conheça a nossa história</a>
+                    <h3 className={styleHome.promo_heading} dangerouslySetInnerHTML={{ __html: t('promo.heading') }}></h3>
+                    <p className={styleHome.promo_paragraph} dangerouslySetInnerHTML={{ __html: t('promo.paragraph') }}></p>
+                    <a href="/sobre" className={styleHome.promo_link}>{t('promo.link')}</a>
                 </div>
                 <img src={catImage} alt="Promo Cat" className={styleHome.promo_image} />
             </div>
 
             <div className={styleHome.help_section}>
-                <h2 className={styleHome.help_heading}>Precisa de Ajuda?</h2>
+                <h2 className={styleHome.help_heading}>{t('help.heading')}</h2>
                 <div className={styleHome.service_container}>
                     <div className={styleHome.service_item}>
                         <img src={dinheiro} alt="Pagamento" className={styleHome.service_icon} />
                         <div>
-                            <h4 className={styleHome.service_title}>Pagamento</h4>
-                            <p className={styleHome.service_text}>Pague suas compras com <br/> rapidez e segurança</p>
+                            <h4 className={styleHome.service_title}>{t('help.payment.title')}</h4>
+                            <p className={styleHome.service_text} dangerouslySetInnerHTML={{ __html: t('help.payment.text') }}></p>
                         </div>
                     </div>
                     <div className={styleHome.service_item}>
                         <img src={devolucao} alt="Devolução" className={styleHome.service_icon} />
                         <div>
-                            <h4 className={styleHome.service_title}>Devolução</h4>
-                            <p className={styleHome.service_text}>Você pode devolver sua  <br/> compra grátis</p>
+                            <h4 className={styleHome.service_title}>{t('help.return.title')}</h4>
+                            <p className={styleHome.service_text} dangerouslySetInnerHTML={{ __html: t('help.return.text') }}></p>
                         </div>
                     </div>
                     <div className={styleHome.service_item}>
                         <img src={perfil} alt="Perfil" className={styleHome.service_icon} />
                         <div>
-                            <h4 className={styleHome.service_title}>Perfil</h4>
-                            <p className={styleHome.service_text}>Personalize seu perfil com  <br/>  rapidez e segurança</p>
+                            <h4 className={styleHome.service_title}>{t('help.profile.title')}</h4>
+                            <p className={styleHome.service_text} dangerouslySetInnerHTML={{ __html: t('help.profile.text') }}></p>
                         </div>
                     </div>
                     <div className={styleHome.service_item}>
                         <img src={categoria} alt="Categorias" className={styleHome.service_icon} />
                         <div>
-                            <h4 className={styleHome.service_title}>Categorias</h4>
-                            <p className={styleHome.service_text}>Explore uma variedade <br/> de categorias únicas</p>
+                            <h4 className={styleHome.service_title}>{t('help.categories.title')}</h4>
+                            <p className={styleHome.service_text} dangerouslySetInnerHTML={{ __html: t('help.categories.text') }}></p>
                         </div>
                     </div>
                 </div>

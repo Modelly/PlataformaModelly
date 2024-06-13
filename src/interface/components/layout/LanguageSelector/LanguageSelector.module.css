@@ -1,0 +1,28 @@
+.language_selector {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.language_button {
+    padding: 10px 20px;
+    border: 2px solid #B075ED;
+    border-radius: 5px;
+    background-color: white;
+    color: #B075ED;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 10px;
+}
+
+.language_button:hover {
+    background-color: #B075ED;
+    color: white;
+}
+
+.language_button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}

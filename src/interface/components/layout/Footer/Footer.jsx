@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import footerBg from '../../../../assets/images/imgs-footer/footer-bg.png';
 import logo from '../../../../assets/images/imgs-footer/logo-footer.png';
 import visaIcon from '../../../../assets/images/imgs-footer/Visa.png';
@@ -15,30 +16,32 @@ import styleFooter from './Footer.module.css';
 import '../../../../../src/App.css';
 
 const Footer = () => {
+    const { t } = useTranslation();
+
     return (
         <footer className={styleFooter.footer} style={{ backgroundImage: `url(${footerBg})` }}>
             <div className={styleFooter.footer_content}>
                 <div className={`${styleFooter.footer_column} ${styleFooter.customer_service}`}>
                     <img src={logo} alt="Logo" className={styleFooter.footer_logo} />
-                    <h4>ATENDIMENTO AO CLIENTE</h4>
+                    <h4>{t('footer.customerService')}</h4>
                     <ul>
-                        <li><a href="#">Venda na Modelly</a></li>
-                        <li><a href="#">Fale Conosco</a></li>
-                        <li><a href="#">Planos Modelly</a></li>
-                        <li><a href="#">Preferências e Cookies</a></li>
+                        <li><a href="#">{t('footer.sellOnModelly')}</a></li>
+                        <li><a href="#">{t('footer.contactUs')}</a></li>
+                        <li><a href="#">{t('footer.modellyPlans')}</a></li>
+                        <li><a href="#">{t('footer.preferencesCookies')}</a></li>
                     </ul>
                 </div>
                 <div className={`${styleFooter.footer_column} ${styleFooter.about}`}>
-                    <h4>SOBRE A MODELLY</h4>
+                    <h4>{t('footer.aboutModelly')}</h4>
                     <ul>
-                        <li><a href="#">Sobre Nós</a></li>
-                        <li><a href="#">Políticas Modelly</a></li>
-                        <li><a href="#">Políticas de Privacidade</a></li>
-                        <li><a href="#">Parcerias</a></li>
+                        <li><a href="#">{t('footer.aboutUs')}</a></li>
+                        <li><a href="#">{t('footer.policies')}</a></li>
+                        <li><a href="#">{t('footer.privacyPolicy')}</a></li>
+                        <li><a href="#">{t('footer.partnerships')}</a></li>
                     </ul>
                 </div>
                 <div className={`${styleFooter.footer_column} ${styleFooter.payment_methods}`}>
-                    <h4>MÉTODOS DE PAGAMENTO</h4>
+                    <h4>{t('footer.paymentMethods')}</h4>
                     <div className={styleFooter.payment_icons}>
                         <img src={visaIcon} alt="Visa" />
                         <img src={mastercardIcon} alt="Mastercard" />
@@ -49,7 +52,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className={`${styleFooter.footer_column} ${styleFooter.follow_us}`}>
-                    <h4>SIGA-NOS</h4>
+                    <h4>{t('footer.followUs')}</h4>
                     <div className={styleFooter.social_icons}>
                         <a href="https://www.instagram.com"><img src={instagramIcon} alt="Instagram" /><span>Instagram</span></a>
                         <a href="https://www.tiktok.com"><img src={tiktokIcon} alt="TikTok" /><span>TikTok</span></a>
@@ -60,7 +63,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className={styleFooter.footer_bottom}>
-                <span>© 2024 Modelly. Todos os direitos reservados.</span>
+                <span>© 2024 Modelly. {t('footer.allRightsReserved')}</span>
             </div>
         </footer>
     );

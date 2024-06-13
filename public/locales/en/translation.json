@@ -1,0 +1,79 @@
+{
+    "welcome": "Welcome",
+    "description": "This is a sample description",
+    "recommendations": "Daily Recommendations",
+    "categories": {
+      "decoracao": "Decoration",
+      "acessorios": "Accessories",
+      "velas": "Candles",
+      "moda": "Fashion",
+      "pets": "Pets",
+      "infantil": "Kids",
+      "sociais": "Social",
+      "casa": "Home",
+      "personalizado": "Personalized"
+    },
+    "product": {
+      "name": "Product name",
+      "description": "Product description",
+      "price": "$00.00"
+    },
+    "buttons": {
+      "view_more": "View more"
+    },
+    "promo": {
+      "heading": "If it's special,<br/> you find it here.",
+      "paragraph": "We are a platform that values and highlights the work <br/> of Brazilian artists, connecting them with a <br/> wide audience that appreciates handmade art.",
+      "link": "Get to know our story"
+    },
+    "help": {
+      "heading": "Need Help?",
+      "payment": {
+        "title": "Payment",
+        "text": "Pay for your purchases with <br/> speed and security"
+      },
+      "return": {
+        "title": "Return",
+        "text": "You can return your <br/> purchase for free"
+      },
+      "profile": {
+        "title": "Profile",
+        "text": "Personalize your profile with <br/> speed and security"
+      },
+      "categories": {
+        "title": "Categories",
+        "text": "Explore a variety of <br/> unique categories"
+      }
+    },
+    "navbar": {
+      "logoAlt": "Logo with Modelly text and a cat holding a brush",
+      "searchPlaceholder": "Search on Modelly",
+      "searchAlt": "Search icon",
+      "cartAlt": "Cart",
+      "favoritesAlt": "Favorites",
+      "userAlt": "User icon",
+      "login": "Login",
+      "personalized": "Personalized",
+      "virtualFair": "Virtual Fair",
+      "beSeller": "Be a Seller",
+      "modellyPlans": "Modelly Plans",
+      "about": "About",
+      "contact": "Contact Us"
+    },
+    "footer": {
+      "customerService": "CUSTOMER SERVICE",
+      "sellOnModelly": "Sell on Modelly",
+      "contactUs": "Contact Us",
+      "modellyPlans": "Modelly Plans",
+      "preferencesCookies": "Preferences and Cookies",
+      "aboutModelly": "ABOUT MODELLY",
+      "aboutUs": "About Us",
+      "policies": "Modelly Policies",
+      "privacyPolicy": "Privacy Policy",
+      "partnerships": "Partnerships",
+      "paymentMethods": "PAYMENT METHODS",
+      "followUs": "FOLLOW US",
+      "allRightsReserved": "All rights reserved."
+    }
+  }
+  
