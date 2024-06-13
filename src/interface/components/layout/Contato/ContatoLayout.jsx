@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import './Contato.css';
+import { useState } from 'react';
+import styleContato from './Contato.module.css';
 
 const Contato = () => {
   const [filePreview, setFilePreview] = useState(null);
@@ -18,61 +18,61 @@ const Contato = () => {
   };
 
   return (
-    <div id="contact-form">
-      <h2>Entre em contato</h2>
-      <p>Essas informações vão nos auxiliar com o seu atendimento.</p>
+    <div className={styleContato.contact_form}>
+      <h2 className='h2'>Entre em contato</h2>
+      <p className='p'>Essas informações vão nos auxiliar com o seu atendimento.</p>
 
       <form>
-        <div className="form-group">
-          <label htmlFor="fullName">Nome Completo</label>
-          <input type="text" id="fullName" name="fullName" required />
+        <div className={styleContato.form_group}>
+          <label className={styleContato.label} htmlFor="fullName">Nome Completo</label>
+          <input type="text" className={`${styleContato.fullName} ${styleContato.input}`} name="fullName" required />
         </div>
 
-        <div className="form-group">
-          <label htmlFor="cpfCnpj">CPF/CNPJ</label>
-          <input type="text" id="cpfCnpj" name="cpfCnpj" />
+        <div className={styleContato.form_group}>
+          <label className={styleContato.label} htmlFor="cpfCnpj">CPF/CNPJ</label>
+          <input type="text" className={`${styleContato.cpfCnpj} ${styleContato.input}`} name="cpfCnpj" />
         </div>
 
-        <div className="form-group">
-          <label htmlFor="email">E-mail</label>
-          <input type="email" id="email" name="email" required />
+        <div className={styleContato.form_group}>
+          <label className={styleContato.label} htmlFor="email">E-mail</label>
+          <input type="email" className={`${styleContato.email} ${styleContato.input}`} name="email" required />
         </div>
 
-        <div className="form-group">
-          <label htmlFor="phone">Telefone</label>
-          <input type="tel" id="phone" name="phone" />
+        <div className={styleContato.form_group}>
+          <label className={styleContato.label} htmlFor="phone">Telefone</label>
+          <input type="tel" className={`${styleContato.phone} ${styleContato.input}`} name="phone" />
         </div>
 
-        <div className="form-group">
-          <label htmlFor="accessPlatform">Plataforma de acesso</label>
-          <select id="accessPlatform" name="accessPlatform" required>
+        <div className={styleContato.form_group}>
+          <label className={styleContato.label} htmlFor="accessPlatform">Plataforma de acesso</label>
+          <select className={`${styleContato.accessPlatform} ${styleContato.select}`} name="accessPlatform" required>
             <option value="">Selecione</option>
             <option value="web">Web</option>
             <option value="app">App</option>
           </select>
         </div>
 
-        <div className="form-group">
-          <label htmlFor="message">Mensagem</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
+        <div className={styleContato.form_group}>
+          <label className={styleContato.label} htmlFor="message">Mensagem</label>
+          <textarea className={`${styleContato.message} ${styleContato.select}`} name="message" rows="5" required></textarea>
         </div>
 
-        <div className="form-group">
-          <label htmlFor="files">Arquivos</label>
-          <div className="input-arquivo">
-            <input type="file" id="files" name="files" multiple onChange={handleFileChange} />
+        <div className={styleContato.form_group}>
+          <label className={styleContato.label} htmlFor="files">Arquivos</label>
+          <div className={styleContato.input_arquivo}>
+            <input type="file" className={`${styleContato.files} ${styleContato.input}`} name="files" multiple onChange={handleFileChange} />
             {filePreview && <img src={filePreview} alt="Prévia do arquivo" style={{ maxWidth: '100%', maxHeight: '200px', margin: '10px auto', display: 'block' }} />}
-            <span className="arquivo-selecionado">
-              <span className="icone-nuvem"></span>
-              <div className="texto-upload">
-                <span className="linha-1">Solte fotos ou vídeos aqui ou</span>
-                <span className="linha-2">procure no seu computador</span>
+            <span className={styleContato.arquivo_selecionado}>
+              <span className={styleContato.icone_nuvem}></span>
+              <div className={styleContato.texto_upload}>
+                <span className={styleContato.linha_1}>Solte fotos ou vídeos aqui ou</span>
+                <span className={styleContato.linha_2}>procure no seu computador</span>
               </div>
             </span>
           </div>
         </div>
 
-        <div className="form-actions">
+        <div className={styleContato.form_actions}>
           <button type="submit">Enviar</button>
           <button type="button">Cancelar</button>
         </div>

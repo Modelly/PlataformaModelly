@@ -1,82 +1,78 @@
-#ContainerCarrinho {
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.containerCarrinho {
     display: flex;
     flex-direction: row;
     gap: 4%;
-    
     width: 100%;
     height: auto;
     padding: 30px;
     margin-bottom: 100px;
 }
 
-.TitleCarrinho {
+.titleCarrinho {
     color: #361A5C;
-
     width: 96%;
     padding: 20px 0 10px;
     margin: 0 20px;
     margin-bottom: 10px;
- 
     border-bottom: 1px solid rgba(122, 122, 122, 0.363);
 }
 
-#BoxCarrinho {
+.boxCarrinho {
     width: 65%;
     height: auto;
-    padding: 0px;
-
+    padding: 0;
     border-radius: 20px;
     background-color: #EFC7FF;
 }
 
-#BoxProgresso {
+.boxProgresso {
     display: flex;
     flex-direction: column;
     gap: 10px;
-
     width: 100%;
     padding: 20px;
-
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-
     font-weight: 600;
     color: white;
-
     background-color: #B075ED;
 }
 
-#BoxProgresso progress {
+.progress {
     width: 100%;
 }
 
-#BoxProgresso progress::-webkit-progress-bar {
+.progress::-webkit-progress-bar {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     background-color: #f3f3f3;
 }
 
-#BoxProgresso progress::-webkit-progress-value {
+.progress::-webkit-progress-value {
     background-color: #4caf50;
     border-bottom-left-radius: 10px;
 }
 
-#BoxProgresso progress::-moz-progress-bar {
+.progress::-moz-progress-bar {
     background-color: #4caf50;
 }
 
-#BoxInfoCarrinho {
+.boxInfoCarrinho {
     display: flex;
     flex-direction: column;
-    
     width: 30%;
     height: 270px;
-
     border-radius: 10px;
     background-color: #EFC7FF;
 }
 
-#BoxInfoCarrinho button {
+.boxInfoCarrinho button {
     border-radius: 15px;
     padding: 10px 20px;
     margin: 0 20px;
@@ -85,29 +81,28 @@
     background-color: #FCD400;
 }
 
-.Box-InfoResumoCompra {
+.boxInfoResumoCompra {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-top: 5px;
     margin: 0 20px;
-
 }
 
-.Box-InfoResumoCompra span {
+.boxInfoResumoCompra span {
     margin-bottom: 10px;
     color: #A972BF;
 }
 
-#BoxInforPrecoTotal {
+.boxInfoPrecoTotal {
     margin: 20px 20px 10px 20px;
 }
 
-#Testrosa {
-    color: #D11F52;
+.testeeRosa {
+    color: #D11F52 !important;
 }
 
-#boldText {
-    color: black;
+.boldText {
+    color: black !important;
     font-weight: 900;
 }

@@ -1,4 +1,4 @@
-/* FeiraLayout.css */
+/* FeiraLayout.module.css */
 
 /* Importar fontes */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Platypi:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
@@ -18,21 +18,8 @@
     --bogart-medium: "Bogart Bold", sans-serif;
 }
 
-@font-face {
-    font-family: 'Bogart Bold';
-    font-style: normal;
-    font-weight: 500;
-    src: local('Bogart Bold'), 
-         url('../fonts/Bogart-Bold-trial.ttf') format('truetype');
-}
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-#Conteiner-BemVindoFeira {
+/* Estilos para o Contêiner Bem-Vindo Feira */
+.sectionFeira {
     display: flex;
     justify-content: space-around; 
     align-items: center;
@@ -44,22 +31,22 @@
     background-color: var(--cor-background);
 }
 
-.bem-vindo-content {
+.bemVindoContent {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
-    gap: 20px;
+    gap: 200px;
 }
 
-.text-content {
+.textContent {
     display: flex;
     flex-direction: column;
     gap: 8px;
     padding: 0 20px; 
 }
 
-#TitleRosa, #TitleRoxo {
+.TitleRosa, .TitleRoxo {
     font-family: var(--bogart-medium);
     font-size: 40px;
     color: var(--cor-quartiaria);
@@ -72,19 +59,22 @@
     color: var(--cor-fonte-principal);
 }
 
-.video-img {
-    width: 400px; 
-    height: auto; 
-    margin-left: auto;
+.VideoFeira {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 20px #3c1266b7;
+    border-radius: 10px;
+    background-color: #B075ED;
 }
 
-#btn-box {
+
+.btnBox {
     display: flex;
     flex-direction: row;
     gap: 10px;
 }
 
-#btn-box button {
+.btnBox button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -96,7 +86,8 @@
     background-color: #B075ED;
 }
 
-#container-ComoFunciona {
+/* Estilos para o Container Como Funciona */
+.containerComoFunciona {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -108,21 +99,7 @@
     background-color: var(--cor-background);
 }
 
-#container-ComoFunciona img {
+.containerComoFunciona img {
     height: 500px;
     object-fit: cover;
 }
-
-#VideoFeira {
-    width: 100%;
-    height: 100%;
-    box-shadow: 0 0 20px #3c1266b7;
-    border-radius: 10px;
-    background-color: #B075ED;
-}
-
-footer {
-    clear: both;
-}
-
-

@@ -1,6 +1,6 @@
-*{
-    padding: 0px;
-    margin: 0px;
+* {
+    padding: 0;
+    margin: 0;
     border: none;
     text-decoration: none;
     box-sizing: border-box;
@@ -11,97 +11,94 @@
 }
 
 /* elemento pai do componente */
-.ProdutoContainer {
+.produtoContainer {
     position: relative;
     display: flex;
     justify-content: center;
     gap: 2%;
-
     width: 100%;
     height: auto;
     padding: 20px 0;
 }
 
-#caminhoProduto {
+.caminhoProduto {
     margin-left: 260px;
 }
 
-/*Estilizando as imagens do produto*/
-.imagens-produto {
+/* Estilizando as imagens do produto */
+.imagensProduto {
     display: flex;
     flex-direction: row;
     width: 45%;
 }
 
-.img-ltrl {
+.imgLtrl {
     position: relative;
     width: 70px;
     height: 68px;
-    background-color: #F0C9FF;
+    background-color: #f0c9ff;
     border-radius: 4.5px;
     margin: 30px 50px;
 }
 
-#img-principal {
+.imgPrincipal {
     position: relative;
     width: 700px;
     height: auto;
     object-fit: cover;
 }
 
-/*Estilizando as informações do conteúdo*/
-#Container-Infos {
+/* Estilizando as informações do conteúdo */
+.containerInfos {
     width: 30%;
 }
 
-#Content-InfosProduto {
+.contentInfosProduto {
     position: relative;
 }
 
-#preco {
+.preco {
     color: green;
     font-size: 38px;
-    margin: 10px 0px;
+    margin: 10px 0;
 }
 
-.InfosProduto {
+.infosProduto {
     margin-bottom: 40px;
 }
 
-/*Estilizando os botões*/
+/* Estilizando os botões */
 .btn {
     display: flex;
     align-items: center;
     justify-content: center;
-
     text-align: center;
     font-weight: 600;
-
     width: 285.5px;
     height: 47.5px;
     border-radius: 15px;
 }
 
-#btn_roxo {
-    background-color: #361A5C;
+.btnRoxo {
+    background-color: #361a5c;
     color: #fff;
     margin-bottom: 30px;
 }
 
-#btn_rosa {
-    background-color: #F0C9FF;
-    color: #361A5C;
+.btnRosa {
+    background-color: #f0c9ff;
+    color: #361a5c;
 }
 
-#CarrinhoIcone {
+.carrinhoIcone {
     position: relative;
     width: 34px;
     height: 35px;
-    margin: 0px 15px;
+    margin: 0 15px;
 }
 
-/*Estilizando a parte de pagamentos*/
-#ContentPagamento {
+/* Estilizando a parte de pagamentos */
+.contentPagamento {
     position: relative;
     width: 285.5px;
     display: flex;
@@ -110,72 +107,68 @@
     justify-content: space-between;
 }
 
-#ContentPagamento img {
+.contentPagamento img {
     position: relative;
     width: 28px;
-    height: 72px;
 }
 
-#ContentPagamento #pix {
+.pix {
     height: 23px;
 }
 
-#Box-InfosPagamento {
+.boxInfosPagamento {
     position: relative;
     display: flex;
     flex-direction: row;
 }
 
-#textoEsquerda, #textoDireita {
+.textoEsquerda,
+.textoDireita {
     width: auto;
     font-size: 14px;
 }
 
-#textoEsquerda {
+.textoEsquerda {
     border-right: 1px solid black;
     padding-right: 5%;
 }
 
-#textoDireita {
+.textoDireita {
     border-left: 1px solid black;
     padding-left: 5%;
 }
 
-/*Estilizando box da loja*/
-#Container-PefilLoja {
+/* Estilizando box da loja */
+.containerPerfilLoja {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    
     font-size: 14px;
-    color: #D11F52;
-
+    color: #d11f52;
     width: 332.5px;
     height: 270px;
     padding: 20px;
     margin-top: 30px;
-    
     border-radius: 9px;
-    border: 2px solid #D11F52;
-    box-shadow: 5px 5px 0px #d11f51ce;;
-  }
-  
+    border: 2px solid #d11f52;
+    box-shadow: 5px 5px 0 #d11f51ce;
+}
 
-#Container-PefilLoja > div {
+.containerPerfilLoja > div {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
 
-#Container-PefilLoja > div button {
+.containerPerfilLoja > div button {
     padding: 10px;
-    background-color: #D11F52;
+    background-color: #d11f52;
     color: #fff;
     border-radius: 7px;
 }
 
-#Container-PefilLoja > div #Foto-perfil {
+.fotoPerfil {
     position: relative;
     width: 45px;
     height: 45px;
@@ -184,14 +177,12 @@
     margin-right: 20px;
 }
 
-#Container-PefilLoja .textRosa {
-    color: #D11F52;
+.textRosa {
+    color: #d11f52;
     margin-bottom: 5px;
 }
 
-#btn-ContatarVendedor {
-    border: 2px solid #D11F52;
+.btnContatarVendedor {
+    border: 2px solid #d11f52;
     border-radius: 9px;
 }
-
-

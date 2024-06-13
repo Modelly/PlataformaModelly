@@ -1,4 +1,3 @@
-import React from 'react';
 import footerBg from '../../../../assets/images/imgs-footer/footer-bg.png';
 import logo from '../../../../assets/images/imgs-footer/logo-footer.png';
 import visaIcon from '../../../../assets/images/imgs-footer/Visa.png';
@@ -12,15 +11,15 @@ import tiktokIcon from '../../../../assets/images/imgs-footer/TikTok.png';
 import githubIcon from '../../../../assets/images/imgs-footer/GitHub.png';
 import linktreeIcon from '../../../../assets/images/imgs-footer/Linktree.png';
 import linkedinIcon from '../../../../assets/images/imgs-footer/LinkedIn.png';
-import './Footer.css';
+import styleFooter from './Footer.module.css';
 import '../../../../../src/App.css';
 
 const Footer = () => {
     return (
-        <footer className="footer" style={{ backgroundImage: `url(${footerBg})` }}>
-            <div className="footer-content">
-                <div className="footer-column customer-service">
-                    <img src={logo} alt="Logo" className="footer-logo" />
+        <footer className={styleFooter.footer} style={{ backgroundImage: `url(${footerBg})` }}>
+            <div className={styleFooter.footer_content}>
+                <div className={`${styleFooter.footer_column} ${styleFooter.customer_service}`}>
+                    <img src={logo} alt="Logo" className={styleFooter.footer_logo} />
                     <h4>ATENDIMENTO AO CLIENTE</h4>
                     <ul>
                         <li><a href="#">Venda na Modelly</a></li>
@@ -29,7 +28,7 @@ const Footer = () => {
                         <li><a href="#">Preferências e Cookies</a></li>
                     </ul>
                 </div>
-                <div className="footer-column about">
+                <div className={`${styleFooter.footer_column} ${styleFooter.about}`}>
                     <h4>SOBRE A MODELLY</h4>
                     <ul>
                         <li><a href="#">Sobre Nós</a></li>
@@ -38,20 +37,20 @@ const Footer = () => {
                         <li><a href="#">Parcerias</a></li>
                     </ul>
                 </div>
-                <div className="footer-column payment-methods">
+                <div className={`${styleFooter.footer_column} ${styleFooter.payment_methods}`}>
                     <h4>MÉTODOS DE PAGAMENTO</h4>
-                    <div className="payment-icons">
+                    <div className={styleFooter.payment_icons}>
                         <img src={visaIcon} alt="Visa" />
                         <img src={mastercardIcon} alt="Mastercard" />
                         <img src={amexIcon} alt="American Express" />
                         <img src={dinersIcon} alt="Discover" />
-                        <img className='img-barcode' src={barcodeIcon} alt="Barcode" />
-                        <img className="pix-pix" src={pixIcon} alt="Pix" />
+                        <img className={styleFooter.img_barcode} src={barcodeIcon} alt="Barcode" />
+                        <img className={styleFooter.pix_pix} src={pixIcon} alt="Pix" />
                     </div>
                 </div>
-                <div className="footer-column follow-us">
+                <div className={`${styleFooter.footer_column} ${styleFooter.follow_us}`}>
                     <h4>SIGA-NOS</h4>
-                    <div className="social-icons">
+                    <div className={styleFooter.social_icons}>
                         <a href="https://www.instagram.com"><img src={instagramIcon} alt="Instagram" /><span>Instagram</span></a>
                         <a href="https://www.tiktok.com"><img src={tiktokIcon} alt="TikTok" /><span>TikTok</span></a>
                         <a href="https://www.linkedin.com"><img src={linkedinIcon} alt="LinkedIn" /><span>LinkedIn</span></a>
@@ -60,7 +59,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="footer-bottom">
+            <div className={styleFooter.footer_bottom}>
                 <span>© 2024 Modelly. Todos os direitos reservados.</span>
             </div>
         </footer>

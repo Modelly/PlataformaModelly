@@ -1,6 +1,5 @@
-import React from 'react';
-import './Vendedor.css';
-import catImage from '../../../../assets/images/imgs-vendedor/Logo_Teste.png'; 
+import styleVendedor from './Vendedor.module.css';
+import catImage from '../../../../assets/images/imgs-vendedor/Logo_Teste.png';
 import Footer from '../../../../interface/components/layout/Footer/Footer';
 import { useNavigate } from 'react-router-dom';
 
@@ -12,17 +11,20 @@ const Popup = () => {
   }
 
   return (
-    <div className="main-container">
-      <div className="popup-container">
-        <div className="popup">
-          <img src={catImage} alt="Gato" className="cat-image" />
-          <h1>Bem-Vindo a Modelly!</h1>
-          <p>Para começar, faça o cadastro como vendedor <br />Modelly e preencha algumas informações<br /> necessárias</p>
-          <button onClick={handleCadastroClick}>Começar Cadastro</button>
+    <div className={`${styleVendedor.bodyHTML}`}>
+      <div className={`${styleVendedor.mainContainer}`}>
+        <div className={`${styleVendedor.popupContainer}`}>
+          <div className={styleVendedor.popup}>
+            <img src={catImage} alt="Gato" className={styleVendedor.catImage} />
+            <h1>Bem-Vindo a Modelly!</h1>
+            <p>Para começar, faça o cadastro como vendedor <br />Modelly e preencha algumas informações<br /> necessárias</p>
+            <button className={styleVendedor.popupButton} onClick={handleCadastroClick}>Começar Cadastro</button>
+          </div>
         </div>
+        <Footer />
       </div>
-      <Footer />
     </div>
+    
   );
 };
 

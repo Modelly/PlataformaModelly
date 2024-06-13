@@ -1,7 +1,7 @@
-import './CarrinhoLayout.css'
+import styleCarrinhoLayout from './CarrinhoLayout.module.css';
 
-import Produto1 from '../../../../assets/images/imgs-carrinho/foto-produto1.png'
-import Produto2 from '../../../../assets/images/imgs-carrinho/foto-produto2.png'
+import Produto1 from '../../../../assets/images/imgs-carrinho/foto-produto1.png';
+import Produto2 from '../../../../assets/images/imgs-carrinho/foto-produto2.png';
 
 import ProdutoCarrinho from './ProdutoCarrinho/ProdutoCarrinho';
 
@@ -22,9 +22,9 @@ const dbProdutoCarrinho = [
 
 function CarrinhoLayout() {
     return (
-        <div id='ContainerCarrinho'>
-            <div id='BoxCarrinho'>
-                <h1 className="TitleCarrinho">Produtos</h1>
+        <div className={styleCarrinhoLayout.containerCarrinho}>
+            <div className={styleCarrinhoLayout.boxCarrinho}>
+                <h1 className={styleCarrinhoLayout.titleCarrinho}>Produtos</h1>
                 {
                     dbProdutoCarrinho.map((produto, index) => (
                         <ProdutoCarrinho key={index}
@@ -35,24 +35,24 @@ function CarrinhoLayout() {
                         />
                     ))
                 }
-                <div id="BoxProgresso">
-                    <progress value="70" max="100"></progress>
+                <div className={styleCarrinhoLayout.boxProgresso}>
+                    <progress className={styleCarrinhoLayout.progress} value="70" max="100"></progress>
                     Frete Grátis!
                 </div>
             </div>
-            <aside id='BoxInfoCarrinho'>
-                <h1 className="TitleCarrinho">Resumo da compra</h1>
-                <div className='Box-InfoResumoCompra'>
+            <aside className={styleCarrinhoLayout.boxInfoCarrinho}>
+                <h1 className={styleCarrinhoLayout.titleCarrinho}>Resumo da compra</h1>
+                <div className={styleCarrinhoLayout.boxInfoResumoCompra}>
                     <span>Produtos(2)</span>
                     <span>R$ 158,90</span>
                 </div>
-                <div className='Box-InfoResumoCompra'>
+                <div className={styleCarrinhoLayout.boxInfoResumoCompra}>
                     <span>Frete</span>
                     <span>Grátis</span>
                 </div>
-                <div className='Box-InfoResumoCompra' id="BoxInforPrecoTotal">
-                    <span id='Testrosa'>Total</span>
-                    <span id='boldText'>R$ 158,90</span>
+                <div className={`${styleCarrinhoLayout.boxInfoResumoCompra} ${styleCarrinhoLayout.boxInfoPrecoTotal}`}>
+                    <span className={styleCarrinhoLayout.testeeRosa}>Total</span>
+                    <span className={styleCarrinhoLayout.boldText}>R$ 158,90</span>
                 </div>
                 <button>Continuar compra</button>
             </aside>

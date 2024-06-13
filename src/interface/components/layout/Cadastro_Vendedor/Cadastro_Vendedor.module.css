@@ -14,7 +14,7 @@
     --bogart-medium: "Bogart Bold", sans-serif;
 }
 
-.form-container {
+.form_container {
     font-family: var(--poppins-font);
     background-color: var(--cor-background);
     padding: 20px;
@@ -37,13 +37,13 @@
     font-family: var(--poppins-font);
 }
 
-.step.active {
+.step.Active {
     font-weight: bold;
     color: var(--cor-primaria);
     font-family: var(--poppins-font);
 }
 
-.step-content {
+.step_content {
     padding: 20px;
     border: 1px solid var(--cor-primaria);
     border-radius: 10px;
@@ -51,18 +51,18 @@
     font-family: var(--poppins-font);
 }
 
-.form-group {
+.form_group {
     margin-bottom: 25px !important;
 }
 
-.form-group label {
+.form_group label {
     display: block;
     margin-bottom: 5px;
     color: var(--cor-secundaria);
 }
 
-.form-group input[type="text"],
-.form-group input[type="email"] {
+.form_group input[type="text"],
+.form_group input[type="email"] {
     width: 100%;
     padding: 10px;
     border: 1px solid var(--cor-primaria);
@@ -70,16 +70,16 @@
     font-family: var(--poppins-font);
 }
 
-.form-group input[type="checkbox"] {
+.form_group input[type="checkbox"] {
     margin-right: 10px;
 }
 
-.date-input {
+.date_input {
     display: flex;
     gap: 10px;
 }
 
-.date-input input {
+.date_input input {
     flex: 1;
     padding: 10px;
     border: 1px solid var(--cor-primaria);
@@ -87,12 +87,12 @@
     font-family: var(--poppins-font);
 }
 
-.verification-group {
+.verification_group {
     display: flex;
     gap: 10px;
 }
 
-.verify-button {
+.verify_button {
     background-color: transparent;
     border: 1px solid var(--cor-quartiaria);
     color: var(--cor-quartiaria);
@@ -101,12 +101,12 @@
     cursor: pointer;
 }
 
-.button-group {
+.button_group {
     display: flex;
     justify-content: space-between;
 }
 
-.submit-button {
+.submit_button {
     background-color: var(--cor-terciaria);
     border: 3px solid var(--cor-preta-stroke);
     color: var(--cor-fonte-branco);
@@ -115,7 +115,7 @@
     cursor: pointer;
 }
 
-.back-button {
+.back_button {
     background-color: var(--cor-fonte-branco);
     border: 3px solid var(--cor-preta-stroke);
     color: var(--cor-preta-stroke);

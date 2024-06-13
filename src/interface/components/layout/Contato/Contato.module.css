@@ -15,41 +15,41 @@
 }
 
 /* Estilos do formulário */
-#contact-form {
+.contact_form {
   max-width: 700px;
   margin: 40px auto;
   padding: 30px;
   background-color: var(--cor-background);
 }
 
-h2 {
+.h2 {
   text-align: left;
   margin-bottom: 20px;
   font-family: var(--montserrat-font);
   color: var(--cor-fonte-principal);
 }
 
-p {
+.p {
   text-align: left;
   margin-bottom: 20px;
   font-family: var(--poppins-font);
   color: var(--cor-fonte-principal);
 }
 
-.form-group {
+.form_group {
   margin-bottom: 15px;
 }
 
-label {
+.label {
   font-weight: bold;
   display: block;
   margin-bottom: 5px;
   font-family: var(--poppins-font);
 }
 
-input,
-textarea,
-select {
+.input,
+.textarea,
+.select {
   width: 100%; 
   padding: 8px;
   border: 2px solid var(--cor-fonte-principal);
@@ -58,25 +58,25 @@ select {
   font-family: var(--poppins-font);
 }
 
-input#fullName,
-input#cpfCnpj,
-input#email {
+input.fullName,
+input.cpfCnpj,
+input.email {
     border: 2px solid var(--cor-fonte-principal);
     border-radius: 8px;
 }
 
-textarea,
-.input-arquivo {
+.textarea,
+.input_arquivo {
   border-radius: 12px;
   font-family: var(--poppins-font);
   color: #9B59B6;
 }
 
-.form-actions {
+.form_actions {
   text-align: left;
 }
 
-button {
+.button {
   padding: 10px 20px;
   border: none;
   border-radius: 3px;
@@ -85,7 +85,7 @@ button {
   margin-right: 13px;
 }
 
-button[type="submit"] {
+.button[type="submit"] {
   background-color: rgb(239, 140, 2);
   color: var(--cor-fonte-branco);
   padding: 10px 30px;
@@ -100,7 +100,7 @@ button[type="submit"] {
   margin-bottom: 10px;
 }
 
-button[type="button"] {
+.button[type="button"] {
   background-color: var(--cor-fonte-branco);
   color: var(--cor-preta-stroke);
   border: 3px solid var(--cor-preta-stroke);
@@ -113,7 +113,7 @@ button[type="button"] {
   margin-bottom: 10px;
 }
 
-.input-arquivo {
+.input_arquivo {
   position: relative; 
   overflow: hidden; 
   width: 100%; 
@@ -127,7 +127,7 @@ button[type="button"] {
   margin-bottom: 15px; 
 }
 
-.input-arquivo input[type="file"] {
+.input_arquivo input[type="file"] {
   position: absolute; 
   top: 0;
   left: 0;
@@ -136,13 +136,13 @@ button[type="button"] {
   cursor: pointer; 
 }
 
-.input-arquivo .arquivo-selecionado {
+.input_arquivo .arquivo_selecionado {
   font-size: 16px;
   color: var(--cor-fonte-principal);
   margin-bottom: 10px; 
 }
 
-.input-arquivo .icone-nuvem {
+.input_arquivo .icone-nuvem {
   display: inline-block;
   width: 80px;
   height: 80px;
@@ -153,20 +153,20 @@ button[type="button"] {
   margin-top: 5px;
 }
 
-.input-arquivo .texto-upload {
+.input_arquivo .texto_upload {
   font-family: var(--poppins-font);
   color: var(--cor-fonte-principal);
   margin-bottom: 13px;
 }
 
-.input-arquivo .texto-upload span {
+.input_arquivo .texto_upload span {
   display: block;
 }
 
-.input-arquivo .texto-upload .linha-1 {
+.input_arquivo .texto_upload .linha_1 {
   color: var(--cor-secundaria);
 }
 
-.input-arquivo .texto-upload .linha-2 {
+.input_arquivo .texto_upload .linha_2 {
   color: var(--cor-primaria);
 }

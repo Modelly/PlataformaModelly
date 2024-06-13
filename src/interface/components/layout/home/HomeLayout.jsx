@@ -15,7 +15,7 @@ import perfil from '../../../../assets/images/imgs-home/Artist.png';
 import devolucao from '../../../../assets/images/imgs-home/devolucao.png';
 import categoria from '../../../../assets/images/imgs-home/Categorize.png';
 import { Link } from 'react-router-dom';
-import './Home.css';
+import styleHome from './HomeLayout.module.css';
 
 const categories = [
     { name: 'Decoração', img: decoracaoImg },
@@ -33,82 +33,79 @@ const products = Array(8).fill({ name: 'Nome do produto', description: 'Descriç
 
 const HomeLayout = () => {
     return (
-        <div className='home-container'>
-            <div className='home-bannerImage-container'>
-                <img src={bannerImage} alt="Banner" className='banner-image' />
+        <div className={styleHome.home_container}>
+            <div className={styleHome.home_bannerImage_container}>
+                <img src={bannerImage} alt="Banner" className={styleHome.banner_image} />
             </div>
-            <div className='categories-container'>
+            <div className={styleHome.categories_container}>
                 {categories.map((category, index) => (
-                    <div key={index} className='category-item'>
-                        <img src={category.img} alt={category.name} className='category-image' />
+                    <div key={index} className={styleHome.category_item}>
+                        <img src={category.img} alt={category.name} className={styleHome.category_image} />
                         <p>{category.name}</p>
                     </div>
                 ))}
             </div>
-            <div className='recommendations-container'>
-                <h2 className='recommendations-heading'>Recomendações Diárias</h2>
-                <div className='products-container'>
+            <div className={styleHome.recommendations_container}>
+                <h2 className={styleHome.recommendations_heading}>Recomendações Diárias</h2>
+                <div className={styleHome.products_container}>
                     {products.map((product, index) => (
-                        <div key={index} className='product-card'>
+                        <div key={index} className={styleHome.product_card}>
                             <Link to="/produto">
-                                <img src={product.img} alt={product.name} className='product-image' />
-                                <p className='product-name'>{product.name}</p>
-                                <p className='product-description'>{product.description}</p>
-                                <div className='product-footer'>
-                                    <p className='product-price'>{product.price}</p>
-                                    <button className='view-more-button'>Ver mais</button>
+                                <img src={product.img} alt={product.name} className={styleHome.product_image} />
+                                <p className={styleHome.product_name}>{product.name}</p>
+                                <p className={styleHome.product_description}>{product.description}</p>
+                                <div className={styleHome.product_footer}>
+                                    <p className={styleHome.product_price}>{product.price}</p>
+                                    <button className={styleHome.view_more_button}>Ver mais</button>
                                 </div>
                             </Link>
                         </div>
                     ))}
                 </div>
             </div>
-            <button className='view-more-home'>Ver mais</button>
-            <div className='promo-section'>
-                <div className='promo-text'>
-                    <h3 className='promo-heading'>Se é especial,<br/> você encontra aqui.</h3>
-                    <p className='promo-paragraph'>
+            <button className={styleHome.view_more_home}>Ver mais</button>
+            <div className={styleHome.promo_section}>
+                <div className={styleHome.promo_text}>
+                    <h3 className={styleHome.promo_heading}>Se é especial,<br/> você encontra aqui.</h3>
+                    <p className={styleHome.promo_paragraph}>
                         Somos uma plataforma que valoriza e enaltece o trabalho <br/> dos artistas brasileiros,
                         conectando-os com um público<br/> amplo e apreciador da arte feita à mão.
                     </p>
-                    <a href="/sobre" className='promo-link'>Conheça a nossa história</a>
+                    <a href="/sobre" className={styleHome.promo_link}>Conheça a nossa história</a>
                 </div>
-                <img src={catImage} alt="Promo Cat" className='promo-image' />
+                <img src={catImage} alt="Promo Cat" className={styleHome.promo_image} />
             </div>
 
-            <div className='help-section'>
-                <h2 className='help-heading'>Precisa de Ajuda?</h2>
-                <div className='service-container'>
-                    <div className='service-item'>
-                        <img src={dinheiro} alt="Pagamento" className='service-icon' />
+            <div className={styleHome.help_section}>
+                <h2 className={styleHome.help_heading}>Precisa de Ajuda?</h2>
+                <div className={styleHome.service_container}>
+                    <div className={styleHome.service_item}>
+                        <img src={dinheiro} alt="Pagamento" className={styleHome.service_icon} />
                         <div>
-                            <h4 className='service-title'>Pagamento</h4>
-                            <p className='service-text'>Pague suas compras com <br/> rapidez e segurança</p>
+                            <h4 className={styleHome.service_title}>Pagamento</h4>
+                            <p className={styleHome.service_text}>Pague suas compras com <br/> rapidez e segurança</p>
                         </div>
                     </div>
-                    <div className='service-item'>
-                        <img src={devolucao} alt="Devolução" className='service-icon' />
+                    <div className={styleHome.service_item}>
+                        <img src={devolucao} alt="Devolução" className={styleHome.service_icon} />
                         <div>
-                            <h4 className='service-title'>Devolução</h4>
-                            <p className='service-text'>Você pode devolver sua  <br/> compra grátis</p>
+                            <h4 className={styleHome.service_title}>Devolução</h4>
+                            <p className={styleHome.service_text}>Você pode devolver sua  <br/> compra grátis</p>
                         </div>
-                        
                     </div>
-                    <div className='service-item'>
-                        <img src={perfil} alt="Perfil" className='service-icon' />
+                    <div className={styleHome.service_item}>
+                        <img src={perfil} alt="Perfil" className={styleHome.service_icon} />
                         <div>
-                            <h4 className='service-title'>Perfil</h4>
-                            <p className='service-text'>Personalize seu perfil com  <br/>  rapidez e segurança</p>
+                            <h4 className={styleHome.service_title}>Perfil</h4>
+                            <p className={styleHome.service_text}>Personalize seu perfil com  <br/>  rapidez e segurança</p>
                         </div>
-                        
                     </div>
-                    <div className='service-item'>
-                        <img src={categoria} alt="Categorias" className='service-icon' />
+                    <div className={styleHome.service_item}>
+                        <img src={categoria} alt="Categorias" className={styleHome.service_icon} />
                         <div>
-                            <h4 className='service-title'>Categorias</h4>
-                            <p className='service-text'>Explore uma variedade <br/> de categorias únicas</p>
+                            <h4 className={styleHome.service_title}>Categorias</h4>
+                            <p className={styleHome.service_text}>Explore uma variedade <br/> de categorias únicas</p>
                         </div>
-                        
                     </div>
                 </div>
             </div>

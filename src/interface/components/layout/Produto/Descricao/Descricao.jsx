@@ -1,5 +1,5 @@
+import styleDescricaoProduto from './Descricao.module.css';
 import sc from '../../../../../assets/images/imgs-produto/s-c.png';
-import './Descricao.css'
 
 const dbDescricao = [
     {
@@ -26,15 +26,14 @@ const dbDescricao = [
         titulo: "Adicionado em:",
         descricao: "10/10/2022"
     },
-]
+];
 
 function Descricao() {
-    return(
-        <div id="ContainerDescricao">
+    return (
+        <div className={styleDescricaoProduto.containerDescricao}>
             <h2>Descrição</h2>
 
             {
-                // Função map que pega do Data Base o título e a descrição de cada item!
                 dbDescricao.map((itemDesc, index) => (
                     <p key={index}>
                         <strong>{itemDesc.titulo}</strong>
@@ -44,12 +43,12 @@ function Descricao() {
                 ))
             }
 
-            <a className="a">
-                <img id="car" src={sc} alt="s-c" />
+            <a className={styleDescricaoProduto.link}>
+                <img className={styleDescricaoProduto.imgCar} src={sc} alt="s-c" />
                 Comprar produto
             </a>
         </div>
-    )
+    );
 }
 
 export default Descricao;

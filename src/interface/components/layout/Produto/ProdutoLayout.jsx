@@ -1,14 +1,13 @@
-import "./ProdutoLayout.css";
-
+import styleProduto from "./ProdutoLayout.module.css";
 import InfoProduto from "./InfoProduto/InfoProduto";
 import Descricao from "./Descricao/Descricao";
 
-import produto1 from '../../../../assets/images/imgs-produto/produto1.png'
-import produto2 from '../../../../assets/images/imgs-produto/produto2.png'
-import produto3 from '../../../../assets/images/imgs-produto/produto3.png'
-import produto4 from '../../../../assets/images/imgs-produto/produto4.png'
-import produto5 from '../../../../assets/images/imgs-produto/produto5.png'
-import produto6 from '../../../../assets/images/imgs-produto/produto6.png'
+import produto1 from '../../../../assets/images/imgs-produto/produto1.png';
+import produto2 from '../../../../assets/images/imgs-produto/produto2.png';
+import produto3 from '../../../../assets/images/imgs-produto/produto3.png';
+import produto4 from '../../../../assets/images/imgs-produto/produto4.png';
+import produto5 from '../../../../assets/images/imgs-produto/produto5.png';
+import produto6 from '../../../../assets/images/imgs-produto/produto6.png';
 
 const dbProducts = [
   {
@@ -37,20 +36,22 @@ const dbProducts = [
   },
 ]
 
-
 function Produto() {
   return (
-    <main>
+    <main className={styleProduto.main}>
       <InfoProduto />
-      <div>
+      <div className={styleProduto.container}>
         <Descricao />
-        
-        <div id="Container-ProdutosSimilares">
+        <div className={styleProduto.containerProdutosSimilares}>
           <h3>Produto similar da loja</h3>
-          <div>
+          <div className={styleProduto.similarProducts}>
             {
               dbProducts.map((produto, index) => (
-                <a key={index} className="price-product" style={{ backgroundImage: `url(${produto.img_bg})` }}>
+                <a 
+                  key={index} 
+                  className={styleProduto.priceProduct} 
+                  style={{ backgroundImage: `url(${produto.img_bg})` }}
+                >
                   <span>{produto.price}</span>
                 </a>
               ))

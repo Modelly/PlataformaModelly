@@ -1,5 +1,4 @@
-import './InfoProduto.css'
-
+import styleInfoProduto from './InfoProduto.module.css';
 import { Link } from 'react-router-dom';
 
 import imagemPrincipal from '../../../../../assets/images/imgs-produto/imagem-principal.png';
@@ -11,84 +10,84 @@ import pix from '../../../../../assets/images/imgs-produto/pix.png';
 function InfoProduto() {
     return(
         <section>
-            <p id="caminhoProduto" >início &gt; Bolsas e Carteiras &gt; Bolsa &gt; Bolsa de crochê</p>
-            <div className="ProdutoContainer">
+            <p className={styleInfoProduto.caminhoProduto} >início &gt; Bolsas e Carteiras &gt; Bolsa &gt; Bolsa de crochê</p>
+            <div className={styleInfoProduto.produtoContainer}>
 
-                <div className="imagens-produto">
+                <div className={styleInfoProduto.imagensProduto}>
                     <div>
-                        <div className="img-ltrl"></div>
-                        <div className="img-ltrl"></div>
-                        <div className="img-ltrl"></div>
-                        <div className="img-ltrl"></div>
+                        <div className={styleInfoProduto.imgLtrl}></div>
+                        <div className={styleInfoProduto.imgLtrl}></div>
+                        <div className={styleInfoProduto.imgLtrl}></div>
+                        <div className={styleInfoProduto.imgLtrl}></div>
                     </div>
 
                     <img
-                        id="img-principal"
+                        className={styleInfoProduto.imgPrincipal}
                         src={imagemPrincipal}
                         alt="Imagem Principal do Produto"
                     />
                 </div>
                 
-                <aside id="Container-Infos">
-                    <div id="Content-InfosProduto">
+                <aside className={styleInfoProduto.containerInfos}>
+                    <div className={styleInfoProduto.contentInfosProduto}>
                         <h2>Bing Bong</h2>
-                        <h1 id="preco">R$ 350,00</h1>
+                        <h1 className={styleInfoProduto.preco}>R$ 350,00</h1>
                         
-                        <p className="InfosProduto">
+                        <p className={styleInfoProduto.infosProduto}>
                             ou 12x sem juros de R$29,17 no cartão
                             
                             <br /><br />
                             
                             <strong>Feito sob encomenda</strong>
                             <br />
-                            <span className="subText">10 dias para produção</span>
+                            <span className={styleInfoProduto.subText}>10 dias para produção</span>
 
                             <br /><br />
 
                             <strong>Feito sob encomenda (Regular)</strong>
                             <br />
-                            <span className="subText">Disponível para todo Brasil</span>
+                            <span className={styleInfoProduto.subText}>Disponível para todo Brasil</span>
                         </p>
 
 
-                        <a href="#" className="btn" id="btn_roxo">Comprar agora</a>
-                        <Link to="/carrinho" className="btn" id="btn_rosa">
-                            <img id="CarrinhoIcone" src={shoppingCart} alt="Shopping Cart" />Adicionar ao carrinho
+                        <a href="#" className={`${styleInfoProduto.btn} ${styleInfoProduto.btnRoxo}`}>Comprar agora</a>
+                        <Link to="/carrinho" className={`${styleInfoProduto.btn} ${styleInfoProduto.btnRosa}`}>
+                            <img className={styleInfoProduto.carrinhoIcone} src={shoppingCart} alt="Shopping Cart" />Adicionar ao carrinho
                         </Link>
                         
-                        <div id="ContentPagamento">
+                        <div className={styleInfoProduto.contentPagamento}>
                             <h4>Meios de pagamento:</h4>
                             <img src={mC} alt="Icone cartão" />
                             <img src={barcode} alt="Icone código boleto" />
-                            <img src={pix} alt="icone pix" id="pix" />
+                            <img src={pix} alt="icone pix" className={styleInfoProduto.pix} />
                         </div>
 
-                        <div id="Box-InfosPagamento">
-                            <div id="textoEsquerda">
+                        <div className={styleInfoProduto.boxInfosPagamento}>
+                            <div className={styleInfoProduto.textoEsquerda}>
                                 <p>
                                     <strong>Compra segura e Protegida</strong>
                                     <br />
-                                    <span className="subText">Seu pedido ou seu dinheiro de volta</span>
+                                    <span className={styleInfoProduto.subText}>Seu pedido ou seu dinheiro de volta</span>
                                 </p>
                             </div>
 
-                            <div id="textoDireita">
+                            <div className={styleInfoProduto.textoDireita}>
                                 <p>
                                     <strong>Políticas Modelly</strong>
                                     <br />
-                                    <span className="subText">Reembolso, troca e devolução</span>
+                                    <span className={styleInfoProduto.subText}>Reembolso, troca e devolução</span>
                                 </p>
                             </div>
                         </div>
                     </div>
 
-                    <div id="Container-PefilLoja">
+                    <div className={styleInfoProduto.containerPerfilLoja}>
                         <div>
-                            <img id="Foto-perfil" src={imagemPrincipal}></img>
+                            <img className={styleInfoProduto.fotoPerfil} src={imagemPrincipal}></img>
 
                             <div>
-                                <span className="textRosa">Nome da loja</span>
-                                <p className="subText">Localização da loja</p>
+                                <span className={styleInfoProduto.textRosa}>Nome da loja</span>
+                                <p className={styleInfoProduto.subText}>Localização da loja</p>
                             </div>
 
                             <button>Seguir</button>
@@ -100,8 +99,8 @@ function InfoProduto() {
                             <span>8 coleções</span>
                         </div>
 
-                        <a className="btn" id="btn-ContatarVendedor">Contatar vendedor</a>
-                        <a className="btn">Políticas da loja</a>
+                        <a className={`${styleInfoProduto.btn} ${styleInfoProduto.btnContatarVendedor}`}>Contatar vendedor</a>
+                        <a className={styleInfoProduto.btn}>Políticas da loja</a>
                     </div>
                 </aside>
             </div>
