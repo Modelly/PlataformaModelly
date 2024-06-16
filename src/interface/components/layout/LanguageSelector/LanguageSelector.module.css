@@ -1,28 +1,62 @@
-.language_selector {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
+.languageSelector {
+    position: relative;
+    z-index: 1000; /* Garantir que o botão esteja acima de outros elementos */
 }
 
-.language_button {
-    padding: 10px 20px;
-    border: 2px solid #B075ED;
-    border-radius: 5px;
-    background-color: white;
-    color: #B075ED;
-    font-size: 16px;
+.fixedButton {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    min-width: 112px;
+    margin: 0  0 20px 20px;
+    padding: 10px;
+    
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.295);
+    background-color: #ffffff;
+
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    margin-top: 10px;
+    display: flex;
+    align-items: center;
 }
 
-.language_button:hover {
-    background-color: #B075ED;
-    color: white;
+.fixedButton img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
 }
 
-.language_button:focus {
-    outline: none;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+.dropdown {
+    position: fixed;
+    left: 20px;
+    bottom: 60px;
+    z-index: 1000;
+
+    display: flex;
+    flex-direction: column;
+
+    width: max-content;
+    min-width: 100px;
+    padding: 10px;
+    
+    border: 1px solid rgba(0, 0, 0, 0.205);
+    border-bottom: 0;
+    border-radius: 5px 5px 0 0;
+    background-color: white;
+    
+}
+
+.dropdownButton {
+    margin: 5px 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.dropdownButton img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
 }
