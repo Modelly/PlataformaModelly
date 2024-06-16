@@ -1,5 +1,5 @@
 import Routes from './interface/routes'; 
-import Translation  from './interface/components/language/LanguageSelector/Translator';
+import Translation  from './interface/components/language/Translator';
 
 const App = () => {
     return (
