@@ -1,4 +1,3 @@
-import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import styleNav from './Navbar.module.css';
 import logo from '../../../../assets/images/imgs-nav/modelly-logo.png';
@@ -8,39 +7,37 @@ import heartIcon from '../../../../assets/images/imgs-nav/heart-icon.png';
 import userIcon from '../../../../assets/images/imgs-nav/male-user.png';
 
 const Navbar = () => {
-    const { t } = useTranslation();
-
     return (
         <div className={styleNav.navbar_container}>
             <div className={styleNav.navbar_top}>
                 <Link to="/">
-                    <img src={logo} alt={t('navbar.logoAlt')} className={styleNav.logo_nav} />
+                    <img src={logo} alt="Logo totalmente branco escrito Modelly com um gatinho segurando um pincel" className={styleNav.logo_nav} />
                 </Link>
                 <div className={styleNav.search_box}>
-                    <input type="text" placeholder={t('navbar.searchPlaceholder')} />
-                    <img src={lupa} alt={t('navbar.searchAlt')} className={styleNav.lupa_icon} />
+                    <input type="text" placeholder="Buscar na Modelly" />
+                    <img src={lupa} alt="Lupa de pesquisa" className={styleNav.lupa_icon} />
                 </div>
                 <div className={styleNav.icons}>
                     <Link to="/carrinho">
-                        <img src={cartIcon} alt={t('navbar.cartAlt')} className={styleNav.icon} />
+                        <img src={cartIcon} alt="Carrinho" className={styleNav.icon} />
                     </Link>
                     <Link to="/Cadastro_Produto">
-                        <img src={heartIcon} alt={t('navbar.favoritesAlt')} className={styleNav.icon} />
+                        <img src={heartIcon} alt="Favoritos" className={styleNav.icon} />
                     </Link>
                     <Link to="/login" className={styleNav.login_link}>
-                        <img src={userIcon} alt={t('navbar.userAlt')} className={styleNav.user_icon} />
-                        <span>{t('navbar.login')}</span>
+                        <img src={userIcon} alt="Ícone de usuário" className={styleNav.user_icon} />
+                        <span>Iniciar Sessão</span>
                     </Link>
                 </div>
             </div>
             <div className={styleNav.navbar_bottom}>
                 <ul className={styleNav.navbar_list}>
-                    <li className={styleNav.navbar_item}><Link to="/personalizado">{t('navbar.personalized')}</Link></li>
-                    <li className={styleNav.navbar_item}><Link to="/feira-virtual">{t('navbar.virtualFair')}</Link></li>
-                    <li className={styleNav.navbar_item}><Link to="/seja-vendedor">{t('navbar.beSeller')}</Link></li>
-                    <li className={styleNav.navbar_item}><Link to="/planos-modelly">{t('navbar.modellyPlans')}</Link></li>
-                    <li className={styleNav.navbar_item}><Link to="/sobre">{t('navbar.about')}</Link></li>
-                    <li className={styleNav.navbar_item}><Link to="/fale-conosco">{t('navbar.contact')}</Link></li>
+                    <li className={styleNav.navbar_item}><Link to="/personalizado">Personalizado</Link></li>
+                    <li className={styleNav.navbar_item}><Link to="/feira-virtual">Feira Virtual</Link></li>
+                    <li className={styleNav.navbar_item}><Link to="/seja-vendedor">Seja Vendedor</Link></li>
+                    <li className={styleNav.navbar_item}><Link to="/planos-modelly">Planos Modelly</Link></li>
+                    <li className={styleNav.navbar_item}><Link to="/sobre">Sobre</Link></li>
+                    <li className={styleNav.navbar_item}><Link to="/fale-conosco">Fale Conosco</Link></li>
                 </ul>
             </div>
         </div>
