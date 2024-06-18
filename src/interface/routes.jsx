@@ -12,6 +12,7 @@ import Vendedor from './pages/Vendedor/Vendedor.jsx';
 import Popup from './components/layout/pop_vendedor/VendedorLayout.jsx';
 import Cadastro_VendedorLayout from './components/layout/Cadastro_Vendedor/Cadastro_VendedorLayout.jsx';
 import ContatoLayout from './components/layout/Contato/ContatoLayout.jsx';
+import CadastroVendedor from './pages/Cad_Vendedor/Cad_Vendedor.jsx';
 
 const AppRoutes = () => {
     return (
@@ -29,7 +30,7 @@ const AppRoutes = () => {
                     <Route path="/carrinho" element={<Carrinho/>} />
                     <Route path="/Cadastro_Produto" element={<CadastroProduto/>} />
                     <Route path="/" element={<Popup/>} />
-                    <Route path="/cadastrar-vendedor" element={<Cadastro_VendedorLayout/>} />
+                    <Route path="/cadastrar-vendedor" element={<CadastroVendedor/>} />
                     <Route path="/fale-conosco" element={<ContatoLayout/>}/>
                 </Routes>         
             </div>
