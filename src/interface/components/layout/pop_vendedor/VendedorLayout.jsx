@@ -1,6 +1,6 @@
 import styleVendedor from './Vendedor.module.css';
 import catImage from '../../../../assets/images/imgs-vendedor/Logo_Teste.png';
-import Footer from '../../../../interface/components/layout/Footer/Footer';
+import Footer from '../Footer/Footer';
 import { useNavigate } from 'react-router-dom';
 
 const Popup = () => {
