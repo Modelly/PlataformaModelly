@@ -6,7 +6,7 @@ function CadastroVendedor() {
     return (
         <div>
             <Navbar />
-            <CarrinhoLayout />
+            <CadastroVendedor/>
             <Footer />
         </div>
     )
