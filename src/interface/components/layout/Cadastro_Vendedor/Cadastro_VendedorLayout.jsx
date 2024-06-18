@@ -165,7 +165,7 @@ const Cadastro_VendedorLayout = () => {
             </div>
             <div className={styleCadastroVendedor.form_group}>
               <input type="checkbox" />
-              <label>Eu li e concordo com Termos de Serviço, Política de Privacidade Modelify, Termos de Serviço Conta de Pagamento Modelify, Política de Privacidade Modelify.</label>
+              <label>Eu li e concordo com Termos de Serviço, Política de Privacidade Modelly, Termos de Serviço Conta de Pagamento Modelify, Política de Privacidade Modelify.</label>
             </div>
             <div className={styleCadastroVendedor.button_group}>
               <button className={styleCadastroVendedor.back_button} onClick={handleBack}>Voltar</button>
