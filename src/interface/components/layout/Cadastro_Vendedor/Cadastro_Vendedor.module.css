@@ -64,7 +64,7 @@
     background-color: #fff;
     font-family: var(--poppins-font);
     position: relative;
-    text-align: left; /* Alinhando o conteúdo à esquerda */
+    text-align: left; 
 }
 
 .next_button {
@@ -124,6 +124,7 @@
 .form_group input[type="email"],
 .form_group input[type="number"] {
     padding: 10px;
+    margin-bottom: 12px;
     border: 1px solid var(--cor-primaria);
     border-radius: 5px;
     font-family: var(--poppins-font);
