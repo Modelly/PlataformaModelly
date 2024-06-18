@@ -3,9 +3,16 @@ import styleCadastroVendedor from './Cadastro_Vendedor.module.css';
 
 const Cadastro_VendedorLayout = () => {
   const [step, setStep] = useState(1);
+  const [selectedOption, setSelectedOption] = useState('');
 
   const handleNext = () => {
-    setStep(step + 1);
+    if (step === 1 && selectedOption) {
+      if (selectedOption === 'CPF') {
+        setStep(2); // Navigate to CPF form
+      } else if (selectedOption === 'CNPJ') {
+        setStep(3); // Navigate to CNPJ form
+      }
+    }
   };
 
   const handleBack = () => {
@@ -24,13 +31,23 @@ const Cadastro_VendedorLayout = () => {
       {step === 1 && (
         <div className={styleCadastroVendedor.step_content}>
           <h2>Escolha um tipo de loja</h2>
-          <button onClick={handleNext}>Próximo</button>
+          <div className={styleCadastroVendedor.options_container}>
+            <label className={styleCadastroVendedor.option}>
+              <input type="radio" name="loja" value="CPF" onChange={() => setSelectedOption('CPF')} />
+              Pessoa Física (CPF)
+            </label>
+            <label className={styleCadastroVendedor.option}>
+              <input type="radio" name="loja" value="CNPJ" onChange={() => setSelectedOption('CNPJ')} />
+              Pessoa Jurídica (CNPJ)
+            </label>
+          </div>
+          <button className={styleCadastroVendedor.next_button} onClick={handleNext}>Próximo</button>
         </div>
       )}
 
       {step === 2 && (
         <div className={styleCadastroVendedor.step_content}>
-          <h2>Fornecer Informação</h2>
+          <h2>Fornecer Informação - CPF</h2>
           <form>
             <div className={styleCadastroVendedor.form_group}>
               <label>Nome Completo</label>
@@ -105,7 +122,8 @@ const Cadastro_VendedorLayout = () => {
 
       {step === 3 && (
         <div className={styleCadastroVendedor.step_content}>
-          <h2>Finalizar</h2>
+          <h2>Fornecer Informação - CNPJ</h2>
+          {/* Form for CNPJ */}
         </div>
       )}
     </div>

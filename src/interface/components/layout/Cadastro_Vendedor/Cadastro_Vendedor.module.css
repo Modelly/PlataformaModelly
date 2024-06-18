@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Platypi:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
     --cor-primaria: #9B59B6;
@@ -14,41 +14,90 @@
     --bogart-medium: "Bogart Bold", sans-serif;
 }
 
-.form_container {
-    font-family: var(--poppins-font);
-    background-color: var(--cor-background);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-    font-family: var(--poppins-font);
+.bodyHTML {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: var(--poppinsFont);
+    background-image: url('../../../../assets/images/img_cad_produto/image-15.png'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.steps {
+.form_container {
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 8px;
+    padding: 20px;
+    margin:7rem;
+    max-width: 1300px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .steps {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
-    font-family: var(--poppins-font);
-}
-
-.step {
+  }
+  
+  .step {
+    flex: 1;
     padding: 10px;
-    border-bottom: 3px solid var(--cor-primaria);
     cursor: pointer;
+    border-bottom: 3px solid var(--cor-primaria);
     font-family: var(--poppins-font);
-}
-
-.step.Active {
+  }
+  
+  .Active {
     font-weight: bold;
     color: var(--cor-primaria);
-    font-family: var(--poppins-font);
-}
-
-.step_content {
+  }
+  
+  .step_content {
+    margin-top: 20px;
     padding: 20px;
     border: 1px solid var(--cor-primaria);
     border-radius: 10px;
     background-color: #fff;
     font-family: var(--poppins-font);
+    position: relative;
+  }
+  
+  .next_button {
+    background-color: #F68E07;
+    border: 2px solid #F68E07;
+    border-radius: 8px;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .next_button:hover {
+    background-color: #D11F52;
+    border-color: #D11F52;
+  }
+
+.option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--cor-primaria);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.option input {
+    margin-right: 10px;
 }
 
 .form_group {
