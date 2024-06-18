@@ -21,7 +21,6 @@ const Cadastro_VendedorLayout = () => {
 
   return (
     <div className={styleCadastroVendedor.form_container}>
-      <h1>Página de Cadastro de Vendedor</h1>
       <div className={styleCadastroVendedor.steps}>
         <div className={`${styleCadastroVendedor.step} ${step >= 1 ? styleCadastroVendedor.Active : ''}`} onClick={() => setStep(1)}>1 Escolha um tipo de loja</div>
         <div className={`${styleCadastroVendedor.step} ${step >= 2 ? styleCadastroVendedor.Active : ''}`} onClick={() => setStep(2)}>2 Fornecer Informação</div>
@@ -30,7 +29,6 @@ const Cadastro_VendedorLayout = () => {
 
       {step === 1 && (
         <div className={styleCadastroVendedor.step_content}>
-          <h2>Escolha um tipo de loja</h2>
           <div className={styleCadastroVendedor.options_container}>
             <label className={styleCadastroVendedor.option}>
               <input type="radio" name="loja" value="CPF" onChange={() => setSelectedOption('CPF')} />
