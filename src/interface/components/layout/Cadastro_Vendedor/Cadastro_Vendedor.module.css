@@ -220,6 +220,7 @@
   }
   
   .card h2 {
+    font-family: var(--poppins-font);
     margin-bottom: 13px;
     color: var(--cor-fonte-principal)
   }
