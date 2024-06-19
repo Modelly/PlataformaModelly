@@ -8,7 +8,7 @@ const PopupMensagem = ({ onClose }) => {
         <img src={cat} alt="Cat" className={styleContato.catImage} />
         <h1>Mensagem Recebida com Sucesso!</h1>
         <p>Obrigado por entrar em contato conosco. Sua mensagem foi recebida e nossa <br/> equipe está aqui para ajudar você. Aguarde enquanto tomamos as medidas<br/> necessárias para resolver sua questão. Vamos mantê-lo informado em breve.<br/> Agradecemos pela sua paciência!</p>
-        <button onClick={onClose}>Voltar ao Início</button>
+        <button onClick={onClose}>Voltar</button>
       </div>
     </div>
   );

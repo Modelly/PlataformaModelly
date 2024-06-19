@@ -11,7 +11,6 @@ import CadastroProduto from './pages/Cad_Produto/Cad_Product';
 import Vendedor from './pages/Vendedor/Vendedor.jsx';
 import Popup from './components/layout/pop_vendedor/VendedorLayout.jsx';
 import CadastroVendedor from './pages/Cad_Vendedor/Cad_Vendedor.jsx';
-import Contato from './pages/Contato/Contato.jsx';
 import Contato_1 from './pages/Contato/Contato.jsx';
 
 const AppRoutes = () => {
