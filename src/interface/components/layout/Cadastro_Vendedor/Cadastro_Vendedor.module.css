@@ -116,6 +116,8 @@
 .form_group label {
     margin-bottom: 5px;
     color: var(--cor-secundaria);
+    font-family: var(--poppins-font);
+    font-weight: 600;
 }
 
 .form_group input[type="text"],
@@ -126,6 +128,7 @@
     border: 1px solid var(--cor-primaria);
     border-radius: 5px;
     font-family: var(--poppins-font);
+    font-weight: 500;
 }
 
 .form_group input[type="checkbox"] {
