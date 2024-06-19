@@ -1,8 +1,10 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import styleContato from './Contato.module.css';
+import PopupMensagem from './pop-up-contato'; 
 
 const Contato = () => {
   const [filePreview, setFilePreview] = useState(null);
+  const [showPopup, setShowPopup] = useState(false); 
 
   const handleFileChange = (event) => {
     const file = event.target.files[0];
@@ -19,8 +21,13 @@ const Contato = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Logic for handling form submission goes here
-    console.log('Form submitted!');
+    // Lógica para envio do formulário
+    console.log('Formulário enviado com sucesso!');
+    setShowPopup(true); 
+  };
+
+  const closePopup = () => {
+    setShowPopup(false); 
   };
 
   return (
@@ -83,6 +90,8 @@ const Contato = () => {
           <button type="button" className={`${styleContato.button} ${styleContato.cancel_button}`}>Cancelar</button>
         </div>
       </form>
+
+      {showPopup && <PopupMensagem onClose={closePopup} />}
     </div>
   );
 };

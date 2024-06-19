@@ -142,3 +142,65 @@
   font-size: 16px;
   font-weight: 700;
 }
+
+.popupContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.447); /* Fundo escurecido */
+  z-index: 999; 
+}
+
+.popup {
+  background-color: #fff;
+  border: 3px solid var(--corSecundaria);
+  padding: 20px 100px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 13px rgba(0, 0, 0, 0.1);
+  max-width: 80%;
+}
+
+.catImage {
+  width: 90px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.popup h1 {
+  color: var(--corSecundaria);
+  font-weight: bold;
+  font-size: 1.8rem;
+  font-family: var(--poppinsFont);
+  margin-bottom: 10px;
+}
+
+.popup p {
+  color: var(--corSecundaria);
+  font-weight: 600;
+  font-size: 0.9rem;
+  font-family: var(--poppinsFont);
+  margin-bottom: 20px;
+}
+
+.popup button {
+  background-color: var(--corTerciaria);
+  color: var(--corFonteBranco);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  border: 3px solid black;
+  border-bottom: 4px solid black;
+}
+
+.popup button:hover {
+  background-color: var(--corQuartiaria);
+}
