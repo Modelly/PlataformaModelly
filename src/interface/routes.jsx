@@ -10,9 +10,8 @@ import Carrinho from './pages/Carrinho/Carrinho';
 import CadastroProduto from './pages/Cad_Produto/Cad_Product';
 import Vendedor from './pages/Vendedor/Vendedor.jsx';
 import Popup from './components/layout/pop_vendedor/VendedorLayout.jsx';
-import Cadastro_VendedorLayout from './components/layout/Cadastro_Vendedor/Cadastro_VendedorLayout.jsx';
-import ContatoLayout from './components/layout/Contato/ContatoLayout.jsx';
 import CadastroVendedor from './pages/Cad_Vendedor/Cad_Vendedor.jsx';
+import ContatoLayout from './components/layout/Contato/ContatoLayout.jsx';
 
 const AppRoutes = () => {
     return (

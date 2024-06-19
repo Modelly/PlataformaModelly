@@ -1,15 +1,16 @@
-import CadastroVendedor from "../../components/layout/Cadastro_Vendedor/Cadastro_VendedorLayout";
+import Cadastro_VendedorLayout from "../../components/layout/Cadastro_Vendedor/Cadastro_VendedorLayout";
 import Navbar from "../../components/layout/Navbar/Navbar";
 import Footer from "../../components/layout/Footer/Footer";
+import styles from './Cad_Vendedor.module.css';
 
-function CadastroVendedor() {
+function Cadastro_Vendedor() {
     return (
-        <div>
+        <div className={styles.bodyHTML}>
             <Navbar />
-            <CadastroVendedor/>
+            <Cadastro_VendedorLayout/>
             <Footer />
         </div>
     )
 }
 
-export default CadastroVendedor;
+export default Cadastro_Vendedor;
