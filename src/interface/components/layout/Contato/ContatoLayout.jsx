@@ -17,35 +17,41 @@ const Contato = () => {
     }
   };
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Logic for handling form submission goes here
+    console.log('Form submitted!');
+  };
+
   return (
     <div className={styleContato.contact_form}>
-      <h2 className='h2'>Entre em contato</h2>
-      <p className='p'>Essas informações vão nos auxiliar com o seu atendimento.</p>
+      <h2 className={styleContato.h2}>Entre em contato</h2>
+      <p className={styleContato.p}>Essas informações vão nos auxiliar com o seu atendimento.</p>
 
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className={styleContato.form_group}>
           <label className={styleContato.label} htmlFor="fullName">Nome Completo</label>
-          <input type="text" className={`${styleContato.fullName} ${styleContato.input}`} name="fullName" required />
+          <input type="text" className={`${styleContato.input} ${styleContato.fullName}`} name="fullName" required />
         </div>
 
         <div className={styleContato.form_group}>
           <label className={styleContato.label} htmlFor="cpfCnpj">CPF/CNPJ</label>
-          <input type="text" className={`${styleContato.cpfCnpj} ${styleContato.input}`} name="cpfCnpj" />
+          <input type="text" className={`${styleContato.input} ${styleContato.cpfCnpj}`} name="cpfCnpj" />
         </div>
 
         <div className={styleContato.form_group}>
           <label className={styleContato.label} htmlFor="email">E-mail</label>
-          <input type="email" className={`${styleContato.email} ${styleContato.input}`} name="email" required />
+          <input type="email" className={`${styleContato.input} ${styleContato.email}`} name="email" required />
         </div>
 
         <div className={styleContato.form_group}>
           <label className={styleContato.label} htmlFor="phone">Telefone</label>
-          <input type="tel" className={`${styleContato.phone} ${styleContato.input}`} name="phone" />
+          <input type="tel" className={`${styleContato.input} ${styleContato.phone}`} name="phone" />
         </div>
 
         <div className={styleContato.form_group}>
           <label className={styleContato.label} htmlFor="accessPlatform">Plataforma de acesso</label>
-          <select className={`${styleContato.accessPlatform} ${styleContato.select}`} name="accessPlatform" required>
+          <select className={`${styleContato.input} ${styleContato.select}`} name="accessPlatform" required>
             <option value="">Selecione</option>
             <option value="web">Web</option>
             <option value="app">App</option>
@@ -54,14 +60,14 @@ const Contato = () => {
 
         <div className={styleContato.form_group}>
           <label className={styleContato.label} htmlFor="message">Mensagem</label>
-          <textarea className={`${styleContato.message} ${styleContato.select}`} name="message" rows="5" required></textarea>
+          <textarea className={`${styleContato.input} ${styleContato.message}`} name="message" rows="5" required></textarea>
         </div>
 
         <div className={styleContato.form_group}>
           <label className={styleContato.label} htmlFor="files">Arquivos</label>
           <div className={styleContato.input_arquivo}>
-            <input type="file" className={`${styleContato.files} ${styleContato.input}`} name="files" multiple onChange={handleFileChange} />
-            {filePreview && <img src={filePreview} alt="Prévia do arquivo" style={{ maxWidth: '100%', maxHeight: '200px', margin: '10px auto', display: 'block' }} />}
+            <input type="file" className={`${styleContato.input} ${styleContato.files}`} name="files" multiple onChange={handleFileChange} />
+            {filePreview && <img src={filePreview} alt="Prévia do arquivo" className={styleContato.file_preview} />}
             <span className={styleContato.arquivo_selecionado}>
               <span className={styleContato.icone_nuvem}></span>
               <div className={styleContato.texto_upload}>
@@ -73,8 +79,8 @@ const Contato = () => {
         </div>
 
         <div className={styleContato.form_actions}>
-          <button type="submit">Enviar</button>
-          <button type="button">Cancelar</button>
+          <button type="submit" className={`${styleContato.button} ${styleContato.submit_button}`}>Enviar</button>
+          <button type="button" className={`${styleContato.button} ${styleContato.cancel_button}`}>Cancelar</button>
         </div>
       </form>
     </div>

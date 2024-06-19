@@ -1,38 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Poppins:wght@100..900&display=swap');
 
-/* Variáveis CSS */
+/* Variables */
 :root {
-  --cor-primaria: #9B59B6;
-  --cor-secundaria: #361A5C;
-  --cor-terciaria: #8E44AD; 
   --cor-background: #FBFAFA;
   --cor-fonte-principal: #361A5C;
+  --cor-secundaria: #361A5C;
+  --cor-primaria: #9B59B6;
   --cor-fonte-branco: #fff;
-  --cor-preta-stroke: #000; 
-  --cor-fonte-roxo-claro: #9B59B6; 
-  --poppins-font: 'Poppins', sans-serif;
-  --montserrat-font: 'Montserrat', sans-serif;
+  --cor-preta-stroke: #000;
 }
 
-/* Estilos do formulário */
 .contact_form {
-  max-width: 700px;
+  width: 70%;
+  max-width: 800px;
   margin: 40px auto;
-  padding: 30px;
+  padding: 0px 60px;
   background-color: var(--cor-background);
+  float: left;
 }
 
 .h2 {
   text-align: left;
   margin-bottom: 20px;
-  font-family: var(--montserrat-font);
+  font-family: 'Montserrat', sans-serif;
   color: var(--cor-fonte-principal);
 }
 
 .p {
   text-align: left;
   margin-bottom: 20px;
-  font-family: var(--poppins-font);
+  font-family: 'Poppins', sans-serif;
   color: var(--cor-fonte-principal);
 }
 
@@ -44,36 +41,77 @@
   font-weight: bold;
   display: block;
   margin-bottom: 5px;
-  font-family: var(--poppins-font);
+  font-family: 'Poppins', sans-serif;
+  color: var(--cor-fonte-principal);
 }
 
 .input,
 .textarea,
 .select {
-  width: 100%; 
+  width: 100%;
   padding: 8px;
   border: 2px solid var(--cor-fonte-principal);
   border-radius: 8px;
   box-sizing: border-box;
-  font-family: var(--poppins-font);
+  font-family: 'Poppins', sans-serif;
 }
 
-input.fullName,
-input.cpfCnpj,
-input.email {
-    border: 2px solid var(--cor-fonte-principal);
-    border-radius: 8px;
-}
-
-.textarea,
 .input_arquivo {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 8px;
+  border: 2px solid var(--cor-fonte-principal);
   border-radius: 12px;
-  font-family: var(--poppins-font);
-  color: #9B59B6;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
-.form_actions {
-  text-align: left;
+.input_arquivo input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.arquivo_selecionado {
+  font-size: 16px;
+  color: var(--cor-fonte-principal);
+  margin-bottom: 10px;
+}
+
+.icone_nuvem {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  background-image: url('../../../../assets/images/img_contato/nuvem.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.texto_upload {
+  font-family: 'Poppins', sans-serif;
+  color: var(--cor-fonte-principal);
+  margin-bottom: 13px;
+}
+
+.texto_upload span {
+  display: block;
+}
+
+.linha_1 {
+  color: var(--cor-secundaria);
+}
+
+.linha_2 {
+  color: var(--cor-primaria);
 }
 
 .button {
@@ -81,92 +119,26 @@ input.email {
   border: none;
   border-radius: 3px;
   cursor: pointer;
-  font-family: var(--poppins-font);
+  font-family: 'Poppins', sans-serif;
   margin-right: 13px;
 }
 
-.button[type="submit"] {
+.submit_button {
   background-color: rgb(239, 140, 2);
   color: var(--cor-fonte-branco);
   padding: 10px 30px;
   border-radius: 12px;
-  cursor: pointer;
   font-size: 16px;
+  font-weight: 700;
   border: 3px solid var(--cor-preta-stroke);
   border-bottom: 5.8px solid var(--cor-preta-stroke);
-  font-family: var(--poppins-font);
-  font-weight: 700;
-  margin-top: 20px;
-  margin-bottom: 10px;
 }
 
-.button[type="button"] {
+.cancel_button {
   background-color: var(--cor-fonte-branco);
   color: var(--cor-preta-stroke);
   border: 3px solid var(--cor-preta-stroke);
   border-radius: 12px;
-  border-bottom: 5.8px solid var(--cor-preta-stroke);
   font-size: 16px;
-  font-family: var(--poppins-font);
   font-weight: 700;
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-
-.input_arquivo {
-  position: relative; 
-  overflow: hidden; 
-  width: 100%; 
-  padding: 8px;
-  border: 2px solid var(--cor-fonte-principal);
-  border-radius: 12px; 
-  box-sizing: border-box;
-  font-family: var(--poppins-font); 
-  cursor: pointer; 
-  text-align: center;
-  margin-bottom: 15px; 
-}
-
-.input_arquivo input[type="file"] {
-  position: absolute; 
-  top: 0;
-  left: 0;
-  width: 100%;
-  opacity: 0; 
-  cursor: pointer; 
-}
-
-.input_arquivo .arquivo_selecionado {
-  font-size: 16px;
-  color: var(--cor-fonte-principal);
-  margin-bottom: 10px; 
-}
-
-.input_arquivo .icone-nuvem {
-  display: inline-block;
-  width: 80px;
-  height: 80px;
-  background-image: url('../../../../assets/images/img_contato/nuvem.png'); 
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin-bottom: 5px;
-  margin-top: 5px;
-}
-
-.input_arquivo .texto_upload {
-  font-family: var(--poppins-font);
-  color: var(--cor-fonte-principal);
-  margin-bottom: 13px;
-}
-
-.input_arquivo .texto_upload span {
-  display: block;
-}
-
-.input_arquivo .texto_upload .linha_1 {
-  color: var(--cor-secundaria);
-}
-
-.input_arquivo .texto_upload .linha_2 {
-  color: var(--cor-primaria);
 }
