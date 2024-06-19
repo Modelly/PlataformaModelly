@@ -21,6 +21,7 @@
     padding: 20px;
     margin: auto;
     margin-top: 8em;
+    margin-bottom: 8em;
     max-width: 1100px;
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -39,6 +40,14 @@
     border-bottom: 3px solid var(--cor-primaria);
     font-family: var(--poppins-font);
     color: var(--cor-fonte-principal);
+    text-align: center;
+}
+
+.step_image {
+    width: 30px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
 }
 
 .Active {
@@ -107,6 +116,8 @@
 .form_group label {
     margin-bottom: 5px;
     color: var(--cor-secundaria);
+    font-family: var(--poppins-font);
+    font-weight: 600;
 }
 
 .form_group input[type="text"],
@@ -117,6 +128,7 @@
     border: 1px solid var(--cor-primaria);
     border-radius: 5px;
     font-family: var(--poppins-font);
+    font-weight: 500;
 }
 
 .form_group input[type="checkbox"] {
@@ -178,3 +190,61 @@
     color: var(--cor-quartiaria);
     margin-top: 5px;
 }
+  
+.verification_group {
+    display: flex;
+    align-items: center;
+  }
+  
+  .verification_group input {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .verify_button {
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .card {
+    text-align: center;
+    border-radius: 10px;
+    padding: 40px;
+
+  }
+  
+  .card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+  
+  .card h2 {
+    font-family: var(--poppins-font);
+    margin-bottom: 13px;
+    color: var(--cor-fonte-principal)
+  }
+  
+  .card p {
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: var(--poppins-font);
+    font-weight: 700;
+    color: var(--cor-fonte-principal);
+  }
+
+  .finish_button {
+    background-color: #F68E07;
+    border: 2px solid #000000;
+    border-bottom: 4px solid black;
+    border-right: 3px solid #000000;
+    border-radius: 8px;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;  
+  }

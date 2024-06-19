@@ -1,15 +1,15 @@
-import Contato from "../../components/layout/Contato/ContatoLayout";
+import ContatoLayout from "../../components/layout/Contato/ContatoLayout";
 import Navbar from "../../components/layout/Navbar/Navbar";
-import Footer from "../../components/layout/Footer/";
+import Footer from "../../components/layout/Footer/Footer";
 
-function Contato() {
+function Contato_1() {
     return (
         <div>
             <Navbar />
-            <Contato />
+            <ContatoLayout />
             <Footer />
         </div>
     )
 }
 
-export default Contato;
+export default Contato_1;
