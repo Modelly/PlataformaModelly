@@ -3,7 +3,7 @@
     padding: 0;
     height: 100%;
     font-family: var(--poppins-font);
-    background-image: url('../../../../assets/images/img_cad_produto/image-15.png'); 
+    background-image: url('../../../../src/assets/images/img_cad_produto/image-15.png'); 
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
