@@ -40,6 +40,14 @@
     border-bottom: 3px solid var(--cor-primaria);
     font-family: var(--poppins-font);
     color: var(--cor-fonte-principal);
+    text-align: center;
+}
+
+.step_image {
+    width: 30px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
 }
 
 .Active {

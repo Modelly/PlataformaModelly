@@ -1,5 +1,8 @@
 import { useState } from 'react';
 import styleCadastroVendedor from './Cadastro_Vendedor.module.css';
+import step1Img from './images/step1.png'; // Adicione a imagem do número 1
+import step2Img from './images/step2.png'; // Adicione a imagem do número 2
+import step3Img from './images/step3.png'; // Adicione a imagem do número 3
 
 const Cadastro_VendedorLayout = () => {
   const [step, setStep] = useState(1);
@@ -22,9 +25,18 @@ const Cadastro_VendedorLayout = () => {
   return (
     <div className={styleCadastroVendedor.form_container}>
       <div className={styleCadastroVendedor.steps}>
-        <div className={`${styleCadastroVendedor.step} ${step >= 1 ? styleCadastroVendedor.Active : ''}`} onClick={() => setStep(1)}>1 Escolha um tipo de loja</div>
-        <div className={`${styleCadastroVendedor.step} ${step >= 2 ? styleCadastroVendedor.Active : ''}`} onClick={() => setStep(2)}>2 Fornecer Informação</div>
-        <div className={`${styleCadastroVendedor.step} ${step >= 3 ? styleCadastroVendedor.Active : ''}`} onClick={() => setStep(3)}>3 Finalizar</div>
+        <div className={`${styleCadastroVendedor.step} ${step >= 1 ? styleCadastroVendedor.Active : ''}`} onClick={() => setStep(1)}>
+          <img src={step1Img} alt="Step 1" className={styleCadastroVendedor.step_image} />
+          Escolha um tipo de loja
+        </div>
+        <div className={`${styleCadastroVendedor.step} ${step >= 2 ? styleCadastroVendedor.Active : ''}`} onClick={() => setStep(2)}>
+          <img src={step2Img} alt="Step 2" className={styleCadastroVendedor.step_image} />
+          Fornecer Informação
+        </div>
+        <div className={`${styleCadastroVendedor.step} ${step >= 3 ? styleCadastroVendedor.Active : ''}`} onClick={() => setStep(3)}>
+          <img src={step3Img} alt="Step 3" className={styleCadastroVendedor.step_image} />
+          Finalizar
+        </div>
       </div>
 
       {step === 1 && (
@@ -45,7 +57,6 @@ const Cadastro_VendedorLayout = () => {
 
       {step === 2 && selectedOption === 'CPF' && (
         <div className={styleCadastroVendedor.step_content}>
-          <h2>Fornecer Informação - CPF</h2>
           <form>
             <div className={styleCadastroVendedor.form_group}>
               <label>Nome Completo</label>
@@ -120,11 +131,14 @@ const Cadastro_VendedorLayout = () => {
 
       {step === 3 && selectedOption === 'CNPJ' && (
         <div className={styleCadastroVendedor.step_content}>
-          <h2>Fornecer Informação - CNPJ</h2>
           <form>
             <div className={styleCadastroVendedor.form_group}>
+              <label>Nome da Empresa</label>
+              <input type="text" placeholder="Insira o nome da empresa" maxLength="100" />
               <label>Razão Social</label>
               <input type="text" placeholder="Insira a Razão Social" maxLength="100" />
+              <label>Nome Fantasia</label>
+              <input type="text" placeholder="" maxLength="100" />
             </div>
             <div className={styleCadastroVendedor.form_group}>
               <label>CNPJ</label>
