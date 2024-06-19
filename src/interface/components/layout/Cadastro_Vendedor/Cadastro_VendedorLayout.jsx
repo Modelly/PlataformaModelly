@@ -1,8 +1,11 @@
 import { useState } from 'react';
 import styleCadastroVendedor from './Cadastro_Vendedor.module.css';
-import step1Img from './images/step1.png'; // Adicione a imagem do número 1
-import step2Img from './images/step2.png'; // Adicione a imagem do número 2
-import step3Img from './images/step3.png'; // Adicione a imagem do número 3
+import step1Img from '../../../../assets/images/cad_vendedor/step1.png';
+import step2Img from '../../../../assets/images/cad_vendedor/step2.png';
+import step3Img from '../../../../assets/images/cad_vendedor/step3.png';
+import step2png from '../../../../assets/images/cad_vendedor/step2-2.png';
+import step3png from '../../../../assets/images/cad_vendedor/step3-3.png';
+import logogato from '../../../../assets/images/cad_vendedor/Logo_Teste.png';
 
 const Cadastro_VendedorLayout = () => {
   const [step, setStep] = useState(1);
@@ -11,10 +14,12 @@ const Cadastro_VendedorLayout = () => {
   const handleNext = () => {
     if (step === 1 && selectedOption) {
       if (selectedOption === 'CPF') {
-        setStep(2); // Navigate to CPF form
+        setStep(2); 
       } else if (selectedOption === 'CNPJ') {
-        setStep(3); // Navigate to CNPJ form
+        setStep(2); 
       }
+    } else if (step === 2) {
+      setStep(3); 
     }
   };
 
@@ -30,11 +35,11 @@ const Cadastro_VendedorLayout = () => {
           Escolha um tipo de loja
         </div>
         <div className={`${styleCadastroVendedor.step} ${step >= 2 ? styleCadastroVendedor.Active : ''}`} onClick={() => setStep(2)}>
-          <img src={step2Img} alt="Step 2" className={styleCadastroVendedor.step_image} />
+          <img src={step === 2 ? step2Img : step2png} alt="Step 2" className={styleCadastroVendedor.step_image} />
           Fornecer Informação
         </div>
-        <div className={`${styleCadastroVendedor.step} ${step >= 3 ? styleCadastroVendedor.Active : ''}`} onClick={() => setStep(3)}>
-          <img src={step3Img} alt="Step 3" className={styleCadastroVendedor.step_image} />
+        <div className={`${styleCadastroVendedor.step} ${step === 3 ? styleCadastroVendedor.Active : ''}`} onClick={() => setStep(3)}>
+          <img src={step === 3 ? step3Img : step3png} alt="Step 3" className={styleCadastroVendedor.step_image} />
           Finalizar
         </div>
       </div>
@@ -123,13 +128,13 @@ const Cadastro_VendedorLayout = () => {
             </div>
             <div className={styleCadastroVendedor.button_group}>
               <button className={styleCadastroVendedor.back_button} onClick={handleBack}>Voltar</button>
-              <button className={styleCadastroVendedor.submit_button} type="submit">Enviar</button>
+              <button className={styleCadastroVendedor.submit_button} type="submit" onClick={handleNext}>Enviar</button>
             </div>
           </form>
         </div>
       )}
 
-      {step === 3 && selectedOption === 'CNPJ' && (
+      {step === 2 && selectedOption === 'CNPJ' && (
         <div className={styleCadastroVendedor.step_content}>
           <form>
             <div className={styleCadastroVendedor.form_group}>
@@ -174,18 +179,43 @@ const Cadastro_VendedorLayout = () => {
               <input type="email" value="teste@gmail.com" readOnly />
             </div>
             <div className={styleCadastroVendedor.form_group}>
-              <label>Outro Telefone (Opcional)</label>
+              <label>Código de Verificação de E-mail</label>
+              <div className={styleCadastroVendedor.verification_group}>
+                <input type="text" placeholder="Insira o código de verificação" />
+                <button className={styleCadastroVendedor.verify_button}>Enviar</button>
+              </div>
+            </div>
+            <div className={styleCadastroVendedor.form_group}>
+              <label>Telefone</label>
               <input type="text" placeholder="+55 | Insira o Telefone" />
             </div>
             <div className={styleCadastroVendedor.form_group}>
+              <label>Código de Verificação de Telefone</label>
+              <div className={styleCadastroVendedor.verification_group}>
+                <input type="text" placeholder="Insira o código de verificação" />
+                <button className={styleCadastroVendedor.verify_button}>Enviar</button>
+              </div>
+            </div>
+            <div className={styleCadastroVendedor.form_group}>
               <input type="checkbox" />
-              <label>Eu li e concordo com Termos de Serviço, Política de Privacidade Modelly, Termos de Serviço Conta de Pagamento Modelify, Política de Privacidade Modelify.</label>
+              <label>Eu li e concordo com Termos de Serviço, Política de Privacidade Modelify, Termos de Serviço Conta de Pagamento Modelify, Política de Privacidade Modelify.</label>
             </div>
             <div className={styleCadastroVendedor.button_group}>
               <button className={styleCadastroVendedor.back_button} onClick={handleBack}>Voltar</button>
-              <button className={styleCadastroVendedor.submit_button} type="submit">Enviar</button>
+              <button className={styleCadastroVendedor.submit_button} type="submit" onClick={handleNext}>Enviar</button>
             </div>
           </form>
+        </div>
+      )}
+
+      {step === 3 && (
+        <div className={styleCadastroVendedor.step_content}>
+          <div className={styleCadastroVendedor.card}>
+            <img src={logogato} alt="Logo" className={styleCadastroVendedor.logo} />
+            <h2>Cadastro Finalizado</h2>
+            <p>Obrigado por se juntar à família Modelly! Estamos empolgados em ter você <br/>como um artista na nossa plataforma. Que sua jornada aqui seja repleta de <br/>cores, criatividade e muito sucesso! ️</p>
+            <button className={styleCadastroVendedor.finish_button}>Começar</button>
+          </div>
         </div>
       )}
     </div>
