@@ -8,7 +8,6 @@ import infantilImg from '../../../../assets/images/imgs-home/infantil.png';
 import sociaisImg from '../../../../assets/images/imgs-home/sociais.png';
 import casaImg from '../../../../assets/images/imgs-home/casa.png';
 import personalizadoImg from '../../../../assets/images/imgs-home/personalizado.png';
-import productImg from '../../../../assets/images/imgs-home/product.png';
 import catImage from '../../../../assets/images/imgs-home/cat-image.png';
 import dinheiro from '../../../../assets/images/imgs-home/Banknotes.png';
 import perfil from '../../../../assets/images/imgs-home/Artist.png';
@@ -16,6 +15,10 @@ import devolucao from '../../../../assets/images/imgs-home/devolucao.png';
 import categoria from '../../../../assets/images/imgs-home/Categorize.png';
 import { Link } from 'react-router-dom';
 import styleHome from './HomeLayout.module.css';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
 
 const HomeLayout = () => {
     const categories = [
@@ -30,12 +33,23 @@ const HomeLayout = () => {
         { name: "Personalizado", img: personalizadoImg },
     ];
 
-    const products = Array(8).fill({ 
-        name: "Nome do produto", 
-        description: "Descrição do produto", 
-        price: "R$00,00", 
-        img: productImg 
-    });
+    const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        fetchProducts();
+    }, []);
+
+    const fetchProducts = async () => {
+        try {
+            const response = await axios.get('http://localhost:8080/produtos');
+            setProducts(response.data);
+            setLoading(false);
+        } catch (error) {
+            console.error('Erro ao buscar produtos:', error);
+            setLoading(false);
+        }
+    };
 
     return (
         <div className={styleHome.home_container}>
@@ -53,19 +67,28 @@ const HomeLayout = () => {
             <div className={styleHome.recommendations_container}>
                 <h2 className={styleHome.recommendations_heading}>Recomendações Diárias</h2>
                 <div className={styleHome.products_container}>
-                    {products.map((product, index) => (
-                        <div key={index} className={styleHome.product_card}>
-                            <Link to="/produto">
-                                <img src={product.img} alt={product.name} className={styleHome.product_image} />
-                                <p className={styleHome.product_name}>{product.name}</p>
-                                <p className={styleHome.product_description}>{product.description}</p>
+                {loading ? (
+                        Array(8).fill().map((_, index) => (
+                            <div key={index} className={styleHome.skeleton_card}>
+                                <Skeleton height={200} />
+                                <Skeleton count={2} style={{ marginTop: 10 }} />
+                                <Skeleton width={80} style={{ marginTop: 10 }} />
+                            </div>
+                        ))
+                    ) :(
+                    products.map((product) => (
+                        <div key={product.pk_id_produto} className={styleHome.product_card}>
+                            <Link to={`/produto/${product.pk_id_produto}`}>
+                                <img src={product.foto_produto} alt={product.nome_produto} className={styleHome.product_image} />
+                                <p className={styleHome.product_name}>{product.nome_produto}</p>
+                                <p className={styleHome.product_description}>{product.descricao_produto}</p>
                                 <div className={styleHome.product_footer}>
-                                    <p className={styleHome.product_price}>{product.price}</p>
+                                    <p className={styleHome.product_price}>R$ {product.preco_produto.toFixed(2)}</p>
                                     <button className={styleHome.view_more_button}>Ver mais</button>
                                 </div>
                             </Link>
                         </div>
-                    ))}
+                    )))}
                 </div>
             </div>
             <button className={styleHome.view_more_home}>Ver mais</button>

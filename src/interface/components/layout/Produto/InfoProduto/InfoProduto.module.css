@@ -14,6 +14,7 @@
 .produtoContainer {
     position: relative;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     gap: 2%;
     width: 100%;
@@ -29,21 +30,21 @@
 .imagensProduto {
     display: flex;
     flex-direction: row;
+    gap: 20px;
     width: 45%;
 }
 
 .imgLtrl {
-    position: relative;
     width: 70px;
     height: 68px;
     background-color: #f0c9ff;
     border-radius: 4.5px;
-    margin: 30px 50px;
+    margin: 10px 0;
 }
 
 .imgPrincipal {
-    position: relative;
-    width: 700px;
+    width: 100%;
+    max-width: 700px;
     height: auto;
     object-fit: cover;
 }
@@ -91,7 +92,6 @@
 }
 
 .carrinhoIcone {
-    position: relative;
     width: 34px;
     height: 35px;
     margin: 0 15px;
@@ -99,7 +99,6 @@
 
 /* Estilizando a parte de pagamentos */
 .contentPagamento {
-    position: relative;
     width: 285.5px;
     display: flex;
     flex-direction: row;
@@ -108,7 +107,6 @@
 }
 
 .contentPagamento img {
-    position: relative;
     width: 28px;
 }
 
@@ -117,14 +115,12 @@
 }
 
 .boxInfosPagamento {
-    position: relative;
     display: flex;
     flex-direction: row;
 }
 
 .textoEsquerda,
 .textoDireita {
-    width: auto;
     font-size: 14px;
 }
 
@@ -169,7 +165,6 @@
 }
 
 .fotoPerfil {
-    position: relative;
     width: 45px;
     height: 45px;
     border-radius: 50%;

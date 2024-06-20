@@ -1,5 +1,7 @@
 import styleInfoProduto from './InfoProduto.module.css';
 import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 
 import imagemPrincipal from '../../../../../assets/images/imgs-produto/imagem-principal.png';
 import shoppingCart from '../../../../../assets/images/imgs-produto/Shopping-Cart.png';
@@ -8,6 +10,31 @@ import barcode from '../../../../../assets/images/imgs-produto/Barcode.png';
 import pix from '../../../../../assets/images/imgs-produto/pix.png';
 
 function InfoProduto() {
+
+    const { id } = useParams();
+    const [produto, setProduto] = useState(null);
+
+    useEffect(() => {
+        const fetchProduto = async () => {
+            try {
+                const response = await fetch(`http://localhost:8080/produtos/${id}`);
+                if (!response.ok) {
+                    throw new Error('Erro ao buscar produto');
+                }
+                const data = await response.json();
+                setProduto(data);
+            } catch (error) {
+                console.error('Erro ao buscar produto:', error);
+            }
+        };
+
+        fetchProduto();
+    }, [id]);
+
+    if (!produto) {
+        return <p>Carregando...</p>;
+    }
+
     return(
         <section>
             <p className={styleInfoProduto.caminhoProduto} >início &gt; Bolsas e Carteiras &gt; Bolsa &gt; Bolsa de crochê</p>
@@ -23,7 +50,7 @@ function InfoProduto() {
 
                     <img
                         className={styleInfoProduto.imgPrincipal}
-                        src={imagemPrincipal}
+                        src={produto.foto_produto}
                         alt="Imagem Principal do Produto"
                     />
                 </div>
@@ -31,10 +58,10 @@ function InfoProduto() {
                 <aside className={styleInfoProduto.containerInfos}>
                     <div className={styleInfoProduto.contentInfosProduto}>
                         <h2>Bing Bong</h2>
-                        <h1 className={styleInfoProduto.preco}>R$ 350,00</h1>
+                        <h1 className={styleInfoProduto.preco}>R$ {produto.preco_produto.toFixed(2)}</h1>
                         
                         <p className={styleInfoProduto.infosProduto}>
-                            ou 12x sem juros de R$29,17 no cartão
+                            ou 12x sem juros de R${(produto.preco_produto / 12).toFixed(2)} no cartão
                             
                             <br /><br />
                             
