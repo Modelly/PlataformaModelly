@@ -57,7 +57,7 @@ function InfoProduto() {
                 
                 <aside className={styleInfoProduto.containerInfos}>
                     <div className={styleInfoProduto.contentInfosProduto}>
-                        <h2>Bing Bong</h2>
+                        <h2>{produto.nome_produto}</h2>
                         <h1 className={styleInfoProduto.preco}>R$ {produto.preco_produto.toFixed(2)}</h1>
                         
                         <p className={styleInfoProduto.infosProduto}>
@@ -67,7 +67,7 @@ function InfoProduto() {
                             
                             <strong>Feito sob encomenda</strong>
                             <br />
-                            <span className={styleInfoProduto.subText}>10 dias para produção</span>
+                            <span className={styleInfoProduto.subText}>{produto.tempo_producao} dias para produção</span>
 
                             <br /><br />
 
@@ -113,7 +113,7 @@ function InfoProduto() {
                             <img className={styleInfoProduto.fotoPerfil} src={imagemPrincipal}></img>
 
                             <div>
-                                <span className={styleInfoProduto.textRosa}>Nome da loja</span>
+                                <span className={styleInfoProduto.textRosa}>{produto.loja.nome_loja}</span>
                                 <p className={styleInfoProduto.subText}>Localização da loja</p>
                             </div>
 
@@ -121,9 +121,9 @@ function InfoProduto() {
                         </div>
 
                         <div>
-                            <span>10 produtos</span>
+                            <span>{produto.loja.qtd_produtos} produtos</span>
                             <span>12 avaliações</span>
-                            <span>8 coleções</span>
+                            <span>{produto.loja.qtd_colecao} coleções</span>
                         </div>
 
                         <a className={`${styleInfoProduto.btn} ${styleInfoProduto.btnContatarVendedor}`}>Contatar vendedor</a>
