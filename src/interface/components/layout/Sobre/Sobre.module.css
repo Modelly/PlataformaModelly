@@ -12,7 +12,7 @@
     --bogart-medium: 'Bogart Bold', sans-serif;
 }
 
-.root-container {
+.rootContainer {
     background-color: var(--cor-background);
     font-family: var(--poppins-font);
     padding: 2rem;
@@ -22,54 +22,77 @@
     padding: 2rem 0;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    margin-left: 5rem;
 }
 
-.section:nth-child(even) {
-    flex-direction: row-reverse;
+.textContainer {
+    max-width: 100%;
 }
 
-.title, .section-title {
+.title, .sectionTitle {
     font-family: var(--bogart-medium);
     color: var(--cor-quartiaria);
     margin-bottom: 1rem;
+    font-size: 2.3rem;
 }
 
 .text {
     font-family: var(--poppins-font);
+    font-size: 1.3rem;
     color: var(--cor-fonte-principal);
     font-weight: 700;
-    margin: 1rem 0;
+    margin: 2rem 0;
+}
+
+.textqui {
+    font-family: var(--poppins-font);
+    font-size: 1.5rem;
+    color: var(--cor-fonte-principal);
+    font-weight: 700;
+    margin: 2rem 0;
+    margin-right: 20rem;
 }
 
 .image {
-    max-width: 200px;
-    margin: 0 2rem;
+    max-width: 260px;
+    margin: 0 2.5rem;
 }
 
-.mvv-container {
+.MarketImage {
+    max-width: 260px;
+    margin-left: -3rem;
+}
+
+.CatImage {
+    max-width: 260px;
+    margin-right: 6rem;
+}
+
+.mvvContainer {
     display: flex;
     justify-content: space-around;
     text-align: center;
     margin: 2rem 0;
 }
 
-.mvv-item {
+.mvvItem {
     width: 30%;
 }
 
-.mvv-image {
+.mvvImage {
     max-width: 100px;
     margin: 0 auto;
 }
 
-.mvv-title {
+.mvvTitle {
     font-family: var(--bogart-medium);
     color: var(--cor-preta-stroke);
     margin: 1rem 0;
 }
 
-.mvv-text {
-    font-family: var(--poppins-font);
+.mvvText {
+    font-family: var (--poppins-font);
     color: var(--cor-preta-stroke);
     font-weight: 500;
 }
@@ -82,12 +105,12 @@
     padding: 1rem 0;
 }
 
-.carousel-item {
+.carouselItem {
     min-width: 200px;
     scroll-snap-align: start;
 }
 
-.card-container {
+.cardContainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -103,18 +126,18 @@
     overflow: hidden;
 }
 
-.card-header {
+.cardHeader {
     background-color: var(--cor-primaria);
     padding: 1rem;
     font-family: var(--poppins-font);
     font-weight: 700;
 }
 
-.card-body {
+.cardBody {
     padding: 1rem;
 }
 
-.card-footer {
+.cardFooter {
     display: flex;
     justify-content: flex-end;
     padding: 0.5rem;

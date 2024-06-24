@@ -7,7 +7,7 @@ const Sobre = () => {
   return (
     <div className="bodyHTML">
       <Navbar />
-      <SobreLayout />
+      <SobreLayout/>
       <Footer/>
     </div>
   );
