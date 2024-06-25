@@ -46,7 +46,7 @@ const HomeLayout = () => {
 
     const fetchProducts = async () => {
         try {
-            const response = await axios.get('http://localhost:8080/produtos');
+            const response = await axios.get('https://813a-177-9-31-79.ngrok-free.app/produtos');
             setProducts(response.data);
             setLoading(false);
         } catch (error) {
