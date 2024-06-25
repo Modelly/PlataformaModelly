@@ -1,5 +1,5 @@
 import ContatoLayout from "../../components/layout/Contato/ContatoLayout";
-import Navbar from "../../components/layout/Navbar/Navbar";
+import Navbar from "../../components/layout/Navbar/deslogado/NavbarDeslogado";
 import Footer from "../../components/layout/Footer/Footer";
 
 function Contato_1() {

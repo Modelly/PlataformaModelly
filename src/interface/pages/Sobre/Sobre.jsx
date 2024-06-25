@@ -1,5 +1,5 @@
 import SobreLayout from '../../components/layout/Sobre/Sobre_Layout.jsx';
-import Navbar from '../../components/layout/Navbar/Navbar.jsx';
+import Navbar from '../../components/layout/Navbar/deslogado/NavbarDeslogado.jsx';
 import React from 'react';
 import Footer from '../../components/layout/Footer/Footer.jsx';
 
