@@ -12,7 +12,6 @@ import imagemPrincipal from '../../../../../assets/images/imgs-produto/imagem-pr
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 
-import localData from '../../../../../../public/data/products.json'
 import styleInfoProduto from './InfoProduto.module.css';
 
 
@@ -36,15 +35,25 @@ function InfoProduto() {
                 setTimeout(() => {
                     setProduto(data);
                     setIsLoading(false)
-                }, 500)
+                }, 800)
                 
             } catch (error) {
                 console.error('Erro ao buscar produto:', error);
-                const foundProduct = localData.find(p => p.pk_id_produto === parseInt(id));
-                setTimeout(() => {
-                    setProduto(foundProduct)
-                    setIsLoading(false)
-                }, 500) 
+                try {
+                    const localResponse = await fetch('/data/products.json');
+                    if (!localResponse.ok) {
+                        throw new Error('Erro ao buscar produto local');
+                    }
+                    const localData = await localResponse.json();
+                    const foundProduct = localData.find(p => p.pk_id_produto === parseInt(id));
+                    setTimeout(() => {
+                        setProduto(foundProduct);
+                        setIsLoading(false);
+                    }, 800);
+                } catch (localError) {
+                    console.error('Erro ao buscar produto local:', localError);
+                    setIsLoading(false);
+                }
             }
         };
 

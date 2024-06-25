@@ -57,15 +57,21 @@ const HomeLayout = () => {
             setTimeout(() => {
                 setProducts(response.data);
                 setLoading(false);
-            }, 1200) 
+            }, 1000) 
         } catch (error) {
             console.error('Erro ao buscar produtos:', error);
             // Carregando dados localmente
-            const localData = await fetch('public/data/products.json').then(res => res.json());
-            setTimeout(() => {
-                setProducts(localData);
+            const localResponse = await fetch('/data/products.json');
+            if (localResponse.ok) {
+                const localData = await localResponse.json();
+                setTimeout(() => {
+                    setProducts(localData);
+                    setLoading(false);
+                }, 1000);
+            } else {
+                console.error('Erro ao buscar produtos localmente:', error);
                 setLoading(false);
-            }, 1200) 
+            }
         }
     };
 
