@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import styleCadastroVendedor from './Cadastro_Vendedor.module.css';
 import step1Img from '../../../../assets/images/cad_vendedor/step1.png';
 import step2Img from '../../../../assets/images/cad_vendedor/step2.png';
@@ -214,7 +215,9 @@ const Cadastro_VendedorLayout = () => {
             <img src={logogato} alt="Logo" className={styleCadastroVendedor.logo} />
             <h2>Cadastro Finalizado</h2>
             <p>Obrigado por se juntar à família Modelly! Estamos empolgados em ter você <br/>como um artista na nossa plataforma. Que sua jornada aqui seja repleta de <br/>cores, criatividade e muito sucesso! ️</p>
-            <button className={styleCadastroVendedor.finish_button}>Começar</button>
+            <Link to="/artesao">
+              <button className={styleCadastroVendedor.finish_button}>Começar</button>
+            </Link>
           </div>
         </div>
       )}
