@@ -9,12 +9,18 @@ import barcode from '../../../../../assets/images/imgs-produto/Barcode.png';
 import shoppingCart from '../../../../../assets/images/imgs-produto/Shopping-Cart.png';
 import imagemPrincipal from '../../../../../assets/images/imgs-produto/imagem-principal.png';
 
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
+
+import localData from '../../../../../../public/data/products.json'
 import styleInfoProduto from './InfoProduto.module.css';
+
 
 function InfoProduto() {
 
     const { id } = useParams();
     const [produto, setProduto] = useState(null);
+    const [isLoading, setIsLoading] = useState(true)
 
     const location = useLocation();
     const basePath = getBasePath(location.pathname);
@@ -27,17 +33,44 @@ function InfoProduto() {
                     throw new Error('Erro ao buscar produto');
                 }
                 const data = await response.json();
-                setProduto(data);
+                setTimeout(() => {
+                    setProduto(data);
+                    setIsLoading(false)
+                }, 500)
+                
             } catch (error) {
                 console.error('Erro ao buscar produto:', error);
+                const foundProduct = localData.find(p => p.pk_id_produto === parseInt(id));
+                setTimeout(() => {
+                    setProduto(foundProduct)
+                    setIsLoading(false)
+                }, 500) 
             }
         };
 
         fetchProduto();
     }, [id]);
 
-    if (!produto) {
-        return <p>Carregando...</p>;
+    if (isLoading) {
+        return (
+            <section>
+                <Skeleton height={20} width={300}/>
+                <div className={styleInfoProduto.produtoContainer}>
+                    <div className={styleInfoProduto.imagensProduto}>
+                        <div>
+                            <Skeleton height={90} width={90} count={4} style={{marginTop: 10}}/>
+
+                        </div>
+                        <Skeleton height={900} width={700} />
+                    </div>
+                    <aside className={styleInfoProduto.containerInfos}>
+                        <Skeleton height={40} width={270} count={8} style={{marginTop: 10}} />
+                        <Skeleton height={280} width={320} style={{marginTop: 10}} />
+
+                    </aside>
+                </div>
+            </section>
+        );
     }
 
     return(
