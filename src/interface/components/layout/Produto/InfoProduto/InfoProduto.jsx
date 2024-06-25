@@ -27,7 +27,11 @@ function InfoProduto() {
     useEffect(() => {
         const fetchProduto = async () => {
             try {
-                const response = await fetch(`http://localhost:8080/produtos/${id}`);
+                const response = await fetch(`https://5a09-177-9-31-79.ngrok-free.app/produtos/${id}`, {
+                    headers: {
+                        'ngrok-skip-browser-warning': 'true'
+                      }
+                });
                 if (!response.ok) {
                     throw new Error('Erro ao buscar produto');
                 }

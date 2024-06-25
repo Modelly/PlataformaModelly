@@ -51,17 +51,6 @@ const AppRoutes = () => {
                         <Route path="/consumidor/fale-conosco" element={<Contato_1/>}/>
                         <Route path="/consumidor/cadastrar-vendedor" element={<CadastroVendedor/>} />
                     </Route>
-                    {/*
-                        <Route path="/" element={<HomeConsumidor />} />
-                        <Route path="/produto" element={<ProdutoConsumidor />} />
-                        <Route path="/produto/:id" element={<ProdutoConsumidor />} />
-                        <Route path="/feira-virtual" element={<FeiraVirtualConsumidor />} />
-                        <Route path="/seja-vendedor" element={<VendedorConsumidor />}/>
-                        <Route path="/personalizado" element={<PersonalizadoConsumidor />} />
-                        <Route path="/sobre" element={<SobreConsumidor />} />
-                        <Route path="/carrinho" element={<CarrinhoConsumidor />} />
-                        <Route path="/fale-conosco" element={<Contato_1Consumidor />}/>
-                    */}
 
                     {/* TELAS ARTESAO */}
                     <Route path="/artesao" element={<UsuarioArtesao />}>
