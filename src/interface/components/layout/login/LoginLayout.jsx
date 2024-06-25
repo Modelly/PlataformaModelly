@@ -22,7 +22,7 @@ function LoginLayout() {
                         <Components.Input type='email' placeholder='Email' />
                         <Components.Input type='password' placeholder='Senha' />
                         
-                        <Link to="/">
+                        <Link to="/consumidor">
                             <Components.Button>Cadastrar</Components.Button>
                         </Link>
                         
@@ -37,7 +37,7 @@ function LoginLayout() {
                         <Components.Input type='password' placeholder='Senha' />
                         <Components.Anchor href="#">Esqueceu sua senha?</Components.Anchor>
 
-                        <Link to="/">
+                        <Link to="/consumidor">
                             <Components.Button>Entrar</Components.Button>
                         </Link>
 
