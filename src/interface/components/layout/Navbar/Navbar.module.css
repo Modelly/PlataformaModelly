@@ -66,12 +66,28 @@
 
 .icons {
     display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-between; 
 }
 
 .icon {
     width: 30px;
     height: 30px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.iconConsumidor {
+    width: 40px;
+    height: auto;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.user_iconPerfil {
+    width: 60px;
+    height: auto;
     cursor: pointer;
     margin-left: 20px;
 }
