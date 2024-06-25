@@ -61,7 +61,7 @@ const HomeLayout = () => {
         } catch (error) {
             console.error('Erro ao buscar produtos:', error);
             // Carregando dados localmente
-            const localData = await fetch('../../../../../public/data/products.json').then(res => res.json());
+            const localData = await fetch('public/data/products.json').then(res => res.json());
             setTimeout(() => {
                 setProducts(localData);
                 setLoading(false);
