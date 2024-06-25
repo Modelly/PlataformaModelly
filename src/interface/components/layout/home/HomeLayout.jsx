@@ -1,25 +1,28 @@
-import bannerImage from '../../../../assets/images/imgs-home/banner-image.png';
-import decoracaoImg from '../../../../assets/images/imgs-home/decoracao.png';
-import acessoriosImg from '../../../../assets/images/imgs-home/acessorios.png';
-import velasImg from '../../../../assets/images/imgs-home/velas.png';
-import modaImg from '../../../../assets/images/imgs-home/moda.png';
-import petsImg from '../../../../assets/images/imgs-home/pets.png';
-import infantilImg from '../../../../assets/images/imgs-home/infantil.png';
-import sociaisImg from '../../../../assets/images/imgs-home/sociais.png';
-import casaImg from '../../../../assets/images/imgs-home/casa.png';
-import personalizadoImg from '../../../../assets/images/imgs-home/personalizado.png';
-import catImage from '../../../../assets/images/imgs-home/cat-image.png';
-import dinheiro from '../../../../assets/images/imgs-home/Banknotes.png';
-import perfil from '../../../../assets/images/imgs-home/Artist.png';
-import devolucao from '../../../../assets/images/imgs-home/devolucao.png';
-import categoria from '../../../../assets/images/imgs-home/Categorize.png';
-import { Link, useLocation } from 'react-router-dom';
-import styleHome from './HomeLayout.module.css';
 import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { getBasePath } from "../../util/GetBasePath.jsx"
+
 import axios from 'axios';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
-import { getBasePath } from "../../util/GetBasePath.jsx"
+
+import modaImg from '../../../../assets/images/imgs-home/moda.png';
+import petsImg from '../../../../assets/images/imgs-home/pets.png';
+import casaImg from '../../../../assets/images/imgs-home/casa.png';
+import perfil from '../../../../assets/images/imgs-home/Artist.png';
+import velasImg from '../../../../assets/images/imgs-home/velas.png';
+import sociaisImg from '../../../../assets/images/imgs-home/sociais.png';
+import catImage from '../../../../assets/images/imgs-home/cat-image.png';
+import dinheiro from '../../../../assets/images/imgs-home/Banknotes.png';
+import devolucao from '../../../../assets/images/imgs-home/devolucao.png';
+import infantilImg from '../../../../assets/images/imgs-home/infantil.png';
+import categoria from '../../../../assets/images/imgs-home/Categorize.png';
+import decoracaoImg from '../../../../assets/images/imgs-home/decoracao.png';
+import acessoriosImg from '../../../../assets/images/imgs-home/acessorios.png';
+import bannerImage from '../../../../assets/images/imgs-home/banner-image.png';
+import personalizadoImg from '../../../../assets/images/imgs-home/personalizado.png';
+
+import styleHome from './HomeLayout.module.css';
 
 const HomeLayout = () => {
     const categories = [
