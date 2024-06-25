@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { getBasePath } from "../../util/GetBasePath.jsx"
+import { truncateDescription } from '../../util/TruncateDescription.jsx';
 
 import axios from 'axios';
 import Skeleton from 'react-loading-skeleton';
@@ -20,7 +21,7 @@ import categoria from '../../../../assets/images/imgs-home/Categorize.png';
 import decoracaoImg from '../../../../assets/images/imgs-home/decoracao.png';
 import acessoriosImg from '../../../../assets/images/imgs-home/acessorios.png';
 import bannerImage from '../../../../assets/images/imgs-home/banner-image.png';
-import personalizadoImg from '../../../../assets/images/imgs-home/personalizado.png';
+import personalizadoImg from '../../../../assets/images/imgs-home/personalizado.png'; 
 
 import styleHome from './HomeLayout.module.css';
 
@@ -37,6 +38,8 @@ const HomeLayout = () => {
         { name: "Personalizado", img: personalizadoImg },
     ];
 
+    const MAX_LENGHT = 20;
+
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
 
@@ -51,11 +54,18 @@ const HomeLayout = () => {
                     'ngrok-skip-browser-warning': 'true'
                   }
             });
-            setProducts(response.data);
-            setLoading(false);
+            setTimeout(() => {
+                setProducts(response.data);
+                setLoading(false);
+            }, 1200) 
         } catch (error) {
             console.error('Erro ao buscar produtos:', error);
-            setLoading(false);
+            // Carregando dados localmente
+            const localData = await fetch('../../../../../public/data/products.json').then(res => res.json());
+            setTimeout(() => {
+                setProducts(localData);
+                setLoading(false);
+            }, 1200) 
         }
     };
 
@@ -83,7 +93,7 @@ const HomeLayout = () => {
                             <div key={index} className={styleHome.skeleton_card}>
                                 <Skeleton height={200} />
                                 <Skeleton count={2} style={{ marginTop: 10 }} />
-                                <Skeleton width={80} style={{ marginTop: 10 }} />
+                                <Skeleton width={250} style={{ marginTop: 10 }} />
                             </div>
                         ))
                     ) :(
@@ -92,7 +102,7 @@ const HomeLayout = () => {
                             <Link to={`${basePath}/produto/${product.pk_id_produto}`}>
                                 <img src={product.foto_produto} alt={product.nome_produto} className={styleHome.product_image} />
                                 <p className={styleHome.product_name}>{product.nome_produto}</p>
-                                <p className={styleHome.product_description}>{product.descricao_produto}</p>
+                                <p className={styleHome.product_description}>{truncateDescription(product.descricao_produto, MAX_LENGHT)}</p>
                                 <div className={styleHome.product_footer}>
                                     <p className={styleHome.product_price}>R$ {product.preco_produto.toFixed(2)}</p>
                                     <button className={styleHome.view_more_button}>Ver mais</button>
