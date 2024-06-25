@@ -1,20 +1,23 @@
-import styleInfoProduto from './InfoProduto.module.css';
-import { Link, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-
-import imagemPrincipal from '../../../../../assets/images/imgs-produto/imagem-principal.png';
-import shoppingCart from '../../../../../assets/images/imgs-produto/Shopping-Cart.png';
-import mC from '../../../../../assets/images/imgs-produto/m-c.png';
-import barcode from '../../../../../assets/images/imgs-produto/Barcode.png';
-import pix from '../../../../../assets/images/imgs-produto/pix.png';
-
+import { Link, useLocation } from 'react-router-dom';
 import { getBasePath } from "../../../util/GetBasePath.jsx"
+
+import mC from '../../../../../assets/images/imgs-produto/m-c.png';
+import pix from '../../../../../assets/images/imgs-produto/pix.png';
+import barcode from '../../../../../assets/images/imgs-produto/Barcode.png';
+import shoppingCart from '../../../../../assets/images/imgs-produto/Shopping-Cart.png';
+import imagemPrincipal from '../../../../../assets/images/imgs-produto/imagem-principal.png';
+
+import styleInfoProduto from './InfoProduto.module.css';
 
 function InfoProduto() {
 
     const { id } = useParams();
     const [produto, setProduto] = useState(null);
+
+    const location = useLocation();
+    const basePath = getBasePath(location.pathname);
 
     useEffect(() => {
         const fetchProduto = async () => {
@@ -36,9 +39,6 @@ function InfoProduto() {
     if (!produto) {
         return <p>Carregando...</p>;
     }
-
-    const location = useLocation();
-    const basePath = getBasePath(location.pathname);
 
     return(
         <section>
