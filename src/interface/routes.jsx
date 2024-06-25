@@ -6,7 +6,7 @@ import UsuarioDeslogado from './pages/UsuarioDeslogado.jsx';
 import UsuarioArtesao from './pages/UsuarioArtesao.jsx';
 
 // layouts
-import Login from '../interface/pages/Login/Login';
+import Login from '../interface/components/layout/login/LoginLayout.jsx';
 
 import HomeLayout from '../interface/components/layout/home/HomeLayout.jsx';
 import Produto from '../interface/components/layout/Produto/ProdutoLayout.jsx';
@@ -49,7 +49,7 @@ const AppRoutes = () => {
                         <Route path="/consumidor/sobre" element={<Sobre/>} />
                         <Route path="/consumidor/carrinho" element={<Carrinho/>} />
                         <Route path="/consumidor/fale-conosco" element={<Contato_1/>}/>
-                        <Route path="/consumidor/consumidor/cadastrar-vendedor" element={<CadastroVendedor/>} />
+                        <Route path="/consumidor/cadastrar-vendedor" element={<CadastroVendedor/>} />
                     </Route>
                     {/*
                         <Route path="/" element={<HomeConsumidor />} />
