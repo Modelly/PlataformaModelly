@@ -13,12 +13,13 @@ import dinheiro from '../../../../assets/images/imgs-home/Banknotes.png';
 import perfil from '../../../../assets/images/imgs-home/Artist.png';
 import devolucao from '../../../../assets/images/imgs-home/devolucao.png';
 import categoria from '../../../../assets/images/imgs-home/Categorize.png';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import styleHome from './HomeLayout.module.css';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
+import { getBasePath } from "../../util/GetBasePath.jsx"
 
 const HomeLayout = () => {
     const categories = [
@@ -51,6 +52,9 @@ const HomeLayout = () => {
         }
     };
 
+    const location = useLocation();
+    const basePath = getBasePath(location.pathname);
+
     return (
         <div className={styleHome.home_container}>
             <div className={styleHome.home_bannerImage_container}>
@@ -78,7 +82,7 @@ const HomeLayout = () => {
                     ) :(
                     products.map((product) => (
                         <div key={product.pk_id_produto} className={styleHome.product_card}>
-                            <Link to={`/produto/${product.pk_id_produto}`}>
+                            <Link to={`${basePath}/produto/${product.pk_id_produto}`}>
                                 <img src={product.foto_produto} alt={product.nome_produto} className={styleHome.product_image} />
                                 <p className={styleHome.product_name}>{product.nome_produto}</p>
                                 <p className={styleHome.product_description}>{product.descricao_produto}</p>
