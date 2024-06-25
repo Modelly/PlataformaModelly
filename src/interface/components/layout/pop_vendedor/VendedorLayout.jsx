@@ -1,13 +1,18 @@
-import styleVendedor from './Vendedor.module.css';
-import catImage from '../../../../assets/images/imgs-vendedor/Logo_Teste.png';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { getBasePath } from "../../util/GetBasePath.jsx";
+
 import Footer from '../Footer/Footer';
-import { useNavigate } from 'react-router-dom';
+import catImage from '../../../../assets/images/imgs-vendedor/Logo_Teste.png';
+
+import styleVendedor from './Vendedor.module.css';
 
 const Popup = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
+  const location = useLocation();
+  const basePath = getBasePath(location.pathname);
 
   const handleCadastroClick = () => {
-    navigate('/cadastrar-vendedor');
+    navigate(`${basePath}/cadastrar-vendedor`);
   }
 
   return (
