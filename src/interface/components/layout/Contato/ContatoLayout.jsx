@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styleContato from './Contato.module.css';
 import PopupMensagem from './pop-up-contato'; 
 
