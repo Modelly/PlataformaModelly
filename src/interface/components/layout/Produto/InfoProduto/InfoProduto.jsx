@@ -1,5 +1,5 @@
 import styleInfoProduto from './InfoProduto.module.css';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
@@ -8,6 +8,8 @@ import shoppingCart from '../../../../../assets/images/imgs-produto/Shopping-Car
 import mC from '../../../../../assets/images/imgs-produto/m-c.png';
 import barcode from '../../../../../assets/images/imgs-produto/Barcode.png';
 import pix from '../../../../../assets/images/imgs-produto/pix.png';
+
+import { getBasePath } from "../../../util/GetBasePath.jsx"
 
 function InfoProduto() {
 
@@ -34,6 +36,9 @@ function InfoProduto() {
     if (!produto) {
         return <p>Carregando...</p>;
     }
+
+    const location = useLocation();
+    const basePath = getBasePath(location.pathname);
 
     return(
         <section>
@@ -78,7 +83,7 @@ function InfoProduto() {
 
 
                         <a href="#" className={`${styleInfoProduto.btn} ${styleInfoProduto.btnRoxo}`}>Comprar agora</a>
-                        <Link to="/carrinho" className={`${styleInfoProduto.btn} ${styleInfoProduto.btnRosa}`}>
+                        <Link to={`${basePath}/carrinho`} className={`${styleInfoProduto.btn} ${styleInfoProduto.btnRosa}`}>
                             <img className={styleInfoProduto.carrinhoIcone} src={shoppingCart} alt="Shopping Cart" />Adicionar ao carrinho
                         </Link>
                         
