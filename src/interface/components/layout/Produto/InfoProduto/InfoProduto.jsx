@@ -27,7 +27,7 @@ function InfoProduto() {
     useEffect(() => {
         const fetchProduto = async () => {
             try {
-                const response = await fetch(`https://5a09-177-9-31-79.ngrok-free.app/produtos/${id}`, {
+                const response = await fetch(`https://98b4-177-9-31-79.ngrok-free.app/produtos/${id}`, {
                     headers: {
                         'ngrok-skip-browser-warning': 'true'
                       }
