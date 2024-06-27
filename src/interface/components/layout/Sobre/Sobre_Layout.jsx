@@ -102,7 +102,7 @@ const Sobre = () => {
             <section className={styles.section}>
                 <img src={MarketImage} alt="Quitanda" className={styles.MarketImage} />
                 <div className={styles.textContainer}>
-                    <p className={styles.textqui}>
+                    <p className={styles.text}>
                         Com uma plataforma intuitiva e segura,<br/> oferecemos ferramentas para os
                         artistas <br/>gerenciarem seus negócios e divulgarem seus <br/>produtos,
                         impulsionando o sucesso profissional.
