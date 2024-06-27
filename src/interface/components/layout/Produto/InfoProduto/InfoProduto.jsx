@@ -27,7 +27,7 @@ function InfoProduto() {
     useEffect(() => {
         const fetchProduto = async () => {
             try {
-                const response = await fetch(`https://98b4-177-9-31-79.ngrok-free.app/produtos/${id}`, {
+                const response = await fetch(`http://localhost:8080/produtos/${id}`, {
                     headers: {
                         'ngrok-skip-browser-warning': 'true'
                       }
@@ -99,11 +99,14 @@ function InfoProduto() {
                         <div className={styleInfoProduto.imgLtrl}></div>
                     </div>
 
+                    <a href={produto.nome_produto === "Boneco Bing Bong" ? "https://lumalabs.ai/capture/B1FC17F8-6910-4B02-82EF-F4936D2EFC06" : ""} target='_blank' rel="noopener noreferrer">
                     <img
                         className={styleInfoProduto.imgPrincipal}
                         src={produto.foto_produto}
                         alt="Imagem Principal do Produto"
                     />
+                    </a>
+                    
                 </div>
                 
                 <aside className={styleInfoProduto.containerInfos}>

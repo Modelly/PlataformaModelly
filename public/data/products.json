@@ -234,45 +234,6 @@
         "foto_produto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi73c8NJdH2C0qYXRQJ7_KtJoG5BkCw0kTbA&s"
     },
     {
-        "pk_id_produto": 7,
-        "loja": {
-            "pk_id_loja": 1,
-            "usuario": {
-                "pk_id_usuario": 2,
-                "nome_usuario": "Maria Oliveira",
-                "cpf_usuario": "987.654.321-00",
-                "senha_usuario": "senha456",
-                "email_usuario": "maria@example.com",
-                "genero_usuario": "feminino",
-                "data_nasc_usuario": "1985-05-05",
-                "data_registro_usuario": "2024-06-20",
-                "plano_usuario": "colecionador",
-                "permissao_usuario": "artesao",
-                "endereco_usuario": "Rua B, 456",
-                "foto_perfil_usuario": "C:\\Users\\Aluno\\Downloads\\perfil_lojaEusuario.png"
-            },
-            "nome_loja": "Loja da Maria",
-            "descricao_loja": "Loja de artesanato",
-            "plano_loja": "escultura",
-            "telefone_loja": "12345678",
-            "email_loja": "lojadamaria@example.com",
-            "cnpj_loja": "00.000.000/0001-00",
-            "qtd_colecao": 5,
-            "qtd_produtos": 50,
-            "foto_perfil_loja": "C:\\Users\\Aluno\\Downloads\\perfil_lojaEusuario.png",
-            "banner_loja": "C:\\Users\\Aluno\\Downloads\\banner_loja.png"
-        },
-        "nome_produto": "Quadro Abstrato",
-        "preco_produto": 129.99,
-        "descricao_produto": "Uma obra de arte abstrata em tela, pintada à mão com cores vibrantes e texturas ricas. Ideal para decorar salas de estar, escritórios ou qualquer ambiente que necessite de um toque de sofisticação.",
-        "categoria_produto": "decoracao",
-        "qtd_produto": 3,
-        "pronta_entrega": false,
-        "tempo_producao": 10,
-        "status_produto": "producao",
-        "foto_produto": "https://images.tcdn.com.br/img/img_prod/985996/quadro_abstrato_predominacao_azul_1293_1_82f7c89bcf732cce2e1bb5b43e198aa8.jpg"
-    },
-    {
         "pk_id_produto": 8,
         "loja": {
             "pk_id_loja": 1,
@@ -310,5 +271,44 @@
         "tempo_producao": 4,
         "status_produto": "disponivel",
         "foto_produto": "https://cdn.awsli.com.br/2500x2500/1561/1561446/produto/235057929/2130ebdc-672f-47fa-929d-33b930cd2cd4-g8my8tug4h.jpg"
+    },
+    {
+        "pk_id_produto": 9,
+        "loja": {
+            "pk_id_loja": 1,
+            "usuario": {
+                "pk_id_usuario": 2,
+                "nome_usuario": "Maria Oliveira",
+                "cpf_usuario": "987.654.321-00",
+                "senha_usuario": "senha456",
+                "email_usuario": "maria@example.com",
+                "genero_usuario": "feminino",
+                "data_nasc_usuario": "1985-05-05",
+                "data_registro_usuario": "2024-06-20",
+                "plano_usuario": "colecionador",
+                "permissao_usuario": "artesao",
+                "endereco_usuario": "Rua B, 456",
+                "foto_perfil_usuario": "C:\\Users\\Aluno\\Downloads\\perfil_lojaEusuario.png"
+            },
+            "nome_loja": "Loja da Maria",
+            "descricao_loja": "Loja de artesanato",
+            "plano_loja": "escultura",
+            "telefone_loja": "12345678",
+            "email_loja": "lojadamaria@example.com",
+            "cnpj_loja": "00.000.000/0001-00",
+            "qtd_colecao": 5,
+            "qtd_produtos": 50,
+            "foto_perfil_loja": "C:\\Users\\Aluno\\Downloads\\perfil_lojaEusuario.png",
+            "banner_loja": "C:\\Users\\Aluno\\Downloads\\banner_loja.png"
+        },
+        "nome_produto": "Boneco Bing Bong",
+        "preco_produto": 59.99,
+        "descricao_produto": "Uma peça artesanal detalhada do personagem Bing Bong, feita com materiais de alta qualidade. Ideal para colecionadores e fãs de artesanato.",
+        "categoria_produto": "escultura",
+        "qtd_produto": 5,
+        "pronta_entrega": true,
+        "tempo_producao": 7,
+        "status_produto": "disponivel",
+        "foto_produto": "/src/assets/images/imgs-produto/imagem-principal.png"
     }
 ]
