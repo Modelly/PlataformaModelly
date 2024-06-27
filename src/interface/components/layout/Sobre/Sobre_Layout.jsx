@@ -1,5 +1,3 @@
-import React from 'react';
-import styles from './Sobre.module.css';
 import CatImage from '../../../../assets/images/img_sobre/cat.png';
 import MarketImage from '../../../../assets/images/img_sobre/market.png';
 import LineImage from '../../../../assets/images/img_sobre/line.png';
@@ -12,7 +10,78 @@ import PartnerImage1 from '../../../../assets/images/img_sobre/Parceiro.png';
 import PartnerImage2 from '../../../../assets/images/img_sobre/Parceiro.png';
 import PartnerImage3 from '../../../../assets/images/img_sobre/Parceiro.png';
 
+import fotoMatt from '../../../../assets/images/img-equipe/MatheusMorgado.png'
+import fotoPamela from '../../../../assets/images/img-equipe/Pamela.png'
+import fotoJoao from '../../../../assets/images/img-equipe/JoaoLucas.png'
+import fotoJhonathan from '../../../../assets/images/img-equipe/Jhonatan.png'
+import fotoGiovana from '../../../../assets/images/img-equipe/GiovanaTavares.png'
+import fotoGabSantos from '../../../../assets/images/img-equipe/GabSantos.png'
+import fotoGabLopes from '../../../../assets/images/img-equipe/GabLopes.png'
+import fotoBenHur from '../../../../assets/images/img-equipe/BenHur.png'
+
+import styles from './Sobre.module.css';
+
 const Sobre = () => {
+    const dbEquipe = [
+        {
+            nome: "Matheus Ribeiro Morgado",
+            funcao: "Dev FullStack",
+            linkGitHub: "https://github.com/mathmorgado",
+            linkLinkedin: "https://www.linkedin.com/in/mathmorgado/",
+            foto: fotoMatt
+        },
+        {
+            nome: "Gabriel Lopes Valentin Barboza",
+            funcao: "UI/UX | Dev Frontend | Financeiro",
+            linkGitHub: "https://github.com/gabvalentinbarboza",
+            linkLinkedin: "https://linkedin.com/in/gabriel-lopes-01b0311a1",
+            foto: fotoGabLopes
+        },
+        {
+            nome: "Gabriel Santos de Oliveira",
+            funcao: "UI/UX | Dev Frontend | Scrum Master",
+            linkGitHub: "https://github.com/R2oock",
+            linkLinkedin: "https://www.linkedin.com/in/gabriel-santos-9ab449266/",
+            foto: fotoGabSantos
+        },
+        {
+            nome: "Giovanna Carolina Pereira Tavares",
+            funcao: "Dev Backend | Banco de Dados",
+            linkGitHub: "https://github.com/diow123",
+            linkLinkedin: "https://www.linkedin.com/in/giovanna--tavares/",
+            foto: fotoGiovana
+        },
+        {
+            nome: "Jhonatan Gomes",
+            funcao: "Dev Frontend",
+            linkGitHub: "https://github.com/Jhonatangomes007",
+            linkLinkedin: "http://linkedin.com/in/jhonatangomes-ti",
+            foto: fotoJhonathan
+        },
+        {
+            nome: "João Silva",
+            funcao: "Dev Frontend",
+            linkGitHub: "https://github.com/Guiado011",
+            linkLinkedin: "linkedin.com/in/joão-silva-a80701300",
+            foto: fotoJoao
+        },
+        {
+            nome: "Pamela Miranda de Oliveira ",
+            funcao: "Dev Frontend",
+            linkGitHub: "https://github.com/pamyszz",
+            linkLinkedin: " https://www.linkedin.com/in/pamelami/",
+            foto: fotoPamela
+
+        },
+        {
+            nome: "Ben Hur ",
+            funcao: "Dev Frontend",
+            linkGitHub: "#",
+            linkLinkedin: " #",
+            foto: fotoBenHur
+        }
+    ]
+
     return (
         <div className={styles.rootContainer}>
             {/* Texto à esquerda e Gato à direita */}
@@ -71,7 +140,7 @@ const Sobre = () => {
                 </div>
             </div>
 
-            <section className={styles.section}>
+            <section className={styles.sectionColumn}>
                 <h2 className={styles.sectionTitle}>O que oferecemos?</h2>
                 <p className={styles.text}>
                     Para artistas: Gerencie seu negócio com facilidade e<br/> promova suas
@@ -85,9 +154,8 @@ const Sobre = () => {
                 </p>
             </section>
 
-            <section className={styles.section}>
+            <section className={styles.sectionColumn}>
                 <h2 className={styles.sectionTitle}>Nossos parceiros</h2>
-                <p className={styles.text}>Graças a eles podemos oferecer o melhor!</p>
                 <div className={styles.carousel}>
                     <div className={styles.carouselItem}><img src={PartnerImage1} alt="Parceiro 1" /></div>
                     <div className={styles.carouselItem}><img src={PartnerImage2} alt="Parceiro 2" /></div>
@@ -95,16 +163,18 @@ const Sobre = () => {
                 </div>
             </section>
 
-            <section className={styles.section}>
+            <section className={styles.sectionColumn}>
                 <h2 className={styles.sectionTitle}>Conheça a Equipe de <br/>Desenvolvedores da Modelly</h2>
                 <div className={styles.cardContainer}>
-                    {[...Array(7)].map((_, index) => (
+                    {dbEquipe.map((item, index) => (
                         <div className={styles.card} key={index}>
-                            <div className={styles.cardHeader}>Nome Sobrenome</div>
-                            <div className={styles.cardBody}>Função</div>
+                            <div className={styles.cardHeader}>
+                                <img src={item.foto} className={styles.imgIntegrante} alt="imagem integrante" />
+                            </div>
+                            <div className={styles.cardBody}>{item.nome} <br /> {item.funcao}</div>
                             <div className={styles.cardFooter}>
-                                <img src={GitHubIcon} alt="GitHub" className={styles.icon} />
-                                <img src={LinkedInIcon} alt="LinkedIn" className={styles.icon} />
+                                <a href={item.linkGitHub}><img src={GitHubIcon} alt="GitHub" className={styles.icon} /></a>
+                                <a href={item.linkLinkedin}><img src={LinkedInIcon} alt="LinkedIn" className={styles.icon} /></a>
                             </div>
                         </div>
                     ))}
