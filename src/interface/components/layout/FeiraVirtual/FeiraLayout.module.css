@@ -21,12 +21,10 @@
 /* Estilos para o Contêiner Bem-Vindo Feira */
 .sectionFeira {
     display: flex;
-    justify-content: space-around; 
     align-items: center;
-    gap: 2%;
     width: 100%;
     height: 55vh;
-    margin: 100px 0 200px 0;
+    margin: 100px 0 85px 0;
     padding: 0 100px; 
     background-color: var(--cor-background);
 }
@@ -59,12 +57,14 @@
     color: var(--cor-fonte-principal);
 }
 
-.VideoFeira {
-    width: 100%;
-    height: 100%;
-    box-shadow: 0 0 20px #3c1266b7;
+.videoBox {
+    height: auto;
+    width: auto;
+}
+
+.video {
     border-radius: 10px;
-    background-color: #B075ED;
+    background-color: #9B59B6;
 }
 
 
@@ -91,15 +91,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2%;
-    width: 100%;
+    gap: 5%;
+
+    width: 80%;
     height: 55vh;
-    margin: 120px 0 200px 0;
     padding: 0 20px; 
+    margin: 0px auto 80px auto;
+
     background-color: var(--cor-background);
 }
 
 .containerComoFunciona img {
-    height: 500px;
+    height: 350px;
     object-fit: cover;
 }

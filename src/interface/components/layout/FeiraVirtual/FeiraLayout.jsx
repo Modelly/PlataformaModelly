@@ -2,7 +2,7 @@ import styleFeira from './FeiraLayout.module.css'; // Importando o módulo CSS
 import conjuntoImage from "../../../../assets/images/imgs-feira/artes-conjunto.png";
 import iconeFeira from "../../../../assets/images/imgs-feira/feiraIcone.png";
 import iconeTicket from "../../../../assets/images/imgs-feira/Ticket.png";
-import videoImg from '../../../../assets/images/imgs-feira/video.png';
+import video from "../../../../assets/videos/video-feira.mp4"
 
 function FeiraLayout() {
     return (
@@ -23,11 +23,13 @@ function FeiraLayout() {
                             </button>
                         </div>
                     </div>
-                    <img src={videoImg} alt="Vídeo da Feira" className={styleFeira.videoFeira} />
+                    <div className={styleFeira.videoBox}>
+                        <video width="600" height="338" className={styleFeira.video} controls>
+                        <source src={video} type="video/mp4" />
+                        Seu navegador não suporta a tag de vídeo.
+                        </video>
+                    </div>
                 </div>
-                <article>
-                    <div className={styleFeira.VideoFeira}></div>
-                </article>
             </section>
             <section className={`${styleFeira.sectionFeira} ${styleFeira.containerComoFunciona}`}>
                 <img src={conjuntoImage} alt="imagens de exemplo para arte" />
