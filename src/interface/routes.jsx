@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import ScrollToTop from './components/util/ScrollToTop.jsx';
 
 // pages
 import UsuarioLogado from './pages/UsuarioLogado.jsx';
@@ -21,6 +22,7 @@ import Contato_1 from '../interface/components/layout/Contato/ContatoLayout.jsx'
 const AppRoutes = () => {
     return (
         <Router>
+            <ScrollToTop />
             <div className='container'>
                 <Routes>
                     
