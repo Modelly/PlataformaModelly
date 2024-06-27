@@ -27,7 +27,7 @@ function InfoProduto() {
     useEffect(() => {
         const fetchProduto = async () => {
             try {
-                const response = await fetch(`http://localhost:8080/produtos/${id}`, {
+                const response = await fetch(`${import.meta.env.VITE_API_URL}/produtos/${id}`, {
                     headers: {
                         'ngrok-skip-browser-warning': 'true'
                       }
