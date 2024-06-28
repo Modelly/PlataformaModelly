@@ -1,7 +1,6 @@
 import { useNavigate, useLocation } from 'react-router-dom';
 import { getBasePath } from "../../util/GetBasePath.jsx";
 
-import Footer from '../Footer/Footer';
 import catImage from '../../../../assets/images/imgs-vendedor/Logo_Teste.png';
 
 import styleVendedor from './Vendedor.module.css';
@@ -26,7 +25,6 @@ const Popup = () => {
             <button className={styleVendedor.popupButton} onClick={handleCadastroClick}>Começar Cadastro</button>
           </div>
         </div>
-        <Footer />
       </div>
     </div>
     

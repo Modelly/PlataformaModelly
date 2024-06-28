@@ -21,7 +21,7 @@ const NavbarDeslogado = () => {
                     <Link to="/carrinho">
                         <img src={cartIcon} alt="Carrinho" className={styleNav.icon} />
                     </Link>
-                    <Link to="/Cadastro_Produto">
+                    <Link to="#">
                         <img src={heartIcon} alt="Favoritos" className={styleNav.icon} />
                     </Link>
                     <Link to="/login" className={styleNav.login_link}>

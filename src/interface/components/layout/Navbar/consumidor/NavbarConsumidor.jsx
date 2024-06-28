@@ -35,7 +35,7 @@ const NavbarConsumidor = () => {
                     <img src={lupa} alt="Lupa de pesquisa" className={styleNav.lupa_icon} />
                 </div>
                 <div className={styleNav.icons}>
-                    <Link to="/consumidor/Cadastro_Produto">
+                    <Link to="#">
                         <img src={heartIcon} alt="Favoritos" className={styleNav.iconConsumidor} />
                     </Link>
                     <Link to="/consumidor/carrinho">

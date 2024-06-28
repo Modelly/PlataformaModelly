@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Platypi:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+:root {
+    --cor-primaria: #9B59B6;
+    --cor-secundaria: #361A5C;
+    --cor-terciaria: #F68E07;
+    --cor-quartiaria: #D11F52;
+    --cor-background: #FCF8F0;
+    --cor-preta-stroke: #0a0808;
+    --cor-fonte-principal: #361A5C;
+    --cor-fonte-branco: #fff;
+    --poppins-font: "Poppins", sans-serif;
+    --montserrat-font: "Montserrat", sans-serif; 
+    --bogart-medium: "Bogart Bold", sans-serif;
+}
+
+@font-face {
+    font-family: 'Bogart Bold';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Bogart Bold'), 
+         url('../fonts/Bogart-Bold-trial.ttf') format('truetype');
+}
+
+.recommendations_container {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    margin-bottom: 80px; 
+}
+
+.recommendations_heading {
+    font-family: var(--bogart-medium);
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--cor-fonte-principal);
+    margin-bottom: 65px;
+}
+
+.products_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3.5rem; 
+}
+
+.view_more_home {
+    background-color: var(--cor-terciaria);
+    border: 2px solid black;
+    border-right-width: 2px;
+    border-bottom-width: 5px;
+    padding: 10px 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: var(--montserrat-font);
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+.view_more_home:hover {
+    background-color: rgb(239, 155, 52);
+}
+
+.skeleton_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skeleton_item {
+    width: 200px;
+    height: 250px;
+    margin-bottom: 20px;
+}

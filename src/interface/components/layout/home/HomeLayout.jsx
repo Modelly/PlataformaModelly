@@ -1,12 +1,6 @@
-import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { getBasePath } from "../../util/GetBasePath.jsx"
-import { truncateDescription } from '../../util/TruncateDescription.jsx';
+// HomeLayout.jsx
 import { motion } from 'framer-motion';
-
-import axios from 'axios';
-import Skeleton from 'react-loading-skeleton';
-import 'react-loading-skeleton/dist/skeleton.css';
+import SectionProducts from '../../common/Products/sectionProducts/SectionProducts';
 
 import modaImg from '../../../../assets/images/imgs-home/moda.png';
 import petsImg from '../../../../assets/images/imgs-home/pets.png';
@@ -40,7 +34,7 @@ const HomeLayout = () => {
     ];
 
     const categoryImgVariants = {
-        hidden: { scale: 0, rotate: 360, opacity: 0 },
+        hidden: { scale: 0, rotate: 800, opacity: 0 },
         visible: { scale: 1, rotate: 0, opacity: 1 },
     };
 
@@ -58,46 +52,6 @@ const HomeLayout = () => {
         hidden: { opacity: 0, x: 80 },
         visible: { opacity: 1, x: 0 },
     };
-
-    const MAX_LENGHT = 20;
-
-    const [products, setProducts] = useState([]);
-    const [loading, setLoading] = useState(true);
-
-    useEffect(() => {
-        fetchProducts();
-    }, []);
-
-    const fetchProducts = async () => {
-        try {
-            const response = await axios.get(`${import.meta.env.VITE_API_URL}/produtos`, {
-                headers: {
-                    'ngrok-skip-browser-warning': 'true'
-                  }
-            });
-            setTimeout(() => {
-                setProducts(response.data);
-                setLoading(false);
-            }, 1000) 
-        } catch (error) {
-            console.error('Erro ao buscar produtos:', error);
-            // Carregando dados localmente
-            const localResponse = await fetch('/data/products.json');
-            if (localResponse.ok) {
-                const localData = await localResponse.json();
-                setTimeout(() => {
-                    setProducts(localData);
-                    setLoading(false);
-                }, 1000);
-            } else {
-                console.error('Erro ao buscar produtos localmente:', error);
-                setLoading(false);
-            }
-        }
-    };
-
-    const location = useLocation();
-    const basePath = getBasePath(location.pathname);
 
     return (
         <div className={styleHome.home_container}>
@@ -120,41 +74,21 @@ const HomeLayout = () => {
                             initial="hidden"
                             whileInView="visible"
                             variants={categoryTextVariants}
-                            transition={{ duration: 0.7 }} 
+                            transition={{ duration: 0.7 }}
                         >
                             {category.name}
                         </motion.p>
                     </div>
                 ))}
             </div>
+
+            {/* Seção com 8 produtos! */}
             <div className={styleHome.recommendations_container}>
                 <h2 className={styleHome.recommendations_heading}>Recomendações Diárias</h2>
-                <div className={styleHome.products_container}>
-                {loading ? (
-                        Array(8).fill().map((_, index) => (
-                            <div key={index} className={styleHome.skeleton_card}>
-                                <Skeleton height={200} />
-                                <Skeleton count={2} style={{ marginTop: 10 }} />
-                                <Skeleton width={250} style={{ marginTop: 10 }} />
-                            </div>
-                        ))
-                    ) :(      
-                        products.map((product) => (
-                            <div key={product.pk_id_produto} className={styleHome.product_card}>
-                                <Link to={`${basePath}/produto/${product.pk_id_produto}`}>
-                                    <img src={product.foto_produto} alt={product.nome_produto} className={styleHome.product_image} />
-                                    <p className={styleHome.product_name}>{product.nome_produto}</p>
-                                    <p className={styleHome.product_description}>{truncateDescription(product.descricao_produto, MAX_LENGHT)}</p>
-                                    <div className={styleHome.product_footer}>
-                                        <p className={styleHome.product_price}>R$ {product.preco_produto.toFixed(2)}</p>
-                                        <button className={styleHome.view_more_button}>Ver mais</button>
-                                    </div>
-                                </Link>
-                            </div>
-                    )))}
-                </div>
+                <SectionProducts />
             </div>
-            <button className={styleHome.view_more_home}>Ver mais</button>
+                <button className={styleHome.view_more_home}>Ver mais</button>
+
             <motion.div 
                 className={styleHome.promo_section}
                 initial="hidden"
