@@ -1,5 +1,7 @@
 // HomeLayout.jsx
 import { motion } from 'framer-motion';
+import { useLocation, Link } from 'react-router-dom';
+import { getBasePath } from "../../util/GetBasePath.jsx";
 import SectionProducts from '../../common/Products/sectionProducts/SectionProducts';
 
 import modaImg from '../../../../assets/images/imgs-home/moda.png';
@@ -53,6 +55,9 @@ const HomeLayout = () => {
         visible: { opacity: 1, x: 0 },
     };
 
+    const location = useLocation();
+    const basePath = getBasePath(location.pathname);
+
     return (
         <div className={styleHome.home_container}>
             <div className={styleHome.home_bannerImage_container}>
@@ -60,7 +65,7 @@ const HomeLayout = () => {
             </div>
             <div className={styleHome.categories_container}>
                 {categories.map((category, index) => (
-                    <div key={index} className={styleHome.category_item}>
+                    <Link to={`${basePath}/categoria`} key={index} className={styleHome.category_item}>
                         <motion.img 
                             src={category.img} 
                             alt={category.name} 
@@ -78,7 +83,7 @@ const HomeLayout = () => {
                         >
                             {category.name}
                         </motion.p>
-                    </div>
+                    </Link>
                 ))}
             </div>
 

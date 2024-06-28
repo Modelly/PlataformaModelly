@@ -4,7 +4,6 @@ import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 import ProductCard from '../Card1/ProductCard1.jsx';
 
-
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { getBasePath } from "../../../util/GetBasePath.jsx";
