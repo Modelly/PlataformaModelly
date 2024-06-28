@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { getBasePath } from "../../util/GetBasePath.jsx"
 import { truncateDescription } from '../../util/TruncateDescription.jsx';
+import { motion } from 'framer-motion';
 
 import axios from 'axios';
 import Skeleton from 'react-loading-skeleton';
@@ -37,6 +38,26 @@ const HomeLayout = () => {
         { name: "Casa", img: casaImg },
         { name: "Personalizado", img: personalizadoImg },
     ];
+
+    const categoryImgVariants = {
+        hidden: { scale: 0, rotate: 360, opacity: 0 },
+        visible: { scale: 1, rotate: 0, opacity: 1 },
+    };
+
+    const categoryTextVariants = {
+        hidden: { scale: 0.4, opacity: 0 },
+        visible: { scale: 1, opacity: 1 },
+    };
+    
+    const promoTextVariants = {
+        hidden: { opacity: 0, x: -80 },
+        visible: { opacity: 1, x: 0 },
+    };
+    
+    const promoImageVariants = {
+        hidden: { opacity: 0, x: 80 },
+        visible: { opacity: 1, x: 0 },
+    };
 
     const MAX_LENGHT = 20;
 
@@ -86,8 +107,23 @@ const HomeLayout = () => {
             <div className={styleHome.categories_container}>
                 {categories.map((category, index) => (
                     <div key={index} className={styleHome.category_item}>
-                        <img src={category.img} alt={category.name} className={styleHome.category_image} />
-                        <p>{category.name}</p>
+                        <motion.img 
+                            src={category.img} 
+                            alt={category.name} 
+                            className={styleHome.category_image} 
+                            initial="hidden"
+                            whileInView="visible"
+                            variants={categoryImgVariants}
+                            transition={{ duration: 0.7 }} 
+                        />
+                        <motion.p
+                            initial="hidden"
+                            whileInView="visible"
+                            variants={categoryTextVariants}
+                            transition={{ duration: 0.7 }} 
+                        >
+                            {category.name}
+                        </motion.p>
                     </div>
                 ))}
             </div>
@@ -119,14 +155,28 @@ const HomeLayout = () => {
                 </div>
             </div>
             <button className={styleHome.view_more_home}>Ver mais</button>
-            <div className={styleHome.promo_section}>
-                <div className={styleHome.promo_text}>
+            <motion.div 
+                className={styleHome.promo_section}
+                initial="hidden"
+                whileInView="visible"
+            >
+                <motion.div 
+                    className={styleHome.promo_text}
+                    variants={promoTextVariants}
+                    transition={{ duration: 0.6 }}
+                >
                     <h3 className={styleHome.promo_heading} dangerouslySetInnerHTML={{ __html: "Se é especial,<br/> você encontra aqui." }}></h3>
                     <p className={styleHome.promo_paragraph} dangerouslySetInnerHTML={{ __html: "Somos uma plataforma que valoriza e enaltece o trabalho <br/> dos artistas brasileiros, conectando-os com um público<br/> amplo e apreciador da arte feita à mão." }}></p>
                     <a href="/sobre" className={styleHome.promo_link}>Conheça a nossa história</a>
-                </div>
-                <img src={catImage} alt="Promo Cat" className={styleHome.promo_image} />
-            </div>
+                </motion.div>
+                <motion.img 
+                    src={catImage} 
+                    alt="Promo Cat" 
+                    className={styleHome.promo_image}
+                    variants={promoImageVariants}
+                    transition={{ duration: 0.6 }}
+                />
+            </motion.div>
 
             <div className={styleHome.help_section}>
                 <h2 className={styleHome.help_heading}>Precisa de Ajuda?</h2>
