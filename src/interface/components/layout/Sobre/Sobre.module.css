@@ -125,10 +125,16 @@
 }
 
 .cardContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.imgIntegrante {
+    width: 100%;
+    margin-top: 1rem; 
 }
 
 .card {
@@ -147,11 +153,6 @@
     padding-bottom: 0;
     font-family: var(--poppins-font);
     font-weight: 700;
-}
-
-.imgIntegrante {
-    width: 100%;;
-    margin: 0;
 }
 
 .cardBody {
