@@ -47,7 +47,6 @@ const AppRoutes = () => {
                         <Route path="/fale-conosco" element={<Contato_1/>}/>
                         <Route path="/feira-virtual" element={<FeiraVirtual/>}/>
                         <Route path="/seja-vendedor" element={<VendedorPopUp/>}/>
-                        <Route path="/Personalizado" element={<PersonalizadoLayout/>}/>
                         <Route path="/cadastrar-vendedor" element={<CadastroVendedor/>}/>
                     </Route>
 
@@ -78,6 +77,7 @@ const AppRoutes = () => {
                         <Route path="/artesao/feira-virtual" element={<FeiraVirtual/>}/>
                         <Route path="/artesao/seja-vendedor" element={<VendedorPopUp/>}/>
                         <Route path="/artesao/Cadastro_Produto" element={<CadastroProduto/>}/>
+                        <Route path="/artesao/Personalizado" element={<PersonalizadoLayout/>}/>
                         <Route path="/artesao/cadastrar-vendedor" element={<CadastroVendedor/>} />
                         <Route path="/artesao/pedido-personalizado" element={<CategoriaCliente/>}/>
                     </Route>
