@@ -25,6 +25,10 @@ h1 {
 
 h2 {
     font-size: 1.75em; 
+}
+
+.title {
+    font-size: 1.75em; 
     margin-top: 2% !important;
     margin-bottom: 2% !important;
 }
