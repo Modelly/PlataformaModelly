@@ -1,19 +1,31 @@
 import PropTypes from 'prop-types';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styleProdutoCarrinho from './ProdutoCarrinho.module.css';
 
 function ProdutoCarrinho(props) {
     const [quantidade, setQuantidade] = useState(1);
+    const [precoTotal, setPrecoTotal] = useState(parseFloat(props.PrecoProduto.replace('R$', '').replace(',', '.')));
+    const [disponiveis, setDisponiveis] = useState(100);
+
+    useEffect(() => {
+        const precoUnitario = parseFloat(props.PrecoProduto.replace('R$', '').replace(',', '.'));
+        setPrecoTotal(precoUnitario * quantidade);
+    }, [quantidade, props.PrecoProduto]);
 
     const handleAdicionar = () => {
-        setQuantidade(quantidade + 1);
+        if (disponiveis > 0) {
+            setQuantidade(quantidade + 1);
+            setDisponiveis(disponiveis - 1);
+            props.onAtualizarQuantidade(props.id, quantidade + 1);
+        }
     };
 
     const handleDiminuir = () => {
         if (quantidade > 1) {
             setQuantidade(quantidade - 1);
+            setDisponiveis(disponiveis + 1);
+            props.onAtualizarQuantidade(props.id, quantidade - 1);
         } else {
-            // Remove o produto quando a quantidade é menor que 1
             props.onExcluir(props.id);
         }
     };
@@ -23,7 +35,6 @@ function ProdutoCarrinho(props) {
     };
 
     const handleComprar = () => {
-        // Redireciona para a tela de compra
         props.onComprar(props.id);
     };
 
@@ -43,10 +54,10 @@ function ProdutoCarrinho(props) {
                     <span>{quantidade}</span>
                     <span onClick={handleAdicionar}>+</span>
                 </div>
-                <span>100 disponíveis</span>
+                <span>{disponiveis} disponíveis</span>
             </div>
             <div className={styleProdutoCarrinho.boxPreco}>
-                <span>{props.PrecoProduto}</span>
+                <span>R$ {precoTotal.toFixed(2)}</span>
                 <button onClick={handleComprar}>Comprar</button>
             </div>
         </div>
@@ -61,6 +72,7 @@ ProdutoCarrinho.propTypes = {
     PrecoProduto: PropTypes.string.isRequired,
     onExcluir: PropTypes.func.isRequired,
     onComprar: PropTypes.func.isRequired,
+    onAtualizarQuantidade: PropTypes.func.isRequired,
 }
 
 export default ProdutoCarrinho;

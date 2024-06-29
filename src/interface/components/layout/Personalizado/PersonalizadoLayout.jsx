@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styles from "./Personalizado.module.css";
 import alertImg from "../../../../assets/images/imgs-personalizado/alert.png";
 import closeImg from "../../../../assets/images/imgs-personalizado/close.png";
