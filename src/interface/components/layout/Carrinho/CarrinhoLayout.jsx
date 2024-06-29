@@ -67,7 +67,6 @@ function CarrinhoLayout() {
                     ))
                 }
                 <div className={styleCarrinhoLayout.boxProgresso}>
-                    <progress className={styleCarrinhoLayout.progress} value="70" max="100"></progress>
                     Frete Grátis!
                 </div>
             </div>

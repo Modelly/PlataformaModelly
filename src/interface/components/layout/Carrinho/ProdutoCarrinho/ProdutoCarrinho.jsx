@@ -34,9 +34,6 @@ function ProdutoCarrinho(props) {
         props.onExcluir(props.id);
     };
 
-    const handleComprar = () => {
-        props.onComprar(props.id);
-    };
 
     return (
         <div className={styleProdutoCarrinho.produtoCarrinho}>
