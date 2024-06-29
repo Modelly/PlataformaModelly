@@ -24,7 +24,9 @@ h1 {
 }
 
 h2 {
-    font-size: 1.75em; /* Ajuste de tamanho do texto */
+    font-size: 1.75em; 
+    margin-top: 2% !important;
+    margin-bottom: 2% !important;
 }
 
 h3 {
@@ -65,7 +67,7 @@ button {
 .alerta {
     position: relative;
     width: 92%;
-    height: 265px; /* Reduzindo o tamanho do card de notificação */
+    height: 265px;
     background-color: #D11F52;
     color: #fff;
     margin: 30px auto;
