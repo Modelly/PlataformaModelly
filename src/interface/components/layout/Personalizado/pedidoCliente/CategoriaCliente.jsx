@@ -1,5 +1,5 @@
 import style from './CategoriaCliente.module.css'
-import womanImg2 from '../../../../../assets/images/pedido-personalizado/womanImg2.png'
+import womanImg from '../../../../../assets/images/pedido-personalizado/womanImg.png'
 import { Link } from 'react-router-dom'
 import NavbarConsumidor from '../../Navbar/consumidor/NavbarConsumidor'
 
@@ -12,7 +12,7 @@ export default function CategoriaCliente() {
     <NavbarConsumidor />
       <div className={style.containerInicial}>
       <div className={style.boxImg}>
-        <img src={womanImg2} alt="" />
+        <img src={womanImg} alt="" />
       </div>
       <div className={style.boxDescricao}>
         <div>
