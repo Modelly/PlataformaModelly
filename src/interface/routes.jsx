@@ -21,6 +21,11 @@ import CadastroVendedor from '../interface/components/layout/Cadastro_Vendedor/C
 import Contato_1 from '../interface/components/layout/Contato/ContatoLayout.jsx';
 import Categoria from './components/layout/Categoria/Categoria.jsx';
 import PersonalizadoLayout from './components/layout/Personalizado/PersonalizadoLayout.jsx';
+import CategoriaCliente from './components/layout/Personalizado/pedidoCliente/CategoriaCliente.jsx';
+import FormularioServicos from './components/layout/Personalizado/pedidoCliente/FormularioServicos.jsx';
+import EscolhaCategoria from './components/layout/Personalizado/pedidoCliente/EscolhaCategoria.jsx';
+import Publicar from './components/layout/Personalizado/pedidoCliente/Publicar.jsx';
+
 
 const AppRoutes = () => {
     return (
@@ -42,8 +47,7 @@ const AppRoutes = () => {
                         <Route path="/fale-conosco" element={<Contato_1/>}/>
                         <Route path="/feira-virtual" element={<FeiraVirtual/>}/>
                         <Route path="/seja-vendedor" element={<VendedorPopUp/>}/>
-                        <Route path="/cadastrar-vendedor" element={<CadastroVendedor/>} />
-                        <Route path="/Personalizado" element={<PersonalizadoLayout/>}/>
+                        <Route path="/cadastrar-vendedor" element={<CadastroVendedor/>}/>
                     </Route>
 
                     {/* TELAS CONSUMIDOR LOGADO */}
@@ -57,7 +61,8 @@ const AppRoutes = () => {
                         <Route path="/consumidor/fale-conosco" element={<Contato_1/>}/>
                         <Route path="/consumidor/feira-virtual" element={<FeiraVirtual/>}/>
                         <Route path="/consumidor/seja-vendedor" element={<VendedorPopUp/>}/>
-                        <Route path="/consumidor/cadastrar-vendedor" element={<CadastroVendedor/>} />
+                        <Route path="/consumidor/cadastrar-vendedor" element={<CadastroVendedor/>}/>
+                        <Route path="/consumidor/pedido-personalizado" element={<CategoriaCliente/>}/>
                     </Route>
 
                     {/* TELAS ARTESAO */}
@@ -72,10 +77,17 @@ const AppRoutes = () => {
                         <Route path="/artesao/feira-virtual" element={<FeiraVirtual/>}/>
                         <Route path="/artesao/seja-vendedor" element={<VendedorPopUp/>}/>
                         <Route path="/artesao/Cadastro_Produto" element={<CadastroProduto/>}/>
+                        <Route path="/artesao/Personalizado" element={<PersonalizadoLayout/>}/>
                         <Route path="/artesao/cadastrar-vendedor" element={<CadastroVendedor/>} />
+                        <Route path="/artesao/pedido-personalizado" element={<CategoriaCliente/>}/>
                     </Route>
 
                     <Route path="/Cadastro_Produto" element={<CadastroProduto/>} />
+
+                    <Route path="/pedido-personalizado" element={<CategoriaCliente/>}/>
+                    <Route path="/pedido-personalizado/categorias" element={<EscolhaCategoria/>}/>
+                    <Route path="/pedido-personalizado/formulario" element={<FormularioServicos/>}/>
+                    <Route path="/pedido-personalizado/publicar" element={<Publicar/>}/>
                 </Routes>         
             </div>
         </Router>

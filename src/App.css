@@ -26,6 +26,6 @@
     cursor: pointer;
     color: var(--cor-fonte-branco); 
     text-transform: uppercase;
-    font-family: var(--montserrat-font);
+    font-family: var(--poppins-font);
     font-weight: 600;
 }
