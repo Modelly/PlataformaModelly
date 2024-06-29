@@ -109,7 +109,7 @@
     font-family: var (--poppins-font);
     color: var(--cor-fonte-principal);
     font-weight: 700;
-    text-align: left;
+    text-align: center;
 }
 
 .carousel {
