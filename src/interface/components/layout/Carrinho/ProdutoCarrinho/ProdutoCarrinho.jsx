@@ -34,9 +34,6 @@ function ProdutoCarrinho(props) {
         props.onExcluir(props.id);
     };
 
-    const handleComprar = () => {
-        props.onComprar(props.id);
-    };
 
     return (
         <div className={styleProdutoCarrinho.produtoCarrinho}>
@@ -48,17 +45,16 @@ function ProdutoCarrinho(props) {
                     <button onClick={handleExcluir}>Excluir</button>
                 </div>
             </div>
-            <div className={styleProdutoCarrinho.quantidadeProdutoCarrinho}>
-                <div className={styleProdutoCarrinho.botaoQuantidade}>
-                    <span onClick={handleDiminuir}>-</span>
-                    <span>{quantidade}</span>
-                    <span onClick={handleAdicionar}>+</span>
-                </div>
-                <span>{disponiveis} disponíveis</span>
-            </div>
             <div className={styleProdutoCarrinho.boxPreco}>
                 <span>R$ {precoTotal.toFixed(2)}</span>
-                <button onClick={handleComprar}>Comprar</button>
+                <div className={styleProdutoCarrinho.boxQuantidadeDisponiveis}>
+                    <span>{disponiveis} disponíveis</span>
+                    <div className={styleProdutoCarrinho.botaoQuantidade}>
+                        <span onClick={handleDiminuir}>-</span>
+                        <span>{quantidade}</span>
+                        <span onClick={handleAdicionar}>+</span>
+                    </div>
+                </div>
             </div>
         </div>
     );

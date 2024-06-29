@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styleCarrinhoLayout from './CarrinhoLayout.module.css';
 
 import Produto1 from '../../../../assets/images/imgs-carrinho/foto-produto1.png';
@@ -21,10 +22,11 @@ const dbProdutoCarrinho = [
         Descricao: "Essa é uma descricao genérica do produto Boneca Escolar",
         Preco: "R$ 99,90"
     }
-]
+];
 
 function CarrinhoLayout() {
     const [produtos, setProdutos] = useState(dbProdutoCarrinho.map(produto => ({ ...produto, quantidade: 1 })));
+    const navigate = useNavigate();
 
     const handleExcluirProduto = (id) => {
         setProdutos(produtos.filter(produto => produto.id !== id));
@@ -36,8 +38,8 @@ function CarrinhoLayout() {
         )));
     };
 
-    const handleComprarProduto = (id) => {
-        console.log(`Redirecionar para a compra do produto com id: ${id}`);
+    const handleComprarProduto = () => {
+        navigate('/checkout');
     };
 
     const calcularPrecoTotal = () => {
@@ -67,7 +69,6 @@ function CarrinhoLayout() {
                     ))
                 }
                 <div className={styleCarrinhoLayout.boxProgresso}>
-                    <progress className={styleCarrinhoLayout.progress} value="70" max="100"></progress>
                     Frete Grátis!
                 </div>
             </div>
@@ -85,7 +86,7 @@ function CarrinhoLayout() {
                     <span className={styleCarrinhoLayout.testeeRosa}>Total</span>
                     <span className={styleCarrinhoLayout.boldText}>R$ {calcularPrecoTotal()}</span>
                 </div>
-                <button>Continuar compra</button>
+                <button onClick={handleComprarProduto}>Continuar compra</button>
             </aside>
         </div>
     )
