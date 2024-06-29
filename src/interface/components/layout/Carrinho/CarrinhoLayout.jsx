@@ -24,10 +24,16 @@ const dbProdutoCarrinho = [
 ]
 
 function CarrinhoLayout() {
-    const [produtos, setProdutos] = useState(dbProdutoCarrinho);
+    const [produtos, setProdutos] = useState(dbProdutoCarrinho.map(produto => ({ ...produto, quantidade: 1 })));
 
     const handleExcluirProduto = (id) => {
         setProdutos(produtos.filter(produto => produto.id !== id));
+    };
+
+    const handleAtualizarQuantidade = (id, novaQuantidade) => {
+        setProdutos(produtos.map(produto => (
+            produto.id === id ? { ...produto, quantidade: novaQuantidade } : produto
+        )));
     };
 
     const handleComprarProduto = (id) => {
@@ -37,8 +43,7 @@ function CarrinhoLayout() {
     const calcularPrecoTotal = () => {
         return produtos.reduce((total, produto) => {
             const precoProduto = parseFloat(produto.Preco.replace('R$', '').replace(',', '.'));
-            const quantidadeProduto = produto.quantidade || 1; // Considera a quantidade padrão como 1
-            return total + (precoProduto * quantidadeProduto);
+            return total + (precoProduto * produto.quantidade);
         }, 0).toFixed(2);
     };
 
@@ -57,6 +62,7 @@ function CarrinhoLayout() {
                             PrecoProduto={produto.Preco}
                             onExcluir={handleExcluirProduto}
                             onComprar={handleComprarProduto}
+                            onAtualizarQuantidade={handleAtualizarQuantidade}
                         />
                     ))
                 }
@@ -68,7 +74,7 @@ function CarrinhoLayout() {
             <aside className={styleCarrinhoLayout.boxInfoCarrinho}>
                 <h1 className={styleCarrinhoLayout.titleCarrinho}>Resumo da compra</h1>
                 <div className={styleCarrinhoLayout.boxInfoResumoCompra}>
-                    <span>Produtos({produtos.length})</span>
+                    <span>Produtos({produtos.reduce((acc, produto) => acc + produto.quantidade, 0)})</span>
                     <span>R$ {calcularPrecoTotal()}</span>
                 </div>
                 <div className={styleCarrinhoLayout.boxInfoResumoCompra}>
