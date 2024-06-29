@@ -127,14 +127,16 @@
 .cardContainer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
+    gap: 1.5rem;
     justify-content: space-around;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .imgIntegrante {
     width: 100%;
+    height: auto;
     margin-top: 1rem; 
+    margin-bottom: -0.4rem;
 }
 
 .card {
@@ -166,7 +168,7 @@
 }
 
 .icon {
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 28px;
     margin-left: 0.5rem;
 }
