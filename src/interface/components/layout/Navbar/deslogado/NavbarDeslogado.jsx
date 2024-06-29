@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import styleNav from '../Navbar.module.css';
 import logo from '../../../../../assets/images/imgs-nav/modelly-logo.png';
 import lupa from '../../../../../assets/images/imgs-nav/lupa-icon.png';
-import cartIcon from '../../../../../assets/images/imgs-nav/cart-icon.png';
+import bagIcon from '../../../../../assets/images/imgs-nav/bag-icon.png';
 import heartIcon from '../../../../../assets/images/imgs-nav/heart-icon.png';
 import userIcon from '../../../../../assets/images/imgs-nav/male-user.png';
 
@@ -19,7 +19,7 @@ const NavbarDeslogado = () => {
                 </div>
                 <div className={styleNav.icons}>
                     <Link to="/carrinho">
-                        <img src={cartIcon} alt="Carrinho" className={styleNav.icon} />
+                        <img src={bagIcon} alt="Carrinho" className={styleNav.icon} />
                     </Link>
                     <Link to="#">
                         <img src={heartIcon} alt="Favoritos" className={styleNav.icon} />

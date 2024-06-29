@@ -62,6 +62,8 @@ const HomeLayout = () => {
         <div className={styleHome.home_container}>
             <div className={styleHome.home_bannerImage_container}>
                 <img src={bannerImage} alt="Banner" className={styleHome.banner_image} />
+                <h1 className={styleHome.banner_heading}>Seja bem-vindo(a)</h1>
+                <h2 className={styleHome.banner_subheading}>Conectando artistas,<br/>encantando o mundo!</h2>
             </div>
             <div className={styleHome.categories_container}>
                 {categories.map((category, index) => (
