@@ -24,7 +24,7 @@ function PersonalizadoLayout() {
               Habilite as notificações e receba instantaneamente pedidos sobre sua
               categoria.
             </p>
-            <button>Ativar</button>
+            <button className={styles.ativarButton}>Ativar</button>
           </div>
           <img className={styles.close} src={closeImg} alt="Fechar" onClick={closeAlert} />
         </div>
@@ -39,10 +39,11 @@ function PersonalizadoLayout() {
             <img src={searchImg} alt="lupa" />
           </div>
           <div className={styles.pBtns}>
-            <input id="rs" className={styles.poppinsRegular} type="submit" value="Artesanato" />
-            <input id="a" className={styles.poppinsRegular} type="submit" value="Amigurumi" />
-            <input id="vd" className={styles.poppinsRegular} type="submit" value="Crochê" />
+            <input id="rs" className={styles.rs} type="submit" value="Artesanato" />
+            <input id="a" className={styles.a} type="submit" value="Amigurumi" />
+            <input id="vd" className={styles.vd} type="submit" value="Crochê" />
           </div>
+
           <div className={styles.artes}>
             <div className={styles.arte}>
               <Arte />
