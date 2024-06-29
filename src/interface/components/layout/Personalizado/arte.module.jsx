@@ -17,7 +17,7 @@ function Arte() {
     <div className={styles.arteContainer}>
       <div className={styles.arte}>
         <div className={styles.oR}>
-          <h2 className={styles.title}>Título da Arte</h2>
+          <h2 className={styles.titlear}>Título da Arte</h2>
           <input className={styles.proposalButton} type="submit" value="Fazer Proposta" />
         </div>
         <div className={styles.tR}>
@@ -44,7 +44,7 @@ function Arte() {
         <div className={styles.overlay}>
           <div className={styles.popup}>
             <button className={styles.closeButton} onClick={handleClosePopup}>×</button>
-            <h2>Marcar a proposta como inapropriada</h2>
+            <h2 className={styles.titlear}>Marcar a proposta como inapropriada</h2>
             <form>
               <label>
                 <input type="radio" name="reason" value="inappropriate" />

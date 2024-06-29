@@ -11,13 +11,13 @@
 }
 
 
-.title, .title3 {
+.titleper, .title3 {
     font-family: var(--poppins-font);
     font-weight: 600;
 }
 
 
-.title {
+.titleper {
     font-size: 1.75em; 
     margin-top: 2% !important;
     margin-bottom: 2% !important;
@@ -27,17 +27,20 @@
     font-size: 1.75em;
 }
 
+.titleper {
+    font-size: 2rem; 
+    color: #361A5C;
+    margin: 0px 0px 50px 5%;
+    margin-top: 20px;
+}
 
 .prgf, .rs, .a, .vd {
     font-family: var(--poppins-font);
     font-weight: 400;
 }
 
-button {
-    font-weight: 500;
-}
 
-.main {
+.mainper {
     position: relative;
     width: 100%;
     height: auto;
@@ -98,13 +101,6 @@ button {
     top: 20px;
     right: 20px;
     cursor: pointer;
-}
-
-h2 {
-    font-size: 2rem; 
-    color: #361A5C;
-    margin: 0px 0px 50px 5%;
-    margin-top: 20px;
 }
 
 .section {

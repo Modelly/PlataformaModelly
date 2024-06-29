@@ -30,7 +30,7 @@ function PersonalizadoLayout() {
         </div>
       )}
 
-      <h2 className={styles.title}>Encontre Trabalho</h2>
+      <h2 className={styles.titleper}>Encontre Trabalho</h2>
       <section className={styles.section}>
         <Filtros />
         <div id="pqs" className={styles.pqs}>
