@@ -1,14 +1,13 @@
-// Categoria.jsx
 import PropTypes from 'prop-types';
 import SectionProducts from '../../common/Products/sectionProducts/SectionProducts';
 import HorizontalCategory from '../../common/Categories/horizontalRectangleCategory/HorizontalCategory';
 
-import imgPaperCategory from '../../../../assets/images/img-categoria/PaperCategory.png'
-import imgFeltroCategory from '../../../../assets/images/img-categoria/FeltroCategory.png'
+import imgPaperCategory from '../../../../assets/images/img-categoria/PaperCategory.png';
+import imgFeltroCategory from '../../../../assets/images/img-categoria/FeltroCategory.png';
 
 import stylesCategoria from './Categoria.module.css';
 
-const Categoria = ({ titulo="Categoria", descricao="Descrição da categoria fica bem aqui" }) => {
+const Categoria = ({ titulo = "Categoria", descricao = "Descrição da categoria fica bem aqui" }) => {
     const dbCategorias = [
         {
             categoria: 'Artes de papel',
@@ -48,8 +47,8 @@ const Categoria = ({ titulo="Categoria", descricao="Descrição da categoria fic
 }
 
 Categoria.propTypes = {
-    titulo: PropTypes.string.isRequired,
-    descricao: PropTypes.string.isRequired
-}
+    titulo: PropTypes.string, // Não obrigatório
+    descricao: PropTypes.string // Não obrigatório
+};
 
 export default Categoria;
