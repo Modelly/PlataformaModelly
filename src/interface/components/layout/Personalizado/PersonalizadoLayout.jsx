@@ -14,13 +14,13 @@ function PersonalizadoLayout() {
   };
 
   return (
-    <main className={styles.main}>
+    <main className={styles.mainper}>
       {alertVisible && (
         <div id="alerta" className={styles.alerta}>
           <img className={styles.alertaImg} src={alertImg} alt="Alerta" />
           <div id="texto" className={styles.texto}>
-            <h3 className={styles.poppinsMedium}>Não perca nada!</h3>
-            <p className={styles.poppinsRegular}>
+            <h3 className={styles.title3}>Não perca nada!</h3>
+            <p className={styles.prgf}>
               Habilite as notificações e receba instantaneamente pedidos sobre sua
               categoria.
             </p>
@@ -39,9 +39,9 @@ function PersonalizadoLayout() {
             <img src={searchImg} alt="lupa" />
           </div>
           <div className={styles.pBtns}>
-            <input id="rs" className={styles.rs} type="submit" value="Artesanato" />
-            <input id="a" className={styles.a} type="submit" value="Amigurumi" />
-            <input id="vd" className={styles.vd} type="submit" value="Crochê" />
+            <input className={styles.rs} type="submit" value="Artesanato" />
+            <input className={styles.a} type="submit" value="Amigurumi" />
+            <input className={styles.vd} type="submit" value="Crochê" />
           </div>
 
           <div className={styles.artes}>

@@ -10,22 +10,12 @@
     --montserrat-font: 'Montserrat', sans-serif;
 }
 
-body {
-    font-family: var(--poppins-font);
-}
 
-h1, h2, h3, h4, h5, h6 {
+.title, .title3 {
     font-family: var(--poppins-font);
     font-weight: 600;
 }
 
-h1 {
-    font-size: 2.5em;
-}
-
-h2 {
-    font-size: 1.75em; 
-}
 
 .title {
     font-size: 1.75em; 
@@ -33,23 +23,12 @@ h2 {
     margin-bottom: 2% !important;
 }
 
-h3 {
+.title3 {
     font-size: 1.75em;
 }
 
-h4 {
-    font-size: 1.5em;
-}
 
-h5 {
-    font-size: 1.25em;
-}
-
-h6 {
-    font-size: 1em;
-}
-
-p, label, button, input, select, option {
+.prgf, .rs, .a, .vd {
     font-family: var(--poppins-font);
     font-weight: 400;
 }
@@ -79,7 +58,7 @@ button {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: -5px !important;
+
 }
 
 .texto {
@@ -88,12 +67,12 @@ button {
     padding: 10px 0px;
 }
 
-.texto h3 {
+.texto .title3 {
     font-size: 28px;
     font-weight: 500;
 }
 
-.texto p {
+.texto .prgf {
     display: inline-block;
     width: 700px;
     margin: 20px 0px;

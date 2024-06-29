@@ -93,15 +93,19 @@ body {
 }
 
 .tagButton:nth-child(1) {
+    font-family: var(--poppins-font);
+    font-weight: 400;
     background-color: #FE6291;
 }
 
 .tagButton:nth-child(2) {
     background-color: #6BA457;
+    font-weight: 400;
 }
 
 .tagButton:nth-child(3) {
     background-color: #43E3E3;
+    font-weight: 400;
 }
 
 .report {
