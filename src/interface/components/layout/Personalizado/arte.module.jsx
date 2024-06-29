@@ -16,7 +16,7 @@ function Arte() {
     
     
       <p className={styles.description}>
-        O cliente deseja uma obra de arte que capture a essência de uma jornada pessoal e significativa. A inspiração para esta peça vem de uma combinação de elementos naturais e urbanos, representando o equilíbrio entre a serenidade da natureza e a energia da cidade.
+        O cliente deseja uma obra de arte que capture a essência de uma jornada <br/>pessoal e significativa. A inspiração para esta peça vem de uma combinação<br/> de elementos naturais e urbanos, representando o equilíbrio entre a <br/>serenidade da natureza e a energia da cidade.
       </p>
       <div className={styles.fR}>
         <div className={styles.tagButtons}>

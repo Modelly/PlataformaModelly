@@ -22,7 +22,6 @@ body {
     border-radius: 15.83px;
     background-color: var(--cor-background);
     text-align: left; 
-
 }
 
 .oR {
@@ -64,11 +63,12 @@ body {
 }
 
 .description {
-    margin: 15px 0;
-    font-size: 16px;
+    margin: 14px 0;
+    font-size: 1.1rem;
     line-height: 1.5;
     color: var(--cor-secundaria);
-    margin-bottom: 10%;
+    margin-bottom: 5%;
+    margin-top: 3%;
 }
 
 .fR {
@@ -83,9 +83,9 @@ body {
 }
 
 .tagButton {
-    padding: 5px 10px;
+    padding: 6px 18px;
     border: none;
-    border-radius: 10px;
+    border-radius: 14px;
     font-size: 14px;
     color: var(--cor-fonte-branco);
     cursor: pointer;
@@ -107,12 +107,12 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 14px;
+    font-size: 16px;
     color: var(--cor-secundaria);
     cursor: pointer;
 }
 
 .report img {
-    width: 20px;
-    height: 20px;
+    width: 26px;
+    height: 26px;
 }
