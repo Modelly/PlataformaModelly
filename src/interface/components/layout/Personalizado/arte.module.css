@@ -17,8 +17,8 @@ body {
 .arte {
     position: relative;
     width: 100%;
-    max-width: 780px;
-    padding: 20px;
+    max-width: 855px;
+    padding: 23px;
     border-radius: 15.83px;
     background-color: var(--cor-background);
     text-align: left; 
@@ -34,11 +34,11 @@ body {
     font-size: 1.5em;
     font-weight: 600;
     color: var(--cor-secundaria);
-    margin-right: auto ; 
+    margin-left: 0; 
 }
 
 .proposalButton {
-    width: 150px;
+    width: 140px;
     height: 40px;
     border: none;
     border-radius: 20px;
@@ -50,15 +50,16 @@ body {
 
 .tR {
     display: flex;
-    justify-content: space-between; 
-    margin-top: -11px;
+    justify-content: flex-start; 
+    margin-top: -40px; 
+    gap: 15px; 
     color: var(--cor-secundaria);
 }
 
 .published,
 .proposals {
     font-size: 14px;
-    margin-left: 0; 
+    margin: 0; 
 }
 
 .description {
