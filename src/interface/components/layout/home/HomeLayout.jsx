@@ -106,7 +106,7 @@ const HomeLayout = () => {
                 >
                     <h3 className={styleHome.promo_heading} dangerouslySetInnerHTML={{ __html: "Se é especial,<br/> você encontra aqui." }}></h3>
                     <p className={styleHome.promo_paragraph} dangerouslySetInnerHTML={{ __html: "Somos uma plataforma que valoriza e enaltece o trabalho <br/> dos artistas brasileiros, conectando-os com um público<br/> amplo e apreciador da arte feita à mão." }}></p>
-                    <a href="/sobre" className={styleHome.promo_link}>Conheça a nossa história</a>
+                    <a href="/Sobre" className={styleHome.promo_link}>Conheça a nossa história</a>
                 </motion.div>
                 <motion.img 
                     src={catImage} 
