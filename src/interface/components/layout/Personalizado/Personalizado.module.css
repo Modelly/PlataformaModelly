@@ -64,12 +64,12 @@ button {
 
 .alerta {
     position: relative;
-    width: 94%;
-    height: 275.62px;
+    width: 92%;
+    height: 265px; /* Reduzindo o tamanho do card de notificação */
     background-color: #D11F52;
     color: #fff;
     margin: 30px auto;
-    border-radius: 15.23px;
+    border-radius: 15px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -83,35 +83,35 @@ button {
 }
 
 .texto h3 {
-    font-size: 30.46px;
+    font-size: 28px;
     font-weight: 500;
 }
 
 .texto p {
     display: inline-block;
-    width: 750px;
+    width: 700px;
     margin: 20px 0px;
-    font-size: 26.65px;
+    font-size: 24px; 
 }
 
 .texto button {
-    width: 182.73px;
-    height: 50.25px;
+    width: 180px; 
+    height: 48px; 
     background-color: #F68E07;
     color: #fff;
     border: none;
-    border-radius: 19.03px;
-    font-size: 18.27px;
+    border-radius: 18px;
+    font-size: 18px;
 }
 
 .alertaImg {
-    margin: 0px 130px;
+    margin: 0px 120px; 
 }
 
 .close {
     position: absolute;
-    top: 25px;
-    right: 25px;
+    top: 20px;
+    right: 20px;
     cursor: pointer;
 }
 
@@ -137,39 +137,37 @@ h2 {
     align-items: start;
     justify-content: space-around;
     width: 28%;
-    height: 628.9px;
+    height: 15%;
     margin: 0px;
     padding: 2%;
     border: 2px solid #361A5C;
-    border-radius: 15.23px;
+    border-radius: 15px;
+    background-color: #FBFAFA;
 }
 
 .busca label, .busca select {
     display: block;
-    font-size: 22.84px;
+    font-size: 1rem;
     color: #361A5C;
-    font-size: 22.74px;
 }
 
 .busca select {
     margin: 25px 0px 20px;
     font-size: 16px;
-}
-
-.busca select {
     width: 90%;
-    height: 51.13px;
+    height: 55px; 
     border: 2px solid #361A5C;
     padding: 0px 10px;
-    border-radius: 19.03px;
+    border-radius: 20px; 
 }
 
 .busca input {
     display: inline;
-    padding: 10px 35px;
-    height: 47.97px;
-    border-radius: 11.42px;
+    padding: 10px 30px;
+    height: 55px;
+    border-radius: 10px; 
     color: #361A5C;
+    font-weight: bold; 
 }
 
 .btns {
@@ -184,10 +182,10 @@ h2 {
 
 .busca button {
     position: relative;
-    width: 50%;
-    height: 67.14px;
+    width: 48%;
+    height: 65px; 
     border-radius: 20px;
-    background-color: orange;
+    background-color: #FE6291;
     color: #fff;
     margin: 30px auto 20px;
     font-size: 1rem;
@@ -205,7 +203,7 @@ h2 {
     position: relative;
     width: 100%;
     height: 60px; 
-    border-radius: 19.03px;
+    border-radius: 20px; 
     border: 2px solid #361A5C;
     display: flex;
     align-items: center;
@@ -213,9 +211,9 @@ h2 {
 }
 
 .pesquisar input {
-    width: 70%;
-    height: 80%;
-    font-size: 30.46px;
+    width: 88%;
+    height: 90%;
+    font-size: 26px; 
     border: none;
 }
 
@@ -224,7 +222,8 @@ h2 {
 }
 
 .pesquisar input::placeholder {
-    font-size: 30.46px;
+    font-size: 26px; 
+    font-weight: 530;
     color: #737373;
 }
 
@@ -241,14 +240,14 @@ h2 {
 }
 
 .pBtns input {
-    width: 30%;
-    height: 35.02px;
-    border-radius: 11.42px;
+    width: 28%;
+    height: 32px; 
+    border-radius: 10px; 
     border: none;
-    font-size: 15.23px;
+    font-size: 14px; 
     color: #fff;
-    text-align: center; /* Centraliza o texto verticalmente */
-    line-height: 35.02px; /* Centraliza o texto verticalmente */
+    text-align: center; 
+    line-height: 32px; 
 }
 
 #rs {
@@ -276,10 +275,10 @@ h2 {
 .arte {
     position: relative;
     width: 100%;
-    height: 352.99px;
-    border-radius: 15.83px;
-    border: 1px solid #361A5C;
-    margin-bottom: 70px;
+    height: 340px; 
+    border-radius: 15px;
+    border: 2px solid #361A5C;
+    margin-bottom: 60px; 
 }
 
 .arte .o-r {
@@ -296,11 +295,11 @@ h2 {
 
 .arte .o-r input {
     position: relative;
-    width: 200px;
-    height: 45px;
-    border-radius: 15.23px;
+    width: 180px; 
+    height: 40px; 
+    border-radius: 15px;
     color: #fff;
-    font-size: 15px;
+    font-size: 14px; 
     background-color: #F68E07;
 }
 
@@ -311,7 +310,7 @@ h2 {
     flex-direction: row;
     justify-content: start;
     color: #361A5C;
-    font-size: 15px;
+    font-size: 14px; 
 }
 
 .arte #t-r-s {
@@ -319,8 +318,7 @@ h2 {
 }
 
 .arte .desc {
-    font-size: 17.41px;
-    padding: 2%;
+    font-size: 16px; 
 }
 
 #btn-rs {
