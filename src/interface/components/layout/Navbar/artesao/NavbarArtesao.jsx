@@ -1,5 +1,5 @@
-import { getBasePath } from "../../../util/GetBasePath.jsx"
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { getBasePath } from "../../../util/GetBasePath.jsx";
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
 import logo from '../../../../../assets/images/imgs-nav/modelly-logo.png';
 import lupa from '../../../../../assets/images/imgs-nav/lupa-icon.png';
@@ -7,42 +7,42 @@ import bagIcon from '../../../../../assets/images/imgs-nav/consumidor/atencao-sa
 import heartIcon from '../../../../../assets/images/imgs-nav/heart-icon.png';
 import photoPerfil from '../../../../../assets/images/imgs-nav/foto-perfil.png';
 
-import helpIcon from "../../../../../assets/images/imgs-nav/dropdown/Help.png"
-import storeIcon from "../../../../../assets/images/imgs-nav/dropdown/Store.png"
-import logoutIcon from "../../../../../assets/images/imgs-nav/dropdown/Logout.png"
-import settingsIcon from "../../../../../assets/images/imgs-nav/dropdown/Settings.png"
+import helpIcon from "../../../../../assets/images/imgs-nav/dropdown/Help.png";
+import storeIcon from "../../../../../assets/images/imgs-nav/dropdown/Store.png";
+import logoutIcon from "../../../../../assets/images/imgs-nav/dropdown/Logout.png";
+import settingsIcon from "../../../../../assets/images/imgs-nav/dropdown/Settings.png";
 
 import styleNav from '../Navbar.module.css';
 
 const NavbarArtesao = () => {
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     const location = useLocation();
     const basePath = getBasePath(location.pathname);
 
     const handleLogout = () => {
-        /*Lógica de logout vai vir aqui quando eu terminar o back*/
+        /* Lógica de logout vai vir aqui quando eu terminar o back */
         navigate(`/`);
     };
 
     return (
         <div className={styleNav.navbar_container}>
             <div className={styleNav.navbar_top}>
-                <Link to="/artesao">
+                <NavLink to="/artesao" className={styleNav.navbar_logo}>
                     <img src={logo} alt="Logo totalmente branco escrito Modelly com um gatinho segurando um pincel" className={styleNav.logo_nav} />
-                </Link>
+                </NavLink>
                 <div className={styleNav.search_box}>
                     <input type="text" placeholder="Buscar na Modelly" />
                     <img src={lupa} alt="Lupa de pesquisa" className={styleNav.lupa_icon} />
                 </div>
                 <div className={styleNav.icons}>
-                    <Link to="/artesao/Cadastro_Produto">
+                    <NavLink to="/artesao/Cadastro_Produto" activeClassName={styleNav.active}>
                         <img src={heartIcon} alt="Favoritos" className={styleNav.iconConsumidor} />
-                    </Link>
-                    <Link to="/artesao/carrinho">
+                    </NavLink>
+                    <NavLink to="/artesao/carrinho" activeClassName={styleNav.active}>
                         <img src={bagIcon} alt="Carrinho" className={styleNav.iconConsumidor} />
-                    </Link>
+                    </NavLink>
                     <div>
-                    <details className={styleNav.dropdown}>
+                        <details className={styleNav.dropdown}>
                             <summary><img src={photoPerfil} alt="Ícone de usuário" className={styleNav.user_iconPerfil} /></summary>
                             <ul className={styleNav.dropdown_menu}>
                                 <li>
@@ -68,12 +68,12 @@ const NavbarArtesao = () => {
             </div>
             <div className={styleNav.navbar_bottom}>
                 <ul className={styleNav.navbar_list}>
-                    <li className={styleNav.navbar_item}><Link to="/personalizado">Personalizado</Link></li>
-                    <li className={styleNav.navbar_item}><Link to="/feira-virtual">Feira Virtual</Link></li>
-                    <li className={styleNav.navbar_item}><Link to="/seja-vendedor">Minha Loja</Link></li>
-                    <li className={styleNav.navbar_item}><Link to="/planos-modelly">Planos Modelly</Link></li>
-                    <li className={styleNav.navbar_item}><Link to="/sobre">Sobre</Link></li>
-                    <li className={styleNav.navbar_item}><Link to="/fale-conosco">Fale Conosco</Link></li>
+                    <li className={styleNav.navbar_item}><NavLink to="/artesao/personalizado" activeClassName={styleNav.active}>Personalizado</NavLink></li>
+                    <li className={styleNav.navbar_item}><NavLink to="/artesao/feira-virtual" activeClassName={styleNav.active}>Feira Virtual</NavLink></li>
+                    <li className={styleNav.navbar_item}><NavLink to="/artesao/seja-vendedor" activeClassName={styleNav.active}>Minha Loja</NavLink></li>
+                    <li className={styleNav.navbar_item}><NavLink to="/artesao/planos-modelly" activeClassName={styleNav.active}>Planos Modelly</NavLink></li>
+                    <li className={styleNav.navbar_item}><NavLink to="/artesao/sobre" activeClassName={styleNav.active}>Sobre</NavLink></li>
+                    <li className={styleNav.navbar_item}><NavLink to="/artesao/fale-conosco" activeClassName={styleNav.active}>Fale Conosco</NavLink></li>
                 </ul>
             </div>
         </div>

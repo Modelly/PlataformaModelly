@@ -191,7 +191,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--cor-secundaria); 
+    background-color: #361A5C; 
     padding: 5px 3%;
 }
 
@@ -218,3 +218,4 @@
     color: var(--cor-fonte-branco) !important;  
     text-decoration: none !important; 
 }
+
