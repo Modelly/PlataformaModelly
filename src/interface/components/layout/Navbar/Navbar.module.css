@@ -10,7 +10,7 @@
     --cor-fonte-principal: #361A5C;
     --cor-fonte-branco: #fff;
     --poppins-font: "Poppins", sans-serif;
-    --montserrat-font: "Montserrat", sans-serif; 
+    --montserrat-font: "Poppins", sans-serif; 
 }
 
 .navbar_container {
@@ -174,7 +174,7 @@
     align-items: center;
     text-decoration: none;
     color: var(--cor-fonte-principal);
-    font-family: var(--montserrat-font);
+    font-family: var(--poppins-font);
     font-weight: 600;
     margin-left: 20px;
 }

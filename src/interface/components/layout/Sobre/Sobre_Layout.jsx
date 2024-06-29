@@ -126,17 +126,27 @@ const Sobre = () => {
                 <div className={styles.mvvItem}>
                     <img src={MissionImage} alt="Missão" className={styles.mvvImage} />
                     <h2 className={styles.mvvTitle}>Missão</h2>
-                    <p className={styles.mvvText}>Descrição da missão da<br/> Modelly - Lorem ipsum bla</p>
+                    <p className={styles.mvvText}>A Modelly tem como missão apoiar o desenvolvimento sustentável da carreira de artesãos,
+                         facilitando todo o processo de venda de seus produtos e permitindo que eles se concentrem na criatividade.<br /><br />
+                         Nosso objetivo é conectar consumidores de arte a um vasto mercado de artesanato, promovendo um ambiente inclusivo e igualitário.
+</p>
                 </div>
                 <div className={styles.mvvItem}>
                     <img src={VisionImage} alt="Visão" className={styles.mvvImage} />
                     <h2 className={styles.mvvTitle}>Visão</h2>
-                    <p className={styles.mvvText}>Descrição da Visão da<br/> Modelly - Lorem ipsum bla</p>
+                    <p className={styles.mvvText}>Ser a plataforma de referência global para a comercialização de artesanato,
+                         reconhecida por proporcionar um ambiente acolhedor e eficiente tanto para artesãos quanto para consumidores.<br /><br /> Almejamos ser líderes em inovação,
+                         promovendo a valorização do trabalho artesanal e o fortalecimento de uma comunidade artística global</p>
                 </div>
                 <div className={styles.mvvItem}>
                     <img src={ValuesImage} alt="Valores" className={styles.mvvImage} />
                     <h2 className={styles.mvvTitle}>Valores</h2>
-                    <p className={styles.mvvText}>Descrição dos Valores da<br/> Modelly - Lorem ipsum bla</p>
+                    <p className={styles.mvvText}>1. Sustentabilidade: Compromisso com o desenvolvimento sustentável da carreira dos artesãos.<br /><br />
+2. Inclusão: Criação de um ambiente igualitário e inclusivo para todos os tipos de arte e artistas.<br /><br />
+3. Inovação: Implementação de soluções tecnológicas e criativas para facilitar o processo de venda e compra de artesanato.<br /><br />
+4. Transparência: Manutenção de negociações justas e claras entre artesãos e consumidores.<br /><br />
+5. Relacionamento: Valorização de relações sólidas e significativas com nossos clientes, baseadas em confiança e excelência.<br /><br />
+6. Comunidade: Fomento de uma comunidade artística vibrante e engajada, onde experiências e conhecimentos são compartilhados.</p>
                 </div>
             </div>
 

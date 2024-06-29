@@ -51,11 +51,11 @@ const Footer = () => {
                 <div className={`${styleFooter.footer_column} ${styleFooter.follow_us}`}>
                     <h4>Siga-nos</h4>
                     <div className={styleFooter.social_icons}>
-                        <a href="https://www.instagram.com"><img src={instagramIcon} alt="Instagram" /><span>Instagram</span></a>
-                        <a href="https://www.tiktok.com"><img src={tiktokIcon} alt="TikTok" /><span>TikTok</span></a>
-                        <a href="https://www.linkedin.com"><img src={linkedinIcon} alt="LinkedIn" /><span>LinkedIn</span></a>
-                        <a href="https://www.github.com"><img src={githubIcon} alt="GitHub" /><span>GitHub</span></a>
-                        <a href="https://www.linktree.com"><img src={linktreeIcon} alt="Linktree" /><span>Linktree</span></a>
+                        <a href="https://www.instagram.com/modelly_art/"><img src={instagramIcon} alt="Instagram" /><span>Instagram</span></a>
+                        <a href="https://www.tiktok.com/@modelly_art"><img src={tiktokIcon} alt="TikTok" /><span>TikTok</span></a>
+                        <a href="https://www.linkedin.com/company/modellyart/"><img src={linkedinIcon} alt="LinkedIn" /><span>LinkedIn</span></a>
+                        <a href="https://github.com/Modelly"><img src={githubIcon} alt="GitHub" /><span>GitHub</span></a>
+                        <a href="https://linktr.ee/modelly_art"><img src={linktreeIcon} alt="Linktree" /><span>Linktree</span></a>
                     </div>
                 </div>
             </div>
@@ -67,3 +67,5 @@ const Footer = () => {
 };
 
 export default Footer;
+
+
