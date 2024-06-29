@@ -133,16 +133,19 @@ body {
   
   .popup {
     background: white;
-    padding: 20px;
+    padding: 25px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     z-index: 1001;
     width: 50%;
+    position: relative;
   }
   
   .popup h2 {
-    font-size: 1.75em; /* Ajuste de tamanho do texto */
+    font-size: 1.75em; 
+    margin-left: 0px;
     color: var(--cor-fonte-principal);
+    margin-bottom: 13px;
   }
   
   .popup form {
@@ -164,15 +167,30 @@ body {
     border: 1px solid var(--cor-fonte-principal);
     border-radius: 5px;
   }
-  
+
+  .popup input[type="radio"] {
+    margin-right: 10px; 
+  }
+
   .popup button {
     width: 100px;
     height: 40px;
-    background-color: var(--cor-primaria);
+    background-color: #F68E07;
     color: var(--cor-fonte-branco);
     border: none;
     border-radius: 5px;
     cursor: pointer;
     align-self: flex-end;
     margin-top: 10px;
+  }
+  
+  .closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none !important;
+    border: none;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--cor-fonte-principal) !important;
   }

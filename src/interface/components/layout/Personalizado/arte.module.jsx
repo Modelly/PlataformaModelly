@@ -43,6 +43,7 @@ function Arte() {
       {showPopup && (
         <div className={styles.overlay}>
           <div className={styles.popup}>
+            <button className={styles.closeButton} onClick={handleClosePopup}>×</button>
             <h2>Marcar a proposta como inapropriada</h2>
             <form>
               <label>
@@ -71,7 +72,6 @@ function Arte() {
               </label>
               <textarea placeholder="Mais informações"></textarea>
               <button type="submit">Enviar</button>
-              <button type="button" onClick={handleClosePopup}>Fechar</button>
             </form>
           </div>
         </div>
