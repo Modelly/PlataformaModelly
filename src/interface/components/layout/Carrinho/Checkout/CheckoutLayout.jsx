@@ -11,13 +11,16 @@ import product1Image from '../../../../../../src/assets/images/imgs-carrinho/fot
 import product2Image from '../../../../../../src/assets/images/imgs-carrinho/foto-produto2.png';
 import editIcon from '../../../../../../src/assets/images/imgs-carrinho/lapis.png';
 // import Error from '../../../../../assets/images/imgs-carrinho/Error.png'
+
 const CheckoutLayout = () => {
     return (
-      <div className={styles.checkoutContainer}>
+        <div className={styles.checkoutContainer}>
         <div className={styles.formulario}>
           <div className={styles.header}>
             <div className={styles.icon}><img src={deliveryIcon} alt="Entrega" /></div>
+            <div className={styles.line}></div> {/* Linha entre Entrega e Pagamento */}
             <div className={styles.icon}><img src={paymentIcon} alt="Pagamento" /></div>
+            <div className={styles.line}></div> {/* Linha entre Pagamento e Revisão */}
             <div className={styles.icon}><img src={reviewIcon} alt="Revisão" /></div>
           </div>
           <div className={styles.section}>
@@ -28,18 +31,18 @@ const CheckoutLayout = () => {
                   <strong>Casa</strong>
                   <img src={editIcon} alt="Editar" className={styles.editIcon} />
                 </div>
-                <div>Rua joao gomes filho Nº666</div>
-                <div>Vila Clementina - São paulo/SP</div>
-                <div>Cep: 04980 - 089</div>
+                <div>Rua João Gomes Filho Nº666</div>
+                <div>Vila Clementina - São Paulo/SP</div>
+                <div>CEP: 04980-089</div>
               </div>
               <div>
                 <div>
                   <strong>Serviço</strong>
                   <img src={editIcon} alt="Editar" className={styles.editIcon} />
                 </div>
-                <div>Rua joao gomes filho Nº666</div>
-                <div>Vila Clementina - São paulo/SP</div>
-                <div>Cep: 04980 - 089</div>
+                <div>Rua João Gomes Filho Nº666</div>
+                <div>Vila Clementina - São Paulo/SP</div>
+                <div>CEP: 04980-089</div>
               </div>
             </div>
           </div>

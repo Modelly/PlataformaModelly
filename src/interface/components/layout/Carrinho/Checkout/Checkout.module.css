@@ -7,14 +7,13 @@
   --poppins-font: "Poppins", sans-serif;
   --montserrat-font: "Montserrat", sans-serif;
 }
-
 .checkoutContainer {
   display: flex;
 }
 
 .formulario {
   flex: 1;
-  margin-right: 20px; 
+  margin-right: 20px;
 }
 
 .resumo {
@@ -24,8 +23,9 @@
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center; 
   padding: 20px;
-  border-bottom: 2px solid var(--cor-primaria); 
+  border-bottom: 2px solid var(--cor-primaria);
 }
 
 .section {
@@ -44,28 +44,34 @@
 .icon {
   width: 24px;
   height: 24px;
+  display: flex;
+  padding: 28px;
+  align-items: center;
+  justify-content: center;
+  border: 2.5px solid var(--cor-fonte-principal);
+  border-radius: 50%; 
+}
+
+.line {
+  flex: 1; 
+  height: 2px; 
+  background-color: var(--cor-fonte-principal); 
+}
+
+.editIcon {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px; 
+}
+
+.productImage {
+  width: 50px;
+  height: 50px;
   margin-right: 10px;
 }
 
-.address, .payment, .summary, .confirmation {
-  display: flex;
-  flex-direction: column;
-}
-
-.product {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
-}
-
-.total {
-  display: flex;
-  justify-content: space-between;
-  font-weight: bold;
-}
-
 .button {
-  background-color: var(--cor-secundaria); 
+  background-color: var(--cor-secundaria);
   color: white;
   padding: 15px;
   text-align: center;
@@ -74,9 +80,3 @@
   cursor: pointer;
   font-size: 1.2em;
 }
-
-.editIcon {
-  width: 16px; 
-  height: 16px;
-}
-
