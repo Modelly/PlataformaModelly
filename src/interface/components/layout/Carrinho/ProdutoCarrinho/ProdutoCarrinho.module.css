@@ -1,10 +1,20 @@
+:root {
+    --cor-primaria: #9B59B6;
+    --cor-secundaria: #D11F52;
+    --cor-terciaria: #F68E07;
+    --cor-background: #FFFBF3;
+    --cor-fonte-principal: #361A5C;
+    --poppins-font: "Poppins", sans-serif;
+    --montserrat-font: "Montserrat", sans-serif;
+}
+
 .produtoCarrinho {
     display: flex;
     flex-direction: row;
     gap: 20px;
     padding: 20px;
     margin-bottom: 20px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     font-family: var(--poppins-font);
 }
 
@@ -63,6 +73,11 @@
     border-radius: 10px;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.botaoQuantidade span {
+    cursor: pointer;
+    font-size: 18px;
 }
 
 .boxPreco {
