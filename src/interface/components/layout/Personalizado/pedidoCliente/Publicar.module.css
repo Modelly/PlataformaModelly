@@ -1,0 +1,57 @@
+.containerPublicar{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10rem;
+    background-image: url(../../../public/backgroundPublicar.png);
+}
+.boxPublicar{
+    width:60rem;
+    background-color: var(--cor-background);
+    border: 5px solid var(--cor-primaria);
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.tituloArte, .descricaoArte, .editarArte, .publicarArte{
+    font-family: var(--poppins-font);
+}
+.tituloArte{
+    color: var(--cor-secundaria);
+    font-size: 3rem;
+    font-weight: 600;
+}
+.descricaoArte{
+    font-size: 2rem;
+    color: black;
+
+}
+
+.boxEnvio{
+    align-self: flex-end;
+    display: flex;
+    gap: 2.5rem;
+}
+
+.editarArte, .publicarArte{ 
+    font-size: 2rem;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    color: var(--cor-fonte-branco);
+    font-weight: 600;
+-webkit-box-shadow: 7px 7px 8px -3px rgba(0,0,0,1);
+-moz-box-shadow: 7px 7px 8px -3px rgba(0,0,0,1);
+box-shadow: 7px 7px 8px -3px rgba(0,0,0,1);
+
+}
+.editarArte{ 
+  background-color: var(--cor-primaria);
+}
+
+.publicarArte{ 
+   background-color: var(--cor-terciaria);
+}
