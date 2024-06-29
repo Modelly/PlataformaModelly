@@ -101,14 +101,15 @@
 
 .mvvTitle {
     font-family: var(--bogart-medium);
-    color: var(--cor-preta-stroke);
+    color: var(--cor-quartiaria);
     margin: 1rem 0;
 }
 
 .mvvText {
     font-family: var (--poppins-font);
-    color: var(--cor-preta-stroke);
-    font-weight: 500;
+    color: var(--cor-fonte-principal);
+    font-weight: 700;
+    text-align: left;
 }
 
 .carousel {
