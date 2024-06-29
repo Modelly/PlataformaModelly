@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Poppins:wght@100..900&display=swap');
+
+:root {
+    --cor-primaria: #9B59B6;
+    --cor-secundaria: #361A5C;
+    --cor-background: #FBFAFA;
+    --cor-fonte-principal: #361A5C;
+    --cor-fonte-branco: #fff;
+    --poppins-font: 'Poppins', sans-serif;
+    --montserrat-font: 'Montserrat', sans-serif;
+}
+
+body {
+    font-family: var(--poppins-font);
+}
+
+.arte {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid var(--cor-secundaria);
+    border-radius: 15.83px;
+    background-color: var(--cor-background);
+}
+
+.oR {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: var(--cor-secundaria);
+}
+
+.proposalButton {
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background-color: #F68E07;
+    color: var(--cor-fonte-branco);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tR {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    color: var(--cor-secundaria);
+}
+
+.published,
+.proposals {
+    font-size: 14px;
+}
+
+.description {
+    margin: 15px 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--cor-secundaria);
+}
+
+.fR {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tagButtons {
+    display: flex;
+    gap: 10px;
+}
+
+.tagButton {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    color: var(--cor-fonte-branco);
+    cursor: pointer;
+}
+
+.tagButton:nth-child(1) {
+    background-color: #FE6291;
+}
+
+.tagButton:nth-child(2) {
+    background-color: #6BA457;
+}
+
+.tagButton:nth-child(3) {
+    background-color: #43E3E3;
+}
+
+.report {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--cor-secundaria);
+    cursor: pointer;
+}
+
+.report img {
+    width: 20px;
+    height: 20px;
+}
+
