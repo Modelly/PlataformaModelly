@@ -4,7 +4,7 @@ import styleProdutoCarrinho from './ProdutoCarrinho.module.css';
 function ProdutoCarrinho(props) {
     return (
         <div className={styleProdutoCarrinho.produtoCarrinho}>
-            <img src={props.FotoProduto} alt="fotoProduto" />
+            <img src={props.FotoProduto} alt="fotoProduto" className={styleProdutoCarrinho.fotoProduto} />
             <div className={styleProdutoCarrinho.infosProdutoCarrinho}>
                 <h2>{props.NomeProduto}</h2>
                 <p>{props.DescricaoProduto}</p>
@@ -20,14 +20,14 @@ function ProdutoCarrinho(props) {
                     <span>1</span>
                     <span>+</span>
                 </div>
-                <span>100 disponiveis</span>
+                <span>100 disponíveis</span>
             </div>
             <div className={styleProdutoCarrinho.boxPreco}>
                 <span>{props.PrecoProduto}</span>
                 <button>Comprar</button>
             </div>
         </div>
-    )
+    );
 }
 
 ProdutoCarrinho.propTypes = {
