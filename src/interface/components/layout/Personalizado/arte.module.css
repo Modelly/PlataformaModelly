@@ -117,3 +117,62 @@ body {
     width: 26px;
     height: 26px;
 }
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .popup {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    z-index: 1001;
+    width: 50%;
+  }
+  
+  .popup h2 {
+    font-size: 1.75em; /* Ajuste de tamanho do texto */
+    color: var(--cor-fonte-principal);
+  }
+  
+  .popup form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .popup label {
+    font-size: 1rem;
+    color: var(--cor-fonte-principal);
+    margin: 10px 0;
+  }
+  
+  .popup textarea {
+    width: 100%;
+    height: 100px;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid var(--cor-fonte-principal);
+    border-radius: 5px;
+  }
+  
+  .popup button {
+    width: 100px;
+    height: 40px;
+    background-color: var(--cor-primaria);
+    color: var(--cor-fonte-branco);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: flex-end;
+    margin-top: 10px;
+  }

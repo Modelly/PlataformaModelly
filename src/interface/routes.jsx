@@ -21,6 +21,7 @@ import CadastroVendedor from '../interface/components/layout/Cadastro_Vendedor/C
 import Contato_1 from '../interface/components/layout/Contato/ContatoLayout.jsx';
 import Categoria from './components/layout/Categoria/Categoria.jsx';
 import PersonalizadoLayout from './components/layout/Personalizado/PersonalizadoLayout.jsx';
+import Inapropriado from './components/layout/Personalizado/InapropriadaLayout.jsx';
 
 const AppRoutes = () => {
     return (
@@ -44,6 +45,7 @@ const AppRoutes = () => {
                         <Route path="/seja-vendedor" element={<VendedorPopUp/>}/>
                         <Route path="/cadastrar-vendedor" element={<CadastroVendedor/>} />
                         <Route path="/Personalizado" element={<PersonalizadoLayout/>}/>
+                        <Route path="/inapropriado" element={<Inapropriado/>} />
                     </Route>
 
                     {/* TELAS CONSUMIDOR LOGADO */}
