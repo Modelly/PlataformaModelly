@@ -30,7 +30,7 @@ const HomeLayout = () => {
         { name: "Moda", img: modaImg },
         { name: "Pets", img: petsImg },
         { name: "Infantil", img: infantilImg },
-        { name: "Sociais", img: sociaisImg },
+        { name: "Sacolas", img: sociaisImg },
         { name: "Casa", img: casaImg },
         { name: "Personalizado", img: personalizadoImg },
     ];
