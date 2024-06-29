@@ -68,13 +68,12 @@ button {
     height: 275.62px;
     background-color: #D11F52;
     color: #fff;
-    margin: 50px auto;
+    margin: 30px auto;
     border-radius: 15.23px;
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-bottom: -5px !important;
-    margin-top: 15px !important;
 }
 
 .texto {
