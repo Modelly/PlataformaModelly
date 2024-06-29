@@ -1,4 +1,4 @@
-import styleFeira from './FeiraLayout.module.css'; // Importando o módulo CSS
+import styleFeira from './FeiraLayout.module.css'; 
 import conjuntoImage from "../../../../assets/images/imgs-feira/artes-conjunto.png";
 import iconeFeira from "../../../../assets/images/imgs-feira/feiraIcone.png";
 import iconeTicket from "../../../../assets/images/imgs-feira/Ticket.png";
