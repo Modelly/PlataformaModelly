@@ -22,6 +22,7 @@ body {
     border-radius: 15.83px;
     background-color: var(--cor-background);
     text-align: left; 
+
 }
 
 .oR {
@@ -67,6 +68,7 @@ body {
     font-size: 16px;
     line-height: 1.5;
     color: var(--cor-secundaria);
+    margin-bottom: 10%;
 }
 
 .fR {
