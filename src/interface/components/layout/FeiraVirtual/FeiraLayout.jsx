@@ -1,4 +1,4 @@
-import styleFeira from './FeiraLayout.module.css'; // Importando o módulo CSS
+import styleFeira from './FeiraLayout.module.css'; 
 import conjuntoImage from "../../../../assets/images/imgs-feira/artes-conjunto.png";
 import iconeFeira from "../../../../assets/images/imgs-feira/feiraIcone.png";
 import iconeTicket from "../../../../assets/images/imgs-feira/Ticket.png";
@@ -24,7 +24,7 @@ function FeiraLayout() {
                         </div>
                     </div>
                     <div className={styleFeira.videoBox}>
-                        <video width="600" height="338" className={styleFeira.video} controls>
+                        <video width="600" height="338" className={styleFeira.video} no-controls autoPlay>
                         <source src={video} type="video/mp4" />
                         Seu navegador não suporta a tag de vídeo.
                         </video>

@@ -20,6 +20,7 @@ import VendedorPopUp from './components/layout/pop_vendedor/VendedorLayout.jsx';
 import CadastroVendedor from '../interface/components/layout/Cadastro_Vendedor/Cadastro_VendedorLayout.jsx';
 import Contato_1 from '../interface/components/layout/Contato/ContatoLayout.jsx';
 import Categoria from './components/layout/Categoria/Categoria.jsx';
+import PersonalizadoLayout from './components/layout/Personalizado/PersonalizadoLayout.jsx';
 
 const AppRoutes = () => {
     return (
@@ -42,6 +43,7 @@ const AppRoutes = () => {
                         <Route path="/feira-virtual" element={<FeiraVirtual/>}/>
                         <Route path="/seja-vendedor" element={<VendedorPopUp/>}/>
                         <Route path="/cadastrar-vendedor" element={<CadastroVendedor/>} />
+                        <Route path="/Personalizado" element={<PersonalizadoLayout/>}/>
                     </Route>
 
                     {/* TELAS CONSUMIDOR LOGADO */}
