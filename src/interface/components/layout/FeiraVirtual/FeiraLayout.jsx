@@ -24,7 +24,7 @@ function FeiraLayout() {
                         </div>
                     </div>
                     <div className={styleFeira.videoBox}>
-                        <video width="600" height="338" className={styleFeira.video} controls>
+                        <video width="600" height="338" className={styleFeira.video} no-controls autoPlay>
                         <source src={video} type="video/mp4" />
                         Seu navegador não suporta a tag de vídeo.
                         </video>
