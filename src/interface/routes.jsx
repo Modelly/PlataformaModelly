@@ -17,11 +17,11 @@ import Publicar from './components/layout/Personalizado/pedidoCliente/Publicar.j
 import PerfilVendedor from './components/layout/Perfil_Vendedor/PerfilVendedor.jsx';
 import CheckoutLayout from './components/layout/Carrinho/Checkout/CheckoutLayout.jsx';
 import FeiraVirtual from '../interface/components/layout/FeiraVirtual/FeiraLayout.jsx';
-import PersonalizadoLayout from './components/layout/Personalizado/PersonalizadoLayout.jsx';
 import CadastroProduto from '../interface/components/layout/Cadastro_Produto/Cadastro_Produto.jsx';
 import EscolhaCategoria from './components/layout/Personalizado/pedidoCliente/EscolhaCategoria.jsx';
 import CategoriaCliente from './components/layout/Personalizado/pedidoCliente/CategoriaCliente.jsx';
 import FormularioServicos from './components/layout/Personalizado/pedidoCliente/FormularioServicos.jsx';
+import PersonalizadoLayout from './components/layout/Personalizado/pedidosArtesao/PersonalizadoLayout.jsx';
 import CadastroVendedor from '../interface/components/layout/Cadastro_Vendedor/Cadastro_VendedorLayout.jsx';
 
 const routes = () => {
