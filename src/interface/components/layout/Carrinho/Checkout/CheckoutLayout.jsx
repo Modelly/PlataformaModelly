@@ -33,17 +33,6 @@ const CheckoutLayout = () => {
     cep: ''
   });
 
-  useEffect(() => {
-    navigator.geolocation.getCurrentPosition((position) => {
-      const { latitude, longitude } = position.coords;
-      setAddressList([{
-        id: 1,
-        label: 'Local Atual',
-        address: `Lat: ${latitude}, Long: ${longitude}`,
-      }]);
-    });
-  }, []);
-
   const handleNext = () => {
     setCurrentStep(currentStep + 1);
   };
@@ -98,6 +87,8 @@ const CheckoutLayout = () => {
   const handleAddNewAddress = () => {
     setEditAddress(true);
   };
+
+  const totalAmount = 400; 
 
   return (
     <div className={styles.checkoutContainer}>
@@ -178,7 +169,7 @@ const CheckoutLayout = () => {
                   />
                   <div className={styles.buttonContainer}>
                     <button className={styles.button} onClick={handleSaveAddress}>Salvar Endereço</button>
-                    <button className={styles.button} onClick={handleNext}>Próximo</button>
+                    <button className={styles.button} onClick={() => setEditAddress(false)}>Cancelar</button>
                   </div>
                 </div>
               )}
@@ -187,31 +178,19 @@ const CheckoutLayout = () => {
         )}
         {currentStep === 2 && (
           <div className={styles.section}>
-            <div className={styles.sectionTitle}>Método de Pagamento</div>
+            <div className={styles.sectionTitle}>Pagamento</div>
             <div className={styles.payment}>
-              <div
-                className={styles.paymentMethod}
-                onClick={() => handlePaymentMethodChange('pix')}
-                style={{ backgroundColor: selectedPaymentMethod === 'pix' ? '#f0f0f0' : 'transparent' }}
-              >
-                <img src={pixIcon} alt="Pix" style={{ width: '40px', height: '40px' }} />
-                <span>{selectedPaymentMethod === 'pix' && 'Selecionado'}</span>
+              <div className={styles.paymentMethod} onClick={() => handlePaymentMethodChange('pix')}>
+                <img src={pixIcon} alt="PIX" />
+                <span>PIX</span>
               </div>
-              <div
-                className={styles.paymentMethod}
-                onClick={() => handlePaymentMethodChange('credit')}
-                style={{ backgroundColor: selectedPaymentMethod === 'credit' ? '#f0f0f0' : 'transparent' }}
-              >
-                <img src={creditCardIcon} alt="Cartão de Crédito" style={{ width: '40px', height: '40px' }} />
-                <span>{selectedPaymentMethod === 'credit' && 'Selecionado'}</span>
+              <div className={styles.paymentMethod} onClick={() => handlePaymentMethodChange('cartao')}>
+                <img src={creditCardIcon} alt="Cartão de Crédito" />
+                <span>Cartão de Crédito</span>
               </div>
-              <div
-                className={styles.paymentMethod}
-                onClick={() => handlePaymentMethodChange('boleto')}
-                style={{ backgroundColor: selectedPaymentMethod === 'boleto' ? '#f0f0f0' : 'transparent' }}
-              >
-                <img src={boletoIcon} alt="Boleto" style={{ width: '40px', height: '40px' }} />
-                <span>{selectedPaymentMethod === 'boleto' && 'Selecionado'}</span>
+              <div className={styles.paymentMethod} onClick={() => handlePaymentMethodChange('boleto')}>
+                <img src={boletoIcon} alt="Boleto" />
+                <span>Boleto</span>
               </div>
             </div>
             <div className={styles.buttonContainer}>
@@ -222,24 +201,36 @@ const CheckoutLayout = () => {
         )}
         {currentStep === 3 && (
           <div className={styles.section}>
-            <div className={styles.sectionTitle}>Revisão do Pedido</div>
+            <div className={styles.sectionTitle}>Revisão</div>
             <div className={styles.reviewContainer}>
-              <div className={styles.product}>
-                <img src={product1Image} alt="Produto 1" />
-                <div className={styles.productDetails}>
-                  <h3 className={styles.productTitle}>Título do Produto 1</h3>
-                  <p>Quantidade: 1</p>
-                  <p>Preço: R$ 100,00</p>
+              <div>
+                <strong>Endereço de Entrega:</strong>
+                <p>{addressList[0].address}</p>
+              </div>
+              <div>
+                <strong>Produtos:</strong>
+                <div className={styles.product}>
+                  <img src={product1Image} alt="Produto 1" />
+                  <div className={styles.productDetails}>
+                    <div className={styles.productTitle}>Produto 1</div>
+                    <div>Descrição do produto 1</div>
+                    <div>R$ 200,00</div>
+                  </div>
+                </div>
+                <div className={styles.product}>
+                  <img src={product2Image} alt="Produto 2" />
+                  <div className={styles.productDetails}>
+                    <div className={styles.productTitle}>Produto 2</div>
+                    <div>Descrição do produto 2</div>
+                    <div>R$ 200,00</div>
+                  </div>
                 </div>
               </div>
-              <div className={styles.product}>
-                <img src={product2Image} alt="Produto 2" />
-                <div className={styles.productDetails}>
-                  <h3 className={styles.productTitle}>Título do Produto 2</h3>
-                  <p>Quantidade: 2</p>
-                  <p>Preço: R$ 200,00</p>
-                </div>
+              <div>
+                <strong>Método de Pagamento:</strong>
+                <p>{selectedPaymentMethod}</p>
               </div>
+              <div className={styles.totalPrice}>Total: R$ {totalAmount},00</div>
             </div>
             <div className={styles.buttonContainer}>
               <button className={styles.button} onClick={handlePrevious}>Voltar</button>
@@ -254,3 +245,4 @@ const CheckoutLayout = () => {
 };
 
 export default CheckoutLayout;
+
