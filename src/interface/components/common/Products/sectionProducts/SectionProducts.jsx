@@ -37,6 +37,7 @@ const SectionProducts = () => {
             const localResponse = await fetch('/data/products.json');
             if (localResponse.ok) {
                 const localData = await localResponse.json();
+                console.log(localData)
                 const productsData = Array.isArray(localData) ? localData : [];
                 setTimeout(() => {
                     setProducts(productsData);
