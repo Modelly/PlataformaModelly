@@ -23,16 +23,19 @@ import personalizadoImg from '../../../../assets/images/imgs-home/personalizado.
 import styleHome from './HomeLayout.module.css';
 
 const HomeLayout = () => {
+    const location = useLocation();
+    const basePath = getBasePath(location.pathname);
+    
     const categories = [
-        { name: "Decoração", img: decoracaoImg },
-        { name: "Acessórios", img: acessoriosImg },
-        { name: "Velas", img: velasImg },
-        { name: "Moda", img: modaImg },
-        { name: "Pets", img: petsImg },
-        { name: "Infantil", img: infantilImg },
-        { name: "Sacolas", img: sociaisImg },
-        { name: "Casa", img: casaImg },
-        { name: "Personalizado", img: personalizadoImg },
+        { name: "Decoração", img: decoracaoImg, path: `${basePath}/categoria/Decoracao` },
+        { name: "Acessórios", img: acessoriosImg, path: `${basePath}/categoria/Acessorios` },
+        { name: "Velas", img: velasImg, path: `${basePath}/categoria/Velas` },
+        { name: "Moda", img: modaImg, path: `${basePath}/categoria/Moda` },
+        { name: "Pets", img: petsImg, path: `${basePath}/categoria/Pets` },
+        { name: "Infantil", img: infantilImg, path: `${basePath}/categoria/Infantil` },
+        { name: "Sacolas", img: sociaisImg, path: `${basePath}/categoria/Sacolas` },
+        { name: "Casa", img: casaImg, path: `${basePath}/categoria/Casa` },
+        { name: "Personalizado", img: personalizadoImg, path: `${basePath}/personalizado` },
     ];
 
     const categoryImgVariants = {
@@ -55,9 +58,6 @@ const HomeLayout = () => {
         visible: { opacity: 1, x: 0 },
     };
 
-    const location = useLocation();
-    const basePath = getBasePath(location.pathname);
-
     return (
         <div className={styleHome.home_container}>
             <div className={styleHome.home_bannerImage_container}>
@@ -67,7 +67,7 @@ const HomeLayout = () => {
             </div>
             <div className={styleHome.categories_container}>
                 {categories.map((category, index) => (
-                    <Link to={`${basePath}/categoria`} key={index} className={styleHome.category_item}>
+                    <Link to={category.path} key={index} className={styleHome.category_item}>
                         <motion.img 
                             src={category.img} 
                             alt={category.name} 
