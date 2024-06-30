@@ -1,0 +1,188 @@
+:root {
+    --cor-primaria: #9B59B6;
+    --cor-secundaria: #361A5C;
+    --cor-terciaria: #F68E07;
+    --cor-quartiaria: #D11F52;
+    --cor-background: #FCF8F0;
+    --cor-preta-stroke: #0a0808;
+    --cor-fonte-principal: #361A5C;
+    --cor-fonte-branco: #fff;
+    --poppins-font: 'Poppins', sans-serif;
+    --montserrat-font: 'Montserrat', sans-serif;
+    --bogart-medium: 'Bogart Bold', sans-serif;
+}
+
+.perfilVendedorContainer {
+    height: 842px;
+}
+
+.navPerfilVendedor {
+    float: left;
+    height: 100%;
+    width: 35%;
+    background-color: rgb(241, 249, 249);
+    border-radius: 0 0 20px 0; 
+}
+
+.botaoPerfilVendedor {
+    box-sizing: border-box;
+    width: 380px;
+    height: 50px;
+    background: var(--cor-quartiaria);
+    border: 1px solid var(--cor-preta-stroke);
+    border-width: 1px 3px 4px 1px;
+    border-radius: 50px;
+    font-family: var(--poppins-font);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--cor-fonte-branco);
+    margin: 50px auto 0;
+}
+
+.botaoPerfilVendedor:hover {
+    background: #FF4785;
+    cursor: pointer;
+}
+
+/* estilo para o contêiner do tópico */
+.topico {
+    display: flex; /* exibe os itens em linha */
+    align-items: center; /* alinha os itens verticalmente ao centro */
+    margin-bottom: 30px; /* margem inferior para separação dos tópicos */
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 30px;
+}
+
+
+/* estilo para o ícone */
+.topico .icon {
+    width: 35px; /* largura do ícone */
+    height: 35px; /* altura do ícone */
+    background-size: cover; /* ajusta o tamanho do background */
+    margin-right: 10px; /* margem direita para separação do ícone */
+}
+
+/* estilo para a lista de tópicos (pedidos, contas, etc.) */
+.topico li {
+    list-style-type: none; /* remove os marcadores de lista */
+    font-family: 'Poppins', sans-serif; /* fonte do texto */
+    font-size: 1.5rem; /* tamanho da fonte */
+    line-height: 24px; /* altura da linha */
+    
+}
+.topico li a:hover{
+   color: var(--cor-primaria);
+}
+
+/* estilo para o link dentro da lista de tópicos */
+.topico li a {
+    text-decoration: none; /* remove o sublinhado padrão do link */
+    color: var(--cor-fonte-principal); /* cor do texto do link */
+}
+
+/* estilo para o tópico específico 'Pedidos' */
+.topico .pedidos {
+    font-weight: bold; /* torna o texto em negrito */
+}
+
+.topico .produto {
+    font-weight: bold;
+}
+
+.subtopicosProduto {
+padding-top: 10%;/* 20px de padding + 25px da largura do ícone */
+   
+    display: flex;
+    height: 80px;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    
+    
+   }
+   
+
+.subtopicosProduto .subtopico {
+    list-style-type: none;
+    font-family: var(--poppins-font);
+    font-size: 1.5rem;
+    line-height: 24px;
+   
+   
+}
+
+.subtopicosProduto .subtopico a {
+    text-decoration: none;
+    color: var(--cor-quartiaria);
+}
+
+.subtopicosProduto .subtopico a:hover {
+    color: var(--cor-primaria);
+}
+
+.subtopicosAtendimento {
+   
+        padding-top: 10%;/* 20px de padding + 25px da largura do ícone */
+           
+            display: flex;
+            height: 80px;
+            width: 150px;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: space-between;
+  
+            
+            
+}
+
+.subtopicosAtendimento .subtopico {
+    list-style-type: none;
+    font-family: var(--poppins-font);
+    font-size: 1.5rem;
+    line-height: 24px;
+}
+
+.subtopicosAtendimento .subtopico a {
+    text-decoration: none;
+    color: var(--cor-quartiaria);
+}
+
+.subtopicosAtendimento .subtopico a:hover {
+    color: var(--cor-primaria);
+}
+.subtopicosLoja {
+   
+    padding-top: 10%;/* 20px de padding + 25px da largura do ícone */
+       
+        display: flex;
+        height: 120px;
+        width: 150px;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        
+        
+}
+
+.subtopicosLoja .subtopico {
+list-style-type: none;
+font-family: var(--poppins-font);
+font-size: 1.5rem;
+line-height: 24px;
+}
+
+.subtopicosLoja .subtopico a {
+text-decoration: none;
+color: var(--cor-quartiaria);
+}
+
+.subtopicosLoja .subtopico a:hover {
+color: var(--cor-primaria);
+}

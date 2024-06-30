@@ -35,7 +35,7 @@ const NavbarArtesao = () => {
                     <img src={lupa} alt="Lupa de pesquisa" className={styleNav.lupa_icon} />
                 </div>
                 <div className={styleNav.icons}>
-                    <Link to="/artesao/Cadastro_Produto">
+                    <Link>
                         <img src={heartIcon} alt="Favoritos" className={styleNav.iconConsumidor} />
                     </Link>
                     <Link to="/artesao/carrinho">
@@ -46,19 +46,19 @@ const NavbarArtesao = () => {
                             <summary><img src={photoPerfil} alt="Ícone de usuário" className={styleNav.user_iconPerfil} /></summary>
                             <ul className={styleNav.dropdown_menu}>
                                 <li>
-                                    <img src={settingsIcon} alt="icone de engranagem" />
+                                    <img src={settingsIcon} alt="icone de engrenagem" />
                                     Configurar Conta
                                 </li>
                                 <li>
-                                    <img src={storeIcon} alt="icone de engranagem" />
+                                    <img src={storeIcon} alt="icone de engrenagem" />
                                     Minha Loja
                                 </li>
                                 <li onClick={() => navigate(`${basePath}/fale-conosco`)}>
-                                    <img src={helpIcon} alt="icone de engranagem" />
+                                    <img src={helpIcon} alt="icone de engrenagem" />
                                     Ajuda
                                 </li>
                                 <li onClick={handleLogout}>
-                                    <img src={logoutIcon} alt="icone de engranagem" />
+                                    <img src={logoutIcon} alt="icone de engrenagem" />
                                     Encerrar sessão
                                 </li>
                             </ul>
@@ -70,7 +70,7 @@ const NavbarArtesao = () => {
                 <ul className={styleNav.navbar_list}>
                     <li className={styleNav.navbar_item}><Link to="/personalizado">Personalizado</Link></li>
                     <li className={styleNav.navbar_item}><Link to="/feira-virtual">Feira Virtual</Link></li>
-                    <li className={styleNav.navbar_item}><Link to="/seja-vendedor">Minha Loja</Link></li>
+                    <li className={styleNav.navbar_item}><Link to="/artesao/minha-loja">Minha Loja</Link></li>
                     <li className={styleNav.navbar_item}><Link to="/planos-modelly">Planos Modelly</Link></li>
                     <li className={styleNav.navbar_item}><Link to="/sobre">Sobre</Link></li>
                     <li className={styleNav.navbar_item}><Link to="/fale-conosco">Fale Conosco</Link></li>

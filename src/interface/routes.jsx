@@ -24,7 +24,7 @@ import FormularioServicos from './components/layout/Personalizado/pedidoCliente/
 import EscolhaCategoria from './components/layout/Personalizado/pedidoCliente/EscolhaCategoria.jsx';
 import Publicar from './components/layout/Personalizado/pedidoCliente/Publicar.jsx';
 import CheckoutLayout from './components/layout/Carrinho/Checkout/CheckoutLayout.jsx';
-
+import PerfilVendedor from './components/layout/Perfil_Vendedor/PerfilVendedor.jsx';
 const AppRoutes = () => {
     return (
         <Router>
@@ -45,6 +45,7 @@ const AppRoutes = () => {
                         <Route path="/feira-virtual" element={<FeiraVirtual />} />
                         <Route path="/seja-vendedor" element={<VendedorPopUp />} />
                         <Route path="/cadastrar-vendedor" element={<CadastroVendedor />} />
+                       
                     </Route>
 
                     {/* Rotas para usuários logados */}
@@ -77,6 +78,7 @@ const AppRoutes = () => {
                         <Route path="/artesao/Personalizado" element={<PersonalizadoLayout />} />
                         <Route path="/artesao/cadastrar-vendedor" element={<CadastroVendedor />} />
                         <Route path="/artesao/pedido-personalizado" element={<CategoriaCliente />} />
+                        <Route path="/artesao/minha-loja" element={<PerfilVendedor/>} />
                     </Route>
 
                     {/* Rota para checkout */}
