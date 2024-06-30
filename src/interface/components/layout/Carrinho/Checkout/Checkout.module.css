@@ -10,7 +10,7 @@
 
 .checkoutContainer {
   display: flex;
-  font-family: var(--poppins-font);
+  font-family: var(--poppins-font); 
   color: var(--cor-fonte-principal);
 }
 
@@ -22,7 +22,7 @@
 
 .resumo {
   flex: 1;
-  font-family: var(--poppins-font);
+  font-family: var(--poppins-font); 
 }
 
 .header {
@@ -37,57 +37,102 @@
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
-  font-family: var(--poppins-font);
+  font-family: var(--poppins-font); 
   border: 2px solid #361A5C;
 }
 
 .sectionTitle {
-  font-size: 1.2em;
+  font-size: 1.4em;
   margin-bottom: 10px;
   font-weight: bold;
-  font-family: var(--poppins-font);
+ 
 }
 
-.icon {
-  width: 24px;
-  height: 24px;
-  display: flex;
-  padding: 28px;
-  align-items: center;
-  justify-content: center;
-  border: 2.5px solid var(--cor-fonte-principal);
-  border-radius: 50%;
+.address, .payment, .review {
+  margin-top: 10px;
 }
 
-.iconGreen {
-  width: 24px;
-  height: 24px;
-  display: flex;
-  padding: 28px;
-  align-items: center;
-  justify-content: center;
-  border: 2.5px solid green;
-  border-radius: 50%;
-}
-
-.line {
-  flex: 1;
-  height: 2px;
-  background-color: var(--cor-fonte-principal);
-}
-
-.lineGreen {
-  flex: 1;
-  height: 2px;
-  background-color: green;
+.address div, .paymentMethod {
+  margin-bottom: 15px;
 }
 
 .editIcon {
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  right: 10px;
-  top: 20px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.button {
+  background-color: var(--cor-primaria);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: var(--montserrat-font);
+}
+
+.button:hover {
+  background-color: var(--cor-secundaria);
+}
+
+.paymentMethod {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.paymentMethod img {
+  margin-right: 10px;
+}
+
+.installments {
+  margin-top: 20px;
+}
+
+.installments label {
+  margin-right: 10px;
+}
+
+.header .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 2px solid var(--cor-primaria);
+}
+
+.header .icon img {
+  width: 30px;
+  height: 30px;
+}
+
+.line, .lineGreen {
+  flex-grow: 1;
+  height: 2px;
+  background-color: var(--cor-primaria);
+}
+
+.lineGreen {
+  background-color: #00a651;
+}
+
+.reviewItem {
+  margin-bottom: 10px;
+}
+
+.summary {
+  padding: 20px;
+}
+
+.product {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
 
 .productImage {
@@ -96,21 +141,8 @@
   margin-right: 10px;
 }
 
-.button {
-  background-color: var(--cor-secundaria);
-  color: white;
-  padding: 15px;
-  text-align: center;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
+.total {
+  font-weight: bold;
   font-size: 1.2em;
-  font-family: var(--poppins-font);
-  margin-right: 10px;
-}
-
-.buttonContainer {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 10px;
 }
