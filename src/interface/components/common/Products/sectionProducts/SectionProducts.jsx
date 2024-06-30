@@ -27,8 +27,9 @@ const SectionProducts = () => {
                     'ngrok-skip-browser-warning': 'true'
                 }
             });
+            const productsData = Array.isArray(response.data) ? response.data : [];
             setTimeout(() => {
-                setProducts(response.data);
+                setProducts(productsData);
                 setLoading(false);
             }, 150)
         } catch (error) {
@@ -36,8 +37,9 @@ const SectionProducts = () => {
             const localResponse = await fetch('/data/products.json');
             if (localResponse.ok) {
                 const localData = await localResponse.json();
+                const productsData = Array.isArray(localData) ? localData : [];
                 setTimeout(() => {
-                    setProducts(localData);
+                    setProducts(productsData);
                     setLoading(false);
                 }, 150);
             } else {
