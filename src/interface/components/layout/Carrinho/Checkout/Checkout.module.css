@@ -10,7 +10,7 @@
 
 .checkoutContainer {
   display: flex;
-  font-family: var(--poppins-font); 
+  font-family: var(--poppins-font);
   color: var(--cor-fonte-principal);
 }
 
@@ -22,7 +22,7 @@
 
 .resumo {
   flex: 1;
-  font-family: var(--poppins-font); 
+  font-family: var(--poppins-font);
 }
 
 .header {
@@ -37,7 +37,7 @@
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
-  font-family: var(--poppins-font); 
+  font-family: var(--poppins-font);
   border: 2px solid #361A5C;
 }
 
@@ -45,7 +45,7 @@
   font-size: 1.2em;
   margin-bottom: 10px;
   font-weight: bold;
-  font-family: var(--poppins-font); 
+  font-family: var(--poppins-font);
 }
 
 .icon {
@@ -59,16 +59,35 @@
   border-radius: 50%;
 }
 
+.iconGreen {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  padding: 28px;
+  align-items: center;
+  justify-content: center;
+  border: 2.5px solid green;
+  border-radius: 50%;
+}
+
 .line {
   flex: 1;
   height: 2px;
   background-color: var(--cor-fonte-principal);
 }
 
+.lineGreen {
+  flex: 1;
+  height: 2px;
+  background-color: green;
+}
+
 .editIcon {
   width: 24px;
   height: 24px;
-  margin-left: 10px;
+  position: absolute;
+  right: 10px;
+  top: 20px;
 }
 
 .productImage {
@@ -86,5 +105,12 @@
   border-radius: 8px;
   cursor: pointer;
   font-size: 1.2em;
-  font-family: var(--poppins-font); 
+  font-family: var(--poppins-font);
+  margin-right: 10px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
 }
