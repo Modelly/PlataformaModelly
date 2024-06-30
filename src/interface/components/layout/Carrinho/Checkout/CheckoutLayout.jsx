@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './Checkout.module.css';
 import deliveryIcon from '../../../../../../src/assets/images/imgs-carrinho/caminhaoroxo.png';
 import paymentIcon from '../../../../../../src/assets/images/imgs-carrinho/cartaoproxoiconpequeno.png';
@@ -10,20 +10,42 @@ import creditCardIcon from '../../../../../../src/assets/images/imgs-carrinho/ca
 import boletoIcon from '../../../../../assets/images/imgs-carrinho/boleto.png';
 import product1Image from '../../../../../../src/assets/images/imgs-carrinho/foto-produto1.png';
 import product2Image from '../../../../../../src/assets/images/imgs-carrinho/foto-produto2.png';
-import editIcon from '../../../../../../src/assets/images/imgs-carrinho/lapis.png';
-import Popup from './PoppupCheckout';
+import Popup from './PoppupCheckout.jsx';
 
 const CheckoutLayout = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [selectedPaymentMethod, setSelectedPaymentMethod] = useState('');
   const [showPopup, setShowPopup] = useState(false);
+  const [editAddress, setEditAddress] = useState(false);
+  const [addressList, setAddressList] = useState([
+    {
+      id: 1,
+      label: 'Casa',
+      address: 'Rua João Gomes Filho Nº666, Vila Clementina - São Paulo/SP, CEP: 04980-089',
+    },
+  ]);
+  const [newAddress, setNewAddress] = useState('');
+
+  useEffect(() => {
+    // Obter endereço atual da máquina (substitua por API real, se necessário)
+    navigator.geolocation.getCurrentPosition((position) => {
+      const { latitude, longitude } = position.coords;
+      setAddressList([{
+        id: 1,
+        label: 'Local Atual',
+        address: `Lat: ${latitude}, Long: ${longitude}`,
+      }]);
+    });
+  }, []);
 
   const handleNext = () => {
     setCurrentStep(currentStep + 1);
   };
 
   const handlePrevious = () => {
-    setCurrentStep(currentStep - 1);
+    if (currentStep > 1) {
+      setCurrentStep(currentStep - 1);
+    }
   };
 
   const handlePaymentMethodChange = (method) => {
@@ -36,8 +58,28 @@ const CheckoutLayout = () => {
 
   const closePopup = () => {
     setShowPopup(false);
-    setCurrentStep(1); // Resetando o passo para o início após a compra
-    setSelectedPaymentMethod(''); // Resetando o método de pagamento selecionado
+    setCurrentStep(1);
+    setSelectedPaymentMethod('');
+  };
+
+  const handleEditAddress = () => {
+    setEditAddress(true);
+  };
+
+  const handleSaveAddress = () => {
+    if (newAddress) {
+      setAddressList([...addressList, { id: addressList.length + 1, label: 'Novo Endereço', address: newAddress }]);
+      setNewAddress('');
+    }
+    setEditAddress(false);
+  };
+
+  const handleDeleteAddress = (id) => {
+    setAddressList(addressList.filter(address => address.id !== id));
+  };
+
+  const handleAddNewAddress = () => {
+    setEditAddress(true);
   };
 
   return (
@@ -59,44 +101,64 @@ const CheckoutLayout = () => {
         {currentStep === 1 && (
           <div className={styles.section}>
             <div className={styles.sectionTitle}>Endereço</div>
-            <div className={styles.address}>
-              <div>
-                <strong>Casa</strong>
-                <div>
-                  <span>Rua João Gomes Filho Nº666</span>
-                  <span>Vila Clementina - São Paulo/SP</span>
-                  <span>CEP: 04980-089</span>
+            <div className={styles.addressContainer}>
+              {addressList.map((address) => (
+                <div key={address.id} className={styles.address}>
+                  <strong>{address.label}</strong>
+                  <div>{address.address}</div>
+                  <button className={styles.button} onClick={() => handleDeleteAddress(address.id)}>Excluir</button>
                 </div>
-                <img src={editIcon} alt="Editar" className={styles.editIcon} />
-              </div>
-              <div>
-                <strong>Serviço</strong>
+              ))}
+              {!editAddress ? (
+                <>
+                  <button className={styles.button} onClick={handleEditAddress}>Editar Endereço</button>
+                  <button className={styles.button} onClick={handleAddNewAddress}>Adicionar Novo Endereço</button>
+                </>
+              ) : (
                 <div>
-                  <span>Rua João Gomes Filho Nº666</span>
-                  <span>Vila Clementina - São Paulo/SP</span>
-                  <span>CEP: 04980-089</span>
+                  <input
+                    type="text"
+                    value={newAddress}
+                    onChange={(e) => setNewAddress(e.target.value)}
+                    placeholder="Digite o novo endereço"
+                    className={styles.inputAddress}
+                  />
+                  <button className={styles.button} onClick={handleSaveAddress}>Salvar Endereço</button>
                 </div>
-                <img src={editIcon} alt="Editar" className={styles.editIcon} />
+              )}
+              <div className={styles.navigationButtons}>
+                <button className={styles.button} onClick={handleNext}>Próximo</button>
               </div>
             </div>
-            <button className={styles.button} onClick={handleNext}>Próximo</button>
           </div>
         )}
         {currentStep === 2 && (
           <div className={styles.section}>
             <div className={styles.sectionTitle}>Método de Pagamento</div>
             <div className={styles.payment}>
-              <div className={styles.paymentMethod} onClick={() => handlePaymentMethodChange('pix')}>
+              <div
+                className={styles.paymentMethod}
+                onClick={() => handlePaymentMethodChange('pix')}
+                style={{ backgroundColor: selectedPaymentMethod === 'pix' ? '#f0f0f0' : 'transparent' }}
+              >
                 <img src={pixIcon} alt="Pix" style={{ width: '40px', height: '40px' }} />
-                <span>Aprovação Imediata</span>
+                <span>{selectedPaymentMethod === 'pix' && 'Selecionado'}</span>
               </div>
-              <div className={styles.paymentMethod} onClick={() => handlePaymentMethodChange('credit')}>
+              <div
+                className={styles.paymentMethod}
+                onClick={() => handlePaymentMethodChange('credit')}
+                style={{ backgroundColor: selectedPaymentMethod === 'credit' ? '#f0f0f0' : 'transparent' }}
+              >
                 <img src={creditCardIcon} alt="Cartão de Crédito" style={{ width: '40px', height: '40px' }} />
-                <span>Crédito</span>
+                <span>{selectedPaymentMethod === 'credit' && 'Selecionado'}</span>
               </div>
-              <div className={styles.paymentMethod} onClick={() => handlePaymentMethodChange('boleto')}>
+              <div
+                className={styles.paymentMethod}
+                onClick={() => handlePaymentMethodChange('boleto')}
+                style={{ backgroundColor: selectedPaymentMethod === 'boleto' ? '#f0f0f0' : 'transparent' }}
+              >
                 <img src={boletoIcon} alt="Boleto" style={{ width: '40px', height: '40px' }} />
-                <span>Aprovação em 3 dias</span>
+                <span>{selectedPaymentMethod === 'boleto' && 'Selecionado'}</span>
               </div>
             </div>
             {selectedPaymentMethod === 'credit' && (
@@ -106,12 +168,13 @@ const CheckoutLayout = () => {
                   <option value="1">1x sem juros</option>
                   <option value="2">2x sem juros</option>
                   <option value="3">3x sem juros</option>
-                  {/* Adicione mais opções conforme necessário */}
                 </select>
               </div>
             )}
-            <button className={styles.button} onClick={handleNext}>Próximo</button>
-            <button className={styles.button} onClick={handlePrevious}>Voltar</button>
+            <div className={styles.navigationButtons}>
+              <button className={styles.button} onClick={handleNext}>Próximo</button>
+              <button className={styles.button} onClick={handlePrevious}>Voltar</button>
+            </div>
           </div>
         )}
         {currentStep === 3 && (
@@ -120,7 +183,7 @@ const CheckoutLayout = () => {
             <div className={styles.review}>
               <div className={styles.reviewItem}>
                 <strong>Endereço:</strong>
-                <span>Rua João Gomes Filho Nº666, Vila Clementina - São Paulo/SP, CEP: 04980-089</span>
+                <span>{addressList.find((addr) => addr.label === 'Casa')?.address}</span>
               </div>
               <div className={styles.reviewItem}>
                 <strong>Método de Pagamento:</strong>
@@ -140,7 +203,7 @@ const CheckoutLayout = () => {
       </div>
       <div className={styles.resumo}>
         <div className={styles.section}>
-          <div className={styles.sectionTitle}>Resumo do Pedido</div>
+        <div className={styles.sectionTitle}>Resumo do Pedido</div>
           <div className={styles.summary}>
             <div className={styles.product}>
               <img src={product1Image} alt="Produto 1" className={styles.productImage} />
@@ -169,4 +232,3 @@ const CheckoutLayout = () => {
 };
 
 export default CheckoutLayout;
-

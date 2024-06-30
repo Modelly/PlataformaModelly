@@ -12,6 +12,10 @@
   display: flex;
   font-family: var(--poppins-font); 
   color: var(--cor-fonte-principal);
+  padding: 20px;
+  background-color: var(--cor-background);
+  border-radius: 10px;
+  border: 1px solid #ddd;
 }
 
 .formulario {
@@ -37,15 +41,22 @@
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
+  background-color: #fff;
   font-family: var(--poppins-font); 
-  border: 2px solid #361A5C;
+  position: relative; /* Para posicionamento absoluto do botão de editar */
 }
 
 .sectionTitle {
   font-size: 1.4em;
   margin-bottom: 10px;
   font-weight: bold;
- 
+  display: flex; /* Para alinhar o ícone de editar */
+  align-items: center; /* Para alinhar verticalmente com o ícone */
+}
+
+.addressContainer {
+  display: flex;
+  flex-direction: column;
 }
 
 .address, .payment, .review {
@@ -56,11 +67,11 @@
   margin-bottom: 15px;
 }
 
-.editIcon {
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-  margin-left: 10px;
+.inputAddress {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
 .button {
@@ -71,10 +82,16 @@
   border-radius: 5px;
   cursor: pointer;
   font-family: var(--montserrat-font);
+  margin-right: 10px;
+  margin-top: 10px;
 }
 
 .button:hover {
   background-color: var(--cor-secundaria);
+}
+
+.navigationButtons {
+  margin-top: 20px;
 }
 
 .paymentMethod {
