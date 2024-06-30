@@ -158,28 +158,28 @@ const HomeLayout = () => {
             <div className={styleHome.help_section} data-aos="fade-down">
                 <h2 className={styleHome.help_heading}>Precisa de Ajuda?</h2>
                 <div className={styleHome.service_container}>
-                    <div className={styleHome.service_item}>
+                    <div className={styleHome.service_item} data-aos="fade-down">
                         <img src={dinheiro} alt="Pagamento" className={styleHome.service_icon} />
                         <div>
                             <h4 className={styleHome.service_title}>Pagamento</h4>
                             <p className={styleHome.service_text} dangerouslySetInnerHTML={{ __html: "Pague suas compras com <br/> rapidez e segurança" }}></p>
                         </div>
                     </div>
-                    <div className={styleHome.service_item}>
+                    <div className={styleHome.service_item} data-aos="fade-down">
                         <img src={devolucao} alt="Devolução" className={styleHome.service_icon} />
                         <div>
                             <h4 className={styleHome.service_title}>Devolução</h4>
                             <p className={styleHome.service_text} dangerouslySetInnerHTML={{ __html: "Você pode devolver sua <br/> compra grátis" }}></p>
                         </div>
                     </div>
-                    <div className={styleHome.service_item}>
+                    <div className={styleHome.service_item} data-aos="fade-down">
                         <img src={perfil} alt="Perfil" className={styleHome.service_icon} />
                         <div>
                             <h4 className={styleHome.service_title}>Perfil</h4>
                             <p className={styleHome.service_text} dangerouslySetInnerHTML={{ __html: "Personalize seu perfil com <br/> rapidez e segurança" }}></p>
                         </div>
                     </div>
-                    <div className={styleHome.service_item}>
+                    <div className={styleHome.service_item} data-aos="fade-down">
                         <img src={categoria} alt="Categorias" className={styleHome.service_icon} />
                         <div>
                             <h4 className={styleHome.service_title}>Categorias</h4>
