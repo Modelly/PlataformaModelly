@@ -41,49 +41,49 @@ const HomeLayout = () => {
             name: "Acessórios",
             img: acessoriosImg,
             path: `${basePath}/categoria/Acessorios`,
-            duration: "100"
+            duration: "50"
         },
         { 
             name: "Velas",
             img: velasImg,
             path: `${basePath}/categoria/Velas`,
-            duration: "200"
+            duration: "100"
         },
         { 
             name: "Moda",
             img: modaImg,
             path: `${basePath}/categoria/Moda`,
-            duration: "300"
+            duration: "150"
         },
         { 
             name: "Pets",
             img: petsImg,
             path: `${basePath}/categoria/Pets`,
-            duration: "400"
+            duration: "200"
         },
         { 
             name: "Infantil",
             img: infantilImg,
             path: `${basePath}/categoria/Infantil`,
-            duration: "500"
+            duration: "250"
         },
         { 
             name: "Sacolas",
             img: sociaisImg,
             path: `${basePath}/categoria/Sacolas`,
-            duration: "600"
+            duration: "300"
         },
         { 
             name: "Casa",
             img: casaImg,
             path: `${basePath}/categoria/Casa`,
-            duration: "700"
+            duration: "350"
         },
         { 
             name: "Personalizado",
             img: personalizadoImg,
             path: `${basePath}/personalizado`,
-            duration: "800"
+            duration: "400"
         },
     ];
     

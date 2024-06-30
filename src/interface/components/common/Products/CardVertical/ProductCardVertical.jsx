@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { truncateDescription } from '../../../util/TruncateDescription.jsx';
 import styles from './ProductCard.module.css';
 
-const ProductCard = ({ id, image, name, description, price, basePath }) => {
+const ProductCardVertical = ({ id, image, name, description, price, basePath }) => {
     const MAX_LENGTH = 20;
 
     return (
@@ -21,7 +21,7 @@ const ProductCard = ({ id, image, name, description, price, basePath }) => {
     );
 };
 
-ProductCard.propTypes = {
+ProductCardVertical.propTypes = {
     id: PropTypes.number.isRequired,
     image: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
@@ -30,4 +30,4 @@ ProductCard.propTypes = {
     basePath: PropTypes.string.isRequired,
 };
 
-export default ProductCard;
+export default ProductCardVertical;
