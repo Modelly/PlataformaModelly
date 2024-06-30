@@ -21,7 +21,7 @@ const CheckoutLayout = () => {
     {
       id: 1,
       label: 'Casa',
-      address: 'Rua João Gomes Filho Nº666, Vila Clementina - São Paulo/SP, CEP: 04980-089',
+      address: 'Rua João Gomes Filho Nº666<br />Vila Clementina - São Paulo/SP<br />CEP: 04980-089',
     },
   ]);
   const [newAddress, setNewAddress] = useState({
@@ -63,7 +63,7 @@ const CheckoutLayout = () => {
 
   const handleSaveAddress = () => {
     if (Object.values(newAddress).some(field => field)) {
-      const fullAddress = `${newAddress.rua} Nº${newAddress.numero}, ${newAddress.bairro} - ${newAddress.cidade}/${newAddress.estado}, CEP: ${newAddress.cep}`;
+      const fullAddress = `${newAddress.rua} Nº${newAddress.numero}<br />${newAddress.bairro} - ${newAddress.cidade}/${newAddress.estado}<br />CEP: ${newAddress.cep}`;
       setAddressList([...addressList, { id: addressList.length + 1, label: 'Novo Endereço', address: fullAddress }]);
       setNewAddress({
         rua: '',
@@ -113,7 +113,7 @@ const CheckoutLayout = () => {
               {addressList.map((address) => (
                 <div key={address.id} className={styles.address}>
                   <strong>{address.label}</strong>
-                  <div>{address.address}</div>
+                  <div dangerouslySetInnerHTML={{ __html: address.address }} />
                   <button className={styles.button} onClick={() => handleDeleteAddress(address.id)}>Excluir</button>
                 </div>
               ))}
@@ -205,7 +205,7 @@ const CheckoutLayout = () => {
             <div className={styles.reviewContainer}>
               <div>
                 <strong>Endereço de Entrega:</strong>
-                <p>{addressList[0].address}</p>
+                <p dangerouslySetInnerHTML={{ __html: addressList[0].address }} />
               </div>
               <div>
                 <strong>Produtos:</strong>
@@ -245,4 +245,3 @@ const CheckoutLayout = () => {
 };
 
 export default CheckoutLayout;
-

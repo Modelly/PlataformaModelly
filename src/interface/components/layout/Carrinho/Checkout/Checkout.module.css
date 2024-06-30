@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 :root {
-  --purple:  #361A5C;
+  --purple: #361A5C;
 }
 
 .checkoutContainer {
@@ -54,10 +54,14 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  padding: 20px;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  margin-bottom: 20px;
 }
 
 .sectionTitle {
-  font-size: 1.5em;
+  font-size: 1.6em;
   font-weight: bold;
   margin-bottom: 10px;
 }
@@ -75,6 +79,7 @@
   padding: 10px;
   border: 1px solid #d0d0d0;
   border-radius: 4px;
+  background-color: #f9f9f9; 
 }
 
 .buttonContainer {
@@ -101,6 +106,10 @@
   display: flex;
   justify-content: space-around;
   margin: 20px 0;
+  padding: 20px;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  background-color: #f9f9f9; 
 }
 
 .paymentMethod {
@@ -110,6 +119,10 @@
   padding: 10px;
   cursor: pointer;
   border-radius: 4px;
+}
+
+.paymentMethod:hover {
+  background-color: rgba(54, 26, 92, 0.1);
 }
 
 .paymentMethod img {
@@ -129,11 +142,20 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding: 20px;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  font-size: 1.1rem; 
 }
 
 .product {
   display: flex;
   gap: 20px;
+  padding: 10px;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  background-color: #fff; 
 }
 
 .product img {
@@ -155,7 +177,7 @@
 }
 
 .totalPrice {
-  font-size: 1.4em;
+  font-size: 1.6rem;
   font-weight: bold;
   color: var(--purple);
 }
