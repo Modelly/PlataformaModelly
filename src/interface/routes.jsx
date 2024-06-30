@@ -81,6 +81,7 @@ const AppRoutes = () => {
 
                     {/* Rota para checkout */}
                     <Route path="/checkout" element={<CheckoutLayout />} />
+                 
 
                     {/* Rotas para pedido personalizado */}
                     <Route path="/pedido-personalizado" element={<CategoriaCliente />} />
