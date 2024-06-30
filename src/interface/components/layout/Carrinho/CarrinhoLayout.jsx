@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { getBasePath } from '../../util/GetBasePath';
 import styleCarrinhoLayout from './CarrinhoLayout.module.css';
 
 import Produto1 from '../../../../assets/images/imgs-carrinho/foto-produto1.png';
@@ -28,6 +29,9 @@ function CarrinhoLayout() {
     const [produtos, setProdutos] = useState(dbProdutoCarrinho.map(produto => ({ ...produto, quantidade: 1 })));
     const navigate = useNavigate();
 
+    const location = useLocation();
+    const basePath = getBasePath(location.pathname);
+
     const handleExcluirProduto = (id) => {
         setProdutos(produtos.filter(produto => produto.id !== id));
     };
@@ -39,7 +43,7 @@ function CarrinhoLayout() {
     };
 
     const handleComprarProduto = () => {
-        navigate('/checkout');
+        navigate(`${basePath}/checkout`);
     };
 
     const calcularPrecoTotal = () => {

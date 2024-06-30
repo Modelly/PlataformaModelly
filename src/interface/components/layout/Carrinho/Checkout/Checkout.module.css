@@ -141,5 +141,11 @@
 .productTitle {
   font-size: 1.2em;
   font-weight: bold;
+  color: #333;
 }
 
+.totalPrice {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #6a1b9a;
+}

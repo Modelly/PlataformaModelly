@@ -10,7 +10,7 @@ import creditCardIcon from '../../../../../../src/assets/images/imgs-carrinho/ca
 import boletoIcon from '../../../../../assets/images/imgs-carrinho/boleto.png';
 import product1Image from '../../../../../../src/assets/images/imgs-carrinho/foto-produto1.png';
 import product2Image from '../../../../../../src/assets/images/imgs-carrinho/foto-produto2.png';
-import Popup from './PoppupCheckout.jsx';
+import Popup from './PoppupCheckout';
 
 const CheckoutLayout = () => {
   const [currentStep, setCurrentStep] = useState(1);
