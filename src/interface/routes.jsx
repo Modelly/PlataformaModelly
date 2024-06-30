@@ -23,7 +23,8 @@ import EscolhaCategoria from './components/layout/Personalizado/pedidoCliente/Es
 import CategoriaCliente from './components/layout/Personalizado/pedidoCliente/CategoriaCliente.jsx';
 import FormularioServicos from './components/layout/Personalizado/pedidoCliente/FormularioServicos.jsx';
 import CadastroVendedor from '../interface/components/layout/Cadastro_Vendedor/Cadastro_VendedorLayout.jsx';
-const AppRoutes = () => {
+
+const routes = () => {
     return (
         <Router>
             <ScrollToTop />
@@ -93,4 +94,4 @@ const AppRoutes = () => {
     );
 }
 
-export default AppRoutes;
+export default routes;
