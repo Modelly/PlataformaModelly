@@ -159,13 +159,13 @@ const HomeLayout = () => {
                 <h2 className={styleHome.help_heading}>Precisa de Ajuda?</h2>
                 <div className={styleHome.service_container}>
                     <div className={styleHome.service_item} data-aos="fade-down">
-                        <img src={dinheiro} alt="Pagamento" className={styleHome.service_icon} />
+                        <img src={dinheiro} alt="Pagamento" className={styleHome.service_icon} data-aos-delay="100"/>
                         <div>
                             <h4 className={styleHome.service_title}>Pagamento</h4>
                             <p className={styleHome.service_text} dangerouslySetInnerHTML={{ __html: "Pague suas compras com <br/> rapidez e segurança" }}></p>
                         </div>
                     </div>
-                    <div className={styleHome.service_item} data-aos="fade-down">
+                    <div className={styleHome.service_item} data-aos="fade-down" data-aos-delay="100">
                         <img src={devolucao} alt="Devolução" className={styleHome.service_icon} />
                         <div>
                             <h4 className={styleHome.service_title}>Devolução</h4>
