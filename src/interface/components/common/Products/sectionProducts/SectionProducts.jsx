@@ -31,7 +31,7 @@ const SectionProducts = () => {
             setTimeout(() => {
                 setProducts(productsData);
                 setLoading(false);
-            }, 150)
+            }, 350)
         } catch (error) {
             console.error('Erro ao buscar produtos:', error);
             const localResponse = await fetch('/data/products.json');
@@ -41,7 +41,7 @@ const SectionProducts = () => {
                 setTimeout(() => {
                     setProducts(productsData);
                     setLoading(false);
-                }, 150);
+                }, 350);
             } else {
                 console.error('Erro ao buscar produtos localmente:', error);
                 setLoading(false);
