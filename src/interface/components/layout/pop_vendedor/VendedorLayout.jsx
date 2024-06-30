@@ -1,5 +1,9 @@
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import { getBasePath } from "../../util/GetBasePath.jsx";
+import { useNavigate, useLocation } from 'react-router-dom';
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import catImage from '../../../../assets/images/imgs-vendedor/Logo_Teste.png';
 
@@ -14,10 +18,16 @@ const Popup = () => {
     navigate(`${basePath}/cadastrar-vendedor`);
   }
 
+  useEffect(() => {
+      AOS.init({
+          duration: 1200, // Duração das animações
+      });
+  }, []);
+
   return (
     <div className={`${styleVendedor.bodyHTML}`}>
       <div className={`${styleVendedor.mainContainer}`}>
-        <div className={`${styleVendedor.popupContainer}`}>
+        <div className={`${styleVendedor.popupContainer}`} data-aos="fade-up">
           <div className={styleVendedor.popup}>
             <img src={catImage} alt="Gato" className={styleVendedor.catImage} />
             <h1>Bem-Vindo a Modelly!</h1>

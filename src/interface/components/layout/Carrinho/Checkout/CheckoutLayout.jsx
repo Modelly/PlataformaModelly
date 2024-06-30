@@ -1,16 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import styles from './Checkout.module.css';
-import deliveryIcon from '../../../../../../src/assets/images/imgs-carrinho/caminhaoroxo.png';
-import paymentIcon from '../../../../../../src/assets/images/imgs-carrinho/cartaoproxoiconpequeno.png';
-import reviewIcon from '../../../../../../src/assets/images/imgs-carrinho/revisao-roxo.png';
-import deliveryIconGreen from '../../../../../../src/assets/images/imgs-carrinho/caminhaoverde.png';
-import paymentIconGreen from '../../../../../../src/assets/images/imgs-carrinho/cartaoverdeiconpequeno.png';
-import pixIcon from '../../../../../../src/assets/images/imgs-carrinho/pix.png';
-import creditCardIcon from '../../../../../../src/assets/images/imgs-carrinho/cartãoroxogrande.png';
+import { useState, useEffect } from 'react';
+
+import Popup from './PoppupCheckout';
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 import boletoIcon from '../../../../../assets/images/imgs-carrinho/boleto.png';
+import pixIcon from '../../../../../../src/assets/images/imgs-carrinho/pix.png';
+import reviewIcon from '../../../../../../src/assets/images/imgs-carrinho/revisao-roxo.png';
+import deliveryIcon from '../../../../../../src/assets/images/imgs-carrinho/caminhaoroxo.png';
 import product1Image from '../../../../../../src/assets/images/imgs-carrinho/foto-produto1.png';
 import product2Image from '../../../../../../src/assets/images/imgs-carrinho/foto-produto2.png';
-import Popup from './PoppupCheckout';
+import deliveryIconGreen from '../../../../../../src/assets/images/imgs-carrinho/caminhaoverde.png';
+import creditCardIcon from '../../../../../../src/assets/images/imgs-carrinho/cartãoroxogrande.png';
+import paymentIcon from '../../../../../../src/assets/images/imgs-carrinho/cartaoproxoiconpequeno.png';
+import paymentIconGreen from '../../../../../../src/assets/images/imgs-carrinho/cartaoverdeiconpequeno.png';
+
+import styles from './Checkout.module.css';
 
 const CheckoutLayout = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -32,6 +38,12 @@ const CheckoutLayout = () => {
     estado: '',
     cep: ''
   });
+
+  useEffect(() => {
+    AOS.init({
+        duration: 1000
+    });
+  }, [])
 
   const handleNext = () => {
     setCurrentStep(currentStep + 1);
@@ -91,7 +103,7 @@ const CheckoutLayout = () => {
   const totalAmount = 400; 
 
   return (
-    <div className={styles.checkoutContainer}>
+    <div className={styles.checkoutContainer} data-aos="fade-up">
       <div className={styles.formulario}>
         <div className={styles.header}>
           <div className={styles.icon}>
@@ -177,7 +189,7 @@ const CheckoutLayout = () => {
           </div>
         )}
         {currentStep === 2 && (
-          <div className={styles.section}>
+          <div className={styles.section} data-aos="fade">
             <div className={styles.sectionTitle}>Pagamento</div>
             <div className={styles.payment}>
               <div className={styles.paymentMethod} onClick={() => handlePaymentMethodChange('pix')}>
@@ -209,7 +221,7 @@ const CheckoutLayout = () => {
               </div>
               <div>
                 <strong>Produtos:</strong>
-                <div className={styles.product}>
+                <div className={styles.product} data-aos="fade-left">
                   <img src={product1Image} alt="Produto 1" />
                   <div className={styles.productDetails}>
                     <div className={styles.productTitle}>Produto 1</div>
@@ -217,7 +229,7 @@ const CheckoutLayout = () => {
                     <div>R$ 200,00</div>
                   </div>
                 </div>
-                <div className={styles.product}>
+                <div className={styles.product} data-aos="fade-left" data-aos-delay="100">
                   <img src={product2Image} alt="Produto 2" />
                   <div className={styles.productDetails}>
                     <div className={styles.productTitle}>Produto 2</div>

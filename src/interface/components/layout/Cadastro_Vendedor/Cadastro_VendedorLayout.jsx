@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+
 import styleCadastroVendedor from './Cadastro_Vendedor.module.css';
 import step1Img from '../../../../assets/images/cad_vendedor/step1.png';
 import step2Img from '../../../../assets/images/cad_vendedor/step2.png';
@@ -8,9 +9,18 @@ import step2png from '../../../../assets/images/cad_vendedor/step2-2.png';
 import step3png from '../../../../assets/images/cad_vendedor/step3-3.png';
 import logogato from '../../../../assets/images/cad_vendedor/Logo_Teste.png';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const Cadastro_VendedorLayout = () => {
   const [step, setStep] = useState(1);
   const [selectedOption, setSelectedOption] = useState('');
+
+  useEffect(() => {
+      AOS.init({
+          duration: 1200, // Duração das animações
+      });
+  }, []);
 
   const handleNext = () => {
     if (step === 1 && selectedOption) {
@@ -29,7 +39,7 @@ const Cadastro_VendedorLayout = () => {
   };
 
   return (
-    <div className={styleCadastroVendedor.form_container}>
+    <div className={styleCadastroVendedor.form_container} data-aos="fade-up">
       <div className={styleCadastroVendedor.steps}>
         <div className={`${styleCadastroVendedor.step} ${step >= 1 ? styleCadastroVendedor.Active : ''}`} onClick={() => setStep(1)}>
           <img src={step1Img} alt="Step 1" className={styleCadastroVendedor.step_image} />
@@ -62,7 +72,7 @@ const Cadastro_VendedorLayout = () => {
       )}
 
       {step === 2 && selectedOption === 'CPF' && (
-        <div className={styleCadastroVendedor.step_content}>
+        <div className={styleCadastroVendedor.step_content} data-aos="fade-up">
           <form>
             <div className={styleCadastroVendedor.form_group}>
               <label>Nome Completo</label>
@@ -136,7 +146,7 @@ const Cadastro_VendedorLayout = () => {
       )}
 
       {step === 2 && selectedOption === 'CNPJ' && (
-        <div className={styleCadastroVendedor.step_content}>
+        <div className={styleCadastroVendedor.step_content} data-aos="fade-up">
           <form>
             <div className={styleCadastroVendedor.form_group}>
               <label>Nome da Empresa</label>
@@ -210,7 +220,7 @@ const Cadastro_VendedorLayout = () => {
       )}
 
       {step === 3 && (
-        <div className={styleCadastroVendedor.step_content}>
+        <div className={styleCadastroVendedor.step_content} data-aos="fade">
           <div className={styleCadastroVendedor.card}>
             <img src={logogato} alt="Logo" className={styleCadastroVendedor.logo} />
             <h2>Cadastro Finalizado</h2>
