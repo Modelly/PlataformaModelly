@@ -1,8 +1,12 @@
 // HomeLayout.jsx
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useLocation, Link } from 'react-router-dom';
 import { getBasePath } from "../../util/GetBasePath.jsx";
 import SectionProducts from '../../common/Products/sectionProducts/SectionProducts';
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import modaImg from '../../../../assets/images/imgs-home/moda.png';
 import petsImg from '../../../../assets/images/imgs-home/pets.png';
@@ -27,26 +31,61 @@ const HomeLayout = () => {
     const basePath = getBasePath(location.pathname);
     
     const categories = [
-        { name: "Decoração", img: decoracaoImg, path: `${basePath}/categoria/Decoracao` },
-        { name: "Acessórios", img: acessoriosImg, path: `${basePath}/categoria/Acessorios` },
-        { name: "Velas", img: velasImg, path: `${basePath}/categoria/Velas` },
-        { name: "Moda", img: modaImg, path: `${basePath}/categoria/Moda` },
-        { name: "Pets", img: petsImg, path: `${basePath}/categoria/Pets` },
-        { name: "Infantil", img: infantilImg, path: `${basePath}/categoria/Infantil` },
-        { name: "Sacolas", img: sociaisImg, path: `${basePath}/categoria/Sacolas` },
-        { name: "Casa", img: casaImg, path: `${basePath}/categoria/Casa` },
-        { name: "Personalizado", img: personalizadoImg, path: `${basePath}/personalizado` },
+        { 
+            name: "Decoração",
+            img: decoracaoImg,
+            path: `${basePath}/categoria/Decoracao`,
+            duration: "0"
+        },
+        { 
+            name: "Acessórios",
+            img: acessoriosImg,
+            path: `${basePath}/categoria/Acessorios`,
+            duration: "100"
+        },
+        { 
+            name: "Velas",
+            img: velasImg,
+            path: `${basePath}/categoria/Velas`,
+            duration: "200"
+        },
+        { 
+            name: "Moda",
+            img: modaImg,
+            path: `${basePath}/categoria/Moda`,
+            duration: "300"
+        },
+        { 
+            name: "Pets",
+            img: petsImg,
+            path: `${basePath}/categoria/Pets`,
+            duration: "400"
+        },
+        { 
+            name: "Infantil",
+            img: infantilImg,
+            path: `${basePath}/categoria/Infantil`,
+            duration: "500"
+        },
+        { 
+            name: "Sacolas",
+            img: sociaisImg,
+            path: `${basePath}/categoria/Sacolas`,
+            duration: "600"
+        },
+        { 
+            name: "Casa",
+            img: casaImg,
+            path: `${basePath}/categoria/Casa`,
+            duration: "700"
+        },
+        { 
+            name: "Personalizado",
+            img: personalizadoImg,
+            path: `${basePath}/personalizado`,
+            duration: "800"
+        },
     ];
-
-    const categoryImgVariants = {
-        hidden: { scale: 0, rotate: 800, opacity: 0 },
-        visible: { scale: 1, rotate: 0, opacity: 1 },
-    };
-
-    const categoryTextVariants = {
-        hidden: { scale: 0.4, opacity: 0 },
-        visible: { scale: 1, opacity: 1 },
-    };
     
     const promoTextVariants = {
         hidden: { opacity: 0, x: -80 },
@@ -58,33 +97,30 @@ const HomeLayout = () => {
         visible: { opacity: 1, x: 0 },
     };
 
+    useEffect(() => {
+        AOS.init({
+            duration: 1200, // Duração das animações
+        });
+    }, []);
+
     return (
         <div className={styleHome.home_container}>
-            <div className={styleHome.home_bannerImage_container}>
+            <div className={styleHome.home_bannerImage_container} data-aos="fade-down">
                 <img src={bannerImage} alt="Banner" className={styleHome.banner_image} />
                 <h1 className={styleHome.banner_heading}>Seja bem-vindo(a)</h1>
                 <h2 className={styleHome.banner_subheading}>Conectando artistas,<br/>encantando o mundo!</h2>
             </div>
             <div className={styleHome.categories_container}>
                 {categories.map((category, index) => (
-                    <Link to={category.path} key={index} className={styleHome.category_item}>
-                        <motion.img 
+                    <Link to={category.path} key={index} className={styleHome.category_item} data-aos="fade-up" data-aos-delay={category.duration}>
+                        <img 
                             src={category.img} 
                             alt={category.name} 
                             className={styleHome.category_image} 
-                            initial="hidden"
-                            whileInView="visible"
-                            variants={categoryImgVariants}
-                            transition={{ duration: 0.7 }} 
                         />
-                        <motion.p
-                            initial="hidden"
-                            whileInView="visible"
-                            variants={categoryTextVariants}
-                            transition={{ duration: 0.7 }}
-                        >
+                        <p>
                             {category.name}
-                        </motion.p>
+                        </p>
                     </Link>
                 ))}
             </div>
@@ -119,7 +155,7 @@ const HomeLayout = () => {
                 />
             </motion.div>
 
-            <div className={styleHome.help_section}>
+            <div className={styleHome.help_section} data-aos="fade-down">
                 <h2 className={styleHome.help_heading}>Precisa de Ajuda?</h2>
                 <div className={styleHome.service_container}>
                     <div className={styleHome.service_item}>
