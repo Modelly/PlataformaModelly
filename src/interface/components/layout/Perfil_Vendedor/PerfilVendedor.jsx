@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import stylePerfilVendedor from './perfil_vendedor.module.css';
+import stylePerfilVendedor from './Nav_perfil_vendedor.module.css';
 import iconPedidos from '../../../../assets/images/imgs-perfil_vendedor/Pedidos.png';
 import iconContas from '../../../../assets/images/imgs-perfil_vendedor/Contas.png';
 import iconProduto from '../../../../assets/images/imgs-perfil_vendedor/Produto.png';
@@ -8,7 +8,7 @@ import iconDashboard from '../../../../assets/images/imgs-perfil_vendedor/Dashbo
 import iconLoja from '../../../../assets/images/imgs-perfil_vendedor/Loja.png';
 import iconFreelancer from '../../../../assets/images/imgs-perfil_vendedor/Freelancer.png';
 
-function PerfilVendedor() {
+function navPerfilVendedor() {
     // Estado para controlar a exibição dos sub-tópicos de Produto e Atendimento
     const [mostrarSubtopicosProduto, setMostrarSubtopicosProduto] = useState(false);
     const [mostrarSubtopicosAtendimento, setMostrarSubtopicosAtendimento] = useState(false);
@@ -79,4 +79,4 @@ function PerfilVendedor() {
     );
 }
 
-export default PerfilVendedor;
+export default navPerfilVendedor;
