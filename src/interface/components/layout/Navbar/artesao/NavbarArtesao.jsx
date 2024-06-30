@@ -35,10 +35,10 @@ const NavbarArtesao = () => {
                     <img src={lupa} alt="Lupa de pesquisa" className={styleNav.lupa_icon} />
                 </div>
                 <div className={styleNav.icons}>
-                    <NavLink to="/artesao/Cadastro_Produto" activeClassName={styleNav.active}>
+                    <NavLink to="/artesao/Cadastro_Produto" className={({ isActive }) => isActive ? styleNav.active : ''}>
                         <img src={heartIcon} alt="Favoritos" className={styleNav.iconConsumidor} />
                     </NavLink>
-                    <NavLink to="/artesao/carrinho" activeClassName={styleNav.active}>
+                    <NavLink to="/artesao/carrinho" className={({ isActive }) => isActive ? styleNav.active : ''}>
                         <img src={bagIcon} alt="Carrinho" className={styleNav.iconConsumidor} />
                     </NavLink>
                     <div>
@@ -46,19 +46,19 @@ const NavbarArtesao = () => {
                             <summary><img src={photoPerfil} alt="Ícone de usuário" className={styleNav.user_iconPerfil} /></summary>
                             <ul className={styleNav.dropdown_menu}>
                                 <li>
-                                    <img src={settingsIcon} alt="icone de engranagem" />
+                                    <img src={settingsIcon} alt="icone de engrenagem" />
                                     Configurar Conta
                                 </li>
                                 <li>
-                                    <img src={storeIcon} alt="icone de engranagem" />
+                                    <img src={storeIcon} alt="icone de engrenagem" />
                                     Minha Loja
                                 </li>
                                 <li onClick={() => navigate(`${basePath}/fale-conosco`)}>
-                                    <img src={helpIcon} alt="icone de engranagem" />
+                                    <img src={helpIcon} alt="icone de engrenagem" />
                                     Ajuda
                                 </li>
                                 <li onClick={handleLogout}>
-                                    <img src={logoutIcon} alt="icone de engranagem" />
+                                    <img src={logoutIcon} alt="icone de engrenagem" />
                                     Encerrar sessão
                                 </li>
                             </ul>
@@ -68,12 +68,12 @@ const NavbarArtesao = () => {
             </div>
             <div className={styleNav.navbar_bottom}>
                 <ul className={styleNav.navbar_list}>
-                    <li className={styleNav.navbar_item}><NavLink to="/artesao/personalizado" activeClassName={styleNav.active}>Personalizado</NavLink></li>
-                    <li className={styleNav.navbar_item}><NavLink to="/artesao/feira-virtual" activeClassName={styleNav.active}>Feira Virtual</NavLink></li>
-                    <li className={styleNav.navbar_item}><NavLink to="/artesao/seja-vendedor" activeClassName={styleNav.active}>Minha Loja</NavLink></li>
-                    <li className={styleNav.navbar_item}><NavLink to="/artesao/planos-modelly" activeClassName={styleNav.active}>Planos Modelly</NavLink></li>
-                    <li className={styleNav.navbar_item}><NavLink to="/artesao/sobre" activeClassName={styleNav.active}>Sobre</NavLink></li>
-                    <li className={styleNav.navbar_item}><NavLink to="/artesao/fale-conosco" activeClassName={styleNav.active}>Fale Conosco</NavLink></li>
+                    <li className={styleNav.navbar_item}><NavLink to="/artesao/personalizado" className={({ isActive }) => isActive ? styleNav.active : ''}>Personalizado</NavLink></li>
+                    <li className={styleNav.navbar_item}><NavLink to="/artesao/feira-virtual" className={({ isActive }) => isActive ? styleNav.active : ''}>Feira Virtual</NavLink></li>
+                    <li className={styleNav.navbar_item}><NavLink to="/artesao/minha-loja" className={({ isActive }) => isActive ? styleNav.active : ''}>Minha Loja</NavLink></li>
+                    <li className={styleNav.navbar_item}><NavLink to="/artesao/planos-modelly" className={({ isActive }) => isActive ? styleNav.active : ''}>Planos Modelly</NavLink></li>
+                    <li className={styleNav.navbar_item}><NavLink to="/artesao/sobre" className={({ isActive }) => isActive ? styleNav.active : ''}>Sobre</NavLink></li>
+                    <li className={styleNav.navbar_item}><NavLink to="/artesao/fale-conosco" className={({ isActive }) => isActive ? styleNav.active : ''}>Fale Conosco</NavLink></li>
                 </ul>
             </div>
         </div>
