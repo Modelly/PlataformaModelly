@@ -37,11 +37,12 @@ const AppRoutes = () => {
                         <Route path="/sobre" element={<Sobre />} />
                         <Route path="/produto" element={<Produto />} />
                         <Route path="/carrinho" element={<Carrinho />} />
-                        <Route path="/categoria/:categoria" element={<Categoria />} />
                         <Route path="/produto/:id" element={<Produto />} />
                         <Route path="/fale-conosco" element={<Contato_1 />} />
+                        <Route path="/checkout" element={<CheckoutLayout />} />
                         <Route path="/feira-virtual" element={<FeiraVirtual />} />
                         <Route path="/seja-vendedor" element={<VendedorPopUp />} />
+                        <Route path="/categoria/:categoria" element={<Categoria />} />
                         <Route path="/cadastrar-vendedor" element={<CadastroVendedor />} />
                     </Route>
 
@@ -51,11 +52,12 @@ const AppRoutes = () => {
                         <Route path="/consumidor/sobre" element={<Sobre />} />
                         <Route path="/consumidor/produto" element={<Produto />} />
                         <Route path="/consumidor/carrinho" element={<Carrinho />} />
-                        <Route path="/consumidor/categoria/:categoria" element={<Categoria />} />
                         <Route path="/consumidor/produto/:id" element={<Produto />} />
                         <Route path="/consumidor/fale-conosco" element={<Contato_1 />} />
+                        <Route path="/consumidor/checkout" element={<CheckoutLayout />} />
                         <Route path="/consumidor/feira-virtual" element={<FeiraVirtual />} />
                         <Route path="/consumidor/seja-vendedor" element={<VendedorPopUp />} />
+                        <Route path="/consumidor/categoria/:categoria" element={<Categoria />} />
                         <Route path="/consumidor/cadastrar-vendedor" element={<CadastroVendedor />} />
                         <Route path="/consumidor/pedido-personalizado" element={<CategoriaCliente />} />
                     </Route>
@@ -66,27 +68,24 @@ const AppRoutes = () => {
                         <Route path="/artesao/sobre" element={<Sobre />} />
                         <Route path="/artesao/produto" element={<Produto />} />
                         <Route path="/artesao/carrinho" element={<Carrinho />} />
-                        <Route path="/artesao/categoria/:categoria" element={<Categoria />} />
                         <Route path="/artesao/produto/:id" element={<Produto />} />
                         <Route path="/artesao/fale-conosco" element={<Contato_1 />} />
+                        <Route path="/artesao/checkout" element={<CheckoutLayout />} />
+                        <Route path="/artesao/minha-loja" element={<PerfilVendedor />} />
                         <Route path="/artesao/feira-virtual" element={<FeiraVirtual />} />
                         <Route path="/artesao/seja-vendedor" element={<VendedorPopUp />} />
+                        <Route path="/artesao/categoria/:categoria" element={<Categoria />} />
                         <Route path="/artesao/cadastro_Produto" element={<CadastroProduto />} />
                         <Route path="/artesao/personalizado" element={<PersonalizadoLayout />} />
                         <Route path="/artesao/cadastrar-vendedor" element={<CadastroVendedor />} />
                         <Route path="/artesao/pedido-personalizado" element={<CategoriaCliente />} />
-                        <Route path="/artesao/minha-loja" element={<PerfilVendedor />} />
                     </Route>
-
-                    {/* Rota para checkout */}
-                    <Route path="/checkout" element={<CheckoutLayout />} />
-                 
 
                     {/* Rotas para pedido personalizado */}
                     <Route path="/pedido-personalizado" element={<CategoriaCliente />} />
+                    <Route path="/pedido-personalizado/publicar" element={<Publicar />} />
                     <Route path="/pedido-personalizado/categorias" element={<EscolhaCategoria />} />
                     <Route path="/pedido-personalizado/formulario" element={<FormularioServicos />} />
-                    <Route path="/pedido-personalizado/publicar" element={<Publicar />} />
                   
                 </Routes>         
             </div>
