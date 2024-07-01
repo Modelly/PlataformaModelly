@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './PlanosArt.module.css';
+import stylesPlanoArt from './PlanosArt.module.css';  // Renomeado para stylesPlanoArt
 import standPurple from '../../../../assets/images/imgs-planos/stand-purple.png';
 import standBlue from '../../../../assets/images/imgs-planos/stand-blue.png';
 import standPink from '../../../../assets/images/imgs-planos/stand-pink.png';
@@ -12,16 +12,16 @@ import Sculpture from '../../../../assets/images/imgs-planos/Sculpture.png';
 
 const PlanosArt = () => {
   return (
-    <div className={styles.container}>
-      <h1 className={styles.title}>Para Artistas</h1>
-      <div className={styles.standsContainer}>
-        <div className={styles.stand}>
-          <h2 className={styles.standTitle}>Plano Papel</h2>
-          <img src={standPurple} alt="Stand Purple" className={styles.standImage} />
-          <div className={styles.content1}>
-            <img src={GlossPaper} alt="Gloss Paper Icon" className={styles.icon} />
-            <button className={`${styles.button} ${styles.buttonPurple}`}>Seu Plano Atual</button>
-            <p className={styles.description}>
+    <div className={stylesPlanoArt.container}>
+      <h1 className={stylesPlanoArt.title}>Para Artistas</h1>
+      <div className={stylesPlanoArt.standsContainer}>
+        <div className={stylesPlanoArt.stand}>
+          <h2 className={stylesPlanoArt.standTitle}>Plano Papel</h2>
+          <img src={standPurple} alt="Stand Purple" className={stylesPlanoArt.standImage} />
+          <div className={stylesPlanoArt.content1}>
+            <img src={GlossPaper} alt="Gloss Paper Icon" className={stylesPlanoArt.icon} />
+            <button className={`${stylesPlanoArt.button} ${stylesPlanoArt.buttonPurple}`}>Seu Plano Atual</button>
+            <p className={stylesPlanoArt.description}>
               Feira de Arte: <strong>15 Espaços no Stand</strong>
               Dashboard:
               <strong>Relatórios mensais de vendas</strong>
@@ -33,13 +33,13 @@ const PlanosArt = () => {
             </p>
           </div>
         </div>
-        <div className={styles.stand}>
-          <h2 className={styles.standTitle}>Plano Pincel</h2>
-          <img src={standBlue} alt="Stand Blue" className={styles.standImage} />
-          <div className={styles.content2}>
-            <img src={Paint} alt="Paint Icon" className={styles.icon} />
-            <button className={`${styles.button} ${styles.buttonBlue}`}>Atualizar Plano</button>
-            <p className={styles.description}>
+        <div className={stylesPlanoArt.stand}>
+          <h2 className={stylesPlanoArt.standTitle}>Plano Pincel</h2>
+          <img src={standBlue} alt="Stand Blue" className={stylesPlanoArt.standImage} />
+          <div className={stylesPlanoArt.content2}>
+            <img src={Paint} alt="Paint Icon" className={stylesPlanoArt.icon} />
+            <button className={`${stylesPlanoArt.button} ${stylesPlanoArt.buttonBlue}`}>Atualizar Plano</button>
+            <p className={stylesPlanoArt.description}>
               Feira de Arte: <strong>50 Espaços no Stand</strong>
               Dashboard:
               <strong>Relatórios semanais de vendas</strong>
@@ -53,13 +53,13 @@ const PlanosArt = () => {
             </p>
           </div>
         </div>
-        <div className={styles.stand}>
-          <h2 className={styles.standTitle}>Plano Bordado</h2>
-          <img src={standPink} alt="Stand Pink" className={styles.standImage} />
-          <div className={styles.content3}>
-            <img src={Knitting} alt="Knitting Icon" className={styles.icon} />
-            <button className={`${styles.button} ${styles.buttonPink}`}>Atualizar Plano</button>
-            <p className={styles.description}>
+        <div className={stylesPlanoArt.stand}>
+          <h2 className={stylesPlanoArt.standTitle}>Plano Bordado</h2>
+          <img src={standPink} alt="Stand Pink" className={stylesPlanoArt.standImage} />
+          <div className={stylesPlanoArt.content3}>
+            <img src={Knitting} alt="Knitting Icon" className={stylesPlanoArt.icon} />
+            <button className={`${stylesPlanoArt.button} ${stylesPlanoArt.buttonPink}`}>Atualizar Plano</button>
+            <p className={stylesPlanoArt.description}>
               Feira de Arte: <strong>100 Espaços no Stand</strong>
               Dashboard:
               <strong>Relatórios diários de vendas</strong>
@@ -71,13 +71,13 @@ const PlanosArt = () => {
             </p>
           </div>
         </div>
-        <div className={styles.stand}>
-          <h2 className={styles.standTitle}>Plano Escultura</h2>
-          <img src={standYellow} alt="Stand Yellow" className={styles.standImage} />
-          <div className={styles.content4}>
-            <img src={Sculpture} alt="Sculpture Icon" className={styles.icon} />
-            <button className={`${styles.button} ${styles.buttonYellow}`}>Atualizar Plano</button>
-            <p className={styles.description}>
+        <div className={stylesPlanoArt.stand}>
+          <h2 className={stylesPlanoArt.standTitle}>Plano Escultura</h2>
+          <img src={standYellow} alt="Stand Yellow" className={stylesPlanoArt.standImage} />
+          <div className={stylesPlanoArt.content4}>
+            <img src={Sculpture} alt="Sculpture Icon" className={stylesPlanoArt.icon} />
+            <button className={`${stylesPlanoArt.button} ${stylesPlanoArt.buttonYellow}`}>Atualizar Plano</button>
+            <p className={stylesPlanoArt.description}>
               Feira de Arte: <strong>200 Espaços no Stand</strong>
               Dashboard:
               <strong>Relatórios em tempo real</strong>

@@ -44,7 +44,7 @@
 }
 
 .step_image {
-    width: 30px; /* Ajuste o tamanho da imagem conforme necessário */
+    width: 30px; 
     height: auto;
     display: block;
     margin: 0 auto 10px;
@@ -99,7 +99,7 @@
     width: 80%; 
     max-width: 600px; 
     font-family: var(--poppins-font);
-    color: var(--cor-fonte-principal);
+    color: #361A5C;
     font-weight: 600;
 }
 
@@ -118,6 +118,7 @@
     color: var(--cor-secundaria);
     font-family: var(--poppins-font);
     font-weight: 600;
+    color: #361A5C;
 }
 
 .form_group input[type="text"],
@@ -129,6 +130,7 @@
     border-radius: 5px;
     font-family: var(--poppins-font);
     font-weight: 500;
+    color: #361A5C;
 }
 
 .form_group input[type="checkbox"] {

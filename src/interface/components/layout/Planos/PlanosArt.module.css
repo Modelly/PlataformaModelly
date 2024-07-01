@@ -16,7 +16,7 @@
          url('../fonts/Bogart-Bold-trial.ttf') format('truetype');
   }
   
-  .container {
+  .containera {
     background-color: var(--cor-background);
     padding: 20px;
     font-family: var(--poppins-font);

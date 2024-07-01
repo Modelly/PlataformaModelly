@@ -4,7 +4,7 @@ import styleConfiguracoes from './Configuracoes.module.css';
 
 function Configuracoes(){
        return(
-        <section className={styleConfiguracoes.container} style={{ backgroundImage: `url(${backgroundPapel})` }}>
+        <section className={styleConfiguracoes.containeree} style={{ backgroundImage: `url(${backgroundPapel})` }}>
             
         </section>
        )
