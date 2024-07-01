@@ -166,10 +166,10 @@ function InfoProduto() {
                         <div>
                             <img className={styleInfoProduto.fotoPerfil} src={imagemPrincipal}></img>
 
-                            <div>
+                            <Link to={`${basePath}/perfil-loja`}>
                                 <span className={styleInfoProduto.textRosa}>{produto.loja.nome_loja}</span>
                                 <p className={styleInfoProduto.subText}>Localização da loja</p>
-                            </div>
+                            </Link>
 
                             <button>Seguir</button>
                         </div>

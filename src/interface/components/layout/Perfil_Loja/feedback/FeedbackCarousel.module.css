@@ -1,0 +1,18 @@
+.carouselContainer {
+
+    width: 80%;
+    margin-bottom: 8em;
+}
+
+.title {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 2em;
+    color: #3F0A77;
+}
+
+.slick-slide {
+    padding: 0 100px;
+    
+}
+
