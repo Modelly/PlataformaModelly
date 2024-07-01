@@ -116,6 +116,7 @@
 
 .dropdown_menu {
     position: absolute;
+    z-index: 999;
     right: 60%;
     width: max-content;
     list-style: none;

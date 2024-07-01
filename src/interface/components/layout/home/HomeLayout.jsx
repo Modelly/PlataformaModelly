@@ -1,8 +1,12 @@
 // HomeLayout.jsx
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useLocation, Link } from 'react-router-dom';
 import { getBasePath } from "../../util/GetBasePath.jsx";
 import SectionProducts from '../../common/Products/sectionProducts/SectionProducts';
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import modaImg from '../../../../assets/images/imgs-home/moda.png';
 import petsImg from '../../../../assets/images/imgs-home/pets.png';
@@ -23,27 +27,65 @@ import personalizadoImg from '../../../../assets/images/imgs-home/personalizado.
 import styleHome from './HomeLayout.module.css';
 
 const HomeLayout = () => {
+    const location = useLocation();
+    const basePath = getBasePath(location.pathname);
+    
     const categories = [
-        { name: "Decoração", img: decoracaoImg },
-        { name: "Acessórios", img: acessoriosImg },
-        { name: "Velas", img: velasImg },
-        { name: "Moda", img: modaImg },
-        { name: "Pets", img: petsImg },
-        { name: "Infantil", img: infantilImg },
-        { name: "Sacolas", img: sociaisImg },
-        { name: "Casa", img: casaImg },
-        { name: "Personalizado", img: personalizadoImg },
+        { 
+            name: "Decoração",
+            img: decoracaoImg,
+            path: `${basePath}/categoria/Decoracao`,
+            duration: "0"
+        },
+        { 
+            name: "Acessórios",
+            img: acessoriosImg,
+            path: `${basePath}/categoria/Acessorios`,
+            duration: "50"
+        },
+        { 
+            name: "Velas",
+            img: velasImg,
+            path: `${basePath}/categoria/Velas`,
+            duration: "100"
+        },
+        { 
+            name: "Moda",
+            img: modaImg,
+            path: `${basePath}/categoria/Moda`,
+            duration: "150"
+        },
+        { 
+            name: "Pets",
+            img: petsImg,
+            path: `${basePath}/categoria/Pets`,
+            duration: "200"
+        },
+        { 
+            name: "Infantil",
+            img: infantilImg,
+            path: `${basePath}/categoria/Infantil`,
+            duration: "250"
+        },
+        { 
+            name: "Sacolas",
+            img: sociaisImg,
+            path: `${basePath}/categoria/Sacolas`,
+            duration: "300"
+        },
+        { 
+            name: "Casa",
+            img: casaImg,
+            path: `${basePath}/categoria/Casa`,
+            duration: "350"
+        },
+        { 
+            name: "Personalizado",
+            img: personalizadoImg,
+            path: `${basePath}/personalizado`,
+            duration: "400"
+        },
     ];
-
-    const categoryImgVariants = {
-        hidden: { scale: 0, rotate: 800, opacity: 0 },
-        visible: { scale: 1, rotate: 0, opacity: 1 },
-    };
-
-    const categoryTextVariants = {
-        hidden: { scale: 0.4, opacity: 0 },
-        visible: { scale: 1, opacity: 1 },
-    };
     
     const promoTextVariants = {
         hidden: { opacity: 0, x: -80 },
@@ -55,36 +97,30 @@ const HomeLayout = () => {
         visible: { opacity: 1, x: 0 },
     };
 
-    const location = useLocation();
-    const basePath = getBasePath(location.pathname);
+    useEffect(() => {
+        AOS.init({
+            duration: 1200, // Duração das animações
+        });
+    }, []);
 
     return (
         <div className={styleHome.home_container}>
-            <div className={styleHome.home_bannerImage_container}>
+            <div className={styleHome.home_bannerImage_container} data-aos="fade-down">
                 <img src={bannerImage} alt="Banner" className={styleHome.banner_image} />
                 <h1 className={styleHome.banner_heading}>Seja bem-vindo(a)</h1>
                 <h2 className={styleHome.banner_subheading}>Conectando artistas,<br/>encantando o mundo!</h2>
             </div>
             <div className={styleHome.categories_container}>
                 {categories.map((category, index) => (
-                    <Link to={`${basePath}/categoria`} key={index} className={styleHome.category_item}>
-                        <motion.img 
+                    <Link to={category.path} key={index} className={styleHome.category_item} data-aos="fade-up" data-aos-delay={category.duration}>
+                        <img 
                             src={category.img} 
                             alt={category.name} 
                             className={styleHome.category_image} 
-                            initial="hidden"
-                            whileInView="visible"
-                            variants={categoryImgVariants}
-                            transition={{ duration: 0.7 }} 
                         />
-                        <motion.p
-                            initial="hidden"
-                            whileInView="visible"
-                            variants={categoryTextVariants}
-                            transition={{ duration: 0.7 }}
-                        >
+                        <p>
                             {category.name}
-                        </motion.p>
+                        </p>
                     </Link>
                 ))}
             </div>
@@ -119,31 +155,31 @@ const HomeLayout = () => {
                 />
             </motion.div>
 
-            <div className={styleHome.help_section}>
+            <div className={styleHome.help_section} data-aos="fade-down">
                 <h2 className={styleHome.help_heading}>Precisa de Ajuda?</h2>
                 <div className={styleHome.service_container}>
-                    <div className={styleHome.service_item}>
-                        <img src={dinheiro} alt="Pagamento" className={styleHome.service_icon} />
+                    <div className={styleHome.service_item} data-aos="fade-down">
+                        <img src={dinheiro} alt="Pagamento" className={styleHome.service_icon} data-aos-delay="100"/>
                         <div>
                             <h4 className={styleHome.service_title}>Pagamento</h4>
                             <p className={styleHome.service_text} dangerouslySetInnerHTML={{ __html: "Pague suas compras com <br/> rapidez e segurança" }}></p>
                         </div>
                     </div>
-                    <div className={styleHome.service_item}>
+                    <div className={styleHome.service_item} data-aos="fade-down" data-aos-delay="100">
                         <img src={devolucao} alt="Devolução" className={styleHome.service_icon} />
                         <div>
                             <h4 className={styleHome.service_title}>Devolução</h4>
                             <p className={styleHome.service_text} dangerouslySetInnerHTML={{ __html: "Você pode devolver sua <br/> compra grátis" }}></p>
                         </div>
                     </div>
-                    <div className={styleHome.service_item}>
+                    <div className={styleHome.service_item} data-aos="fade-down">
                         <img src={perfil} alt="Perfil" className={styleHome.service_icon} />
                         <div>
                             <h4 className={styleHome.service_title}>Perfil</h4>
                             <p className={styleHome.service_text} dangerouslySetInnerHTML={{ __html: "Personalize seu perfil com <br/> rapidez e segurança" }}></p>
                         </div>
                     </div>
-                    <div className={styleHome.service_item}>
+                    <div className={styleHome.service_item} data-aos="fade-down">
                         <img src={categoria} alt="Categorias" className={styleHome.service_icon} />
                         <div>
                             <h4 className={styleHome.service_title}>Categorias</h4>

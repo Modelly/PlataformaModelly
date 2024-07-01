@@ -1,5 +1,3 @@
-// AppRoutes.jsx
-import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ScrollToTop from './components/util/ScrollToTop.jsx';
 
@@ -7,26 +5,27 @@ import UsuarioLogado from './pages/UsuarioLogado.jsx';
 import UsuarioDeslogado from './pages/UsuarioDeslogado.jsx';
 import UsuarioArtesao from './pages/UsuarioArtesao.jsx';
 
+import Categoria from './components/layout/Categoria/Categoria.jsx';
 import Login from '../interface/components/layout/login/LoginLayout.jsx';
+import Sobre from '../interface/components/layout/Sobre/Sobre_Layout.jsx';
 import HomeLayout from '../interface/components/layout/home/HomeLayout.jsx';
 import Produto from '../interface/components/layout/Produto/ProdutoLayout.jsx';
-import FeiraVirtual from '../interface/components/layout/FeiraVirtual/FeiraLayout.jsx';
-import Sobre from '../interface/components/layout/Sobre/Sobre_Layout.jsx';
-import Carrinho from '../interface/components/layout/Carrinho/CarrinhoLayout.jsx';
-import CadastroProduto from '../interface/components/layout/Cadastro_Produto/Cadastro_Produto.jsx';
 import VendedorPopUp from './components/layout/pop_vendedor/VendedorLayout.jsx';
-import CadastroVendedor from '../interface/components/layout/Cadastro_Vendedor/Cadastro_VendedorLayout.jsx';
 import Contato_1 from '../interface/components/layout/Contato/ContatoLayout.jsx';
-import Categoria from './components/layout/Categoria/Categoria.jsx';
-import PersonalizadoLayout from './components/layout/Personalizado/PersonalizadoLayout.jsx';
+import Carrinho from '../interface/components/layout/Carrinho/CarrinhoLayout.jsx';
+import Publicar from './components/layout/Personalizado/pedidoCliente/Publicar.jsx';
+import PerfilVendedor from './components/layout/Perfil_Vendedor/PerfilVendedor.jsx';
+import CheckoutLayout from './components/layout/Carrinho/Checkout/CheckoutLayout.jsx';
+import FeiraVirtual from '../interface/components/layout/FeiraVirtual/FeiraLayout.jsx';
+import CadastroProduto from '../interface/components/layout/Cadastro_Produto/Cadastro_Produto.jsx';
+import EscolhaCategoria from './components/layout/Personalizado/pedidoCliente/EscolhaCategoria.jsx';
 import CategoriaCliente from './components/layout/Personalizado/pedidoCliente/CategoriaCliente.jsx';
 import FormularioServicos from './components/layout/Personalizado/pedidoCliente/FormularioServicos.jsx';
-import EscolhaCategoria from './components/layout/Personalizado/pedidoCliente/EscolhaCategoria.jsx';
-import Publicar from './components/layout/Personalizado/pedidoCliente/Publicar.jsx';
-import CheckoutLayout from './components/layout/Carrinho/Checkout/CheckoutLayout.jsx';
-import PerfilVendedor from './components/layout/Perfil_Vendedor/PerfilVendedor.jsx';
 import EditarPerfilArtesao from './components/layout/Minha_Loja/Loja/Perfil/Editar_Perfil_Artesao.jsx';
-const AppRoutes = () => {
+import PersonalizadoLayout from './components/layout/Personalizado/pedidosArtesao/PersonalizadoLayout.jsx';
+import CadastroVendedor from '../interface/components/layout/Cadastro_Vendedor/Cadastro_VendedorLayout.jsx';
+
+const routes = () => {
     return (
         <Router>
             <ScrollToTop />
@@ -40,13 +39,13 @@ const AppRoutes = () => {
                         <Route path="/sobre" element={<Sobre />} />
                         <Route path="/produto" element={<Produto />} />
                         <Route path="/carrinho" element={<Carrinho />} />
-                        <Route path="/categoria" element={<Categoria />} />
                         <Route path="/produto/:id" element={<Produto />} />
                         <Route path="/fale-conosco" element={<Contato_1 />} />
+                        <Route path="/checkout" element={<CheckoutLayout />} />
                         <Route path="/feira-virtual" element={<FeiraVirtual />} />
                         <Route path="/seja-vendedor" element={<VendedorPopUp />} />
+                        <Route path="/categoria/:categoria" element={<Categoria />} />
                         <Route path="/cadastrar-vendedor" element={<CadastroVendedor />} />
-                       
                     </Route>
 
                     {/* Rotas para usuários logados */}
@@ -55,11 +54,12 @@ const AppRoutes = () => {
                         <Route path="/consumidor/sobre" element={<Sobre />} />
                         <Route path="/consumidor/produto" element={<Produto />} />
                         <Route path="/consumidor/carrinho" element={<Carrinho />} />
-                        <Route path="/consumidor/categoria" element={<Categoria />} />
                         <Route path="/consumidor/produto/:id" element={<Produto />} />
                         <Route path="/consumidor/fale-conosco" element={<Contato_1 />} />
+                        <Route path="/consumidor/checkout" element={<CheckoutLayout />} />
                         <Route path="/consumidor/feira-virtual" element={<FeiraVirtual />} />
                         <Route path="/consumidor/seja-vendedor" element={<VendedorPopUp />} />
+                        <Route path="/consumidor/categoria/:categoria" element={<Categoria />} />
                         <Route path="/consumidor/cadastrar-vendedor" element={<CadastroVendedor />} />
                         <Route path="/consumidor/pedido-personalizado" element={<CategoriaCliente />} />
                     </Route>
@@ -70,27 +70,26 @@ const AppRoutes = () => {
                         <Route path="/artesao/sobre" element={<Sobre />} />
                         <Route path="/artesao/produto" element={<Produto />} />
                         <Route path="/artesao/carrinho" element={<Carrinho />} />
-                        <Route path="/artesao/categoria" element={<Categoria />} />
                         <Route path="/artesao/produto/:id" element={<Produto />} />
                         <Route path="/artesao/fale-conosco" element={<Contato_1 />} />
+                        <Route path="/artesao/checkout" element={<CheckoutLayout />} />
+                        <Route path="/artesao/minha-loja" element={<PerfilVendedor />} />
                         <Route path="/artesao/feira-virtual" element={<FeiraVirtual />} />
                         <Route path="/artesao/seja-vendedor" element={<VendedorPopUp />} />
-                        <Route path="/artesao/Cadastro_Produto" element={<CadastroProduto />} />
-                        <Route path="/artesao/Personalizado" element={<PersonalizadoLayout />} />
+                        <Route path="/artesao/categoria/:categoria" element={<Categoria />} />
+                        <Route path="/artesao/cadastro_Produto" element={<CadastroProduto />} />
+                        <Route path="/artesao/personalizado" element={<PersonalizadoLayout />} />
                         <Route path="/artesao/cadastrar-vendedor" element={<CadastroVendedor />} />
                         <Route path="/artesao/pedido-personalizado" element={<CategoriaCliente />} />
                         <Route path="/artesao/minha-loja" element={<PerfilVendedor/>} />
                         <Route path="/artesao/minha-loja/perfil" element={<EditarPerfilArtesao/>} />
                     </Route>
 
-                    {/* Rota para checkout */}
-                    <Route path="/checkout" element={<CheckoutLayout />} />
-
                     {/* Rotas para pedido personalizado */}
                     <Route path="/pedido-personalizado" element={<CategoriaCliente />} />
+                    <Route path="/pedido-personalizado/publicar" element={<Publicar />} />
                     <Route path="/pedido-personalizado/categorias" element={<EscolhaCategoria />} />
                     <Route path="/pedido-personalizado/formulario" element={<FormularioServicos />} />
-                    <Route path="/pedido-personalizado/publicar" element={<Publicar />} />
                   
                 </Routes>         
             </div>
@@ -98,4 +97,4 @@ const AppRoutes = () => {
     );
 }
 
-export default AppRoutes;
+export default routes;

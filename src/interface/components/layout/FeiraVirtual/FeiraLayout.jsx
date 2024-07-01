@@ -1,15 +1,27 @@
+import { useEffect } from 'react';
+
 import styleFeira from './FeiraLayout.module.css'; 
-import conjuntoImage from "../../../../assets/images/imgs-feira/artes-conjunto.png";
-import iconeFeira from "../../../../assets/images/imgs-feira/feiraIcone.png";
-import iconeTicket from "../../../../assets/images/imgs-feira/Ticket.png";
 import video from "../../../../assets/videos/video-feira.mp4"
+import iconeTicket from "../../../../assets/images/imgs-feira/Ticket.png";
+import iconeFeira from "../../../../assets/images/imgs-feira/feiraIcone.png";
+import conjuntoImage from "../../../../assets/images/imgs-feira/artes-conjunto.png";
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function FeiraLayout() {
+
+    useEffect(() => {
+        AOS.init({
+            duration: 1200, // Duração das animações
+        });
+    }, []);
+
     return (
         <>
             <section className={`${styleFeira.sectionFeira} ${styleFeira.ConteinerBemVindoFeira}`}>
                 <div className={styleFeira.bemVindoContent}>
-                    <div className={styleFeira.textContent}>
+                    <div className={styleFeira.textContent} data-aos="fade-left" >
                         <h1 className={styleFeira.TitleRosa}>Bem-vindo(a) à<br />nossa Feira Virtual</h1>
                         <p className={styleFeira.NormalText}>Explore uma experiência única de compras<br /> online, onde você pode encontrar uma ampla<br /> variedade de obras de arte originais e<br /> exclusivas.</p>
                         <div className={`${styleFeira.btnBox}`}>
@@ -23,15 +35,15 @@ function FeiraLayout() {
                             </button>
                         </div>
                     </div>
-                    <div className={styleFeira.videoBox}>
-                        <video width="600" height="338" className={styleFeira.video} no-controls autoPlay>
+                    <div className={styleFeira.videoBox} data-aos="fade-right">
+                        <video width="600" height="338" className={styleFeira.video} autoPlay>
                         <source src={video} type="video/mp4" />
                         Seu navegador não suporta a tag de vídeo.
                         </video>
                     </div>
                 </div>
             </section>
-            <section className={`${styleFeira.sectionFeira} ${styleFeira.containerComoFunciona}`}>
+            <section className={`${styleFeira.sectionFeira} ${styleFeira.containerComoFunciona}`} data-aos="fade-up">
                 <img src={conjuntoImage} alt="imagens de exemplo para arte" />
                 <div>
                     <h1 className={styleFeira.TitleRoxo}>Como funciona a Feira Virtual?</h1>

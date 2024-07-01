@@ -1,4 +1,5 @@
-import PropTypes from 'prop-types';
+import { useParams } from 'react-router-dom';
+
 import SectionProducts from '../../common/Products/sectionProducts/SectionProducts';
 import HorizontalCategory from '../../common/Categories/horizontalRectangleCategory/HorizontalCategory';
 
@@ -7,23 +8,25 @@ import imgFeltroCategory from '../../../../assets/images/img-categoria/FeltroCat
 
 import stylesCategoria from './Categoria.module.css';
 
-const Categoria = ({ titulo = "Categoria", descricao = "Descrição da categoria fica bem aqui" }) => {
+const Categoria = () => {
+    const {categoria} = useParams();
     const dbCategorias = [
         {
             categoria: 'Artes de papel',
-            imagem: imgPaperCategory
+            imagem: imgPaperCategory,
+            animationDelay: "0"
         },
         {
             categoria: 'Artes de feltro',
-            imagem: imgFeltroCategory
+            imagem: imgFeltroCategory,
+            animationDelay: "150"
         }
     ];
 
     return (
         <main>
             <div className={stylesCategoria.backgroundCategory}>
-                <h1>{titulo}</h1>
-                <p>{descricao}</p>
+                <h1>{categoria}</h1>
             </div>
             
             <section className={stylesCategoria.products_container}>
@@ -38,6 +41,7 @@ const Categoria = ({ titulo = "Categoria", descricao = "Descrição da categoria
                             key={index}
                             category={categoria.categoria}
                             image={categoria.imagem}
+                            delay={categoria.animationDelay}
                         />
                     ))}
                 </div>
@@ -45,10 +49,5 @@ const Categoria = ({ titulo = "Categoria", descricao = "Descrição da categoria
         </main>
     );
 }
-
-Categoria.propTypes = {
-    titulo: PropTypes.string, // Não obrigatório
-    descricao: PropTypes.string // Não obrigatório
-};
 
 export default Categoria;

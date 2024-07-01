@@ -47,4 +47,5 @@ main {
 
 .Categories {
     display: flex;
+    justify-content: center;
 }

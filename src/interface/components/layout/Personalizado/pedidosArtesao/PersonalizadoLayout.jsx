@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import styles from "./Personalizado.module.css";
-import alertImg from "../../../../assets/images/imgs-personalizado/alert.png";
-import closeImg from "../../../../assets/images/imgs-personalizado/close.png";
-import searchImg from "../../../../assets/images/imgs-personalizado/lupa.png";
+import alertImg from "../../../../../assets/images/imgs-personalizado/alert.png";
+import closeImg from "../../../../../assets/images/imgs-personalizado/close.png";
+import searchImg from "../../../../../assets/images/imgs-personalizado/lupa.png";
 import Arte from "./arte.module";
 import Filtros from "./filtro";
 
