@@ -25,6 +25,7 @@ import EscolhaCategoria from './components/layout/Personalizado/pedidoCliente/Es
 import Publicar from './components/layout/Personalizado/pedidoCliente/Publicar.jsx';
 import CheckoutLayout from './components/layout/Carrinho/Checkout/CheckoutLayout.jsx';
 import PerfilVendedor from './components/layout/Perfil_Vendedor/PerfilVendedor.jsx';
+import EditarPerfilArtesao from './components/layout/Minha_Loja/Loja/Perfil/Editar_Perfil_Artesao.jsx';
 const AppRoutes = () => {
     return (
         <Router>
@@ -79,6 +80,7 @@ const AppRoutes = () => {
                         <Route path="/artesao/cadastrar-vendedor" element={<CadastroVendedor />} />
                         <Route path="/artesao/pedido-personalizado" element={<CategoriaCliente />} />
                         <Route path="/artesao/minha-loja" element={<PerfilVendedor/>} />
+                        <Route path="/artesao/minha-loja/perfil" element={<EditarPerfilArtesao/>} />
                     </Route>
 
                     {/* Rota para checkout */}
