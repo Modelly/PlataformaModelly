@@ -1,0 +1,23 @@
+:root {
+    --cor-primaria: #9B59B6;
+    --cor-secundaria: #361A5C;
+    --cor-terciaria: #F68E07;
+    --cor-quartiaria: #D11F52;
+    --cor-background: #FCF8F0;
+    --cor-preta-stroke: #0a0808;
+    --cor-fonte-principal: #361A5C;
+    --cor-fonte-branco: #fff;
+    --poppins-font: 'Poppins', sans-serif;
+    --montserrat-font: 'Montserrat', sans-serif;
+    --bogart-medium: 'Bogart Bold', sans-serif;
+}
+
+.containeree {
+    width: 65%;
+    height: 842px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 20px 20px;
+}

@@ -3,7 +3,7 @@
 :root {
     --cor-primaria: #9B59B6;
     --cor-secundaria: #361A5C;
-    --cor-background: #FBFAFA;
+    --cor-background: #fff; /* Alterado para #fff */
     --cor-fonte-principal: #361A5C;
     --cor-fonte-branco: #fff;
     --poppins-font: 'Poppins', sans-serif;
@@ -12,12 +12,12 @@
 
 .filtro {
     width: 30%;
-    background-color: var(--cor-background);
+    background-color: #fff;
     padding: 22px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 40px;
-    border: 2.2px solid var(--cor-secundaria);
+    border: 2.2px solid #361A5C;
     height: 90%;
 }
 
@@ -25,8 +25,8 @@
     display: block;
     margin-bottom: 12px;
     font-weight: 300;
-    color: var(--cor-secundaria);
-    font-family: var(--poppins-font);
+    color: #361A5C;
+    font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
     font-weight: 600;
 }
@@ -36,16 +36,16 @@
     font-weight: 400;
     margin-bottom: 10px;
     height: 42px !important;
-    border: 2px solid var(--cor-secundaria) !important;
+    border: 2px solid #361A5C !important;
     padding: 8px !important;
 }
 
 .filtro button {
     width: 60%;
     border-radius: 10px !important;
-    font-family: var(--poppins-font);
-    background-color: var(--cor-background);
-    color: var(--cor-secundaria);
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    color: #361A5C;
     font-size: 1rem;
     line-height: 1.5;
     box-sizing: border-box;
@@ -55,11 +55,11 @@
     width: 100%;
     margin-bottom: 15px;
     padding: 10px;
-    border: 1px solid var(--cor-secundaria);
+    border: 1px solid #361A5C;
     border-radius: 5px;
-    font-family: var(--poppins-font);
-    background-color: var(--cor-background);
-    color: var(--cor-secundaria);
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    color:#361A5C;
     font-size: 1rem;
     line-height: 1.5;
     text-align: left;
@@ -81,13 +81,13 @@
 
 .filtro .botoes button {
     width: 30%;
-    background-color: var(--cor-background);
-    color: var(--cor-secundaria);
-    border: 1px solid var(--cor-secundaria);
+    background-color: #fff;
+    color: #361A5C;
+    border: 1px solid #361A5C;
     border-radius: 5px;
     cursor: pointer;
     padding: 10px;
-    font-family: var(--poppins-font);
+    font-family: 'Poppins', sans-serif;
     font-size: 1rem;
     line-height: 1.5;
     text-align: center;
@@ -105,12 +105,12 @@
 
 .filtro button.salvar {
     background-color: #F68E07;
-    color: var(--cor-fonte-branco);
+    color: #fff;
     border: 4px solid black;
     border-width: 0 3px 3px 0;
     cursor: pointer;
     padding: 10px;
-    font-family: var(--poppins-font);
+    font-family: 'Poppins', sans-serif;
     font-size: 1.1rem;
     line-height: 1.5;
     text-align: center;

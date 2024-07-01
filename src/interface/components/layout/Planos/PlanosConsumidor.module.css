@@ -1,0 +1,151 @@
+/* PlanosArt.module.css */
+
+:root {
+    --cor-primaria: #9B59B6;
+    --cor-secundaria: #D11F52;
+    --cor-terciaria: #F68E07;
+    --cor-background: #FFFBF3;
+    --cor-fonte-principal: #361A5C;
+    --poppins-font: "Poppins", sans-serif;
+    --bogart-medium: "Bogart Bold", sans-serif;
+  }
+  
+  .container {
+    background-color: var(--cor-background);
+    padding: 20px;
+    font-family: var(--poppins-font);
+  }
+  
+  .title {
+    font-family: var(--bogart-medium);
+    color: var(--cor-fonte-principal);
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .standsContainer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+  
+  .stand {
+    position: relative;
+    width: 30%;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .standImage {
+    width: 89%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .standTitle {
+    font-family: var(--bogart-medium);
+    color: var(--cor-secundaria);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .content1 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 102%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    padding: 40px;
+  }
+  
+  .content2{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    padding: 40px;
+  }
+
+  .content3 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 102%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    padding: 41px;
+  }
+
+
+  .icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+  }
+  
+  .button {
+    display: block;
+    width: 80%;
+    margin: 10px 0;
+    padding: 6px;
+    border: 2px solid black;
+    border-bottom: 4px solid black;
+    border-radius: 15px;
+    font-family: var(--poppins-font);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .buttonPurple {
+    background-color: var(--cor-primaria);
+    color: #fff;
+  }
+  
+  .buttonBlue {
+    background-color: #0198DF;
+    color: #fff;
+  }
+  
+  .buttonPink {
+    background-color: #D11F52;
+    color: #fff;
+  }
+  
+  .description {
+    color: var(--cor-fonte-principal);
+    font-family: var(--poppins-font);
+    font-size: 15px;
+    text-align: left;
+    margin-top: 10px;
+    font-weight: 500;
+  }
+  
+  .description strong {
+    display: block;
+    margin-top: 5px;
+  }
+  

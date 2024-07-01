@@ -2,7 +2,6 @@
 
 /* Variables */
 :root {
-  --cor-background: #FBFAFA;
   --cor-fonte-principal: #361A5C;
   --cor-secundaria: #361A5C;
   --cor-primaria: #9B59B6;
@@ -15,18 +14,17 @@
   max-width: 800px;
   margin: 40px auto;
   padding: 0px 60px;
-  background-color: var(--cor-background);
   float: left;
 }
 
-.h2 {
+.h2o {
   text-align: left;
   margin-bottom: 20px;
   font-family: 'Montserrat', sans-serif;
   color: var(--cor-fonte-principal);
 }
 
-.p {
+.pp {
   text-align: left;
   margin-bottom: 20px;
   font-family: 'Poppins', sans-serif;

@@ -1,0 +1,182 @@
+:root {
+    --cor-primaria: #9B59B6;
+    --cor-secundaria: #D11F52;
+    --cor-terciaria: #F68E07;
+    --cor-background: #FFFBF3;
+    --cor-fonte-principal: #361A5C;
+    --poppins-font: "Poppins", sans-serif;
+    --bogart-medium: "Bogart Bold", sans-serif;
+  }
+  
+  @font-face {
+    font-family: 'Bogart Bold';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Bogart Bold'),
+         url('../fonts/Bogart-Bold-trial.ttf') format('truetype');
+  }
+  
+  .containera {
+    background-color: var(--cor-background);
+    padding: 20px;
+    font-family: var(--poppins-font);
+  }
+  
+  .title {
+    font-family: var(--bogart-medium);
+    color: var(--cor-fonte-principal);
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .standsContainer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+  
+  .stand {
+    position: relative;
+    width: 40%;
+    text-align: center;
+  }
+  
+  .standImage {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .standTitle {
+    font-family: var(--bogart-medium);
+    color: var(--cor-secundaria);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .content1 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    padding: 12px;
+  }
+
+  .content2 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 108%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    padding: 12px;
+  }
+
+  .content3{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    padding: 12px;
+  }
+
+  .content4 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 110%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    padding: 12px;
+  }
+  
+  .icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .button {
+    display: block;
+    width: 60%;
+    margin: 10px 0;
+    padding: 2px 10px;
+    border: 2px solid black;
+    border-bottom: 3px solid black;
+    border-radius: 5px;
+    font-family: var(--poppins-font);
+    font-size: 12px;
+    font-weight: 600;
+    z-index: 2;
+  }
+  
+  .buttonPurple {
+    background-color: #A972BF;
+    color: #fff;
+  }
+  
+  .buttonBlue {
+    background-color: #0198DF;
+    color: #fff;
+  }
+  
+  .buttonPink {
+    background-color: #D11F52;
+    color: #fff;
+  }
+  
+  .buttonYellow {
+    background-color: #F68E07;
+    color: #fff;
+  }
+  
+  .description {
+    color: var(--cor-fonte-principal);
+    font-family: var(--poppins-font);
+    font-size: 14px;
+    text-align: left;
+    margin-top: 10px;
+    font-weight: 500;
+    z-index: 2;
+  }
+  
+  .description strong {
+    display: block;
+    margin-top: 5px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .standsContainer {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .stand {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+}
