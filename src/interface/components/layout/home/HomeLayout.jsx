@@ -3,11 +3,18 @@ import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useLocation, Link } from 'react-router-dom';
 import { getBasePath } from "../../util/GetBasePath.jsx";
+
+import RoundedCategory from '../../common/Categories/roundedCategory/RoundedCategory.jsx';
 import SectionProductsVertical from '../../common/Products/sectionProducts/VerticalSection/SectionProductsVertical.jsx';
 import SectionProductsHorizontal from '../../common/Products/sectionProducts/HorizontalSection/SectionProductsHorizontal.jsx';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
+import Paper from '../../../../assets/images/imgs-home/categorias/RoundedCategory/Paper.png';
+import Bisque from '../../../../assets/images/imgs-home/categorias/RoundedCategory/Bisque.png';
+import Feltro from '../../../../assets/images/imgs-home/categorias/RoundedCategory/Feltro.png';
+import Wood from '../../../../assets/images/imgs-home/categorias/RoundedCategory/Wood.png';
 
 import modaImg from '../../../../assets/images/imgs-home/moda.png';
 import petsImg from '../../../../assets/images/imgs-home/pets.png';
@@ -87,6 +94,33 @@ const HomeLayout = () => {
             duration: "400"
         },
     ];
+
+    const roundedCategories = [
+        {
+            name: "madeira",
+            img: Wood,
+            path: `${basePath}`,
+            duration: "0"
+        },
+        {
+            name: "feltro",
+            img: Feltro,
+            path: `${basePath}`,
+            duration: "100"
+        },
+        {
+            name: "bisque",
+            img: Bisque,
+            path: `${basePath}`,
+            duration: "200"
+        },
+        {
+            name: "papel",
+            img: Paper,
+            path: `${basePath}`,
+            duration: "300"
+        }
+    ]
     
     const promoTextVariants = {
         hidden: { opacity: 0, x: -80 },
@@ -126,14 +160,26 @@ const HomeLayout = () => {
                 ))}
             </div>
 
-            {/* Seção com 8 produtos! */}
+            {/* Seção dos produtos! */}
             <div className={styleHome.recommendations_container}>
                 <h2 className={styleHome.recommendations_heading}>Recomendações Diárias</h2>
                 <SectionProductsVertical startIndex={0} limit={8} />
                 <SectionProductsHorizontal startIndex={8} limit={4} />
                 <SectionProductsVertical startIndex={12} limit={8} />
+                <div className={styleHome.roundedCategorySection}>
+                    {
+                        roundedCategories.map(categoria => (
+                            <RoundedCategory 
+                            key={categoria}
+                            imagem={categoria.img} 
+                            basePath={categoria.path} 
+                            categoria={categoria.name} 
+                            />
+                        ))
+                    }
+                </div>
             </div>
-                <button className={styleHome.view_more_home}>Ver mais</button>
+            
 
             <motion.div 
                 className={styleHome.promo_section}
