@@ -34,7 +34,7 @@
 
 .titlear {
     font-size: 2rem !important;
-    color: #361A5C; /* Substituído var(--cor-fonte-principal) */
+    color: #361A5C;
     margin: 0;
     margin-bottom: 15px;
 }
@@ -45,7 +45,7 @@
     border: none;
     border-radius: 20px;
     background-color: #F68E07;
-    color: #fff; /* Substituído var(--cor-fonte-branco) */
+    color: #fff; 
     font-weight: bold;
     cursor: pointer;
 }
@@ -54,7 +54,7 @@
     display: flex;
     justify-content: flex-start;
     gap: 15px;
-    color: #361A5C; /* Substituído var(--cor-secundaria) */
+    color: #361A5C; 
 }
 
 .published,
@@ -67,7 +67,7 @@
     margin: 14px 0;
     font-size: 1.1rem;
     line-height: 1.5;
-    color: #361A5C; /* Substituído var(--cor-secundaria) */
+    color: #361A5C; 
     margin-bottom: 5%;
     margin-top: 3%;
 }

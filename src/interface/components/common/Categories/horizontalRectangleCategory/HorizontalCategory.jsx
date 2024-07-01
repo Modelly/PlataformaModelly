@@ -1,12 +1,13 @@
 import { useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import styleCategoryH from './HorizontalCategory.module.css';
 
-const HorizontalCategory = ({ category, image, delay }) => {
+const HorizontalCategory = ({ category, image, delay, basePath }) => {
     useEffect(() => {
         AOS.init({
             duration: 1200, // Duração das animações
@@ -14,13 +15,13 @@ const HorizontalCategory = ({ category, image, delay }) => {
     }, []);
   
     return (
-        <div className={styleCategoryH.ContainerCategory} data-aos="fade-up" data-aos-delay={delay}>
+        <Link to={`${basePath}/categoria/${category}`} className={styleCategoryH.ContainerCategory} data-aos="fade-up" data-aos-delay={delay}>
             <img src={image} alt={category} className={styleCategoryH.ImageCategory} />
             <div className={styleCategoryH.BoxContent}>
                 <h1>{category}</h1>
                 <p>Conhecer agora -&gt;</p>
             </div>
-        </div>
+        </Link>
     );
 }
 
@@ -28,6 +29,7 @@ HorizontalCategory.propTypes = {
     category: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
     delay: PropTypes.string.isRequired,
+    basePath: PropTypes.string.isRequired
 };
 
 export default HorizontalCategory;

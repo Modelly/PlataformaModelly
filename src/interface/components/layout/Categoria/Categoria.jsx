@@ -1,7 +1,9 @@
-import { useParams } from 'react-router-dom';
+import { useParams, useLocation } from 'react-router-dom';
+import { getBasePath } from '../../util/GetBasePath';
 
-import SectionProducts from '../../common/Products/sectionProducts/VerticalSection/SectionProductsVertical';
+import SectionCategories from '../../common/Categories/sectionCategories/SectionCategories';
 import HorizontalCategory from '../../common/Categories/horizontalRectangleCategory/HorizontalCategory';
+import SectionProducts from '../../common/Products/sectionProducts/VerticalSection/SectionProductsVertical';
 
 import imgPaperCategory from '../../../../assets/images/img-categoria/PaperCategory.png';
 import imgFeltroCategory from '../../../../assets/images/img-categoria/FeltroCategory.png';
@@ -9,17 +11,21 @@ import imgFeltroCategory from '../../../../assets/images/img-categoria/FeltroCat
 import stylesCategoria from './Categoria.module.css';
 
 const Categoria = () => {
+    const location = useLocation();
     const {categoria} = useParams();
+    const basePath = getBasePath(location.pathname);
     const dbCategorias = [
         {
-            categoria: 'Artes de papel',
-            imagem: imgPaperCategory,
-            animationDelay: "0"
+            category: 'Artes de papel',
+            image: imgPaperCategory,
+            basePath: basePath,
+            delay: "0"
         },
         {
-            categoria: 'Artes de feltro',
-            imagem: imgFeltroCategory,
-            animationDelay: "150"
+            category: 'Artes de feltro',
+            image: imgFeltroCategory,
+            basePath: basePath,
+            delay: "150"
         }
     ];
 
@@ -35,16 +41,10 @@ const Categoria = () => {
             
             <section className={stylesCategoria.ContainerCategories}>
                 <h2>Venha descobrir mais!</h2>
-                <div className={stylesCategoria.Categories}>
-                    {dbCategorias.map((categoria, index) => (
-                        <HorizontalCategory 
-                            key={index}
-                            category={categoria.categoria}
-                            image={categoria.imagem}
-                            delay={categoria.animationDelay}
-                        />
-                    ))}
-                </div>
+                <SectionCategories 
+                    DataBase={dbCategorias}
+                    CategoryComponent={HorizontalCategory}
+                />
             </section>
         </main>
     );

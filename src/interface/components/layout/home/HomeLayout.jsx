@@ -3,11 +3,19 @@ import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useLocation, Link } from 'react-router-dom';
 import { getBasePath } from "../../util/GetBasePath.jsx";
+
+import RoundedCategory from '../../common/Categories/roundedCategory/RoundedCategory.jsx';
+import SectionCategories from '../../common/Categories/sectionCategories/SectionCategories.jsx';
 import SectionProductsVertical from '../../common/Products/sectionProducts/VerticalSection/SectionProductsVertical.jsx';
 import SectionProductsHorizontal from '../../common/Products/sectionProducts/HorizontalSection/SectionProductsHorizontal.jsx';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
+import Paper from '../../../../assets/images/imgs-home/categorias/RoundedCategory/Paper.png';
+import Bisque from '../../../../assets/images/imgs-home/categorias/RoundedCategory/Bisque.png';
+import Feltro from '../../../../assets/images/imgs-home/categorias/RoundedCategory/Feltro.png';
+import Wood from '../../../../assets/images/imgs-home/categorias/RoundedCategory/Wood.png';
 
 import modaImg from '../../../../assets/images/imgs-home/moda.png';
 import petsImg from '../../../../assets/images/imgs-home/pets.png';
@@ -87,6 +95,33 @@ const HomeLayout = () => {
             duration: "400"
         },
     ];
+
+    const roundedCategories = [
+        {
+            category: "madeira",
+            image: Wood,
+            basePath: `${basePath}`,
+            delay: "0"
+        },
+        {
+            category: "feltro",
+            image: Feltro,
+            basePath: `${basePath}`,
+            delay: "100"
+        },
+        {
+            category: "bisque",
+            image: Bisque,
+            basePath: `${basePath}`,
+            delay: "200"
+        },
+        {
+            category: "papel",
+            image: Paper,
+            basePath: `${basePath}`,
+            delay: "300"
+        }
+    ]
     
     const promoTextVariants = {
         hidden: { opacity: 0, x: -80 },
@@ -126,14 +161,19 @@ const HomeLayout = () => {
                 ))}
             </div>
 
-            {/* Seção com 8 produtos! */}
+            {/* Seção dos produtos! */}
             <div className={styleHome.recommendations_container}>
                 <h2 className={styleHome.recommendations_heading}>Recomendações Diárias</h2>
                 <SectionProductsVertical startIndex={0} limit={8} />
                 <SectionProductsHorizontal startIndex={8} limit={4} />
                 <SectionProductsVertical startIndex={12} limit={8} />
+                <SectionCategories 
+                    DataBase={roundedCategories}
+                    CategoryComponent={RoundedCategory}
+                />
+                
             </div>
-                <button className={styleHome.view_more_home}>Ver mais</button>
+            
 
             <motion.div 
                 className={styleHome.promo_section}
@@ -162,7 +202,7 @@ const HomeLayout = () => {
                 <h2 className={styleHome.help_heading}>Precisa de Ajuda?</h2>
                 <div className={styleHome.service_container}>
                     <div className={styleHome.service_item} data-aos="fade-down">
-                        <img src={dinheiro} alt="Pagamento" className={styleHome.service_icon} data-aos-delay="100"/>
+                        <img src={dinheiro} alt="Pagamento" className={styleHome.service_icon} data-aos-delay="200"/>
                         <div>
                             <h4 className={styleHome.service_title}>Pagamento</h4>
                             <p className={styleHome.service_text} dangerouslySetInnerHTML={{ __html: "Pague suas compras com <br/> rapidez e segurança" }}></p>
