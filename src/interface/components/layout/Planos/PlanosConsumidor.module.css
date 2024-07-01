@@ -42,7 +42,7 @@
   }
   
   .standImage {
-    width: 80%;
+    width: 89%;
     border-radius: 10px;
     margin-bottom: 10px;
   }
@@ -60,13 +60,13 @@
     left: 50%;
     transform: translateX(-50%);
     width: 70%;
-    height: 108%;
+    height: 102%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     z-index: 1;
-    padding: 12px;
+    padding: 40px;
   }
   
   .content2{
@@ -75,13 +75,13 @@
     left: 50%;
     transform: translateX(-50%);
     width: 70%;
-    height: 108%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     z-index: 1;
-    padding: 12px;
+    padding: 40px;
   }
 
   .content3 {
@@ -90,13 +90,13 @@
     left: 50%;
     transform: translateX(-50%);
     width: 70%;
-    height: 108%;
+    height: 102%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     z-index: 1;
-    padding: 12px;
+    padding: 41px;
   }
 
 
@@ -110,9 +110,10 @@
     display: block;
     width: 80%;
     margin: 10px 0;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
+    padding: 6px;
+    border: 2px solid black;
+    border-bottom: 4px solid black;
+    border-radius: 15px;
     font-family: var(--poppins-font);
     font-size: 14px;
     font-weight: 600;
@@ -137,7 +138,7 @@
   .description {
     color: var(--cor-fonte-principal);
     font-family: var(--poppins-font);
-    font-size: 16px;
+    font-size: 15px;
     text-align: left;
     margin-top: 10px;
     font-weight: 500;

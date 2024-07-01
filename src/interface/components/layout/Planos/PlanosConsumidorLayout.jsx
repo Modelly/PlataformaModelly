@@ -20,9 +20,7 @@ const PlanosConsumidorLayout = () => {
             <img src={Monaliza} alt="Monaliza Icon" className={styles.icon} />
             <button className={`${styles.button} ${styles.buttonPurple}`}>Atualizar Plano</button>
             <p className={styles.description}>
-              Acesso a Conteúdos Exclusivos: Notícias e atualizações sobre artistas e eventos
               <strong>Acesso a Eventos:</strong> Acesso prioritário a eventos online gratuitos
-              <strong>Ferramentas de Interação:</strong> Chat básico com vendedores
               <strong>Personalização de Experiência:</strong> Recomendações personalizadas de produtos
             </p>
           </div>
@@ -34,9 +32,7 @@ const PlanosConsumidorLayout = () => {
             <img src={Lapis} alt="Lapis Icon" className={styles.icon} />
             <button className={`${styles.button} ${styles.buttonBlue}`}>Atualizar Plano</button>
             <p className={styles.description}>
-              Acesso a Conteúdos Exclusivos: Notícias, atualizações e entrevistas exclusivas com artistas
               <strong>Acesso a Eventos:</strong> Acesso prioritário e descontos em eventos pagos
-              <strong>Ferramentas de Interação:</strong> Chat avançado com histórico de conversas
               <strong>Personalização de Experiência:</strong> Recomendações avançadas e listas de desejos
             </p>
           </div>
@@ -48,9 +44,7 @@ const PlanosConsumidorLayout = () => {
             <img src={Quadros} alt="Quadros Icon" className={styles.icon} />
             <button className={`${styles.button} ${styles.buttonPink}`}>Atualizar Plano</button>
             <p className={styles.description}>
-              Acesso a Conteúdos Exclusivos: Notícias, entrevistas e acesso a bastidores de eventos e processos de criação
               <strong>Acesso a Eventos:</strong> Acesso VIP a todos os eventos, incluindo eventos exclusivos
-              <strong>Ferramentas de Interação:</strong> Chat avançado e agendamento de reuniões virtuais com artistas
               <strong>Personalização de Experiência:</strong> Recomendações avançadas, listas de desejos e consultoria de curadoria personalizada
             </p>
           </div>
