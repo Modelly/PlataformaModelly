@@ -379,7 +379,7 @@
             "foto_perfil_loja": "C:\\Users\\Aluno\\Downloads\\perfil_loja4.png",
             "banner_loja": "C:\\Users\\Aluno\\Downloads\\banner_loja4.png"
         },
-        "nome_produto": "Vela Aromática de Lavanda",
+        "nome_produto": "Vela de Lavanda",
         "preco_produto": 29.99,
         "descricao_produto": "Vela artesanal com aroma de lavanda, proporciona relaxamento e bem-estar.",
         "categoria_produto": "velas",
@@ -621,7 +621,7 @@
         "pronta_entrega": true,
         "tempo_producao": 3,
         "status_produto": "disponivel",
-        "foto_produto": "https://culturanf.com.br/wp-content/uploads/2023/12/fotografia-decoracao-artesanal-colorida-teto.webp"
+        "foto_produto": "https://i.pinimg.com/originals/04/34/0d/04340d0ef94e77a4e6d8412fd2e16d82.jpg"
     },
     {
         "pk_id_produto": 17,
