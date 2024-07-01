@@ -128,7 +128,7 @@ const HomeLayout = () => {
             {/* Seção com 8 produtos! */}
             <div className={styleHome.recommendations_container}>
                 <h2 className={styleHome.recommendations_heading}>Recomendações Diárias</h2>
-                <SectionProducts />
+                <SectionProducts startIndex={4} limit={8} />
             </div>
                 <button className={styleHome.view_more_home}>Ver mais</button>
 

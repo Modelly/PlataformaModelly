@@ -2,6 +2,7 @@
 import axios from 'axios';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
+import PropTypes from 'prop-types';
 import ProductCard from '../CardVertical/ProductCardVertical.jsx';
 
 import { useState, useEffect } from 'react';
@@ -10,7 +11,7 @@ import { getBasePath } from "../../../util/GetBasePath.jsx";
 
 import styleSecProducts from './SectionProducts.module.css';
 
-const SectionProducts = () => {
+const SectionProducts = ({ startIndex, limit }) => {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
     const location = useLocation();
@@ -29,7 +30,7 @@ const SectionProducts = () => {
             });
             const productsData = Array.isArray(response.data) ? response.data : [];
             setTimeout(() => {
-                setProducts(productsData);
+                setProducts(productsData.slice(startIndex, startIndex + limit));
                 setLoading(false);
             }, 350)
         } catch (error) {
@@ -39,7 +40,7 @@ const SectionProducts = () => {
                 const localData = await localResponse.json();
                 const productsData = Array.isArray(localData) ? localData : [];
                 setTimeout(() => {
-                    setProducts(productsData);
+                    setProducts(productsData.slice(startIndex, startIndex + limit));
                     setLoading(false);
                 }, 350);
             } else {
@@ -76,6 +77,11 @@ const SectionProducts = () => {
             )}
         </div>
     );
+};
+
+SectionProducts.propTypes = {
+    startIndex: PropTypes.number.isRequired,
+    limit: PropTypes.number.isRequired
 };
 
 export default SectionProducts;
