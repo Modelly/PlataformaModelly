@@ -4,7 +4,7 @@ import ScrollToTop from './components/util/ScrollToTop.jsx';
 import UsuarioLogado from './pages/UsuarioLogado.jsx';
 import UsuarioDeslogado from './pages/UsuarioDeslogado.jsx';
 import UsuarioArtesao from './pages/UsuarioArtesao.jsx';
-
+ 
 import Categoria from './components/layout/Categoria/Categoria.jsx';
 import Login from '../interface/components/layout/login/LoginLayout.jsx';
 import Sobre from '../interface/components/layout/Sobre/Sobre_Layout.jsx';
@@ -24,6 +24,7 @@ import FormularioServicos from './components/layout/Personalizado/pedidoCliente/
 import EditarPerfilArtesao from './components/layout/Minha_Loja/Loja/Perfil/Editar_Perfil_Artesao.jsx';
 import PersonalizadoLayout from './components/layout/Personalizado/pedidosArtesao/PersonalizadoLayout.jsx';
 import CadastroVendedor from '../interface/components/layout/Cadastro_Vendedor/Cadastro_VendedorLayout.jsx';
+import Configuracoes from './components/layout/Minha_Loja/Loja/Configuracoes.jsx';
 
 const routes = () => {
     return (
@@ -83,6 +84,7 @@ const routes = () => {
                         <Route path="/artesao/pedido-personalizado" element={<CategoriaCliente />} />
                         <Route path="/artesao/minha-loja" element={<PerfilVendedor/>} />
                         <Route path="/artesao/minha-loja/perfil" element={<EditarPerfilArtesao/>} />
+                        <Route path="/artesao/minha-loja/configuracoes" element={<Configuracoes/>} />
                     </Route>
 
                     {/* Rotas para pedido personalizado */}
