@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import StarRating from '../../StarRating/StarRating.jsx';
 import HeartToggle from '../../Toggle/HeartToggle/HeartToggle.jsx';
 
@@ -7,7 +8,7 @@ import styleCardLoja from './LojaCard.module.css';
 const CardLoja = ({DataBase}) => {
 
     return (
-        <div className={styleCardLoja.Container}>
+        <Link to={`${DataBase.basePath}/perfil-loja`} className={styleCardLoja.Container}>
             <div className={styleCardLoja.BoxImages}>
                 <img src={DataBase.image1} alt="imagem do produto" className={styleCardLoja.Image} />
                 <img src={DataBase.image2} alt="imagem do produto" className={styleCardLoja.Image} />
@@ -28,7 +29,7 @@ const CardLoja = ({DataBase}) => {
                     <HeartToggle className={styleCardLoja.Heart}/>
                 </div>
             </div>
-        </div>
+        </Link>
     )
 };
 
@@ -40,6 +41,7 @@ CardLoja.propTypes = {
         image4: PropTypes.string.isRequired,
         PerfilImg: PropTypes.string.isRequired,
         name: PropTypes.string.isRequired,
+        basePath: PropTypes.string.isRequired,
     }).isRequired
 }
 

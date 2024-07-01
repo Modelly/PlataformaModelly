@@ -157,7 +157,7 @@ const HomeLayout = () => {
             image4: Loja1imgProd4,
             PerfilImg: PerfilLoja1,
             name: "Otakupel",
-            delay: "0",
+            basePath: `${basePath}`
         },
         {
             image1: Loja2imgProd1,
@@ -166,6 +166,7 @@ const HomeLayout = () => {
             image4: Loja2imgProd4,
             PerfilImg: PerfilLoja2,
             name: "ArteTaku",
+            basePath: `${basePath}`
         },
         {
             image1: Loja3imgProd1,
@@ -174,6 +175,7 @@ const HomeLayout = () => {
             image4: Loja3imgProd4,
             PerfilImg: PerfilLoja3,
             name: "AnimalArte",
+            basePath: `${basePath}`
         },
         {
             image1: Loja4imgProd1,
@@ -182,6 +184,7 @@ const HomeLayout = () => {
             image4: Loja4imgProd4,
             PerfilImg: PerfilLoja4,
             name: "HandHalf",
+            basePath: `${basePath}`
         }
     ]
     
