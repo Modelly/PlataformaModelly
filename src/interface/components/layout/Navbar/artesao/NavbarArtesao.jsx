@@ -71,7 +71,7 @@ const NavbarArtesao = () => {
                     <li className={styleNav.navbar_item}><NavLink to="/artesao/personalizado" className={({ isActive }) => isActive ? styleNav.active : ''}>Personalizado</NavLink></li>
                     <li className={styleNav.navbar_item}><NavLink to="/artesao/feira-virtual" className={({ isActive }) => isActive ? styleNav.active : ''}>Feira Virtual</NavLink></li>
                     <li className={styleNav.navbar_item}><NavLink to="/artesao/minha-loja" className={({ isActive }) => isActive ? styleNav.active : ''}>Minha Loja</NavLink></li>
-                    <li className={styleNav.navbar_item}><NavLink to="/artesao/planos-modelly" className={({ isActive }) => isActive ? styleNav.active : ''}>Planos Modelly</NavLink></li>
+                    <li className={styleNav.navbar_item}><NavLink to="/artesao/planos" className={({ isActive }) => isActive ? styleNav.active : ''}>Planos Modelly</NavLink></li>
                     <li className={styleNav.navbar_item}><NavLink to="/artesao/sobre" className={({ isActive }) => isActive ? styleNav.active : ''}>Sobre</NavLink></li>
                     <li className={styleNav.navbar_item}><NavLink to="/artesao/fale-conosco" className={({ isActive }) => isActive ? styleNav.active : ''}>Fale Conosco</NavLink></li>
                 </ul>

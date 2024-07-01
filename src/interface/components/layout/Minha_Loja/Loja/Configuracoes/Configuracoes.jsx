@@ -1,4 +1,3 @@
-import {useState} from 'react';
 import backgroundPapel from '../../../../../../assets/images/imgs-perfil_vendedor/paper.png';
 
 import styleConfiguracoes from './Configuracoes.module.css';
@@ -11,3 +10,5 @@ function Configuracoes(){
        )
 
 }
+
+export default Configuracoes;
