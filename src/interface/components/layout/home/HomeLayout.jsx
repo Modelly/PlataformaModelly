@@ -3,7 +3,8 @@ import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useLocation, Link } from 'react-router-dom';
 import { getBasePath } from "../../util/GetBasePath.jsx";
-import SectionProducts from '../../common/Products/sectionProducts/SectionProducts';
+import SectionProductsVertical from '../../common/Products/sectionProducts/VerticalSection/SectionProductsVertical.jsx';
+import SectionProductsHorizontal from '../../common/Products/sectionProducts/HorizontalSection/SectionProductsHorizontal.jsx';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -128,7 +129,9 @@ const HomeLayout = () => {
             {/* Seção com 8 produtos! */}
             <div className={styleHome.recommendations_container}>
                 <h2 className={styleHome.recommendations_heading}>Recomendações Diárias</h2>
-                <SectionProducts startIndex={4} limit={8} />
+                <SectionProductsVertical startIndex={0} limit={8} />
+                <SectionProductsHorizontal startIndex={8} limit={4} />
+                <SectionProductsVertical startIndex={12} limit={8} />
             </div>
                 <button className={styleHome.view_more_home}>Ver mais</button>
 

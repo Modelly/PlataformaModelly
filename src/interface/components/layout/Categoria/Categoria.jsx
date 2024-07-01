@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 
-import SectionProducts from '../../common/Products/sectionProducts/SectionProducts';
+import SectionProducts from '../../common/Products/sectionProducts/VerticalSection/SectionProductsVertical';
 import HorizontalCategory from '../../common/Categories/horizontalRectangleCategory/HorizontalCategory';
 
 import imgPaperCategory from '../../../../assets/images/img-categoria/PaperCategory.png';
@@ -30,7 +30,7 @@ const Categoria = () => {
             </div>
             
             <section className={stylesCategoria.products_container}>
-                <SectionProducts />
+                <SectionProducts startIndex={0} limit={8}/>
             </section>
             
             <section className={stylesCategoria.ContainerCategories}>

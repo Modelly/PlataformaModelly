@@ -1,15 +1,14 @@
-// SectionProducts.jsx
 import axios from 'axios';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 import PropTypes from 'prop-types';
-import ProductCard from '../CardVertical/ProductCardVertical.jsx';
+import ProductCard from '../../CardVertical/ProductCardVertical.jsx';
 
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { getBasePath } from "../../../util/GetBasePath.jsx";
+import { getBasePath } from "../../../../util/GetBasePath.jsx";
 
-import styleSecProducts from './SectionProducts.module.css';
+import styleSecProducts from './SectionProductsVertical.module.css';
 
 const SectionProducts = ({ startIndex, limit }) => {
     const [products, setProducts] = useState([]);
@@ -18,37 +17,38 @@ const SectionProducts = ({ startIndex, limit }) => {
     const basePath = getBasePath(location.pathname);
 
     useEffect(() => {
-        fetchProducts();
-    }, []);
-
-    const fetchProducts = async () => {
-        try {
-            const response = await axios.get(`${import.meta.env.VITE_API_URL}/produtos`, {
-                headers: {
-                    'ngrok-skip-browser-warning': 'true'
-                }
-            });
-            const productsData = Array.isArray(response.data) ? response.data : [];
-            setTimeout(() => {
-                setProducts(productsData.slice(startIndex, startIndex + limit));
-                setLoading(false);
-            }, 350)
-        } catch (error) {
-            console.error('Erro ao buscar produtos:', error);
-            const localResponse = await fetch('/data/products.json');
-            if (localResponse.ok) {
-                const localData = await localResponse.json();
-                const productsData = Array.isArray(localData) ? localData : [];
+        const fetchProducts = async () => {
+            try {
+                const response = await axios.get(`${import.meta.env.VITE_API_URL}/produtos`, {
+                    headers: {
+                        'ngrok-skip-browser-warning': 'true'
+                    }
+                });
+                const productsData = Array.isArray(response.data) ? response.data : [];
                 setTimeout(() => {
                     setProducts(productsData.slice(startIndex, startIndex + limit));
                     setLoading(false);
-                }, 350);
-            } else {
-                console.error('Erro ao buscar produtos localmente:', error);
-                setLoading(false);
+                }, 350)
+            } catch (error) {
+                console.error('Erro ao buscar produtos:', error);
+                const localResponse = await fetch('/data/products.json');
+                if (localResponse.ok) {
+                    const localData = await localResponse.json();
+                    const productsData = Array.isArray(localData) ? localData : [];
+                    setTimeout(() => {
+                        setProducts(productsData.slice(startIndex, startIndex + limit));
+                        setLoading(false);
+                    }, 350);
+                } else {
+                    console.error('Erro ao buscar produtos localmente:', error);
+                    setLoading(false);
+                }
             }
-        }
-    };
+        };
+    
+        fetchProducts();
+    
+    }, [startIndex, limit]);
 
     return (
         <div className={styleSecProducts.products_container}>
