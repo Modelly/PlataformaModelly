@@ -4,6 +4,33 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+/* Adicione isso no seu arquivo CSS global */
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-fluid {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.navbar {
+    width: 100%;
+    padding: 0;
+}
+
+.navbar-nav {
+    margin: auto;
+}
+
+.nav-item {
+    margin: 0 10px;
+}
 
 .container{
     max-width: 100vw;

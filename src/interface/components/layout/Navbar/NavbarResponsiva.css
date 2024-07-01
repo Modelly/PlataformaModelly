@@ -1,0 +1,28 @@
+
+.logo_nav {
+    width: 160px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: var(--cor-fonte-principal);
+    font-family: var(--poppins-font);
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: var(--cor-secundaria);
+}
+
+.navbar {
+    width: 100%;
+    padding: 0;
+}
+
+.navbar-nav {
+    margin: auto;
+}
+
+.nav-item {
+    margin: 0 10px;
+}
