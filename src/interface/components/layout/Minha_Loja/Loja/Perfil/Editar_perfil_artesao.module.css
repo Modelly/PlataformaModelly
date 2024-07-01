@@ -143,7 +143,7 @@
     display: inline-block; /* Exibe como bloco inline */
     color: var(--cor-fonte-principal);
     font-family: var(--poppins-font);
-    font-size: 10px;
+    font-size: 15px;
     margin-top: 12px;
    
 }
@@ -166,7 +166,7 @@
     display: inline-block; /* Exibe como bloco inline */
     color: var(--cor-fonte-principal);
     font-family: var(--poppins-font);
-    font-size: 13px;
+    font-size: 15px;
     margin-top: 12px;
    
     
