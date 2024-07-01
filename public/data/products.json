@@ -234,7 +234,7 @@
         "foto_produto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi73c8NJdH2C0qYXRQJ7_KtJoG5BkCw0kTbA&s"
     },
     {
-        "pk_id_produto": 8,
+        "pk_id_produto": 7,
         "loja": {
             "pk_id_loja": 1,
             "usuario": {
@@ -273,7 +273,7 @@
         "foto_produto": "https://cdn.awsli.com.br/2500x2500/1561/1561446/produto/235057929/2130ebdc-672f-47fa-929d-33b930cd2cd4-g8my8tug4h.jpg"
     },
     {
-        "pk_id_produto": 9,
+        "pk_id_produto": 8,
         "loja": {
             "pk_id_loja": 1,
             "usuario": {
