@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 
-import Popup from './PoppupCheckout';
+import Popup from './PoppupCheckout'
+
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
