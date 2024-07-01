@@ -309,7 +309,7 @@
         "pronta_entrega": true,
         "tempo_producao": 7,
         "status_produto": "disponivel",
-        "foto_produto": "/src/assets/images/imgs-produto/imagem-principal.png"
+        "foto_produto": "/data/imagem-principal.png"
     },
     {
         "pk_id_produto": 9,
