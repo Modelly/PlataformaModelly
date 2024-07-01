@@ -26,6 +26,7 @@ import CadastroVendedor from '../interface/components/layout/Cadastro_Vendedor/C
 import Configuracoes from './components/layout/Minha_Loja/Loja/Configuracoes/Configuracoes.jsx';
 import PlanosArt from './components/layout/Planos/PlanosArtLayout.jsx';
 import PlanosConsumidorLayout from './components/layout/Planos/PlanosConsumidorLayout.jsx';
+import PerfilLoja from './components/layout/Perfil_Loja/LojaLayout.jsx'
 
 const routes = () => {
   return (
@@ -48,6 +49,7 @@ const routes = () => {
             <Route path="/seja-vendedor" element={<VendedorPopUp />} />
             <Route path="/categoria/:categoria" element={<Categoria />} />
             <Route path="/cadastrar-vendedor" element={<CadastroVendedor />} />
+            <Route path="/perfil-loja" element={<PerfilLoja />} />
           </Route>
 
           {/* Rotas para usuários logados */}
@@ -65,6 +67,7 @@ const routes = () => {
             <Route path="/consumidor/cadastrar-vendedor" element={<CadastroVendedor />} />
             <Route path="/consumidor/pedido-personalizado" element={<CategoriaCliente />} />
             <Route path="/consumidor/planos-modelly" element={<PlanosConsumidorLayout />} />
+            <Route path="/consumidor/perfil-loja" element={<PerfilLoja />} />
           </Route>
 
           {/* Rotas para artesãos */}
@@ -86,7 +89,8 @@ const routes = () => {
             <Route path="/artesao/cadastrar-vendedor" element={<CadastroVendedor />} />
             <Route path="/artesao/pedido-personalizado" element={<CategoriaCliente />} />
             <Route path="/artesao/minha-loja/perfil" element={<EditarPerfilArtesao />} />
-            <Route path="/artesao/minha-loja/configuracoes" element={<Configuracoes />} />
+            <Route path="/artesao/minha-loja/configuracoes" element={<Configuracoes />} />  
+            <Route path="/artesao/perfil-loja" element={<PerfilLoja />} />
           </Route>
 
           {/* Rotas para pedido personalizado */}

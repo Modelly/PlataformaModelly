@@ -1,0 +1,44 @@
+.navContainer {
+    position: relative;
+    width: fit-content;
+    margin: 20px;
+}
+
+.navTabs {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.navItem {
+    padding: 10px 20px;
+    cursor: pointer;
+    color: #3F0A77;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.navItem:not(:last-child) {
+    margin-right: 20px;
+}
+
+.active {
+    font-size: 30px;
+    font-weight:600;
+    color: #3F0A77;
+}
+
+.navItem:hover {
+    color:#3F0A77;
+}
+
+.underline {
+    position: absolute;
+    bottom: -5px;
+    height: 3px;
+    background: linear-gradient(to right, #3F0A77, #3F0A77);
+    transition: all 0.3s ease-in-out;
+}
+
