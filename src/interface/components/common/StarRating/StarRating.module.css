@@ -1,0 +1,28 @@
+.star_rating {
+    display: flex;
+    direction: row;
+  }
+  
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0 5px;
+  }
+
+  .star {
+    font-size: 26px;
+    transition: 0.2s all;
+  }
+  
+  .on .star {
+    color: var(--cor-primaria);
+  }
+  
+  .off .star {
+    color: grey;
+  }
+
+
+  
