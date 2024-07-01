@@ -1,11 +1,9 @@
-/* Cadastro_Produto.module.css */
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Poppins:wght@100..900&display=swap');
 
 :root {
     --cor-primaria: #9B59B6;
     --cor-secundaria: #361A5C;
-    --cor-background: #FBFAFA;
+    --cor-background: #fff; /* Alterado para #fff */
     --cor-fonte-principal: #361A5C;
     --cor-fonte-branco: #fff;
     --poppins-font: 'Poppins', sans-serif;
@@ -13,11 +11,11 @@
 }
 
 .bodyHtml {
-    font-family: var(--poppins-font);
-    background-color: var(--cor-background);
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
     margin: 0;
     padding: 0;
-    color: var(--cor-secundaria);
+    color: #361A5C; 
 }
 
 .cadastroProdutoContainer {
@@ -26,7 +24,7 @@
     justify-content: center;
     align-items: flex-start;
     padding: 20px;
-    background-color: var(--cor-background);
+    background-color: #fff; 
     background-size: cover;
     background-position: center;
     gap: 80px;
@@ -48,7 +46,7 @@
 }
 
 .formSection {
-    background-color: var(--cor-fonte-branco);
+    background-color: #fff; 
     padding: 20px;
     border-radius: 15px;
     display: flex;
@@ -96,7 +94,7 @@
 
 .campoForm label {
     font-weight: bold;
-    color: var(--cor-secundaria);
+    color: #361A5C; 
 }
 
 .campoForm input[type="text"],
@@ -105,9 +103,9 @@
 .campoForm input[type="number"] {
     width: 90%;
     padding: 10px;
-    border: 1.9px solid var(--cor-secundaria);
+    border: 1.9px solid #361A5C; 
     border-radius: 5px;
-    color: var(--cor-secundaria);
+    color: #361A5C; 
     font-size: 16px;
     margin-top: 8px;
 }
@@ -122,7 +120,7 @@
 }
 
 .campoEnvio {
-    background-color: var(--cor-fonte-branco);
+    background-color: #fff; 
     border-radius: 12px;
     display: flex;
     flex-direction: column;
@@ -179,8 +177,8 @@
 
 .button {
     align-self: center;
-    background-color: var(--cor-primaria);
-    color: var(--cor-fonte-branco);
+    background-color: #9B59B6; 
+    color: #fff; 
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -188,5 +186,5 @@
 }
 
 .button:hover {
-    background-color: var(--cor-secundaria);
+    background-color: #361A5C; 
 }
