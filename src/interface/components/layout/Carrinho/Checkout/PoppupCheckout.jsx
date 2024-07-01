@@ -6,7 +6,7 @@ const Popup = ({ onClose }) => {
     <div className={styles.popup}>
       <div className={styles.popupContent}>
         <h2>Compra Finalizada!</h2>
-        <p>Obrigado por sua compra. Você receberá um e-mail de confirmação em breve.</p>
+        <p>Obrigado por sua compra. <br/>Você receberá um e-mail de confirmação em breve.</p>
         <button className={styles.button} onClick={onClose}>Fechar</button>
       </div>
     </div>
