@@ -110,7 +110,7 @@ const HomeLayout = () => {
             delay: "100"
         },
         {
-            category: "bisque",
+            category: "biscuit",
             image: Bisque,
             basePath: `${basePath}`,
             delay: "200"
@@ -171,7 +171,6 @@ const HomeLayout = () => {
                     DataBase={roundedCategories}
                     CategoryComponent={RoundedCategory}
                 />
-                
             </div>
             
 
