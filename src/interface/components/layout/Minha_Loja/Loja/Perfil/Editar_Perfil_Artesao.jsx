@@ -1,4 +1,3 @@
-import React from 'react';
 import styleEditarPerfilArtesao from './Editar_perfil_artesao.module.css';
 import imgLoja from '../../../../../../assets/images/imgs-perfil_vendedor/Loja.png';
 import backgroundPapel from '../../../../../../assets/images/imgs-perfil_vendedor/paper.png';
