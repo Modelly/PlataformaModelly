@@ -25,6 +25,7 @@ import PersonalizadoLayout from './components/layout/Personalizado/pedidosArtesa
 import CadastroVendedor from '../interface/components/layout/Cadastro_Vendedor/Cadastro_VendedorLayout.jsx';
 import Configuracoes from './components/layout/Minha_Loja/Loja/Configuracoes/Configuracoes.jsx';
 import PlanosArt from './components/layout/Planos/PlanosArtLayout.jsx';
+import PlanosConsumidorLayout from './components/layout/Planos/PlanosConsumidorLayout.jsx';
 
 const routes = () => {
   return (
@@ -63,6 +64,7 @@ const routes = () => {
             <Route path="/consumidor/categoria/:categoria" element={<Categoria />} />
             <Route path="/consumidor/cadastrar-vendedor" element={<CadastroVendedor />} />
             <Route path="/consumidor/pedido-personalizado" element={<CategoriaCliente />} />
+            <Route path="/consumidor/planos-modelly" element={<PlanosConsumidorLayout />} />
           </Route>
 
           {/* Rotas para artesãos */}
