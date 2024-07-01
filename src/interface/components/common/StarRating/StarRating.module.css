@@ -8,7 +8,7 @@
     border: none;
     cursor: pointer;
     padding: 0;
-    margin: 0 5px;
+    margin-right: 5px;
   }
 
   .star {
@@ -17,7 +17,7 @@
   }
   
   .on .star {
-    color: var(--cor-primaria);
+    color: #686dcd;
   }
   
   .off .star {

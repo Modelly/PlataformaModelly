@@ -12,6 +12,12 @@ import SectionProductsHorizontal from '../../common/Products/sectionProducts/Hor
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+import imgProd1 from '../../../../assets/images/imgs-home/PerfilLojas/Loja1/img1.png'
+import imgProd2 from '../../../../assets/images/imgs-home/PerfilLojas/Loja1/img2.png'
+import imgProd3 from '../../../../assets/images/imgs-home/PerfilLojas/Loja1/img3.png'
+import imgProd4 from '../../../../assets/images/imgs-home/PerfilLojas/Loja1/img4.png'
+import PerfilLoja from '../../../../assets/images/imgs-home/PerfilLojas/Loja1/FotoPerfil.png'
+
 import Paper from '../../../../assets/images/imgs-home/categorias/RoundedCategory/Paper.png';
 import Bisque from '../../../../assets/images/imgs-home/categorias/RoundedCategory/Bisque.png';
 import Feltro from '../../../../assets/images/imgs-home/categorias/RoundedCategory/Feltro.png';
@@ -34,6 +40,7 @@ import bannerImage from '../../../../assets/images/imgs-home/banner-image.png';
 import personalizadoImg from '../../../../assets/images/imgs-home/personalizado.png'; 
 
 import styleHome from './HomeLayout.module.css';
+import SectionLoja from '../../common/Sections/LojasSection/SectionLoja.jsx';
 
 const HomeLayout = () => {
     const location = useLocation();
@@ -122,6 +129,45 @@ const HomeLayout = () => {
             delay: "300"
         }
     ]
+
+    const LojasCard = [
+        {
+            image1: imgProd1,
+            image2: imgProd2,
+            image3: imgProd3,
+            image4: imgProd4,
+            PerfilImg: PerfilLoja,
+            name: "Otakupel",
+            delay: "0",
+        },
+        {
+            image1: imgProd1,
+            image2: imgProd2,
+            image3: imgProd3,
+            image4: imgProd4,
+            PerfilImg: PerfilLoja,
+            name: "ArteTaku",
+            delay: "100",
+        },
+        {
+            image1: imgProd1,
+            image2: imgProd2,
+            image3: imgProd3,
+            image4: imgProd4,
+            PerfilImg: PerfilLoja,
+            name: "ArteTaku",
+            delay: "200",
+        },
+        {
+            image1: imgProd1,
+            image2: imgProd2,
+            image3: imgProd3,
+            image4: imgProd4,
+            PerfilImg: PerfilLoja,
+            name: "ArteTaku",
+            delay: "300",
+        }
+    ]
     
     const promoTextVariants = {
         hidden: { opacity: 0, x: -80 },
@@ -163,6 +209,9 @@ const HomeLayout = () => {
 
             {/* Seção dos produtos! */}
             <div className={styleHome.recommendations_container}>
+                <h2 className={styleHome.recommendations_heading}>Lojas!</h2>
+                <SectionLoja DataBase={LojasCard} />
+
                 <h2 className={styleHome.recommendations_heading}>Recomendações Diárias</h2>
                 <SectionProductsVertical startIndex={0} limit={8} />
                 <SectionProductsHorizontal startIndex={8} limit={4} />

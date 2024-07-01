@@ -52,7 +52,7 @@
 .banner_heading {
     position: absolute;
     top: 80px;
-    left: 90px;
+    left: 190px;
     margin: 0; /* Remove qualquer margem padrão */
     font-family: var(--bogart-medium);
     font-size: 3.5em; /* Ajuste o tamanho conforme necessário */
@@ -63,7 +63,7 @@
 .banner_subheading {
     position: absolute;
     top: calc(45px + 2.5em + 45px); 
-    left: 90px;
+    left: 190px;
     margin: 0; 
     font-family: var(--bogart-medium);
     font-size: 2.5em; 
@@ -101,9 +101,9 @@
 
 .recommendations_container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
     text-align: center;
-    margin-bottom: 80px; 
+    margin-bottom: 80px;
 }
 
 .recommendations_heading {

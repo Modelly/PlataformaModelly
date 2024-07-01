@@ -3,7 +3,6 @@ import ScrollToTop from './components/util/ScrollToTop.jsx';
 import UsuarioLogado from './pages/UsuarioLogado.jsx';
 import UsuarioDeslogado from './pages/UsuarioDeslogado.jsx';
 import UsuarioArtesao from './pages/UsuarioArtesao.jsx';
-import React from 'react';
 
 import Categoria from './components/layout/Categoria/Categoria.jsx';
 import Login from '../interface/components/layout/login/LoginLayout.jsx';

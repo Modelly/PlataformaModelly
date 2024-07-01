@@ -1,0 +1,25 @@
+.BoxHeart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    width: 50px;
+    height: 50px;
+    padding: 2px 0 0 01px;
+
+    border: 1px solid #c3c3c3;
+    border-radius: 50%;
+  }
+  
+  .HeartImage {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.2s ease-in-out;
+    object-fit: cover;
+  }
+  
+  .HeartImage:hover {
+    transform: scale(1.1); /* Efeito de escala ao passar o mouse */
+  }
+  

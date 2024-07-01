@@ -7,7 +7,7 @@ const SectionCategories = ({DataBase, CategoryComponent}) => {
             {
             DataBase.map(categoria => (
                 <CategoryComponent 
-                key={categoria}
+                key={categoria.delay}
                 category={categoria.category}
                 image={categoria.image} 
                 basePath={categoria.basePath} 
@@ -22,10 +22,10 @@ const SectionCategories = ({DataBase, CategoryComponent}) => {
 SectionCategories.propTypes = {
     CategoryComponent: PropTypes.elementType.isRequired,
     DataBase: PropTypes.arrayOf(PropTypes.shape({
-        img: PropTypes.string.isRequired,
-        path: PropTypes.string.isRequired,
-        name: PropTypes.string.isRequired,
-        duration: PropTypes.number.isRequired,
+        category: PropTypes.string.isRequired,
+        image: PropTypes.string.isRequired,
+        basePath: PropTypes.string.isRequired,
+        delay: PropTypes.string.isRequired,
     })).isRequired,
 }
 
