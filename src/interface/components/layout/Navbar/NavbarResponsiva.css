@@ -1,6 +1,8 @@
 
 .logo_nav {
     width: 160px;
+    margin-top: 10px;
+    padding-left: 20px;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -8,6 +10,7 @@
     font-family: var(--poppins-font);
     font-weight: 500;
     text-transform: uppercase;
+
 }
 
 .navbar-light .navbar-nav .nav-link:hover {

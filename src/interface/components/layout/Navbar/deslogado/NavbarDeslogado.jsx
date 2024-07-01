@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styleNav from '../Navbar.module.css';
 import logo from '../../../../../assets/images/imgs-nav/modelly-logo.png';
@@ -7,6 +8,12 @@ import heartIcon from '../../../../../assets/images/imgs-nav/heart-icon.png';
 import userIcon from '../../../../../assets/images/imgs-nav/male-user.png';
 
 const NavbarDeslogado = () => {
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
+
     return (
         <div className={styleNav.navbar_container}>
             <div className={styleNav.navbar_top}>
@@ -17,7 +24,7 @@ const NavbarDeslogado = () => {
                     <input type="text" placeholder="Buscar na Modelly" />
                     <img src={lupa} alt="Lupa de pesquisa" className={styleNav.lupa_icon} />
                 </div>
-                <div className={styleNav.icons}>
+                <div className={`${styleNav.icons} ${menuOpen ? styleNav.open : ''}`}>
                     <Link to="/carrinho">
                         <img src={bagIcon} alt="Carrinho" className={styleNav.icon} />
                     </Link>
@@ -29,8 +36,13 @@ const NavbarDeslogado = () => {
                         <span>Iniciar Sessão</span>
                     </Link>
                 </div>
+                <div className={styleNav.hamburger_menu} onClick={toggleMenu}>
+                    <div className={`${styleNav.hamburger_bar} ${menuOpen ? styleNav.open : ''}`}></div>
+                    <div className={`${styleNav.hamburger_bar} ${menuOpen ? styleNav.open : ''}`}></div>
+                    <div className={`${styleNav.hamburger_bar} ${menuOpen ? styleNav.open : ''}`}></div>
+                </div>
             </div>
-            <div className={styleNav.navbar_bottom}>
+            <div className={`${styleNav.navbar_bottom} ${menuOpen ? styleNav.open : ''}`}>
                 <ul className={styleNav.navbar_list}>
                     <li className={styleNav.navbar_item}><Link to="/personalizado">Personalizado</Link></li>
                     <li className={styleNav.navbar_item}><Link to="/feira-virtual">Feira Virtual</Link></li>
