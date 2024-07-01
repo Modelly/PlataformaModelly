@@ -6,7 +6,7 @@
     
     width: 45%;
     height: 170px;
-    margin: 20px;
+    margin: 0 20px;
 
     border-radius: 20px;
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.205);
@@ -24,6 +24,7 @@
 
 .BoxContent {
     text-align: left;
+    color: black;
 }
 
 .BoxContent h1{

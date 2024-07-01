@@ -16,6 +16,7 @@ main {
 
 .backgroundCategory h1 {
     font-size: 45px;
+    text-transform: capitalize;
 }
 
 .backgroundCategory p {
@@ -35,7 +36,6 @@ main {
 .ContainerCategories {
     display: flex;
     flex-direction: column;
-    gap: 40px;
 
     text-align: center;
     width: 100%;

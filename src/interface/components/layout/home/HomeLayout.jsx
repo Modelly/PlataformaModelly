@@ -5,6 +5,7 @@ import { useLocation, Link } from 'react-router-dom';
 import { getBasePath } from "../../util/GetBasePath.jsx";
 
 import RoundedCategory from '../../common/Categories/roundedCategory/RoundedCategory.jsx';
+import SectionCategories from '../../common/Categories/sectionCategories/SectionCategories.jsx';
 import SectionProductsVertical from '../../common/Products/sectionProducts/VerticalSection/SectionProductsVertical.jsx';
 import SectionProductsHorizontal from '../../common/Products/sectionProducts/HorizontalSection/SectionProductsHorizontal.jsx';
 
@@ -97,28 +98,28 @@ const HomeLayout = () => {
 
     const roundedCategories = [
         {
-            name: "madeira",
-            img: Wood,
-            path: `${basePath}`,
-            duration: "0"
+            category: "madeira",
+            image: Wood,
+            basePath: `${basePath}`,
+            delay: "0"
         },
         {
-            name: "feltro",
-            img: Feltro,
-            path: `${basePath}`,
-            duration: "100"
+            category: "feltro",
+            image: Feltro,
+            basePath: `${basePath}`,
+            delay: "100"
         },
         {
-            name: "bisque",
-            img: Bisque,
-            path: `${basePath}`,
-            duration: "200"
+            category: "bisque",
+            image: Bisque,
+            basePath: `${basePath}`,
+            delay: "200"
         },
         {
-            name: "papel",
-            img: Paper,
-            path: `${basePath}`,
-            duration: "300"
+            category: "papel",
+            image: Paper,
+            basePath: `${basePath}`,
+            delay: "300"
         }
     ]
     
@@ -166,18 +167,11 @@ const HomeLayout = () => {
                 <SectionProductsVertical startIndex={0} limit={8} />
                 <SectionProductsHorizontal startIndex={8} limit={4} />
                 <SectionProductsVertical startIndex={12} limit={8} />
-                <div className={styleHome.roundedCategorySection}>
-                    {
-                        roundedCategories.map(categoria => (
-                            <RoundedCategory 
-                            key={categoria}
-                            imagem={categoria.img} 
-                            basePath={categoria.path} 
-                            categoria={categoria.name} 
-                            />
-                        ))
-                    }
-                </div>
+                <SectionCategories 
+                    DataBase={roundedCategories}
+                    CategoryComponent={RoundedCategory}
+                />
+                
             </div>
             
 
@@ -208,7 +202,7 @@ const HomeLayout = () => {
                 <h2 className={styleHome.help_heading}>Precisa de Ajuda?</h2>
                 <div className={styleHome.service_container}>
                     <div className={styleHome.service_item} data-aos="fade-down">
-                        <img src={dinheiro} alt="Pagamento" className={styleHome.service_icon} data-aos-delay="100"/>
+                        <img src={dinheiro} alt="Pagamento" className={styleHome.service_icon} data-aos-delay="200"/>
                         <div>
                             <h4 className={styleHome.service_title}>Pagamento</h4>
                             <p className={styleHome.service_text} dangerouslySetInnerHTML={{ __html: "Pague suas compras com <br/> rapidez e segurança" }}></p>
