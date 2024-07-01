@@ -26,3 +26,13 @@
 .nav-item {
     margin: 0 10px;
 }
+
+.navbar-nav .nav-link {
+    text-decoration: none !important; 
+    color: inherit !important; 
+}
+
+.navbar-nav .nav-link:hover {
+    text-decoration: none !important; 
+    color: #333 !important; 
+}

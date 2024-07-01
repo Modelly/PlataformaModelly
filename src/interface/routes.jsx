@@ -3,8 +3,6 @@ import ScrollToTop from './components/util/ScrollToTop.jsx';
 import UsuarioLogado from './pages/UsuarioLogado.jsx';
 import UsuarioDeslogado from './pages/UsuarioDeslogado.jsx';
 import UsuarioArtesao from './pages/UsuarioArtesao.jsx';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
 import React from 'react';
 
 import Categoria from './components/layout/Categoria/Categoria.jsx';
