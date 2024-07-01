@@ -1,3 +1,5 @@
+import { useParams } from 'react-router-dom';
+
 import SectionProducts from '../../common/Products/sectionProducts/SectionProducts';
 import HorizontalCategory from '../../common/Categories/horizontalRectangleCategory/HorizontalCategory';
 
@@ -5,18 +7,19 @@ import imgPaperCategory from '../../../../assets/images/img-categoria/PaperCateg
 import imgFeltroCategory from '../../../../assets/images/img-categoria/FeltroCategory.png';
 
 import stylesCategoria from './Categoria.module.css';
-import { useParams } from 'react-router-dom';
 
 const Categoria = () => {
     const {categoria} = useParams();
     const dbCategorias = [
         {
             categoria: 'Artes de papel',
-            imagem: imgPaperCategory
+            imagem: imgPaperCategory,
+            animationDelay: "0"
         },
         {
             categoria: 'Artes de feltro',
-            imagem: imgFeltroCategory
+            imagem: imgFeltroCategory,
+            animationDelay: "150"
         }
     ];
 
@@ -38,6 +41,7 @@ const Categoria = () => {
                             key={index}
                             category={categoria.categoria}
                             image={categoria.imagem}
+                            delay={categoria.animationDelay}
                         />
                     ))}
                 </div>

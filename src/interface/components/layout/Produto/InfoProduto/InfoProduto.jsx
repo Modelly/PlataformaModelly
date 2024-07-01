@@ -39,7 +39,7 @@ function InfoProduto() {
                 setTimeout(() => {
                     setProduto(data);
                     setIsLoading(false)
-                }, 150)
+                }, 350)
                 
             } catch (error) {
                 console.error('Erro ao buscar produto:', error);
@@ -53,7 +53,7 @@ function InfoProduto() {
                     setTimeout(() => {
                         setProduto(foundProduct);
                         setIsLoading(false);
-                    }, 150);
+                    }, 350);
                 } catch (localError) {
                     console.error('Erro ao buscar produto local:', localError);
                     setIsLoading(false);

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styles from './arte.module.css';
-import boxImg from '../../../../assets/images/imgs-personalizado/box.png';
+import boxImg from '../../../../../assets/images/imgs-personalizado/box.png';
 
 function Arte() {
   const [showPopup, setShowPopup] = useState(false);

@@ -2,7 +2,7 @@
 import axios from 'axios';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
-import ProductCard from '../Card1/ProductCard1.jsx';
+import ProductCard from '../CardVertical/ProductCardVertical.jsx';
 
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
@@ -27,19 +27,21 @@ const SectionProducts = () => {
                     'ngrok-skip-browser-warning': 'true'
                 }
             });
+            const productsData = Array.isArray(response.data) ? response.data : [];
             setTimeout(() => {
-                setProducts(response.data);
+                setProducts(productsData);
                 setLoading(false);
-            }, 150)
+            }, 350)
         } catch (error) {
             console.error('Erro ao buscar produtos:', error);
             const localResponse = await fetch('/data/products.json');
             if (localResponse.ok) {
                 const localData = await localResponse.json();
+                const productsData = Array.isArray(localData) ? localData : [];
                 setTimeout(() => {
-                    setProducts(localData);
+                    setProducts(productsData);
                     setLoading(false);
-                }, 150);
+                }, 350);
             } else {
                 console.error('Erro ao buscar produtos localmente:', error);
                 setLoading(false);

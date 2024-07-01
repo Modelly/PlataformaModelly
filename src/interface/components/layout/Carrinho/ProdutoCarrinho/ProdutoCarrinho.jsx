@@ -2,6 +2,9 @@ import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 import styleProdutoCarrinho from './ProdutoCarrinho.module.css';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 function ProdutoCarrinho(props) {
     const [quantidade, setQuantidade] = useState(1);
     const [precoTotal, setPrecoTotal] = useState(parseFloat(props.PrecoProduto.replace('R$', '').replace(',', '.')));
@@ -10,6 +13,10 @@ function ProdutoCarrinho(props) {
     useEffect(() => {
         const precoUnitario = parseFloat(props.PrecoProduto.replace('R$', '').replace(',', '.'));
         setPrecoTotal(precoUnitario * quantidade);
+
+        AOS.init({
+            duration: 1200, // Duração das animações
+        });
     }, [quantidade, props.PrecoProduto]);
 
     const handleAdicionar = () => {
@@ -36,7 +43,7 @@ function ProdutoCarrinho(props) {
 
 
     return (
-        <div className={styleProdutoCarrinho.produtoCarrinho}>
+        <div className={styleProdutoCarrinho.produtoCarrinho} data-aos="fade-up" data-aos-delay={props.delay}>
             <img src={props.FotoProduto} alt="fotoProduto" className={styleProdutoCarrinho.fotoProduto} />
             <div className={styleProdutoCarrinho.infosProdutoCarrinho}>
                 <h2>{props.NomeProduto}</h2>
@@ -69,6 +76,7 @@ ProdutoCarrinho.propTypes = {
     onExcluir: PropTypes.func.isRequired,
     onComprar: PropTypes.func.isRequired,
     onAtualizarQuantidade: PropTypes.func.isRequired,
+    delay: PropTypes.func.isRequired,
 }
 
 export default ProdutoCarrinho;
