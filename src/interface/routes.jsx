@@ -3,7 +3,7 @@ import ScrollToTop from './components/util/ScrollToTop.jsx';
 import UsuarioLogado from './pages/UsuarioLogado.jsx';
 import UsuarioDeslogado from './pages/UsuarioDeslogado.jsx';
 import UsuarioArtesao from './pages/UsuarioArtesao.jsx';
- 
+
 import Categoria from './components/layout/Categoria/Categoria.jsx';
 import Login from '../interface/components/layout/login/LoginLayout.jsx';
 import Sobre from '../interface/components/layout/Sobre/Sobre_Layout.jsx';
@@ -65,29 +65,27 @@ const routes = () => {
             <Route path="/consumidor/pedido-personalizado" element={<CategoriaCliente />} />
           </Route>
 
-                    {/* Rotas para artesãos */}
-                    <Route path="/artesao" element={<UsuarioArtesao />}>
-                        <Route index element={<HomeLayout />} />
-                        <Route path="/artesao/sobre" element={<Sobre />} />
-                        <Route path="/artesao/produto" element={<Produto />} />
-                        <Route path="/artesao/carrinho" element={<Carrinho />} />
-                        <Route path="/artesao/produto/:id" element={<Produto />} />
-                        <Route path="/artesao/fale-conosco" element={<Contato_1 />} />
-                        <Route path="/artesao/checkout" element={<CheckoutLayout />} />
-                        <Route path="/artesao/minha-loja" element={<PerfilVendedor />} />
-                        <Route path="/artesao/feira-virtual" element={<FeiraVirtual />} />
-                        <Route path="/artesao/seja-vendedor" element={<VendedorPopUp />} />
-                        <Route path="artesao/planos" element={<PlanosArt/>}/>
-                        <Route path="/artesao/categoria/:categoria" element={<Categoria />} />
-                        <Route path="/artesao/cadastro_Produto" element={<CadastroProduto />} />
-                        <Route path="/artesao/personalizado" element={<PersonalizadoLayout />} />
-                        <Route path="/artesao/cadastrar-vendedor" element={<CadastroVendedor />} />
-                        <Route path="/artesao/pedido-personalizado" element={<CategoriaCliente />} />
-                        <Route path="/artesao/minha-loja" element={<PerfilVendedor/>} />
-                        <Route path="/artesao/minha-loja/perfil" element={<EditarPerfilArtesao/>} />
-                        <Route path="/artesao/minha-loja/configuracoes" element={<Configuracoes/>} />
-                    </Route>
-         
+          {/* Rotas para artesãos */}
+          <Route path="/artesao" element={<UsuarioArtesao />}>
+            <Route index element={<HomeLayout />} />
+            <Route path="/artesao/sobre" element={<Sobre />} />
+            <Route path="/artesao/produto" element={<Produto />} />
+            <Route path="/artesao/carrinho" element={<Carrinho />} />
+            <Route path="/artesao/produto/:id" element={<Produto />} />
+            <Route path="/artesao/fale-conosco" element={<Contato_1 />} />
+            <Route path="/artesao/checkout" element={<CheckoutLayout />} />
+            <Route path="/artesao/minha-loja" element={<PerfilVendedor />} />
+            <Route path="/artesao/feira-virtual" element={<FeiraVirtual />} />
+            <Route path="/artesao/seja-vendedor" element={<VendedorPopUp />} />
+            <Route path="/artesao/planos-modelly" element={<PlanosArt />} />
+            <Route path="/artesao/categoria/:categoria" element={<Categoria />} />
+            <Route path="/artesao/cadastro_Produto" element={<CadastroProduto />} />
+            <Route path="/artesao/personalizado" element={<PersonalizadoLayout />} />
+            <Route path="/artesao/cadastrar-vendedor" element={<CadastroVendedor />} />
+            <Route path="/artesao/pedido-personalizado" element={<CategoriaCliente />} />
+            <Route path="/artesao/minha-loja/perfil" element={<EditarPerfilArtesao />} />
+            <Route path="/artesao/minha-loja/configuracoes" element={<Configuracoes />} />
+          </Route>
 
           {/* Rotas para pedido personalizado */}
           <Route path="/pedido-personalizado" element={<CategoriaCliente />} />
