@@ -168,4 +168,15 @@
     display: block;
     margin-top: 5px;
   }
+
+  @media screen and (max-width: 1200px) {
+    .standsContainer {
+      flex-direction: column;
+      align-items: center;
+    }
   
+    .stand {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+}
