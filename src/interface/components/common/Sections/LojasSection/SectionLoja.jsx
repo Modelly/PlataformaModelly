@@ -17,10 +17,12 @@ const SectionLoja = ({ DataBase }) => {
 
 SectionLoja.propTypes = {
     DataBase: PropTypes.arrayOf(PropTypes.shape({
-        category: PropTypes.string.isRequired,
-        image: PropTypes.string.isRequired,
-        basePath: PropTypes.string.isRequired,
-        delay: PropTypes.string.isRequired,
+        image1: PropTypes.string.isRequired,
+        image2: PropTypes.string.isRequired,
+        image3: PropTypes.string.isRequired,
+        image4: PropTypes.string.isRequired,
+        PerfilImg: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
     })).isRequired,
 }
 

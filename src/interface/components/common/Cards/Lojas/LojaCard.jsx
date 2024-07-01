@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import StarRating from '../../StarRating/StarRating.jsx';
 import HeartToggle from '../../Toggle/HeartToggle/HeartToggle.jsx';
@@ -41,7 +40,6 @@ CardLoja.propTypes = {
         image4: PropTypes.string.isRequired,
         PerfilImg: PropTypes.string.isRequired,
         name: PropTypes.string.isRequired,
-        delay: PropTypes.string.isRequired,
     }).isRequired
 }
 

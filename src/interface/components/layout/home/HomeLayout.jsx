@@ -12,11 +12,30 @@ import SectionProductsHorizontal from '../../common/Products/sectionProducts/Hor
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import imgProd1 from '../../../../assets/images/imgs-home/PerfilLojas/Loja1/img1.png'
-import imgProd2 from '../../../../assets/images/imgs-home/PerfilLojas/Loja1/img2.png'
-import imgProd3 from '../../../../assets/images/imgs-home/PerfilLojas/Loja1/img3.png'
-import imgProd4 from '../../../../assets/images/imgs-home/PerfilLojas/Loja1/img4.png'
-import PerfilLoja from '../../../../assets/images/imgs-home/PerfilLojas/Loja1/FotoPerfil.png'
+import Loja1imgProd1 from '../../../../assets/images/imgs-home/PerfilLojas/Loja1/img1.png'
+import Loja1imgProd2 from '../../../../assets/images/imgs-home/PerfilLojas/Loja1/img2.png'
+import Loja1imgProd3 from '../../../../assets/images/imgs-home/PerfilLojas/Loja1/img3.png'
+import Loja1imgProd4 from '../../../../assets/images/imgs-home/PerfilLojas/Loja1/img4.png'
+import PerfilLoja1 from '../../../../assets/images/imgs-home/PerfilLojas/Loja1/FotoPerfil.png'
+
+import Loja2imgProd1 from '../../../../assets/images/imgs-home/PerfilLojas/Loja2/img1.png'
+import Loja2imgProd2 from '../../../../assets/images/imgs-home/PerfilLojas/Loja2/img2.png'
+import Loja2imgProd3 from '../../../../assets/images/imgs-home/PerfilLojas/Loja2/img3.png'
+import Loja2imgProd4 from '../../../../assets/images/imgs-home/PerfilLojas/Loja2/img4.png'
+import PerfilLoja2 from '../../../../assets/images/imgs-home/PerfilLojas/Loja2/FotoPerfil.png'
+
+import Loja3imgProd1 from '../../../../assets/images/imgs-home/PerfilLojas/Loja3/img1.png'
+import Loja3imgProd2 from '../../../../assets/images/imgs-home/PerfilLojas/Loja3/img2.png'
+import Loja3imgProd3 from '../../../../assets/images/imgs-home/PerfilLojas/Loja3/img3.png'
+import Loja3imgProd4 from '../../../../assets/images/imgs-home/PerfilLojas/Loja3/img4.png'
+import PerfilLoja3 from '../../../../assets/images/imgs-home/PerfilLojas/Loja3/FotoPerfil.png'
+
+import Loja4imgProd1 from '../../../../assets/images/imgs-home/PerfilLojas/Loja4/img1.webp'
+import Loja4imgProd2 from '../../../../assets/images/imgs-home/PerfilLojas/Loja4/img2.jpeg'
+import Loja4imgProd3 from '../../../../assets/images/imgs-home/PerfilLojas/Loja4/img3.jpg'
+import Loja4imgProd4 from '../../../../assets/images/imgs-home/PerfilLojas/Loja4/img4.jpg'
+import PerfilLoja4 from '../../../../assets/images/imgs-home/PerfilLojas/Loja4/FotoPerfil.avif'
+
 
 import Paper from '../../../../assets/images/imgs-home/categorias/RoundedCategory/Paper.png';
 import Bisque from '../../../../assets/images/imgs-home/categorias/RoundedCategory/Bisque.png';
@@ -132,40 +151,37 @@ const HomeLayout = () => {
 
     const LojasCard = [
         {
-            image1: imgProd1,
-            image2: imgProd2,
-            image3: imgProd3,
-            image4: imgProd4,
-            PerfilImg: PerfilLoja,
+            image1: Loja1imgProd1,
+            image2: Loja1imgProd2,
+            image3: Loja1imgProd3,
+            image4: Loja1imgProd4,
+            PerfilImg: PerfilLoja1,
             name: "Otakupel",
             delay: "0",
         },
         {
-            image1: imgProd1,
-            image2: imgProd2,
-            image3: imgProd3,
-            image4: imgProd4,
-            PerfilImg: PerfilLoja,
+            image1: Loja2imgProd1,
+            image2: Loja2imgProd2,
+            image3: Loja2imgProd3,
+            image4: Loja2imgProd4,
+            PerfilImg: PerfilLoja2,
             name: "ArteTaku",
-            delay: "100",
         },
         {
-            image1: imgProd1,
-            image2: imgProd2,
-            image3: imgProd3,
-            image4: imgProd4,
-            PerfilImg: PerfilLoja,
-            name: "ArteTaku",
-            delay: "200",
+            image1: Loja3imgProd1,
+            image2: Loja3imgProd2,
+            image3: Loja3imgProd3,
+            image4: Loja3imgProd4,
+            PerfilImg: PerfilLoja3,
+            name: "AnimalArte",
         },
         {
-            image1: imgProd1,
-            image2: imgProd2,
-            image3: imgProd3,
-            image4: imgProd4,
-            PerfilImg: PerfilLoja,
-            name: "ArteTaku",
-            delay: "300",
+            image1: Loja4imgProd1,
+            image2: Loja4imgProd2,
+            image3: Loja4imgProd3,
+            image4: Loja4imgProd4,
+            PerfilImg: PerfilLoja4,
+            name: "HandHalf",
         }
     ]
     
