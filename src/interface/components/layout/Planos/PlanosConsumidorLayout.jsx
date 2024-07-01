@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './PlanosArt.module.css';
+import styles from './PlanosConsumidor.module.css';
 import standPurple from '../../../../assets/images/imgs-planos/stand-purple.png';
 import standBlue from '../../../../assets/images/imgs-planos/stand-blue.png';
 import standPink from '../../../../assets/images/imgs-planos/stand-pink.png';
