@@ -5,6 +5,13 @@
     height: 150px;
     margin: 60px 0;
     border-radius: 5px;
+
+    transition: 0.4s all;
+}
+
+.ContainerCard:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 15px 1px #1501313d;
 }
 
 .CardPrice {
