@@ -101,7 +101,7 @@ padding-top: 10%;/* 20px de padding + 25px da largura do ícone */
     display: flex;
     height: 80px;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-stard;
     justify-content: space-between;
     
     
@@ -134,11 +134,8 @@ padding-top: 10%;/* 20px de padding + 25px da largura do ícone */
             height: 80px;
             width: 150px;
             flex-direction: column;
-            align-items: flex-end;
-            justify-content: space-between;
-  
-            
-            
+            align-items: flex-start;
+            justify-content: space-between;            
 }
 
 .subtopicosAtendimento .subtopico {
@@ -164,8 +161,10 @@ padding-top: 10%;/* 20px de padding + 25px da largura do ícone */
         height: 120px;
         width: 150px;
         flex-direction: column;
-        align-items: flex-end;
+        align-items:flex-start;
         justify-content: space-between;
+        color: var(--cor-quartiaria);
+        cursor: pointer;
 
         
         
@@ -178,11 +177,11 @@ font-size: 1.5rem;
 line-height: 24px;
 }
 
-.subtopicosLoja .subtopico a {
+.subtopicosLoja .subtopico {
 text-decoration: none;
 color: var(--cor-quartiaria);
 }
 
-.subtopicosLoja .subtopico a:hover {
+.subtopicosLoja :hover {
 color: var(--cor-primaria);
 }

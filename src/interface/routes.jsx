@@ -3,7 +3,7 @@ import ScrollToTop from './components/util/ScrollToTop.jsx';
 import UsuarioLogado from './pages/UsuarioLogado.jsx';
 import UsuarioDeslogado from './pages/UsuarioDeslogado.jsx';
 import UsuarioArtesao from './pages/UsuarioArtesao.jsx';
-
+ 
 import Categoria from './components/layout/Categoria/Categoria.jsx';
 import Login from '../interface/components/layout/login/LoginLayout.jsx';
 import Sobre from '../interface/components/layout/Sobre/Sobre_Layout.jsx';
@@ -20,8 +20,10 @@ import CadastroProduto from '../interface/components/layout/Cadastro_Produto/Cad
 import EscolhaCategoria from './components/layout/Personalizado/pedidoCliente/EscolhaCategoria.jsx';
 import CategoriaCliente from './components/layout/Personalizado/pedidoCliente/CategoriaCliente.jsx';
 import FormularioServicos from './components/layout/Personalizado/pedidoCliente/FormularioServicos.jsx';
+import EditarPerfilArtesao from './components/layout/Minha_Loja/Loja/Perfil/Editar_Perfil_Artesao.jsx';
 import PersonalizadoLayout from './components/layout/Personalizado/pedidosArtesao/PersonalizadoLayout.jsx';
 import CadastroVendedor from '../interface/components/layout/Cadastro_Vendedor/Cadastro_VendedorLayout.jsx';
+import Configuracoes from './components/layout/Minha_Loja/Loja/Configuracoes.jsx';
 import PlanosArt from './components/layout/Planos/PlanosArtLayout.jsx';
 
 const routes = () => {
@@ -63,6 +65,27 @@ const routes = () => {
             <Route path="/consumidor/pedido-personalizado" element={<CategoriaCliente />} />
           </Route>
 
+                    {/* Rotas para artesãos */}
+                    <Route path="/artesao" element={<UsuarioArtesao />}>
+                        <Route index element={<HomeLayout />} />
+                        <Route path="/artesao/sobre" element={<Sobre />} />
+                        <Route path="/artesao/produto" element={<Produto />} />
+                        <Route path="/artesao/carrinho" element={<Carrinho />} />
+                        <Route path="/artesao/produto/:id" element={<Produto />} />
+                        <Route path="/artesao/fale-conosco" element={<Contato_1 />} />
+                        <Route path="/artesao/checkout" element={<CheckoutLayout />} />
+                        <Route path="/artesao/minha-loja" element={<PerfilVendedor />} />
+                        <Route path="/artesao/feira-virtual" element={<FeiraVirtual />} />
+                        <Route path="/artesao/seja-vendedor" element={<VendedorPopUp />} />
+                        <Route path="/artesao/categoria/:categoria" element={<Categoria />} />
+                        <Route path="/artesao/cadastro_Produto" element={<CadastroProduto />} />
+                        <Route path="/artesao/personalizado" element={<PersonalizadoLayout />} />
+                        <Route path="/artesao/cadastrar-vendedor" element={<CadastroVendedor />} />
+                        <Route path="/artesao/pedido-personalizado" element={<CategoriaCliente />} />
+                        <Route path="/artesao/minha-loja" element={<PerfilVendedor/>} />
+                        <Route path="/artesao/minha-loja/perfil" element={<EditarPerfilArtesao/>} />
+                        <Route path="/artesao/minha-loja/configuracoes" element={<Configuracoes/>} />
+                    </Route>
           {/* Rotas para artesãos */}
           <Route path="/artesao" element={<UsuarioArtesao />}>
             <Route index element={<HomeLayout />} />

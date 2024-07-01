@@ -1,0 +1,19 @@
+.ContainerCard {
+    position: relative;
+    overflow: hidden;
+    width: 22.5%;
+    height: 150px;
+    margin: 60px 0;
+    border-radius: 5px;
+}
+
+.CardPrice {
+    position: absolute;
+    left: 15px;
+    bottom: 10px;
+
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: #7637CD;
+    background-color: #efe5ffbb;
+}

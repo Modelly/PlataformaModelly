@@ -1,0 +1,173 @@
+:root {
+    --cor-primaria: #9B59B6;
+    --cor-secundaria: #361A5C;
+    --cor-terciaria: #F68E07;
+    --cor-quartiaria: #D11F52;
+    --cor-background: #FCF8F0;
+    --cor-preta-stroke: #0a0808;
+    --cor-fonte-principal: #361A5C;
+    --cor-fonte-branco: #fff;
+    --poppins-font: 'Poppins', sans-serif;
+    --montserrat-font: 'Montserrat', sans-serif;
+    --bogart-medium: 'Bogart Bold', sans-serif;
+}
+
+.container {
+    width: 65%;
+    height: 842px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 20px 20px;
+}
+
+.frameMinhaLoja {
+    box-sizing: border-box;
+    position: relative;
+    width: 80%;
+    height: 50%;
+    background: var(--cor-background);
+    border: 3px solid var(--cor-secundaria);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinha conteúdo no topo */
+    align-items: flex-start; /* Alinha itens à esquerda */
+    position: relative; /* Garante que o position:absolute dos elementos internos funcione corretamente */
+}
+
+.botaoEditarInformacoes {
+    box-sizing: border-box;
+    width: 177.78px;
+    height: 70px;
+    background: var(--cor-terciaria);
+    border-width: 1.5px 4.7px 7.7px 1.5px; /* superior, direita, inferior, esquerda */
+    border-style: solid;
+    border-color: var(--cor-preta-stroke); 
+    border-radius: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.botaoEditarInformacoes:hover {
+    background-color: var(--cor-secundaria); /* Altera a cor de fundo ao passar o mouse */
+
+}
+
+.botaoEditarInformacoes .span {
+    font-family: var(--poppins-font);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 33px;
+    color: var(--cor-fonte-branco); 
+}
+
+.minhaLoja {
+    font-family: var(--poppins-font);
+    font-size: 35px;
+    line-height: 1;
+    margin: 0 0 0 20px;
+    color: var(--cor-fonte-principal);
+}
+
+.containerSubTopicos{
+    height: 100%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+
+}
+
+.subTopicos {
+    font-family: var(--poppins-font);
+    font-size: 20px;
+    color: var(--cor-fonte-principal);
+    margin: 10px 0 0 20px;
+}
+
+.linha {
+     background-color: var(--cor-fonte-principal); /* #361A5C */
+    margin:15px 0 0 20px;
+    border: solid 1px;
+    width: 250px;
+}
+
+.fotoLogoLoja {
+    background-color: var(--cor-primaria);
+    border-radius: 100%;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float:inline-start;
+    margin: 0 0 0 20px;
+ 
+
+}
+
+.logoLoja {
+    height: 35px;
+    width: 35px;
+
+}
+
+.informacoesArtesao {
+    margin-left: 15px; /* Distância de 10px para a esquerda */
+    display: inline-block; /* Exibe como bloco inline */
+    color: var(--cor-fonte-principal);
+    font-family: var(--poppins-font);
+    font-size: 15px;
+    margin-top: 12px;
+   
+}
+
+.containerInformacoesArtesao{
+
+    display: flex;
+    flex-direction: row;
+}
+
+.especificacoesFoto{
+    margin-left: 15px; /* Distância de 10px para a esquerda */
+    display: inline-block; /* Exibe como bloco inline */
+    color: var(--cor-fonte-principal);
+    font-family: var(--poppins-font);
+    font-size: 15px;
+    margin-top: 12px;
+   
+}
+
+.emailExemplo{
+
+    margin-left: 15px; /* Distância de 10px para a esquerda */
+    display: inline-block; /* Exibe como bloco inline */
+    color: var(--cor-fonte-principal);
+    font-family: var(--poppins-font);
+    font-size: 15px;
+    margin-top: 12px;
+   
+
+}
+
+.descricaoLoja{
+
+    margin-left: 15px; /* Distância de 10px para a esquerda */
+    display: inline-block; /* Exibe como bloco inline */
+    color: var(--cor-fonte-principal);
+    font-family: var(--poppins-font);
+    font-size: 15px;
+    margin-top: 12px;
+   
+    
+}
