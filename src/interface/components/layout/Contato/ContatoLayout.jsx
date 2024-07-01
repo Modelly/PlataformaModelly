@@ -32,8 +32,8 @@ const Contato = () => {
 
   return (
     <div className={styleContato.contact_form}>
-      <h2 className={styleContato.h2}>Entre em contato</h2>
-      <p className={styleContato.p}>Essas informações vão nos auxiliar com o seu atendimento.</p>
+      <h2 className={styleContato.h2o}>Entre em contato</h2>
+      <p className={styleContato.pp}>Essas informações vão nos auxiliar com o seu atendimento.</p>
 
       <form onSubmit={handleSubmit}>
         <div className={styleContato.form_group}>

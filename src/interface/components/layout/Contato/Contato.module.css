@@ -17,14 +17,14 @@
   float: left;
 }
 
-.h2 {
+.h2o {
   text-align: left;
   margin-bottom: 20px;
   font-family: 'Montserrat', sans-serif;
   color: var(--cor-fonte-principal);
 }
 
-.p {
+.pp {
   text-align: left;
   margin-bottom: 20px;
   font-family: 'Poppins', sans-serif;
