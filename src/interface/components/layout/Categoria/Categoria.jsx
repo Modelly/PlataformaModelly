@@ -3,7 +3,7 @@ import { getBasePath } from '../../util/GetBasePath';
 
 import SectionCategories from '../../common/Categories/sectionCategories/SectionCategories';
 import HorizontalCategory from '../../common/Categories/horizontalRectangleCategory/HorizontalCategory';
-import SectionProducts from '../../common/Products/sectionProducts/VerticalSection/SectionProductsVertical';
+import SectionFilterProducts from '../../common/Sections/ProductsSection/FilterProducts/SectionFilterProducts';
 
 import imgPaperCategory from '../../../../assets/images/img-categoria/PaperCategory.png';
 import imgFeltroCategory from '../../../../assets/images/img-categoria/FeltroCategory.png';
@@ -12,7 +12,7 @@ import stylesCategoria from './Categoria.module.css';
 
 const Categoria = () => {
     const location = useLocation();
-    const {categoria} = useParams();
+    const { categoria } = useParams();
     const basePath = getBasePath(location.pathname);
     const dbCategorias = [
         {
@@ -36,7 +36,7 @@ const Categoria = () => {
             </div>
             
             <section className={stylesCategoria.products_container}>
-                <SectionProducts startIndex={0} limit={8}/>
+                <SectionFilterProducts startIndex={0} limit={8} category={categoria}/>
             </section>
             
             <section className={stylesCategoria.ContainerCategories}>
