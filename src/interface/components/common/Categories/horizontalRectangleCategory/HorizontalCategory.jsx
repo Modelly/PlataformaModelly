@@ -10,12 +10,19 @@ import styleCategoryH from './HorizontalCategory.module.css';
 const HorizontalCategory = ({ category, image, delay, basePath }) => {
     useEffect(() => {
         AOS.init({
-            duration: 1200, // Duração das animações
+            duration: 1200,
         });
     }, []);
+
+    const getLastWord = (str) => {
+        const words = str.split(' ');
+        return words[words.length - 1];
+    };
+
+    const lastWord = getLastWord(category);
   
     return (
-        <Link to={`${basePath}/categoria/${category}`} className={styleCategoryH.ContainerCategory} data-aos="fade-up" data-aos-delay={delay}>
+        <Link to={`${basePath}/categoria/${lastWord}`} className={styleCategoryH.ContainerCategory} data-aos="fade-up" data-aos-delay={delay}>
             <img src={image} alt={category} className={styleCategoryH.ImageCategory} />
             <div className={styleCategoryH.BoxContent}>
                 <h1>{category}</h1>
