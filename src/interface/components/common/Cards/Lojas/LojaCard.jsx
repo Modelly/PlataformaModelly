@@ -8,13 +8,13 @@ import styleCardLoja from './LojaCard.module.css';
 const CardLoja = ({DataBase}) => {
 
     return (
-        <Link to={`${DataBase.basePath}/perfil-loja`} className={styleCardLoja.Container}>
-            <div className={styleCardLoja.BoxImages}>
+        <div className={styleCardLoja.Container}>
+            <Link to={`${DataBase.basePath}/perfil-loja`} className={styleCardLoja.BoxImages}>
                 <img src={DataBase.image1} alt="imagem do produto" className={styleCardLoja.Image} />
                 <img src={DataBase.image2} alt="imagem do produto" className={styleCardLoja.Image} />
                 <img src={DataBase.image3} alt="imagem do produto" className={styleCardLoja.Image} />
                 <img src={DataBase.image4} alt="imagem do produto" className={styleCardLoja.Image} />
-            </div>
+            </Link>
             <div className={styleCardLoja.BoxContent}>
                 <div className={styleCardLoja.Content}>
                     <img src={DataBase.PerfilImg} alt="Imagem de perfil" className={styleCardLoja.FotoPerfil}/>
@@ -29,7 +29,7 @@ const CardLoja = ({DataBase}) => {
                     <HeartToggle className={styleCardLoja.Heart}/>
                 </div>
             </div>
-        </Link>
+        </div>
     )
 };
 
