@@ -120,7 +120,7 @@ function Perfil(){
                         </div>
                     </div>
                 </div>
-                <h1 className={styleLoja.tituloProduto}>Prosutos NOME</h1>
+                <h1 className={styleLoja.tituloProduto}>Produtos Diow</h1>
                 <div className={styleLoja.busca}>
                     <input className={styleLoja.search} type="text" id="search-bar" placeholder="Buscar produtos nessa loja"/>
                     <img src={Lupa} />

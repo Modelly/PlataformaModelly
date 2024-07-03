@@ -27,6 +27,7 @@ import Configuracoes from './components/layout/Minha_Loja/Loja/Configuracoes/Con
 import PlanosArt from './components/layout/Planos/PlanosArtLayout.jsx';
 import PlanosConsumidorLayout from './components/layout/Planos/PlanosConsumidorLayout.jsx';
 import PerfilLoja from './components/layout/Perfil_Loja/LojaLayout.jsx'
+import Freelancer from './components/layout/Personalizado/Freelancer/freelancer.jsx';
 
 const routes = () => {
   return (
@@ -49,6 +50,7 @@ const routes = () => {
             <Route path="/seja-vendedor" element={<VendedorPopUp/>}/>
             <Route path="/categoria/:categoria" element={<Categoria/>}/>
             <Route path="/cadastrar-vendedor" element={<CadastroVendedor/>} />
+            <Route path="/personalizado" element={<Freelancer/>}/>
           </Route>
 
           {/* Rotas para usuários logados */}

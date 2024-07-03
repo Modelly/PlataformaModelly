@@ -3,6 +3,7 @@ import * as Components from './Components';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
+
 const CenteredContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -13,7 +14,7 @@ const CenteredContainer = styled.div`
 function LoginLayout() {
     const [signIn, toggle] = useState(true);
     return (
-        <CenteredContainer>
+        <CenteredContainer className={style.fundo}>
             <Components.Container>
                 <Components.SignUpContainer signinIn={signIn}>
                     <Components.Form>
@@ -48,7 +49,7 @@ function LoginLayout() {
                     <Components.Overlay signinIn={signIn}>
 
                         <Components.LeftOverlayPanel signinIn={signIn}>
-                            <Components.Title>Bem Vindo de Volta!</Components.Title>
+                            <Components.Title>Bem-Vindo de Volta!</Components.Title>
                             <Components.Paragraph>Para se manter conectado conosco, por favor insira suas informações</Components.Paragraph>
                             <Components.GhostButton onClick={() => toggle(true)}>
                                 Entrar
@@ -56,7 +57,7 @@ function LoginLayout() {
                         </Components.LeftOverlayPanel>
 
                         <Components.RightOverlayPanel signinIn={signIn}>
-                            <Components.Title>Bem Vindo!</Components.Title>
+                            <Components.Title>Bem-Vindo!</Components.Title>
                             <Components.Paragraph>Entre com suas informações para começar sua jornada na Modelly!</Components.Paragraph>
                             <Components.GhostButton onClick={() => toggle(false)}>
                                 Cadastrar

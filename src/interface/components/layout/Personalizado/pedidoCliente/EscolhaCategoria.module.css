@@ -35,7 +35,7 @@
 }
 .btnComecar{
     align-self: flex-end;
-  
+    color: #fff !important;
     padding: 1rem 3rem;
     background-color: var(--cor-fonte-principal);
     border-radius: 0.5rem;

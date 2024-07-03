@@ -11,7 +11,6 @@ const feedbacks = [
         description: 'Alguma descrição',
         title: 'Encantador',
         feedback: 'Adorei a atenção da loja. Produto entregue no prazo.',
-        image: '.../../../../../assets/images/img_perfil/matheus.png',
         rating: 4
     },
     {
@@ -19,7 +18,6 @@ const feedbacks = [
         description: 'Alguma descrição',
         title: 'Satisfação Garantida',
         feedback: 'Compra excelente. Atendimento ótimo.',
-        image: 'path/to/jhonatan.jpg',
         rating: 5
     },
     {
@@ -27,7 +25,6 @@ const feedbacks = [
         description: 'Alguma descrição',
         title: 'Título exemplo!',
         feedback: 'Lorem ipsum dolor sit amet.',
-        image: 'path/to/pamela.jpg',
         rating: 4
     },
     {
@@ -35,7 +32,6 @@ const feedbacks = [
         description: 'Alguma descrição',
         title: 'Título exemplo!',
         feedback: 'Lorem ipsum dolor sit amet.',
-        image: 'path/to/giovanna.jpg',
         rating: 5
     }
 ];

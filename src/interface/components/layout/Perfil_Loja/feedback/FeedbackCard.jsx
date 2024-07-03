@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from './FeedbackCard.module.css';
+import Matheus from'../../../../../assets/images/img_freelancer/matheus.png'
 
-const FeedbackCard = ({ name, description, title, feedback, image, rating }) => {
+const FeedbackCard = ({ name, description, title, feedback,  rating }) => {
     const renderStars = () => {
         const fullStars = Array(rating).fill('★');
         const emptyStars = Array(5 - rating).fill('★');
@@ -19,7 +20,7 @@ const FeedbackCard = ({ name, description, title, feedback, image, rating }) => 
 
     return (
         <div className={styles.card}>
-            <img src={image} alt={name} className={styles.image} />
+            <img src={Matheus} alt={name} className={styles.image} />
             <h3 className={styles.name}>{name}</h3>
             <p className={styles.description}>{description}</p>
             <h4 className={styles.title}>{title}</h4>

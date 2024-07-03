@@ -82,7 +82,7 @@
 
 .btnRoxo {
     background-color: #361a5c;
-    color: #fff;
+    color: #fff !important;
     margin-bottom: 30px;
 }
 

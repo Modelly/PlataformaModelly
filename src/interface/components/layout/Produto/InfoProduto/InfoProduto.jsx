@@ -130,8 +130,9 @@ function InfoProduto() {
                             <span className={styleInfoProduto.subText}>Disponível para todo Brasil</span>
                         </p>
 
-
-                        <a href="#" className={`${styleInfoProduto.btn} ${styleInfoProduto.btnRoxo}`}>Comprar agora</a>
+                        <Link to={`${basePath}/checkout`}>
+                            <a href="#" className={`${styleInfoProduto.btn} ${styleInfoProduto.btnRoxo}`}>Comprar agora</a>
+                        </Link>
                         <Link to={`${basePath}/carrinho`} className={`${styleInfoProduto.btn} ${styleInfoProduto.btnRosa}`}>
                             <img className={styleInfoProduto.carrinhoIcone} src={shoppingCart} alt="Shopping Cart" />Adicionar ao carrinho
                         </Link>

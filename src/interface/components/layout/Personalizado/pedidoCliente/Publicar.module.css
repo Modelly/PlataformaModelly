@@ -50,8 +50,10 @@ box-shadow: 7px 7px 8px -3px rgba(0,0,0,1);
 }
 .editarArte{ 
   background-color: var(--cor-primaria);
+  color: #fff !important;
 }
 
 .publicarArte{ 
    background-color: var(--cor-terciaria);
+   color: #fff !important;
 }
