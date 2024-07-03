@@ -32,7 +32,7 @@
 
 .titulo {
     font-size: 3em;
-    /* font-family: 'Bogart Semibold', sans-serif; */ /* Removido para evitar duplicação */
+     font-family: 'Bogart Semibold', sans-serif; 
 }
 
 .left {
@@ -40,6 +40,7 @@
     flex-direction: column;
     justify-content: space-around;
     height: 100%;
+    font-family: var(fon);
 }
 
 .info {
@@ -47,7 +48,7 @@
     font-size: 25px;
     font-weight: 500;
     font-family: 'poppins', sans-serif;
-    text-align: center; /* Ajustado para centralizar o texto */
+    text-align: center; 
 }
 
 .botao {
