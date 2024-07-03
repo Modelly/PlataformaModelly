@@ -61,9 +61,10 @@ const routes = () => {
             <Route path="/consumidor/carrinho" element={<Carrinho />}/>
             <Route path="/consumidor/produto/:id" element={<Produto />}/>
             <Route path="/consumidor/perfil-loja" element={<PerfilLoja />}/>
-            <Route path="/consumidor/fale-conosco" element={<Contato_1 />}/>
-            <Route path="/consumidor/checkout" element={<CheckoutLayout />}/>
             <Route path="/consumidor/feira-virtual" element={<FeiraVirtual />}/>
+            <Route path="/consumidor/fale-conosco" element={<Contato_1 />}/>
+            <Route path="/consumidor/personalizado" element={<Freelancer/>}/>
+            <Route path="/consumidor/checkout" element={<CheckoutLayout />}/>
             <Route path="/consumidor/seja-vendedor" element={<VendedorPopUp />}/>
             <Route path="/consumidor/categoria/:categoria" element={<Categoria />}/>
             <Route path="/consumidor/cadastrar-vendedor" element={<CadastroVendedor />}/>
@@ -92,6 +93,7 @@ const routes = () => {
             <Route path="/artesao/minha-loja/perfil" element={<EditarPerfilArtesao />} />
             <Route path="/artesao/minha-loja/configuracoes" element={<Configuracoes />} />  
             <Route path="/artesao/perfil-loja" element={<PerfilLoja />} />
+            <Route path="/artesao/personalizado" element={<Freelancer/>}/>
           </Route>
 
         {/* Rotas para pedido personalizado */}

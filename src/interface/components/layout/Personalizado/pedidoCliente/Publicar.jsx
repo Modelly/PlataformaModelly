@@ -1,4 +1,5 @@
 import style from "./Publicar.module.css"
+import { Link } from "react-router-dom"
 import NavbarConsumidor from '../../Navbar/consumidor/NavbarConsumidor'
 
 export default function Publicar(){
@@ -12,7 +13,7 @@ export default function Publicar(){
 
                     <div className={style.boxEnvio}>
                         <a className={style.editarArte}>Editar</a>
-                        <a className={style.publicarArte}>Publicar</a>
+                        <Link to="/consumidor" className={style.publicarArte}>Publicar</Link>
                     </div>
                 </div>
             </section>
