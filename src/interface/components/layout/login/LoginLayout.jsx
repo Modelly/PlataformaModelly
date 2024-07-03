@@ -14,7 +14,7 @@ const CenteredContainer = styled.div`
 function LoginLayout() {
     const [signIn, toggle] = useState(true);
     return (
-        <CenteredContainer className={style.fundo}>
+        <CenteredContainer className={styled.fundo}>
             <Components.Container>
                 <Components.SignUpContainer signinIn={signIn}>
                     <Components.Form>

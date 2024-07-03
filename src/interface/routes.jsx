@@ -34,7 +34,7 @@ const routes = () => {
     <Router>
       <ScrollToTop />
       <Routes>
-        <Route path="/login" element={<Login />} />
+            <Route path="/login" element={<Login />} />
 
           {/* Rotas para usuários não logados */}
           <Route path="/" element={<UsuarioDeslogado />}>
