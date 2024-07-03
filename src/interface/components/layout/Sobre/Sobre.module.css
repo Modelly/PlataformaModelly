@@ -57,6 +57,26 @@
     margin: 2rem 0;
 }
 
+.text12{
+    text-align: left;
+    font-family: var(--poppins-font);
+    font-size: 1.3rem;
+    color: var(--cor-fonte-principal);
+    font-weight: 700;
+}
+
+.text123{
+    text-align: left;
+    font-family: var(--poppins-font);
+    font-size: 1.3rem;
+    color: var(--cor-fonte-principal);
+    font-weight: 700;
+}
+
+.mvvImage1 {
+    width: 200px;
+}
+
 .textqui {
     font-family: var(--poppins-font);
     font-size: 1.5rem;
@@ -120,7 +140,8 @@
 }
 
 .carouselItem {
-    min-width: 200px;
+    width: 0em;
+    height: auto;
     scroll-snap-align: start;
 }
 
@@ -135,14 +156,14 @@
 .imgIntegrante {
     width: 100%;
     height: auto;
-    margin-top: 1rem; 
+    margin-top: 1.8rem; 
     margin-bottom: -0.4rem;
 }
 
 .card {
     background-color: #361A5C;
     color: var(--cor-fonte-branco);
-    width: 15rem;
+    width: 16em;
     border-radius: 0.5rem;
     text-align: center;
     overflow: hidden;
@@ -171,4 +192,23 @@
     width: 32px;
     height: 28px;
     margin-left: 0.5rem;
+}
+
+.partnerSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+
+.partnerImage {
+    max-width: 150px;
+    margin-right: 2rem;
+}
+
+.partnerText {
+    font-family: var(--poppins-font);
+    font-size: 1.3rem;
+    color: var(--cor-fonte-principal);
+    text-align: left;
 }

@@ -7,8 +7,8 @@ import ValuesImage from '../../../../assets/images/img_sobre/value.png';
 import GitHubIcon from '../../../../assets/images/imgs-footer/GitHub.png';
 import LinkedInIcon from '../../../../assets/images/imgs-footer/LinkedIn.png';
 import PartnerImage1 from '../../../../assets/images/img_sobre/Parceiro.png';
-import PartnerImage2 from '../../../../assets/images/img_sobre/Parceiro.png';
-import PartnerImage3 from '../../../../assets/images/img_sobre/Parceiro.png';
+import futura from './futura.png'
+
 
 import fotoMatt from '../../../../assets/images/img-equipe/MatheusMorgado.png'
 import fotoPamela from '../../../../assets/images/img-equipe/Pamela.png'
@@ -126,24 +126,18 @@ const Sobre = () => {
                 <div className={styles.mvvItem}>
                     <img src={MissionImage} alt="Missão" className={styles.mvvImage} />
                     <h2 className={styles.mvvTitle}>Missão</h2>
-                    <p className={styles.mvvText}>Na Modelly, apoiamos o crescimento sustentável dos artesãos, facilitando a venda de seus produtos e conectando-os a um vasto mercado de consumidores, em um ambiente inclusivo e justo.
+                    <p className={styles.mvvText}>Na Modelly, apoiamos o crescimento sustentável dos artesãos.
 </p>
                 </div>
                 <div className={styles.mvvItem}>
                     <img src={VisionImage} alt="Visão" className={styles.mvvImage} />
                     <h2 className={styles.mvvTitle}>Visão</h2>
-                    <p className={styles.mvvText}>Ser a plataforma líder global em comercialização de artesanato, reconhecida por nossa inovação, eficiência e apoio à comunidade artística.</p>
+                    <p className={styles.mvvText}>Ser a plataforma líder global em comercialização de artesanato</p>
                 </div>
                 <div className={styles.mvvItem}>
                     <img src={ValuesImage} alt="Valores" className={styles.mvvImage} />
                     <h2 className={styles.mvvTitle}>Valores</h2>
-                    <p className={styles.mvvText}>1. Sustentabilidade: Crescimento sustentável para artesãos.<br />
-                                                  2. Inclusão: Ambiente igualitário para todos os artistas.<br />
-                                                  3. Inovação: Soluções criativas e tecnológicas.<br />
-                                                  4. Transparência: Negociações justas e claras.<br />
-                                                  5. Relacionamento: Relações sólidas e confiáveis.<br />
-                                                  6. Comunidade: Comunidade artística vibrante e engajada.<br /><br />
-                                                  Na Modelly, celebramos a arte e construímos um futuro onde a cultura prospera.</p>
+                    <p className={styles.mvvText}>Crescimento sustentável para artesãos com um ambiente igualitário para todos os artistas.</p>
                     </div>
                 </div>
 
@@ -162,11 +156,26 @@ const Sobre = () => {
             </section>
 
             <section className={styles.sectionColumn}>
-                <h2 className={styles.sectionTitle}>Nossos parceiros</h2>
-                <div className={styles.carousel}>
-                    <div className={styles.carouselItem}><img src={PartnerImage1} alt="Parceiro 1" /></div>
-                    <div className={styles.carouselItem}><img src={PartnerImage2} alt="Parceiro 2" /></div>
-                    <div className={styles.carouselItem}><img src={PartnerImage3} alt="Parceiro 3" /></div>
+            <h2 className={styles.sectionTitle}>Visão futura</h2>
+                <div className={styles.section}>
+                <img src={futura} alt="Ícone de Futuro" className={styles.mvvImage1} />
+                    <div className={styles.textContainer}>
+                    <p className={styles.text123}>
+                            Trazendo algumas novidades à plataforma, nós temos a ideia de expandir para outros horizontes, como artes 3D, produção de música, arte digital, e muito mais. Queremos também trazer um sistema de leilão, uma oficina de arte, e um aplicativo para celulares e tablets.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section className={styles.sectionColumn}>
+            <h2 className={styles.sectionTitle}>Parceria Autonomy</h2>
+                <div className={styles.section}>
+                    <img src={PartnerImage1} alt="Autonomy" className={styles.partnerImage} />
+                    <div className={styles.textContainer}>
+                        <p className={styles.text12}>
+                            Essa colaboração promete ser altamente benéfica, pois<br/> a Autonomy traz uma solução especializada em gestão financeira<br/> para microempreendedores e empreendedores, permitindo<br/> que os vendedores da Modelly gerenciem seus lucros de forma mais eficiente e estratégica. 
+                        </p>
+                    </div>
                 </div>
             </section>
 
