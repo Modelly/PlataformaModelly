@@ -78,6 +78,7 @@
     width: 285.5px;
     height: 47.5px;
     border-radius: 15px;
+    color: #202020;
 }
 
 .btnRoxo {
@@ -104,6 +105,10 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+}
+
+.contentPagamento h4 {
+    font-size: 18px;
 }
 
 .contentPagamento img {
