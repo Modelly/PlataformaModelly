@@ -5,9 +5,9 @@ import { useLocation, Link } from 'react-router-dom';
 import { getBasePath } from "../../util/GetBasePath.jsx";
 
 import RoundedCategory from '../../common/Categories/roundedCategory/RoundedCategory.jsx';
-import SectionCategories from '../../common/Categories/sectionCategories/SectionCategories.jsx';
-import SectionProductsVertical from '../../common/Products/sectionProducts/VerticalSection/SectionProductsVertical.jsx';
-import SectionProductsHorizontal from '../../common/Products/sectionProducts/HorizontalSection/SectionProductsHorizontal.jsx';
+import SectionCategories from '../../common/Sections/CategoriesSection/SectionCategories.jsx';
+import SectionProductsVertical from '../../common/Sections/ProductsSection/VerticalSection/SectionProductsVertical.jsx';
+import SectionProductsHorizontal from '../../common/Sections/ProductsSection/HorizontalSection/SectionProductsHorizontal.jsx';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';

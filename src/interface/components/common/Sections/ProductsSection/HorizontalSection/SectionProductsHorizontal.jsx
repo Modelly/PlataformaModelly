@@ -1,16 +1,16 @@
 import axios from 'axios';
+import PropTypes from 'prop-types';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
-import PropTypes from 'prop-types';
-import ProductCard from '../../CardVertical/ProductCardVertical.jsx';
+import CardHorizontal from '../../../Cards/Products/cardHorizontal/CardHorizontal.jsx';
 
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { getBasePath } from "../../../../util/GetBasePath.jsx";
 
-import styleSecProducts from './SectionProductsVertical.module.css';
+import styleSecProducts from './SectionProductsHorizontal.module.css';
 
-const SectionProducts = ({ startIndex, limit }) => {
+const SectionProductsHorizontal = ({ startIndex, limit }) => {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
     const location = useLocation();
@@ -53,23 +53,17 @@ const SectionProducts = ({ startIndex, limit }) => {
     return (
         <div className={styleSecProducts.products_container}>
             {loading ? (
-                Array(8).fill().map((_, index) => (
-                    <div key={index} >
-                            <div >
-                                <Skeleton height={200} />
-                            </div>
-                            <Skeleton count={2} style={{ marginTop: 10 }} />
-                            <Skeleton width={250} style={{ marginTop: 10 }} />
-                        </div>
+                Array(4).fill().map((_, index) => (
+                    <div key={index} className={styleSecProducts.SkelletonContainer}>
+                        <Skeleton height={150} width={270} style={{ marginRight: 10, marginTop: 60, marginBottom: 60}} />
+                    </div>
                 ))
             ) : (
                 products.map((product) => (
-                    <ProductCard
+                    <CardHorizontal
                         key={product.pk_id_produto}
                         id={product.pk_id_produto}
                         image={product.foto_produto}
-                        name={product.nome_produto}
-                        description={product.descricao_produto}
                         price={product.preco_produto}
                         basePath={basePath}
                     />
@@ -79,9 +73,9 @@ const SectionProducts = ({ startIndex, limit }) => {
     );
 };
 
-SectionProducts.propTypes = {
+SectionProductsHorizontal.propTypes = {
     startIndex: PropTypes.number.isRequired,
     limit: PropTypes.number.isRequired
 };
 
-export default SectionProducts;
+export default SectionProductsHorizontal;

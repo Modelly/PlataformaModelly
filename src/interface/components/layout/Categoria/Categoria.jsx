@@ -1,7 +1,7 @@
 import { useParams, useLocation } from 'react-router-dom';
 import { getBasePath } from '../../util/GetBasePath';
 
-import SectionCategories from '../../common/Categories/sectionCategories/SectionCategories';
+import SectionCategories from '../../common/Sections/CategoriesSection/SectionCategories';
 import HorizontalCategory from '../../common/Categories/horizontalRectangleCategory/HorizontalCategory';
 import SectionFilterProducts from '../../common/Sections/ProductsSection/FilterProducts/SectionFilterProducts';
 

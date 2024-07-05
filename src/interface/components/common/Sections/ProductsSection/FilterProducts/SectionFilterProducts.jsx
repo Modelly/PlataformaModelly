@@ -2,13 +2,13 @@ import axios from 'axios';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 import PropTypes from 'prop-types';
-import ProductCard from '../../../Products/CardVertical/ProductCardVertical.jsx';
+import ProductCard from '../../../Cards/Products/CardVertical/ProductCardVertical.jsx';
 
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { getBasePath } from "../../../../util/GetBasePath.jsx";
 
-import styleSecProducts from '../../../Products/sectionProducts/VerticalSection/SectionProductsVertical.module.css';
+import styleSecProducts from '../../../Sections/ProductsSection/VerticalSection/SectionProductsVertical.module.css';
 
 const SectionProducts = ({ startIndex, limit, category }) => {
     const [products, setProducts] = useState([]);

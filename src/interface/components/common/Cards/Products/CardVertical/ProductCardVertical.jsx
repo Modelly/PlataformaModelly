@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { truncateDescription } from '../../../util/TruncateDescription.jsx';
+import { truncateDescription } from '../../../../util/TruncateDescription.jsx';
 import styles from './ProductCard.module.css';
 
 const ProductCardVertical = ({ id, image, name, description, price, basePath }) => {
